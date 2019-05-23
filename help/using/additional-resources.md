@@ -6,7 +6,7 @@ seo-description: 请参阅本页以了解有关Adobe AEM Cloud Manager的更多�
 uuid: 9aa90a99-f049-422e-9e06-b00 b843 ed98 b
 products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 translation-type: tm+mt
-source-git-commit: 8031df1c1ce9d7fee4ef33de289c6952370b7589
+source-git-commit: 7236e9d3bf5955509068757b34c81f0021db4270
 
 ---
 
@@ -23,8 +23,8 @@ source-git-commit: 8031df1c1ce9d7fee4ef33de289c6952370b7589
 
 ## 网络研讨会系列 {#webinar-series}
 
-按照 [Adobe论坛] (https://forums.adobe.com/message/11061595)获取为Cloud Manager创建的其他学习计划作为网络研讨会系列。
+请按照 [Adobe论坛](https://forums.adobe.com/message/11061595) 获取为Cloud Manager创建的其他学习路径作为网络研讨会系列。
 
 ## 演示视频系列 {#demo-videos}
 
-请在 [AEM Cloud] Manager中使用CI/CD管道(包括视频系列，在失败和成功场景中设置和执行Cloud Manager的CI/CD管线时，请参阅视频系列。
+在 [AEM for AEM中使用CI/CD管道，](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cloud-manager-cicd-pipeline-feature-video-use.html)其中包含在探索、设置和执行Cloud Manager的CI/CD管线失败和成功情景时所用的视频系列。
