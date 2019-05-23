@@ -4,12 +4,12 @@ seo-title: 适用于2019.5.0的AEM Cloud Manager发行说明
 description: 请参阅本页获取Cloud Manager版本2019.5.0的信息。
 seo-description: 请参阅本页获取AEM Cloud Manager版本2019.5.0的信息。
 translation-type: tm+mt
-source-git-commit: 8031df1c1ce9d7fee4ef33de289c6952370b7589
+source-git-commit: cab67f6a3358ef2988baaba78e2a41f7edadb323
 
 ---
 
 
-# 2019.4.0发行说明 {#release-notes-for}
+# 2019.5.0发行说明 {#release-notes-for}
 
 [!UICONTROL Cloud Manager] 2019.5.0版不包含重大功能更改。请按照以下部分了解更多详细信息。
 
