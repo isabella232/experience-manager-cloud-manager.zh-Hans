@@ -9,7 +9,7 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7 e7318 d4
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
 
 ---
 
@@ -54,11 +54,11 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 >有关更多详细定义，请参阅 [量度定义](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) 。
 
 
-您可以在此处 [下载规则列表](assets/sonarqube-rules.xlsx)
+您可以在此处 [下载规则列表](assets/code-quality-rules.xlsx)
 
 >[!NOTE]
 >
->要进一步了解执行的自定义Sonarque规则， [!UICONTROL Cloud Manager]请参阅 [自定义代码质量规则](custom-code-quality-rules.md)。
+>要进一步了解执行的自定义代码质量规则， [!UICONTROL Cloud Manager]请参阅 [自定义代码质量规则](custom-code-quality-rules.md)。
 
 ### 处理虚假位置 {#dealing-with-false-positives}
 
