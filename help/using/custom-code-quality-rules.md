@@ -1,22 +1,22 @@
 ---
 title: 自定义代码质量规则
 seo-title: 自定义代码质量规则
-description: 请阅读本页，了解Cloud Manager执行的自定义Sonarque规则。
-seo-description: 请阅读本页，了解Adobe Experience Manager Cloud Manager执行的自定义Sonarque规则。
+description: 请阅读本页，了解Cloud Manager执行的自定义代码质量规则。
+seo-description: 请阅读本页，了解Adobe Experience Manager Cloud Manager执行的自定义代码质量规则。
 uuid: a7cb465-1982-46be-9e57-e67 b5984979
 contentOwner: jsyal
 products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a 1866-ef62362509 f
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
 
 ---
 
 
 # 自定义代码质量规则 {#custom-code-quality-rules}
 
-本页介绍了Cloud Manager执行的自定义Sonarque规则。这些规则使用AEM工程的最佳实践增强标准Sonarque规则。
+本页描述了Cloud Manager执行的自定义代码质量规则，这些规则基于AEM工程的最佳实践创建。
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 **严重性**：Major
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 ***String. stop()*** 和 ***线程. interbrounch()的方法*** 可能会生成难以重现的问题，在某些情况下会出现安全漏洞。应严格监控和验证其使用情况。通常，消息传递是实现类似目标的更安全方法。
 
@@ -93,7 +93,7 @@ public class DoThis implements Runnable {
 
 **严重性**：Major
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 使用外部源(此请求参数或用户生成的内容)的格式字符串可以使应用程序暴露应用程序拒绝服务攻击。某些情况下，格式字符串可能是外部控制的，但只允许受信任的源。
 
@@ -115,7 +115,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 **严重性**：关键
 
-****因为：版本2018.6.0
+**** 因为：版本2018.6.0
 
 在AEM应用程序中执行HTTP请求时，务必确保配置正确的超时以避免不必要的线程消耗。不幸的是，Java的默认HTTP Client(InstantPurlConnection)和常用Apache HTTP Components客户端的默认行为是永不超时，因此必须显式设置超时。此外，作为最佳实践，这些超时不应超过60秒。
 
@@ -193,7 +193,7 @@ public void orDoThis() {
 
 **严重性**：关键
 
-****因为：版本2018.7.0
+**** 因为：版本2018.7.0
 
 AEM API包含仅供自定义代码使用但未实现的Java接口和类。例如，界面 *com.day.cq.wcm. api只* 设计为 ***由AEM实现***。
 
@@ -219,7 +219,7 @@ public class DontDoThis implements Page {
 
 **严重性**：Major
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 resourceSolver从resourceSolverFactory获得的对象消耗系统资源。尽管在ResourceSolver不再使用时有相应的措施可重新调用这些资源，但通过调用close()方法显式关闭任何打开的resourceSolver对象更加有效。
 
@@ -264,7 +264,7 @@ public void orDoThis(Session session) throws Exception {
 
 **严重性**：Major
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 如 [sling文档](http://sling.apache.org/documentation/the-sling-engine/servlets.html)中所述，按路径绑定servings servlet。路径绑定servlet无法使用标准JCR访问控制，因此需要额外的安全性控制。建议在存储库中创建节点并按资源类型注册servlet，而不是使用路径绑定servlet。
 
@@ -287,7 +287,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 
 **严重性**：未成年人
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 通常情况下，应只记录一次异常。多次记录异常可能会引起混淆，因为不清楚出现异常的次数。导致这种情况的最常见的模式是记录并引发捕获的异常。
 
@@ -332,7 +332,7 @@ public void orDoThis() throws MyCustomException {
 
 **严重性**：未成年人
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 另一个避免的常见模式是记录一条消息，然后立即引发异常。这通常表示在日志文件中会重复出现异常消息。
 
@@ -391,7 +391,7 @@ public void doGet() throws Exception {
 
 **严重性**：未成年人
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 作为最佳实践，日志消息应提供有关应用程序中的位置的上下文信息。尽管上下文也可以通过使用堆栈跟踪来确定，但通常日志消息更易于阅读和理解。因此，在记录异常时，使用例外消息将使用异常消息作为日志消息-例外消息将包含错误的消息，而日志消息应用于告知日志阅读器在异常发生时应用程序所做的操作。例外消息仍将记录；通过指定自己的消息，即可更轻松地理解日志。
 
@@ -427,7 +427,7 @@ public void doThis() {
 
 **严重性**：未成年人
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 顾名思义，Java异常应始终在 *特殊* 情况下使用。因此，在捕获异常时，务必确保日志消息在适当级别记录- WARN或ERROR。这可以确保这些消息在日志中正确显示。
 
@@ -463,7 +463,7 @@ public void doThis() {
 
 **严重性**：未成年人
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 如前所述，在理解日志消息时，上下文至关重要。使用Exception. printStackTrace() **仅** 导致堆栈跟踪输出到标准错误流，从而失去所有上下文。此外，在AEM等多线程应用程序中，如果同时使用此方法打印多个例外，它们的堆栈跟踪可能会重叠，从而产生明显混淆。例外情况应只通过日志记录框架记录。
 
@@ -499,7 +499,7 @@ public void doThis() {
 
 **严重性**：未成年人
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 登录AEM应始终通过日志记录框架(SLF4J)完成。直接输出到标准输出或标准错误流会丢失日志记录框架提供的结构和上下文信息，某些情况下可能会导致性能问题。
 
@@ -535,7 +535,7 @@ public void doThis() {
 
 **严重性**：未成年人
 
-****因为：版本2018.4.0
+**** 因为：版本2018.4.0
 
 通常，以/libs和/apps开头的路径不应被硬编码为路径，因为这些路径最常被存储为相对于Sling搜索路径的路径(默认情况下设置为/libs或应用程序)。使用绝对路径可能会引入细微的瑕疵，这些瑕疵只会在项目生命周期后出现。
 
