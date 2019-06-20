@@ -1,27 +1,32 @@
 ---
-title: 2019.5.0发行说明
-seo-title: 适用于2019.5.0的AEM Cloud Manager发行说明
-description: 请参阅本页获取Cloud Manager版本2019.5.0的信息。
-seo-description: 请参阅本页获取AEM Cloud Manager版本2019.5.0的信息。
+title: 2019.6.0发行说明
+seo-title: 适用于2019.6.0的AEM Cloud Manager发行说明
+description: 请参阅本页获取Cloud Manager版本2019.6.0的信息。
+seo-description: 请参阅本页获取AEM Cloud Manager版本2019.6.0的信息。
 translation-type: tm+mt
-source-git-commit: cab67f6a3358ef2988baaba78e2a41f7edadb323
+source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
 
 ---
 
+# Release Notes for 2019.6.0 {#release-notes-for}
 
-# 2019.5.0发行说明 {#release-notes-for}
+[!UICONTROL Cloud Manager] 2019.6.0版不包含重大功能更改。请按照以下部分了解更多详细信息。
 
-[!UICONTROL Cloud Manager] 2019.5.0版不包含重大功能更改。请按照以下部分了解更多详细信息。
+## Release Date {#release-date}
 
-## 发布日期 {#release-date}
+The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is .
 
-版本2019.5.0 [!UICONTROL Cloud Manager] 的发行日期为2019年月23日。
+## 新增功能 {#whats-new}
 
+* 新的产品更新向导可帮助客户成功执行AEM更新。(链接到产品更新向导页面)
+* 检查内容结构的代码质量规则。(链接到“自定义代码质量规则”页面)
+* Git推送的最大大小已增加至GB。
 
-## 错误修复 {#bug-fixes}
+## Bug Fixes {#bug-fixes}
 
-* SLA报表图表在Y轴中显示重复的值。
-* 某些客户看不到“报告”屏幕。
-* 在少数情况下，无法解析代码质量结果导致管道执行失败。
-* 管道计划步骤中的日历未正确本地化。
-* 次要本地化问题和翻译改进。
+* 在某些情况下，由于先前失败，渠道无法启动。
+
+## 已知问题 {#known-issues}
+
+* 代码质量CSV下载并不总是按照严重程度排序。
+* 如果OSGi配置位于config文件夹下的嵌套文件夹中，则可能由configandInstallShodonlyContainosgiNetwork规则报告虚假位置。
