@@ -9,7 +9,7 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7 e7318 d4
 translation-type: tm+mt
-source-git-commit: 4c1c6786db9b8972f9315bd2f12fc1752881492f
+source-git-commit: ea5bf33dc67c9ce174801f6d905abfc4a21886a2
 
 ---
 
@@ -33,6 +33,10 @@ source-git-commit: 4c1c6786db9b8972f9315bd2f12fc1752881492f
 * **关键** -这些是门户确定的问题，导致管道立即失败。
 * **重要** -这些是门户识别的问题，它导致管道进入暂停状态。部署经理、项目经理或业务所有者可以覆盖问题，在这种情况下，渠道会继续发展，也可以接受问题，在这种情况下，管道会停止失败。
 * **信息** -这些是由门户确定的问题，仅用于信息性目的且不影响管道执行。
+
+>[!NOTE]
+>
+>在“仅代码质量管道”中，代码质量测试门中的重要故障无法覆盖，因为“代码质量测试”步骤是管道的最后一步。
 
 ## Code Quality Testing {#code-quality-testing}
 
