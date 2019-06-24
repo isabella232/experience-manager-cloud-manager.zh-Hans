@@ -8,21 +8,20 @@ contentOwner: jsyal
 products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 discoiquuid: ebcc91a5-be9 e-4684-8146-d88 f4013 d4 d1
 translation-type: tm+mt
-source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
+source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
 
 ---
 
 
 # Evaluation Phase {#evaluation}
 
-Once you click **[!UICONTROL Start Update]**, the first phase in Product Update Wizard is the Evaluation phase. 在此阶段，您可以通过直接从向导访问的模式检测器来评估升级复杂性。在此步骤结束时，您将有权访问评估报告。
+Once you click **[!UICONTROL Start Update]**, the first phase in Product Update wizard is the **[!UICONTROL Evaluation]** phase. 在此阶段，您可以通过直接从向导访问的模式检测器来评估升级复杂性。在此步骤结束时，您将有权访问评估报告。
 
 生成的报告允许您通过检测模式来检查作者实例以实现upgra可变性：
 
 * 违反某些规则，并在升级会影响或覆盖的区域中完成。
 
 * 使用AEM6.x功能或API，它不会在新AEM上向后兼容，并且在升级后可能会断开。
-
 
 这是升级到Adobe Experience Manager(AEM)6.5所涉及的开发工作的评估。
 
@@ -33,7 +32,7 @@ Once you click **[!UICONTROL Start Update]**, the first phase in Product Update 
 
 请按照以下步骤运行评估器：
 
-1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector.
+1. Click on **[!UICONTROL Run Evaluation]** to run the pattern detector.
 
    >[!NOTE]
    >图案检测器可在任何环境上运行。但是，为了提高检测速率并避免对业务关键实例造成任何减慢，云管理器将在创作实例上运行阶段环境。
