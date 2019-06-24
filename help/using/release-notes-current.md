@@ -4,7 +4,7 @@ seo-title: 适用于2019.6.0的AEM Cloud Manager发行说明
 description: 请参阅本页获取Cloud Manager版本2019.6.0的信息。
 seo-description: 请参阅本页获取AEM Cloud Manager版本2019.6.0的信息。
 translation-type: tm+mt
-source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
+source-git-commit: ef6a0a0bdc22e37357304823d6f0a70d84917fa4
 
 ---
 
@@ -19,7 +19,7 @@ The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is June 20, 201
 ## 新增功能 {#whats-new}
 
 * 可帮助客户成功执行AEM更新的新产品更新向导。Refer to [Product Update Wizard](overview-productupdate-wizard.md) to learn more.
-* 检查内容结构的代码质量规则。Refer to [Custom Code Quality Rules](custom-code-quality-rules.md)for more information.
+* 检查内容结构的代码质量规则。Refer to [Custom Code Quality Rules](custom-code-quality-rules.md) for more information.
 * Git推送的最大大小已增加至GB。
 
 ## Bug Fixes {#bug-fixes}
@@ -29,4 +29,4 @@ The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is June 20, 201
 ## 已知问题 {#known-issues}
 
 * 代码质量CSV下载并不总是按照严重程度排序。
-* False positives may be reported by the *ConfigAndInstallShouldOnlyContainOsgiNodes* rule if OSGi configurations are placed in a nested folder under a config folder.
+* *如果* OSGi配置位于 *config* 文件夹下的嵌套文件夹中，则可能由configandInstallShodonlyContainosgiNetwork规则报告虚假位置。
