@@ -8,22 +8,22 @@ contentOwner: jsyal
 products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 discoiquuid: ebcc91a5-be9 e-4684-8146-d88 f4013 d4 d1
 translation-type: tm+mt
-source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
+source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
 
 ---
 
 
-# 简介 {#introduction}
+# Overview to Product Update Wizard {#overview-product-update-wizard}
 
-产品更新向导是可升级到最新Adobe Experience Manager(AEM)6.5的Cloud Manager客户的向导式分步体验。它简化了端到端流程，确保使用Cloud Manager的CI/CD框架和内置的自动化测试遵循AEM最佳做法。
+产品更新向导是为升级到最新Adobe Experience Manager(AEM)6.5的Cloud Manager客户提供的向导式分步体验。它简化了端到端流程，确保使用Cloud Manager的CI/CD框架和内置的自动化测试遵循AEM最佳做法。
 
 向导包含在AEM产品更新期间引导用户的个阶段。五个阶段：
 
-* 评估
-* 修复
-* 执行执行
-* 验证
-* 完成
+* **评估**
+* **修复**
+* **执行执行**
+* **验证**
+* **完成**
 
 >[!NOTE]
 >The current release of Product Update feature in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
