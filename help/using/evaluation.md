@@ -8,16 +8,16 @@ contentOwner: jsyal
 products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 discoiquuid: ebcc91a5-be9 e-4684-8146-d88 f4013 d4 d1
 translation-type: tm+mt
-source-git-commit: 47331787d45fe68144cb90c4b907560fe0079b3c
+source-git-commit: 2fda16bb4826171c993ec07c7ff3e38d1675b9f5
 
 ---
 
 
-# Evaulation Phase {#evaluation}
+# Evaluation Phase {#evaluation}
 
-单击“开始更新”后，产品更新向导中的第一个阶段即为评估阶段。在此阶段，您可以通过直接从向导访问的模式检测器来评估升级复杂性。在此步骤结束时，您将有权访问评估报告。
+Once you click **[!UICONTROL Start Update]**, the first phase in Product Update Wizard is the Evaluation phase. 在此阶段，您可以通过直接从向导访问的模式检测器来评估升级复杂性。在此步骤结束时，您将有权访问评估报告。
 
-生成的报告允许您通过检测使用的模式检查作者实例以实现upgra可变性：
+生成的报告允许您通过检测模式来检查作者实例以实现upgra可变性：
 
 * 违反某些规则，并在升级会影响或覆盖的区域中完成。
 
@@ -33,11 +33,15 @@ source-git-commit: 47331787d45fe68144cb90c4b907560fe0079b3c
 
 请按照以下步骤运行评估器：
 
-1. Select [!UICONTROL Run evaluation] to run the pattern detector. 图案检测器可在任何环境上运行。但是，为了提高检测速率并避免对业务关键实例造成任何减慢，云管理器将在创作实例上运行阶段环境。
+1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector. 图案检测器可在任何环境上运行。但是，为了提高检测速率并避免对业务关键实例造成任何减慢，云管理器将在创作实例上运行阶段环境。
+
+![](assets/Run-Evaluation.png)
 
 1. 向导将通知您操作的状态。You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
 Once the report is generated, you can select [!UICONTROL Download] to save a copy of the evaluation report.
+
+![](assets/Evaluation-1.png)
 
 >[!NOTE]
 >The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
