@@ -8,14 +8,15 @@ contentOwner: jsyal
 products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 discoiquuid: ebcc91a5-be9 e-4684-8146-d88 f4013 d4 d1
 translation-type: tm+mt
-source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
+source-git-commit: 9e33b90818c686f0b7aacaf0955c3f2eba05488f
 
 ---
 
 
 # Evaluation Phase {#evaluation}
 
-Once you click **[!UICONTROL Start Update]**, the first phase in Product Update wizard is the **[!UICONTROL Evaluation]** phase. 在此阶段，您可以通过直接从向导访问的模式检测器来评估升级复杂性。在此步骤结束时，您将有权访问评估报告。
+The first phase in the Product Update wizard is **[!UICONTROL Evaluation]** phase.
+您可以在此通过直接从向导访问的图案检测器来评估升级复杂性。在此步骤结束时，您将有权访问评估报告。
 
 生成的报告允许您通过检测模式来检查作者实例以实现upgra可变性：
 
@@ -30,9 +31,9 @@ Once you click **[!UICONTROL Start Update]**, the first phase in Product Update 
 
 ## Running the Evaluator {#running-evaluator}
 
-请按照以下步骤运行评估器：
+请按照以下步骤生成评估报告：
 
-1. Click on **[!UICONTROL Run Evaluation]** to run the pattern detector.
+1. **[!UICONTROL Run Evaluation]** 单击。
 
    >[!NOTE]
    >图案检测器可在任何环境上运行。但是，为了提高检测速率并避免对业务关键实例造成任何减慢，云管理器将在创作实例上运行阶段环境。
@@ -41,13 +42,10 @@ Once you click **[!UICONTROL Start Update]**, the first phase in Product Update 
 
 1. 向导将通知您操作的状态。You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
-   Once the report is generated, you can click on **[!UICONTROL Download report]** to save a copy of the evaluation report.
+   Once the report is generated, you can click on **[!UICONTROL Download report]** to save a copy.
 
    ![](assets/Evaluation-1.png)
 
-   此外，您还可以查看更新后的脉冲通知，作为状态更新。
-
-   ![](assets/Evaluation-pulse-notification.png)
 
 >[!NOTE]
->The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
+>The current release of Product Update wizard in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
