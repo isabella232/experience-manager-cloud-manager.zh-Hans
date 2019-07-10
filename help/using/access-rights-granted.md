@@ -1,26 +1,28 @@
 ---
 title: 授予权限
 seo-title: 访问AEM Cloud Manager中授予的权限
-description: 请阅读本页了解有关Adobe ID和[！UICCONTROL Experience Cloud]资源。
-seo-description: 请阅读本页了解有关Adobe ID和AEM[！UICCONTROL Experience Cloud]资源。
+description: 了解有关Adobe ID和Experience Cloud资源的更多信息。
+seo-description: 请参阅本页以了解有关Adobe ID和AEM Experience Cloud资源的更多信息。
 uuid: 9aa90a99-f049-422e-9e06-b00 b843 ed98 b
 products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: requirements
 discoiquuid: 072dbc1b-e608-4b1 f-b0 e8-0e4 f88 c8 ad12
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 0f29b3f9cf4bd53d0e57c7793fe05cd3afeea5e1
 
 ---
 
 
-# 授予权限 {#access-rights-granted}
+# Access Rights Granted {#access-rights-granted}
 
-## 用户标识类型 {#user-identity-types}
+## User Identity Types {#user-identity-types}
 
-作为入门流程的一部分，Adobe将在Adobe标识管理系统(IMS)中为您的公司创建一个 **组织** 标识符，其中所有用户及其权限均可管理。每个需要成为该组织成员并且将获得对任何 [!UICONTROL Experience Cloud] 服务的访问权限的用户都需要具有自己的 **Adobe ID**。要开始使用Adobe ID，请访问 [管理Adobe标识类型](https://helpx.adobe.com/enterprise/using/identity.html) ，了解有关如何使用某个可用身份类型获取Adobe ID的详细说明。
+As part of the on-boarding process, Adobe will create an **Organization** identifier for your company in the Adobe Identity Management System (IMS), where all your users and their permissions can be managed. Each user, who needs to be a member of this organization, and will be granted access to any of the [!UICONTROL Experience Cloud] services, will need to have their own **Adobe ID**.
 
-### 用户和角色 {#users-and-roles}
+To get started with an Adobe ID, please visit [Manage Adobe Identity Types](https://helpx.adobe.com/enterprise/using/identity.html) for detailed instructions on how to obtain an Adobe ID using one of the identity types available.
 
-Adobe为您的公司创建了一个组织后，您的指定管理员将被添加为该组织的第一个成员。默认情况下，管理员将获得管理员权限并分配 [!UICONTROL AEM Managed Services] 产品****和一个或多 [!UICONTROL Cloud Manager]**个产品配置文件**。请访问 [“添加用户和角色](setting-up-users-and-roles.md) ”，进一步了解如何使用Admin Console配置和管理团队用户。
+### Users and Roles {#users-and-roles}
 
-授予这些权限后，您的管理员现在可以通过单点登录(使用Adobe ID)访问 [!UICONTROL Experience Cloud] 服务、登录AEM云环境和使用 [!UICONTROL Cloud Manager]。
+Adobe为您的公司创建了一个组织后，您的指定管理员将被添加为该组织的第一个成员。The administrator will be granted the administrator permissions by default, and assigned the [!UICONTROL AEM Managed Services] P **roduct**, and one or more [!UICONTROL Cloud Manager] **Product Profiles**. Please visit [Add Users and Roles](setting-up-users-and-roles.md) to learn more about how to configure and manage your team users using the Admin Console.
+
+With these rights granted, your administrator is now set up with a single sign-on (using Adobe ID) to access the [!UICONTROL Experience Cloud] services, login to your AEM cloud environments, and use [!UICONTROL Cloud Manager].
