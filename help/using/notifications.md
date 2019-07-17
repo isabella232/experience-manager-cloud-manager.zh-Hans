@@ -9,20 +9,20 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: ef574c8-47d9-404b-8e9c-9c6716c1f49a
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
 
 ---
 
 
 # 通知 {#notifications}
 
-[!UICONTROL Cloud Manager] 允许用户在渠道开始和完成(成功或未成功)以及达到 **“实时批准”** 和 **“计划** 步骤”时接收通知。这些通知通过Adobe [!UICONTROL Experience Cloud] Notification System发送。
+[!UICONTROL Cloud Manager] 允许用户在生产部署开始时接收通知，并在达到 **“实时批准”** 和 **“计划** 步骤”步骤时接收通知。These notifications are sent through the Adobe [!UICONTROL Experience Cloud] Notification system.
 
 >[!NOTE]
 >
 >批准和计划通知只会发送给业务所有者、计划经理和部署管理者角色中的用户。
 
-通知显示在用户界面 [!UICONTROL Cloud Manager] (用户界面)和整个Adobe [!UICONTROL Experience Cloud]的提要栏中。
+The notifications appear in a sidebar in [!UICONTROL Cloud Manager] UI (User Interface) and throughout the Adobe [!UICONTROL Experience Cloud].
 
 单击标题中的铃图标以打开提要栏并查看通知，如下图所示：
 
@@ -32,24 +32,24 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ![](assets/screen_shot_2018-07-20at91406pm.png)
 
-此外，单击其中一个通知，然后单击 **查看详细信息** 以访问渠道执行详细信息页面。
+Additionally, click on one of these notifications and then click on **View Details** to access the Pipeline execution details page.
 
 ![](assets/screen_shot_2018-08-14at43503pm.png)
 
-## 电子邮件通知 {#email-notifications}
+## Email Notifications {#email-notifications}
 
-默认情况下，通知在Adobe [!UICONTROL Experience Cloud] 解决方案的Web用户界面中可用。个人用户还可以选择通过电子邮件立即或摘要发送这些通知。
+By default, notifications are available in the web user interface across Adobe [!UICONTROL Experience Cloud] solutions. 个人用户还可以选择通过电子邮件立即或摘要发送这些通知。
 
 单击通知提要栏底部的齿轮图标，如下图所示：
 
 ![](assets/image2018-7-12_12-8-19.png)
 
-此操作会将用户带到Adobe的“通知首选项”屏幕 [!UICONTROL Experience Cloud]。
+This will take the user to the Notifications Preferences screen in Adobe [!UICONTROL Experience Cloud].
 
 用户可以打开电子邮件通知(可选)选择他们希望通过电子邮件接收的通知类型。
 
 >[!NOTE]
 >
->您还可以从Adobe启用摘要 [!UICONTROL Experience Cloud]，如下所示：
+>You can also enable digesting from the Adobe [!UICONTROL Experience Cloud], as shown below:
 
 ![](assets/image2018-7-12_12-10-51.png)
