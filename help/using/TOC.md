@@ -5,7 +5,7 @@ archtype: administrator
 user-guide-title: Experience Manager Cloud Manager帮助
 index: n
 translation-type: tm+mt
-source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
+source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
 
 ---
 
@@ -43,7 +43,8 @@ source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
 + 发行说明 {#release-notes}
-   + [当前发行说明(2019.6.0)](release-notes-current.md)
+   + [当前发行说明(2019.7.0)](release-notes-current.md)
+   + [2019.6.0发行说明](release-notes-2019-6-0.md)
    + [2019.5.0发行说明](release-notes-2019-5-0.md)
    + [2019.4.0发行说明](release-notes-2019-4-0.md)
    + [2019.3.0发行说明](release-notes-2019-3-0.md)
