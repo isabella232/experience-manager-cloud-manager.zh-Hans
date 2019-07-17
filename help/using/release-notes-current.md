@@ -1,32 +1,30 @@
 ---
-title: 2019.6.0发行说明
-seo-title: 适用于2019.6.0的AEM Cloud Manager发行说明
-description: 请参阅本页获取Cloud Manager版本2019.6.0的信息。
-seo-description: 请参阅本页获取AEM Cloud Manager版本2019.6.0的信息。
+title: 2019.7.0发行说明
+seo-title: 适用于2019.7.0的AEM Cloud Manager发行说明
+description: 请参阅本页获取Cloud Manager版本2019.7.0的信息。
+seo-description: 请参阅本页获取AEM Cloud Manager版本2019.7.0的信息。
 translation-type: tm+mt
-source-git-commit: 7373f674b9804c83fad0871a74ef85280ea24962
+source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
 
 ---
 
-# Release Notes for 2019.6.0 {#release-notes-for}
+# Release Notes for 2019.7.0 {#release-notes-for}
 
-[!UICONTROL Cloud Manager] 2019.6.0版本新增了代码质量规则和新的产品更新向导。请按照以下部分了解更多详细信息。
+[!UICONTROL Cloud Manager] 2019.7.0版本新增了代码质量规则和新的产品更新向导。请按照以下部分了解更多详细信息。
 
 ## Release Date {#release-date}
 
-The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is June 20, 2019 .
+The Release Date for [!UICONTROL Cloud Manager] Version 2019.7.0 is July 18, 2019 .
 
 ## 新增功能 {#whats-new}
 
-* 可帮助客户成功执行AEM更新的新产品更新向导。Refer to [Product Update Wizard](overview-productupdate-wizard.md) to learn more.
-* 检查内容结构的代码质量规则。Refer to [Custom Code Quality Rules](custom-code-quality-rules.md) for more information.
-* Git推送的最大大小已增加至GB。
+现在，在生产部署开始时发送Experience Cloud通知。
 
 ## Bug Fixes {#bug-fixes}
 
-* 在某些情况下，由于先前失败，渠道无法启动。
-
-## 已知问题 {#known-issues}
-
-* 代码质量CSV下载并不总是按照严重程度排序。
-* *如果* OSGi配置位于 *config* 文件夹下的嵌套文件夹中，则可能由configandInstallShodonlyContainosgiNetwork规则报告虚假位置。
+* 在某些情况下，云管理器会对Python和PHP文件执行静态代码分析。
+* 包含FileVault InstallWorks的包在代码质量步骤中不一致。
+* 在某些组合中，代码质量问题未得到一致排序。
+* 管道执行页面上存在一些视觉问题。
+* 由于基础云基础结构中的资源限制，性能测试步骤可能会在某些时间随机失败。
+* 由于联网问题，某些客户构建将失败。
