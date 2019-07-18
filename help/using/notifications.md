@@ -9,14 +9,14 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: ef574c8-47d9-404b-8e9c-9c6716c1f49a
 translation-type: tm+mt
-source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
+source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
 ---
 
 
 # 通知 {#notifications}
 
-[!UICONTROL Cloud Manager] 允许用户在生产部署开始时接收通知，并在达到 **“实时批准”** 和 **“计划** 步骤”步骤时接收通知。These notifications are sent through the Adobe [!UICONTROL Experience Cloud] Notification system.
+[!UICONTROL Cloud Manager] 允许用户在渠道开始和完成(成功或未成功)、生产部署开始时以及达到 **“实时批准”** 和 **“计划** 步骤”时接收通知。These notifications are sent through the Adobe [!UICONTROL Experience Cloud] Notification system.
 
 >[!NOTE]
 >
