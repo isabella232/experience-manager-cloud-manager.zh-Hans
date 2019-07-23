@@ -9,7 +9,7 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: 快速入门
 discoiquuid: 76c1a8e4-d66 f-4a3 b-8c0 c-b80 c9 e17700 e
 translation-type: tm+mt
-source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
+source-git-commit: b39fc865e3c34052fb94b223d9eebc0fce3495d2
 
 ---
 
@@ -104,6 +104,7 @@ Cloud Manager builds and tests your code using a specialized build runtime **Env
    * graphicsmagick
    * 如果您需要其他软件包，则需要通过客户成功工程师(CSE)请求这些包。
 
+* 每个构建都在纯净的环境中完成；构建容器不在执行之间保持任何状态。
 * Maven is always run with the command: *mvn --batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * Maven is configured at a system level with a settings.xml file which automatically includes the public Adobe **Artifact** repository. (Refer to [Adobe Public Maven Repository](https://repo.adobe.com/) for more details).
 
