@@ -9,18 +9,18 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: 快速入门
 discoiquuid: 76c1a8e4-d66 f-4a3 b-8c0 c-b80 c9 e17700 e
 translation-type: tm+mt
-source-git-commit: b39fc865e3c34052fb94b223d9eebc0fce3495d2
+source-git-commit: 81f4e0b3b31a8be1f0620b70442b0268159e4ec0
 
 ---
 
 
-# Create an AEM Application Project {#create-an-aem-application-project}
+# 创建AEM应用程序项目 {#create-an-aem-application-project}
 
-## Using Wizard to Create an AEM Application Project {#using-wizard-to-create-an-aem-application-project}
+## 使用向导创建AEM应用程序项目 {#using-wizard-to-create-an-aem-application-project}
 
 客户在将客户停放在Cloud Manager上后，将提供一个空的git存储库。当前Adobe Managed Services(AMS)客户(或者迁移到AMS的预制AEM客户)通常已经在Git(或其他版本控制系统)中拥有他们的项目代码，并会将其项目导入Cloud Manager Git存储库。但是，新客户没有现有项目。
 
-为帮助新客户开始工作，Cloud Manger现在能够创建最低的AEM项目作为起点。This process is based on the [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+为帮助新客户开始工作，Cloud Manger现在能够创建最低的AEM项目作为起点。此过程基于AEM [**Project Architype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
 
 <!-- 
 
@@ -34,47 +34,47 @@ Last Modified Date: 2018-10-08T12:52:50.071-0400
 
 请按照以下步骤在Cloud Manager中创建AEM应用程序项目：
 
-1. Once you log in to Cloud Manager and the basic program setup is complete, a special call to action card will be shown on the **Overview** screen, if the repository is empty.
+1. 登录Cloud Manager并且基本程序设置完成后，如果存储库为空，将在 **概述** 屏幕上显示一个对操作卡的特殊调用。
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-1. Click **Create** to navigate to the **Pipeline Setup** screen.
+1. 单击 **创建** 以导航 **到渠道设置** 屏幕。
 
    ![](assets/image2018-10-3_14-30-22.png)
 
-1. Click **Create to** open a dialog box, which allows the user to provide the parameters required by the AEM Project Archetype. 在默认表单中，对话框要求有两个值：
+1. 单击 **创建** 以打开一个对话框，该对话框允许用户提供AEM项目类型所需的参数。在默认表单中，对话框要求有两个值：
 
    * **标题** -默认情况下，此设置设置为 *计划名称*
 
    * **新分支名称** -默认情况下此名称 *为主分支*
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
-   对话框中有一个抽屉，可通过单击对话框底部的手柄打开该抽屉。在其展开的表单中，对话框显示了Architype的所有配置参数。Many of these parameters have default values which are generated based on the **Title**.
+   对话框中有一个抽屉，可通过单击对话框底部的手柄打开该抽屉。在其展开的表单中，对话框显示了Architype的所有配置参数。其中很多参数都具有根据 **标题生成的默认值**。
 
    ![](assets/screen_shot_2018-10-08at60032am.png)
 
    >[!NOTE]
    >
-   >For example, if the **Title** is ***We.Finance***, the Base Maven Artifact Id parameter is generated as ***com.wefinance***. 如果需要，可以更改这些值。
+   >例如 **，如果标题** 为 ***We. Finance***，则Base Maven Articacic ID参数生成 ***com. webance***。如果需要，可以更改这些值。
    >
    >
-   >For example, you can change from the generated ***value com.wefinance*** to ***net.wefinance***.
+   >例如，您可以从生成 ***的value com. webance*** 更改 ***为net. webance***。
 
-1. Click **Create** in the preceding step to create the starter project by using the archetype and commit to the named git branch. 完成后，您可以设置渠道。
+1. 在上一步中单击 **创建** ，以使用原型类型创建起动项目，并提交给指定的git分支。完成后，您可以设置渠道。
 
-## Setting up your Project {#setting-up-your-project}
+## 设置项目 {#setting-up-your-project}
 
-### Modifying Project Setup Details {#modifying-project-setup-details}
+### 修改项目设置详细信息 {#modifying-project-setup-details}
 
 为了通过Cloud Manager成功构建和部署，现有AEM项目需要遵守一些基本规则：
 
 * 必须使用Apache Maven构建项目。
-* There must be a *pom.xml* file in the root of the Git repository. This *pom.xml* file can refer to as many submodules (which in turn may have other submodules, etc.) 如有必要。
+* Git存储库的根目录中必须有一 *个pom.xml* 文件。此 *pom.xml* 文件可以引用任意多个子模块(反过来可能有其他子模块等)。如有必要。
 
-* You can add references to additional Maven artifact repositories in your *pom.xml* files. 但是，不支持访问受密码保护或受网络保护的伪像库。
-* Deployable content packages are discovered by scanning for content package *zip* files which are contained in a directory named *target*. 任意数量的子模块都可能生成内容包。
+* 您可以在 *pom.xml* 文件中添加对其他Maven伪像存储库的引用。但是，不支持访问受密码保护或受网络保护的伪像库。
+* 可部署内容包是通过扫描包含在名为目标的目录中的内容包 *zip* 文件来发现的 **。任意数量的子模块都可能生成内容包。
 
-* Deployable Dispatcher artifacts are discovered by scanning for *zip* files (again, contained in a directory named *target*) which have directories named *conf* and *conf.d*.
+* 可部署调度程序伪像通过扫描 *名为* target的目录(包含在名为 *conf*** 和 *conf. d*&#x200B;的目录中再次扫描)来发现。
 
 * 如果有多个内容包，则不保证包部署的顺序。如果需要特定订单，则可使用内容包依赖关系定义订单。
 
@@ -88,11 +88,11 @@ Last Modified Date: 2018-10-08T09:20:10.106-0400
 
  -->
 
-## Build Environment Details {#build-environment-details}
+## 构建环境详细信息 {#build-environment-details}
 
-Cloud Manager builds and tests your code using a specialized build runtime **Environment**. 此环境具有以下属性：
+Cloud Manager使用专用构建环境构建和测试代码。此环境具有以下属性：
 
-* 构建环境基于Linux。
+* 构建环境基于Linux，源自Ubuntu18.04。
 * Apache Maven3.6.0已安装。
 * 安装的Java版本为Oracle JDK8u202。
 * 安装了一些其他系统包，它们是必需的：
@@ -102,17 +102,17 @@ Cloud Manager builds and tests your code using a specialized build runtime **Env
    * libpng
    * imagemagick
    * graphicsmagick
-   * 如果您需要其他软件包，则需要通过客户成功工程师(CSE)请求这些包。
 
+* 其他包可能在构建时安装，如下所述 [](#installing-additional-system-packages)。
 * 每个构建都在纯净的环境中完成；构建容器不在执行之间保持任何状态。
-* Maven is always run with the command: *mvn --batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
-* Maven is configured at a system level with a settings.xml file which automatically includes the public Adobe **Artifact** repository. (Refer to [Adobe Public Maven Repository](https://repo.adobe.com/) for more details).
+* Maven始终使用命令运行： *mvn—批处理模式整洁的org. jacoo：accoco-maven-plugin：prepare-Agent包*
+* Maven是在系统级别上配置的，settings.xml文件会自动包含公共Adobe **Artic伪** 存储库。(有关更多详细信息，请参阅 [Adobe Public Maven存储库](https://repo.adobe.com/) )。
 
-## Activating Maven Profiles in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
+## 在Cloud Manager中激活Maven配置文件 {#activating-maven-profiles-in-cloud-manager}
 
-某些情况下，在Cloud Manager内部运行时，您可能需要稍微改变构建过程，而不是在开发人员工作站上运行时略有改变。For these cases, [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) can be used to define how the build should be different in different environments, including Cloud Manager.
+某些情况下，在Cloud Manager内部运行时，您可能需要稍微改变构建过程，而不是在开发人员工作站上运行时略有改变。在这些情况下 [，Maven配置文件](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) 可用于定义在不同环境中(包括云管理器)的构建方式。
 
-Activation of a Maven Profile inside the Cloud Manager build environment should be done by looking for the presence of an environment variable named `CM_BUILD`. 此变量始终在Cloud Manager构建环境中设置。相反，只有在Cloud Manager构建环境之外才可以使用该配置文件来查找此变量的缺憾。
+在Cloud Manager内部构建环境中激活Maven配置文件，应考虑是否存在名为环境变量 `CM_BUILD`。此变量始终在Cloud Manager构建环境中设置。相反，只有在Cloud Manager构建环境之外才可以使用该配置文件来查找此变量的缺憾。
 
 例如，如果您希望仅在Cloud Manager中运行该构建时输出简单消息，您将执行以下操作：
 
@@ -150,7 +150,7 @@ Activation of a Maven Profile inside the Cloud Manager build environment should 
 
 >[!NOTE]
 >
->To test this profile on a developer workstation, you can either enable it on the command line (with `-PcmBuild`) or in your Integrated Development Environment (IDE).
+>要在开发人员工作站上测试此配置文件，您可以在命令行(带有 `-PcmBuild`)或集成开发环境(IDE)中启用该配置文件。
 
 如果您只想输出在Cloud Manager之外运行的简单消息，您应该执行以下操作：
 
@@ -210,6 +210,67 @@ Activation of a Maven Profile inside the Cloud Manager build environment should 
 >
 >环境变量名称只能包含字母数字和下划线(_)字符。按惯例，这些名称应为大写。
 
-## Develop your Code Based on Best Practices {#develop-your-code-based-on-best-practices}
+## 安装其他系统包 {#installing-additional-system-packages}
 
-Adobe Engineering and Consulting teams have developed a [comprehensive set of best practices for AEM developers](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
+一些构建需要安装其他系统包才能完全正常运行。例如，构建可能调用Python或拼音脚本，因此需要安装相应的语言解释器。可以通过调用 [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) 调用APT来完成此操作。此执行通常应包装在特定于Cloud Manager的Maven配置文件中。例如，要安装python：
+
+```xml
+        <profile>
+            <id>install-python</id>
+            <activation>
+                <property>
+                        <name>env.CM_BUILD</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.6.0</version>
+                        <executions>
+                            <execution>
+                                <id>apt-get-update</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>apt-get</executable>
+                                    <arguments>
+                                        <argument>update</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>install-python</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>apt-get</executable>
+                                    <arguments>
+                                        <argument>install</argument>
+                                        <argument>-y</argument>
+                                        <argument>--no-install-recommends</argument>
+                                        <argument>python</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+```
+
+此相同的技术可用于安装语言特定包，即使用 `gem` RubyGems或 `pip` Python Packages。
+
+>[!NOTE]
+>
+>以这种方式安装系统包不会将 **其** 安装在运行Adobe Experience Manager的运行时环境中。如果您需要在AEM环境中安装系统包，请与客户成功工程师(CSE)联系。
+
+## 根据最佳实践开发代码 {#develop-your-code-based-on-best-practices}
+
+Adobe工程和咨询团队为AEM开发人员制定了 [一整套最佳实践](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html)。
