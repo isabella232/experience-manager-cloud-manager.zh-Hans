@@ -1,16 +1,15 @@
 ---
-cloud: experience-cloud
-product: adobe experience manager cloud manager
-archtype: administrator
+product: adobe experience manager
+sub-product: adobe experience manager cloud manager
+archetype: administrator
 user-guide-title: Experience Manager Cloud Manager帮助
-index: n
 translation-type: tm+mt
-source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
+source-git-commit: c5f26158bd4268b866a0726fbd63009a779ddcf1
 
 ---
 
 
-# Experience Manager Help {#using}
+# Experience Manager帮助 {#using}
 
 + [云管理器简介](introduction-to-cloud-manager.md)
 + 概述 {#overview}
@@ -19,7 +18,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [CI/CD管线](ci-cd-pipeline.md)
    + [安全性和隐私](security-and-privacy.md)
    + [帮助资源](help-resources.md)
-+ What is Required {#requirements}
++ 必需内容 {#requirements}
    + [授予权限](access-rights-granted.md)
    + [源代码存储库](source-code-repository.md)
    + [添加用户和角色](setting-up-users-and-roles.md)
@@ -30,7 +29,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [创建AEM应用程序项目](create-an-application-project.md)
    + [配置您的发行分支](configure-your-release-branches.md)
    + [管理调度程序配置](dispatcher-configurations.md)
-+ How to Use {#how-to-use}
++ 如何使用 {#how-to-use}
    + [配置CI/CD管线](configuring-pipeline.md)
    + [部署代码](deploying-code.md)
    + [了解测试结果](understand-your-test-results.md)
@@ -39,7 +38,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [Cloud Manager API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [通知](notifications.md)
    + [自定义代码质量规则](custom-code-quality-rules.md)
-+ Product Update Wizard {#product-update-wizard}
++ 产品更新向导 {#product-update-wizard}
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
 + 发行说明 {#release-notes}
