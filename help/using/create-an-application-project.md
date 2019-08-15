@@ -9,7 +9,7 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: 快速入门
 discoiquuid: 76c1a8e4-d66 f-4a3 b-8c0 c-b80 c9 e17700 e
 translation-type: tm+mt
-source-git-commit: 81f4e0b3b31a8be1f0620b70442b0268159e4ec0
+source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
 
 ---
 
@@ -270,6 +270,43 @@ Cloud Manager使用专用构建环境构建和测试代码。此环境具有以�
 >[!NOTE]
 >
 >以这种方式安装系统包不会将 **其** 安装在运行Adobe Experience Manager的运行时环境中。如果您需要在AEM环境中安装系统包，请与客户成功工程师(CSE)联系。
+
+## 跳过内容包 {#skipping-content-packages}
+
+在Cloud Manager中，构建可能会生成任意数量的内容包。
+由于各种原因，可能需要产品包而不是部署内容包。这可能很有用，例如，构建仅用于测试的内容包或将通过构建过程中的另一个步骤重新封装的内容包(即另一个包的子包)。
+
+为了适应这些情况，云管理器将在构建的内容包的属性中查找名为 ***CloudManagerTarget*** 的属性。如果此属性设置为无，则将跳过和未部署包。设置此属性的机制取决于生成内容包的方式。例如，使用filevault-maven-plugin可以配置如下插件：
+
+```xml
+        <plugin>
+            <groupId>org.apache.jackrabbit</groupId>
+            <artifactId>filevault-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+                <properties>
+                    <cloudManagerTarget>none</cloudManagerTarget>
+                </properties>
+        <!-- other configuration -->
+            </configuration>
+        </plugin>
+```
+
+使用content-package-maven-plugin类似于：
+
+```xml
+        <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+                <properties>
+                    <cloudManagerTarget>none</cloudManagerTarget>
+                </properties>
+        <!-- other configuration -->
+            </configuration>
+        </plugin>
+```
 
 ## 根据最佳实践开发代码 {#develop-your-code-based-on-best-practices}
 
