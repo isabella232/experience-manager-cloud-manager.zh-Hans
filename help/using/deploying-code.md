@@ -9,7 +9,7 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: 832a4647-7b83-4a9d-b373-30FE16092 b15
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
@@ -41,25 +41,27 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
    >
    >此外，您还可以查看各种部署流程中的步骤，方法是查看日志或查看结果，以了解测试条件。
 
-   **Stage Deployment**包括以下步骤：
+   **Stage Deployment**&#x200B;包括以下步骤：
 
    * Build&amp; Unit Testing
    * 代码扫描
    * 部署到Stage
-   ![](assets/Stage_Testing.png)
+   ![](assets/Stage_Deployment1.png)
 
    **Stage Testing**，涉及以下步骤：
 
    * 安全测试
    * 性能测试
-   ![](assets/Stage_Deployment.png)
+   ![](assets/Stage_Testing1.png)
 
-   **Production Deployment**包括以下步骤：
+   **Production Deployment**&#x200B;包括以下步骤：
 
    * **Approval for Approval** (If enabled)
    * **计划生产部署(** 如果启用)
    * **CSE支持** (如果启用)
    * **部署到生产**
+   ![](assets/Prod_Deployment1.png)
+
    >[!NOTE]
    >
    >配置渠道时启用 **计划生产部署** 。
