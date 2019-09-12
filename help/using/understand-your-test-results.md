@@ -9,7 +9,7 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7 e7318 d4
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
 
@@ -114,12 +114,12 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 | 默认口令已更改 | 默认登录帐户 | 关键 |
 | Sling default GET servlet受DOS攻击保护。 | Sling Get Servlet | 关键 |
 | Dispatcher正确过滤请求 | CQ Dispatcher 配置 | 关键 |
-| Adobe Granite HTML库管理器正确配置 | CQ HTML 库管理器配置 | 重要事项 |
 | 正确配置Sling Java Script处理程序 | Sling Java 脚本处理程序 | 关键 |
 | 正确配置Sling JSP脚本处理程序 | Sling JSP脚本处理程序 | 关键 |
-| 为防止CSRF攻击，配置了sling引介过滤器 | Sling 引用过滤器 | 重要事项 |
 | SSL配置正确 | SSL 配置 | 关键 |
 | 找不到明显安全的用户配置文件策略 | 用户配置文件默认访问 | 关键 |
+| 为防止CSRF攻击，配置了sling引介过滤器 | Sling 引用过滤器 | 重要事项 |
+| Adobe Granite HTML库管理器正确配置 | CQ HTML 库管理器配置 | 重要事项 |
 | 禁用CRXDE支持包 | CRXDE 支持 | 重要事项 |
 | 禁用了Sling Davex捆绑和servlet | DavEx 运行状况检查 | 重要事项 |
 | 未安装示例内容 | 示例内容包 | 重要事项 |
