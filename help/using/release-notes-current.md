@@ -4,17 +4,17 @@ seo-title: 适用于2019.9.0的AEM Cloud Manager发行说明
 description: 请参阅本页获取Cloud Manager版本2019.9.0的信息。
 seo-description: 请参阅本页获取AEM Cloud Manager版本2019.9.0的信息。
 translation-type: tm+mt
-source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
+source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
 
 # 2019.9.0发行说明 {#release-notes-for}
 
-[!UICONTROL Cloud Manager] 2019.9.0版增加了Sling Referrer Filter Health检查和监控图表的更新。
+[!UICONTROL Cloud Manager] 2019.9.0版更新了安全测试标准、添加可下载的监视图表并修复了一些客户报告的可用性问题。
 
 ## 发布日期 {#release-date}
 
-版本2019.9.0 [!UICONTROL Cloud Manager] 的发布日期为2019年月11日。
+版本2019.9.0 [!UICONTROL Cloud Manager] 的发布日期为2019年月12日。
 
 ## 新增功能 {#whats-new}
 
@@ -38,4 +38,4 @@ source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
 
 ## 已知问题 {#known-issues}
 
-在Safari中无法下载监视图。
+* 在Safari中无法下载监视图。
