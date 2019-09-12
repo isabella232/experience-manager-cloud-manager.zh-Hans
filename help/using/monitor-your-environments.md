@@ -4,7 +4,7 @@ seo-title: 监控您的环境
 description: 'null'
 seo-description: 可查看本页，了解Cloud Manager中的系统监控，这是通过观察环境中的各个实例并跟踪每个实例的各种指标来完成的。
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
@@ -61,12 +61,12 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 单个图将显示数据随时间的状态和图表以及阈值。如果显示多个实例，则每个实例的数据将位于单独的系列上。
 
-![](assets/System-Monitoring3.png)
+![](assets/Monitoring_Graphs1.png)
 
 通过单击图例中的系列，可以在图形上隐藏单个系列。
 例如，如果单击警告阈值序列，则只会看到关键阈值。
 
-![](assets/System_Monitoring4.png)
+![](assets/Monitoring_Graphs2.png)
 
 ### 指标定义 {#metric-definitions}
 
