@@ -10,7 +10,7 @@ topic-tags: using
 content-type: 引用
 discoiquuid: ba6c763a-b78 a-439e-8c40-367203a719 b3
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
 
 ---
 
@@ -53,8 +53,8 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 1. 此时会显示 **“设置管道** ”屏幕。
 
-   通过三步向导，您可以设置 **分支**、 **环境**和 **测试** 环境。
-选择您的Git分支，然后单击 **下**一步。
+   通过三步向导，您可以设置 **分支**、 **环境**&#x200B;和 **测试** 环境。
+选择您的Git分支，然后单击 **下**&#x200B;一步。
 
    >[!NOTE]
    >
@@ -118,7 +118,7 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
    ![](assets/image2018-8-7_14-53-24.png)
 
-1. 输入路径，从 **类型**中选择操作，然后单击 **添加**。每个环境最多可指定100个路径。添加路径后，单击 **“应用**”。
+1. 输入路径，从 **类型**&#x200B;中选择操作，然后单击 **添加**。每个环境最多可指定100个路径。添加路径后，单击 **“应用**”。
 
    ![](assets/image2018-8-7_14-58-11.png)
 
@@ -161,9 +161,9 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
    >[!NOTE]
    >
-   >此外，您还可以在设置渠道后使用UI **中的“管道设置** ”拼贴编辑相同的设置 [!UICONTROL Cloud Manager] 。
+   >此外，您还可以在设置渠道后使用UI中 **的“生产管道设置** ”拼贴编辑相同的设置 [!UICONTROL Cloud Manager] 。
 
-   ![](assets/Configuring_Pipeline-Settings.png)
+   ![](assets/Prod-Pipeline-Settings-Dialog.png)
 
 ## 非生产和代码质量渠道
 
