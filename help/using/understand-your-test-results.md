@@ -9,18 +9,18 @@ products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7 e7318 d4
 translation-type: tm+mt
-source-git-commit: e8db535b09f0b273de2d3908a85176f38d307c80
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
 
-# Understand your Test Results {#understand-your-test-results}
+# 了解测试结果 {#understand-your-test-results}
 
 **在渠道** 流程中，会捕获许多指标，并与由业务所有者定义的主要性能指标(KPI)或Adobe Managed Services设置的标准进行比较。
 
 它们使用本节中定义的三层分组系统进行报告。
 
-## Three-Tier Gates while Running a Pipeline  {#three-tier-gates-while-running-a-pipeline}
+## 运行管道时三层门 {#three-tier-gates-while-running-a-pipeline}
 
 管道中有三个入口：
 
@@ -38,16 +38,16 @@ source-git-commit: e8db535b09f0b273de2d3908a85176f38d307c80
 >
 >在“仅代码质量管道”中，代码质量测试门中的重要故障无法覆盖，因为“代码质量测试”步骤是管道的最后一步。
 
-## Code Quality Testing {#code-quality-testing}
+## 代码质量测试 {#code-quality-testing}
 
 作为管道的一部分，扫描源代码以确保部署符合特定质量条件。目前，这是通过使用OAKPAL的SonarQue和内容包级检查实现的。有超过100个规则结合了一般的Java规则和AEM特定规则。下表总结了测试标准的等级：
 
 | 名称 | 定义 | 类别 | 失败阈值 |
 |--- |--- |--- |--- |
-| 安全等级 | A = 0 Vulnerability <br/>B = at least 1 Minor Vulnerability<br/> C = at least 1 Major Vulnerability <br/>D = at least 1 Critical Vulnerability <br/>E = at least 1 Blocker Vulnerability | 关键 | &lt; B |
-| 可靠性等级 | A = 0 Bug <br/>B = at least 1 Minor Bug <br/>C = at least 1 Major Bug <br/>D = at least 1 Critical Bug E = at least 1 Blocker Bug | 重要事项 | &lt; C |
-| 可维护性等级 | Outstanding remediation cost for code smells is: <br/><ul><li>&lt;=5%的时间已进入应用程序，评级为A </li><li>到10%之间的评级为B </li><li>在11%到20%之间，评级为C </li><li>到50%之间的评级为D</li><li>50%以上的内容是E</li></ul> | 重要事项 | &lt; A |
-| 范围 | A mix of unit test line coverage and condition coverage using this formula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>where: CT = conditions that have been evaluated to &#39;true&#39; at least once while running unit tests <br/>CF = conditions that have been evaluated to &#39;false&#39; at least once while running unit tests <br/>LC = covered lines = lines_to_cover - uncovered_lines <br/><br/> B = total number of conditions <br/>EL = total number of executable lines (lines_to_cover) | 重要事项 | &lt; 50% |
+| 安全等级 | A=漏洞 <br/>B=至少个次要漏洞<br/> C=至少个主要漏洞 <br/>D=至少个关键漏洞 <br/>E=至少个阻止程序漏洞 | 关键 | &lt; B |
+| 可靠性等级 | A= bug <br/>B=至少个次要错误 <br/>C=至少个严重缺陷 <br/>D=至少个关键缺陷E=至少个阻止程序缺陷 | 重要事项 | &lt; C |
+| 可维护性等级 | 代码的优异补习成本是： <br/><ul><li>&lt;=5%的时间已进入应用程序，评级为A </li><li>到10%之间的评级为B </li><li>在11%到20%之间，评级为C </li><li>到50%之间的评级为D</li><li>50%以上的内容是E</li></ul> | 重要事项 | &lt; A |
+| 范围 | 使用以下公式组合单元测试线覆盖和条件覆盖： <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`<br/>其中：CT=条件，在运行单元测试CF=条件至少在运行单元测试 <br/>CF=的条件下达到“false”至少一次，运行单元测试 <br/>LC= winds_ to_ cover-未覆盖的_ line <br/><br/> B=可执行行的总数量 <br/>(直线_ to_ cover) | 重要事项 | &lt; 50% |
 | 跳过的单元测试 | 跳过的单元测试数。 | 信息 | &gt; 1 |
 | 开放期刊 | 常见问题类型-漏洞、错误和代码消息 | 信息 | &gt; 1 |
 | 重复的线条 | 重复块中涉及的行数。<br/>要将一段代码视为重复的代码块： <br/><ul><li>**非Java项目：**</li><li>至少应该有100个连续的和重复的令牌。</li><li>这些令牌至少应在以下位置传播： </li><li>COBOL的30行代码 </li><li>ABAP20行代码 </li><li>其他语言的10行代码</li><li>**Java项目：**</li><li> 令牌和行数至少应有10个连续和重复的语句。</li></ul> <br/>检测重复项时忽略缩进中以及字符串文本中的差异。 | 信息 | &gt; 1% |
@@ -55,19 +55,19 @@ source-git-commit: e8db535b09f0b273de2d3908a85176f38d307c80
 
 >[!NOTE]
 >
->Refer to [Metric Definitions](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) for more detailed definitions.
+>有关更多详细定义，请参阅 [量度定义](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) 。
 
-You can download the list of rules here [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx)
+您可以在此处 [下载规则列表](/help/using/assets/CodeQuality-Rules-new.xlsx)
 
 >[!NOTE]
 >
->To learn more about the custom code quality rules executed by [!UICONTROL Cloud Manager], please refer to [Custom Code Quality Rules](custom-code-quality-rules.md).
+>要进一步了解执行的自定义代码质量规则， [!UICONTROL Cloud Manager]请参阅 [自定义代码质量规则](custom-code-quality-rules.md)。
 
-### Dealing with False Positives {#dealing-with-false-positives}
+### 处理虚假位置 {#dealing-with-false-positives}
 
 质量扫描过程并非完美无缺，有时会错误地识别问题。这称为“false active”。
 
-In these cases, the source code can be annotated with the standard Java `@SuppressWarnings` annotation specifying the rule ID as the annotation attribute. 例如，一个常见的问题是，sonarQue规则检测硬编码密码会对如何识别硬编码密码很有挑战性。
+在这些情况下，可以使用标准Java `@SuppressWarnings` 注释注释源代码，该注释指定规则ID作为注释属性。例如，一个常见的问题是，sonarQue规则检测硬编码密码会对如何识别硬编码密码很有挑战性。
 
 要查看特定示例，此代码在AEM项目中比较常见，该项目具有连接到某些外部服务的代码：
 
@@ -95,13 +95,13 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 >[!NOTE]
 >
->While it is a best practice to make the `@SuppressWarnings` annotation as specific as possible, i.e. annotate only the specific statement or block causing the issue, it is possible to annotate at a class level.
+>尽管最佳实践是尽可能地使 `@SuppressWarnings` 注释变得特定，但只需注释特定的语句或块就可以在类级别添加注释。
 
-## Security Testing {#security-testing}
+## 安全测试 {#security-testing}
 
 [!UICONTROL Cloud Manager] 在部署之后运行现有 ***AEM Security Heath检查*** ，并通过UI报告状态。结果是从环境中的所有AEM实例聚集的。
 
-If any of the **Instances** report a failure for a given health check, the entire **Environment** fails that health check. 与Code Quality和Performance Testing一样，这些健康检查按类别组织并使用三层分级系统进行报告。唯一的区别是在安全测试方面没有阈值。所有健康检查只能通过或失败。
+如果任何 **实例** 报告给定健康检查失败， **整个环境** 将失败该健康检查。与Code Quality和Performance Testing一样，这些健康检查按类别组织并使用三层分级系统进行报告。唯一的区别是在安全测试方面没有阈值。所有健康检查只能通过或失败。
 
 下表列出了当前检查：
 
@@ -114,10 +114,10 @@ If any of the **Instances** report a failure for a given health check, the entir
 | 默认口令已更改 | 默认登录帐户 | 关键 |
 | Sling default GET servlet受DOS攻击保护。 | Sling Get Servlet | 关键 |
 | Dispatcher正确过滤请求 | CQ Dispatcher 配置 | 关键 |
-| Adobe Granite HTML库管理器正确配置 | CQ HTML 库管理器配置 | 关键 |
+| Adobe Granite HTML库管理器正确配置 | CQ HTML 库管理器配置 | 重要事项 |
 | 正确配置Sling Java Script处理程序 | Sling Java 脚本处理程序 | 关键 |
 | 正确配置Sling JSP脚本处理程序 | Sling JSP脚本处理程序 | 关键 |
-| 为防止CSRF攻击，配置了sling引介过滤器 | Sling 引用过滤器 | 关键 |
+| 为防止CSRF攻击，配置了sling引介过滤器 | Sling 引用过滤器 | 重要事项 |
 | SSL配置正确 | SSL 配置 | 关键 |
 | 找不到明显安全的用户配置文件策略 | 用户配置文件默认访问 | 关键 |
 | 禁用CRXDE支持包 | CRXDE 支持 | 重要事项 |
@@ -128,17 +128,17 @@ If any of the **Instances** report a failure for a given health check, the entir
 | Web服务器配置为防止点击劫持 | Web 服务器配置 | 重要事项 |
 | 复制未使用“管理员”用户 | 复制和转移用户 | 信息 |
 
-## Performance Testing {#performance-testing}
+## 性能测试 {#performance-testing}
 
 *通过30分钟*[!UICONTROL Cloud Manager] 测试实现性能测试。
 
 在管道设置过程中，部署管理器可以决定流向每个桶的流量。
 
-You can learn more about bucket controls, from [Configure your CI/CD Pipeline](configuring-pipeline.md).
+您可以从 [配置CI/CD管线中了解有关桶控件的更多信息](configuring-pipeline.md)。
 
 >[!NOTE]
 >
->To setup your program and define your KPIs, see [Setup your Program](setting-up-program.md).
+>要设置程序并定义KPI，请参阅 [设置程序](setting-up-program.md)。
 
 下表总结了使用三层分级系统的性能测试矩阵：
 
@@ -154,7 +154,7 @@ You can learn more about bucket controls, from [Configure your CI/CD Pipeline](c
 | 网络带宽利用率 | 重要事项 | &gt;= 90% |
 | 每分钟请求数 | 信息 | &lt; 6000 |
 
-### Performance Testing Results Graphs {#performance-testing-results-graphs}
+### 性能测试结果图表 {#performance-testing-results-graphs}
 
 新的图形和下载选项已添加到“性能测试结果”对话框中。
 
