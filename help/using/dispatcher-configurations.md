@@ -2,54 +2,54 @@
 title: 管理调度程序配置
 seo-title: 管理调度程序配置
 description: 'null'
-seo-description: 请参阅本页以了解配置调度程序。
-uuid: 3ex8ca3-5241-4811-87fd-3284a8012eda
+seo-description: 可查看本页以了解有关配置调度程序的信息。
+uuid: 3ecd8ca3-5241-4811-87fd-3284a8012eda
 contentOwner: jsyal
-products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
-topic-tags: 快速入门
-discoiquuid: 8888dd80-d908-464e-927d-779db1 a832 a4
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: 入门
+discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 66ed6bdc8a98c77464c7324806cb5d2cb81da469
 
 ---
 
 
 # 管理调度程序配置 {#manage-your-dispatcher-configurations}
 
-## 使用云管理器部署调度程序配置文件 {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
+## 使用Cloud manager部署调度程序配置文件 {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
 
-除了普通AEM内容包之外，Cloud Manager还可以部署Web服务器和调度程序配置文件，假定它们存储在 **Git存储库**中。
+Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文件存储在 **Git存储库中**)，以及常规AEM内容包。
 
-要利用此功能，Maven构建应生成一个压缩文件，其中至少包含两个目录 ***- conf*** 和 ***conf. d***。可使用maven-assembly-plugin生成此zip文件。通过使用内置 [向导生成的云管理器生成的项目](create-an-application-project.md) 具有正确的Maven项目结构，作为项目创建的一部分创建。
+要利用此功能，Maven构建应生成一个zip文件，其中至少包含两个目录- ***conf******和conf.d***。 可以使用maven-assembly-plugin生成此zip文件。 由Cloud manager使用内置向导生成的项目 [](create-an-application-project.md) ，在项目创建过程中会创建正确的Maven项目结构。
 
-部署到调度程序 **实例**后，这些目录的内容将覆盖调度程序实例上这些目录的内容。由于Web服务器和调度程序配置文件经常需要环境特定的信息，因此，要使此功能能够正确使用，您首先需要与客户成功工程师(CSE)一起将这些环境变量提取到 ***/etc/sysconfig/httpd***中。 [](create-an-application-project.md)
+部署到调度程序实 **例后**，这些目录的内容将覆盖Dispatcher实例中这些目录的内容。 由于Web服务器和Dispatcher配置文件经常需要特定于环境的信息，为了使此功能正确使用，您首先需要与客户成功工程师(CSE)合作，将这些环境变量解压到 ***/etc/sysconfig/httpd中***。 [](create-an-application-project.md)
 
 ### 配置调度程序的步骤 {#steps-for-configuring-dispatcher}
 
-请按照以下步骤完成配置Dispatcher中的初始进程：
+按照以下步骤完成配置Dispatcher的初始过程：
 
-1. 从CSE获取当前生产配置文件。
-1. 删除硬编码的环境特定数据(例如，发布渲染器IP)并替换为变量。
-1. 为每个目标调度程序定义关键值对中所需的变量，并请求您的CSE添加到每个实例上的 ***/etc/sysconfig/httpd*** 。
-1. 在舞台环境中测试更新的配置，然后请求CSE部署到生产。
+1. 从您的CSE获取当前生产配置文件。
+1. 删除硬编码的环境特定数据（例如，发布渲染器IP）并替换为变量。
+1. 在每个目标调度程序的键值对中定义所需的变量，并请求您的CSE在每个实例上添加到 ***/etc/sysconfig/httpd*** 。
+1. 在您的舞台环境中测试更新的配置，然后请求CSE部署到生产。
 1. 将文件提交 **到Git存储库**。
 
-1. 通过Cloud Manager进行部署。
+1. 通过Cloud manager进行部署。
 
 >[!NOTE]
 >
->迁移Dispatcher和Web服务器配置到 **Git存储库** 可在Cloud Manager内进行，但也可以在以后的时间点完成。
+>将Dispatcher和Web服务器配置迁移到 **Git Repository** (Git Repository)可在Cloud Manager入门期间完成，但也可在以后的时间点完成。
 
 ### 示例 {#example}
 
-具体的文件和目录结构可能会因项目的具体情况而异，但本示例应提供一个关于如何构建项目以包括Apache和调度程序配置的可靠指南。
+具体的文件和目录结构可能因项目的具体情况而异，但本示例应提供如何将项目结构化以包括Apache和调度程序配置的具体指南。
 
-1. 创建名为 `dispatcher`的子目录。
+1. 创建名为的子目录 `dispatcher`。
 
    >[!NOTE]
-   在此可随意使用任何名称，但在此步骤中创建的目录名称必须与步骤中使用的名称相同。
+   请随时在此处使用任何名称，但此步骤中创建的目录名称必须与步骤6中使用的名称相同。
 
-1. 此子目录将包含一个Maven模块，它使用Maven Assembly插件构建Dispatcher zip文件。要开始此操作，请在 `dispatcher` 目录中创建一个 `pom.xml` 包含此内容的文件，更改父引用、Articfactid和必要的名称。
+1. 此子目录将包含一个Maven模块，该模块使用Maven Assembly插件构建Dispatcher zip文件。 要启动此项，请在目 `dispatcher` 录中创建包含此内容 `pom.xml` 的文件，并根据需要更改父引用、artifactId和名称。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -90,9 +90,9 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
    ```
 
    >[!NOTE]
-   正如在步骤中一样，在此处，Articfactid和name可为其他值； `dispatcher` 此处仅有一个用于简单的示例。
+   与第1步一样，此处的artifactId和名称可以是其他值（如果需要）;这里 `dispatcher` 只有一个简单化的例子。
 
-1. Maven Assembly插件需要一个 *描述符* 来定义zip文件的创建方式。要创建此描述符，请在使用此内容命名的 `dispatcher` 子目录中创建一个文件(再次 `assembly.xml`在子目录中)。请注意，此文件名在上面的 `pom.xml` 文件第26行上被引用。
+1. Maven Assembly Plugin需要一个描述 *符* ，以定义如何创建zip文件。 要创建此描述符，请创建一个使用此内容命名的文件( `dispatcher` 同样在子目 `assembly.xml`录中)。 请注意，此文件名在上述文件的第26行 `pom.xml` 中引用。
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -115,8 +115,8 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
    </assembly>
    ```
 
-1. 现在，在调度程序子目录内创建一个名为 `src` (如上面的集合描述符上的集合描述符中所引用)的子目录以存储实际Apache和调度程序配置。在此 `src` 目录中，创建名为 `conf``conf.d`、 `conf.dispatcher.d`和 `conf.modules.d`的目录。
-1. 现在，您可以使用配置文件填充 `conf`、 `conf.d`和 `conf.dispatcher.d``conf.modules.d` 目录。例如，默认配置由这些文件和符号链接组成。
+1. 现在，在调度程序子目 `src` 录中创建一个名为（如上面第11行的程序集描述符中引用的子目录），以存储实际的Apache和Dispatcher配置。 在此目 `src` 录中，创建名 `conf`为、 `conf.d`、 `conf.dispatcher.d`和的目录 `conf.modules.d`。
+1. 现在，您可以用 `conf`配置文 `conf.d`件填 `conf.dispatcher.d`充、和 `conf.modules.d` 目录。 例如，默认配置由这些文件和符号链接组成。
 
    ```
    dispatcher
@@ -191,9 +191,9 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
            └── 02-dispatcher.conf
    ```
 
-1. 最后，在项目根目录下的pom.xml文件中，添加一个 `<module>` 元素以包含调度程序模块。
+1. 最后，在项目根目录的pom.xml文件中，添加一个元素以包 `<module>` 含调度程序模块。
 
-   例如，如果您现有的模块列表为
+   例如，如果您的现有模块列表
 
    ```xml
        <modules>
@@ -203,7 +203,7 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
        </modules>
    ```
 
-   您应该将其更改为
+   您应将其更改为
 
    ```xml
        <modules>
@@ -215,9 +215,9 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
    ```
 
    >[!NOTE]
-   如第步中所述， `<module>` 元素的值 **必须** 与创建的目录名称匹配。
+   如第1步中所述，元素的值必 `<module>` 须 **与创建的** 目录名匹配。
 
-1. 最后，要测试，请在项目根目录中运行mvn干净包。您应当在输出中看到这样的线
+1. 最后，要进行测试，请在项目根目录中运行mvn清理包。 输出中应该看到这样的行
 
    ```
    [INFO] --- maven-assembly-plugin:3.1.0:single (default) @ dispatcher ---
