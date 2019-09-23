@@ -1,13 +1,13 @@
 ---
 title: 通知
 seo-title: 通知
-description: 用户如何接收AEM Cloud Manager中的通知
-seo-description: 查看本页，了解用户在AEM Cloud Manager中成功或未成功完成、成功或未成功完成时接收通知的方式。
-uuid: 73e4bb80-36c1-4408-bdd-1ac5328359 d1
+description: 用户如何在AEM Cloud Manager中接收通知
+seo-description: 可查看本页以了解在AEM Cloud Manager中管道开始和完成（成功或未成功）时用户如何接收通知。
+uuid: 73e4bb80-36c1-4408-bdbd-1ac5328359d1
 contentOwner: jsyal
-products: SG_ EXPERIENCE MANAGER/CLEDNAGNANAGER
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
-discoiquuid: ef574c8-47d9-404b-8e9c-9c6716c1f49a
+discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
 translation-type: tm+mt
 source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
@@ -16,40 +16,40 @@ source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
 # 通知 {#notifications}
 
-[!UICONTROL Cloud Manager] 允许用户在渠道开始和完成(成功或未成功)、生产部署开始时以及达到 **“实时批准”** 和 **“计划** 步骤”时接收通知。These notifications are sent through the Adobe [!UICONTROL Experience Cloud] Notification system.
+[!UICONTROL Cloud Manager] 允许用户在生产部署开始时以及到达 **Go-Live Approval** （开始审批）和Scheduled（计划）步骤时，在管道开始和完成（成功或失败）时接收 **** 通知。 这些通知通过Adobe通知系统 [!UICONTROL Experience Cloud] 发送。
 
 >[!NOTE]
 >
->批准和计划通知只会发送给业务所有者、计划经理和部署管理者角色中的用户。
+>批准和计划通知仅发送给业务所有者、计划管理者和部署管理者角色中的用户。
 
-The notifications appear in a sidebar in [!UICONTROL Cloud Manager] UI (User Interface) and throughout the Adobe [!UICONTROL Experience Cloud].
+通知显示在 [!UICONTROL Cloud Manager] UI（用户界面）的提要栏中以及整个Adobe中 [!UICONTROL Experience Cloud]。
 
 单击标题中的铃图标以打开提要栏并查看通知，如下图所示：
 
 ![](assets/image2018-7-12_11-52-40.png)
 
-提要栏会列出最新通知。
+提要栏列出最新通知。
 
 ![](assets/screen_shot_2018-07-20at91406pm.png)
 
-Additionally, click on one of these notifications and then click on **View Details** to access the Pipeline execution details page.
+此外，单击其中一个通知，然后单击“查看详细信 **息”** ，以访问“管道执行详细信息”页面。
 
 ![](assets/screen_shot_2018-08-14at43503pm.png)
 
-## Email Notifications {#email-notifications}
+## 电子邮件通知 {#email-notifications}
 
-By default, notifications are available in the web user interface across Adobe [!UICONTROL Experience Cloud] solutions. 个人用户还可以选择通过电子邮件立即或摘要发送这些通知。
+默认情况下，通知在Adobe解决方案的Web用户界面中可 [!UICONTROL Experience Cloud] 用。 个人用户还可以选择通过电子邮件发送这些通知，无论是立即发送还是摘要发送。
 
 单击通知提要栏底部的齿轮图标，如下图所示：
 
 ![](assets/image2018-7-12_12-8-19.png)
 
-This will take the user to the Notifications Preferences screen in Adobe [!UICONTROL Experience Cloud].
+这将使用户转到Adobe的“通知首选项”屏幕 [!UICONTROL Experience Cloud]。
 
-用户可以打开电子邮件通知(可选)选择他们希望通过电子邮件接收的通知类型。
+用户可以打开电子邮件通知，并（可选）选择要通过电子邮件接收的通知的类型。
 
 >[!NOTE]
 >
->You can also enable digesting from the Adobe [!UICONTROL Experience Cloud], as shown below:
+>您还可以从Adobe中启用消 [!UICONTROL Experience Cloud]化功能，如下所示：
 
 ![](assets/image2018-7-12_12-10-51.png)
