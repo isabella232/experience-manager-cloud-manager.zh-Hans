@@ -2,7 +2,7 @@
 title: 了解测试结果
 seo-title: 了解测试结果
 description: 'null'
-seo-description: 可查看本页以了解在Cloud manager中运行管道、代码扫描、性能和安全测试时三层门以验证您的程序。
+seo-description: 可查看本页，了解在Cloud manager中运行管道、代码扫描、性能和安全测试时三层门以验证您的程序。
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
@@ -44,13 +44,13 @@ source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 | 名称 | 定义 | 类别 | 失败阈值 |
 |--- |--- |--- |--- |
-| 安全等级 | A = 0漏洞 <br/>B =至少1个次要漏洞<br/> C =至少1个主要漏洞 <br/>D =至少1个关键漏洞 <br/>E =至少1个阻止程序漏洞 | 关键 | &lt; B |
-| 可靠性等级 | A = 0错误 <br/>B =至少1个次要错误 <br/>C =至少1个主要错误 <br/>D =至少1个关键错误E =至少1个阻止程序错误 | 重要信息 | &lt; C |
-| 可维护性等级 | 代码气味的未支付补救成本是： <br/><ul><li>&lt;=5%已进入应用程序的时间，评级为A </li><li>评级在6%到10%之间为B </li><li>在11%到20%的评级是C </li><li>21%到50%的评级是D</li><li>超过50%的东西</li></ul> | 重要信息 | &lt; A |
+| 安全等级 | A = 0漏洞 <br/>B =至少1个次要漏洞<br/> C =至少1个主要漏洞 <br/>D =至少1个关键漏洞 <br/>E =至少1个阻止程序漏洞 | Critical | &lt; B |
+| Reliability Rating | A = 0 Bug <br/>B = at least 1 Minor Bug <br/>C = at least 1 Major Bug <br/>D = at least 1 Critical Bug E = at least 1 Blocker Bug | 重要信息 | &lt; C |
+| Maintainability Rating | Outstanding remediation cost for code smells is: <br/><ul><li>&lt;=5% of the time that has already gone into the application, the rating is A </li><li>between 6 to 10% the rating is a B </li><li>between 11 to 20% the rating is a C </li><li>between 21 to 50% the rating is a D</li><li>anything over 50% is an E</li></ul> | 重要信息 | &lt; A |
 | 范围 | 单位测试线覆盖率和条件覆盖率的组合，使用以下公式：其 <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`<br/>中：CT =在运行单元测试时已至少评估为“true”的条件，而运行单元测试时 <br/>CF =已评估为“false”的条件至少评估一次， <br/>LC =覆盖行= lines_to_cover - unvered_lines <br/><br/> B =条件 <br/>EL =可执行行的总数(lines_to_cover) | 重要信息 | &lt; 50% |
-| 跳过的单元测试 | 跳过的单元测试数。 | 信息 | &gt; 1 |
-| 未解决问题 | 总体问题类型——漏洞、错误和代码气味 | 信息 | &gt; 1 |
-| 复制行 | 重复块中涉及的行数。 <br/>对于要视为重复的代码块： <br/><ul><li>**非Java项目：**</li><li>至少应有100个连续的和重复的令牌。</li><li>这些令牌至少应该在以下位置传播： </li><li>COBOL的30行代码 </li><li>ABAP的20行代码 </li><li>10行代码（适用于其他语言）</li><li>**Java项目：**</li><li> 无论令牌和行的数量如何，都至少应有10个连续和重复的语句。</li></ul> <br/>在检测重复时，会忽略缩进和字符串文本中的差异。 | 信息 | &gt; 1% |
+| Skipped Unit Tests | Number of skipped unit tests. | 信息 | &gt; 1 |
+| Open Issues | Overall issue types - Vulnerabilities, Bugs, and Code Smells | 信息 | &gt; 1 |
+| Duplicated Lines | 重复块中涉及的行数。 <br/>对于要视为重复的代码块： <br/><ul><li>**非Java项目：**</li><li>至少应有100个连续的和重复的令牌。</li><li>这些令牌至少应该在以下位置传播： </li><li>COBOL的30行代码 </li><li>ABAP的20行代码 </li><li>10行代码（适用于其他语言）</li><li>**Java项目：**</li><li> 无论令牌和行的数量如何，都至少应有10个连续和重复的语句。</li></ul> <br/>在检测重复时，会忽略缩进和字符串文本中的差异。 | 信息 | &gt; 1% |
 
 
 >[!NOTE]
@@ -101,30 +101,30 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 [!UICONTROL Cloud Manager] 在部署之后 ***，在舞台上运行现有的*** AEM安全性健康检查并通过UI报告状态。 结果会从环境中的所有AEM实例中聚集。
 
-如果任何实例 **报告给定的运行状况检查** ，则整个环境将 **** 失败该运行状况检查。 与“代码质量和性能测试”一样，这些运行状况检查会被组织到类别中，并使用三层门控系统进行报告。 唯一的区别是在安全测试中没有阈值。 所有的健康检查都是通过或失败的。
+如果任何实例 **报告给定的运行状况检查** ，则整个环境将 **** 失败该运行状况检查。 As with Code Quality and Performance Testing, these health checks are organized into categories and reported using the three-tier gating system. The only distinction is that there is no threshold in the case of security testing. All the health checks are simply pass or fail.
 
-下表列出了当前检查：
+The following table lists the current checks:
 
-| **名称** | **运行状况检查实施** | **类别** |
+| **名称** | **Health Check Implementation** | **类别** |
 |---|---|---|
-| 反序列化防火墙连接API就绪状态为可接受状态 | 反序列化防火墙连接 API 已准备就绪 | 关键 |
-| 反序列化防火墙功能正常 | 反序列化防火墙运行正常 | 关键 |
-| 反序列化防火墙已加载 | 反序列化防火墙已加载 | 关键 |
-| AuthorizableNodeName实现不在节点名称／路径中显示可授权ID。 | 可授权的节点名称生成 | 关键 |
-| 默认密码已更改 | 默认登录帐户 | 关键 |
-| Sling默认GET servlet受DOS攻击的保护。 | Sling Get Servlet | 关键 |
+| Deserialization firewall Attach API Readiness is in an acceptable state | 反序列化防火墙连接 API 已准备就绪 | Critical |
+| Deserialization firewall is functional | 反序列化防火墙运行正常 | Critical |
+| Deserialization firewall is loaded | 反序列化防火墙已加载 | Critical |
+| AuthorizableNodeName implementation does not expose authorizable ID in the node name/path. | 可授权的节点名称生成 | Critical |
+| 默认密码已更改 | 默认登录帐户 | Critical |
+| Sling default GET servlet is protected from DOS attacks. | Sling Get Servlet | 关键 |
 | 调度程序正确筛选请求 | CQ Dispatcher 配置 | 关键 |
 | Sling java脚本处理程序已正确配置 | Sling Java 脚本处理程序 | 关键 |
 | Sling JSP脚本处理程序已正确配置 | Sling JSP脚本处理程序 | 关键 |
 | SSL配置正确 | SSL 配置 | 关键 |
 | 未发现明显不安全的用户配置文件策略 | 用户配置文件默认访问 | 关键 |
-| 配置Sling Referrer过滤器以防止CSRF攻击 | Sling 引用过滤器 | 重要信息 |
-| Adobe Granite HTML Library manager已正确配置 | CQ HTML 库管理器配置 | 重要信息 |
-| CRXDE支持包被禁用 | CRXDE 支持 | 重要信息 |
-| Sling DavEx捆绑和servlet被禁用 | DavEx 运行状况检查 | 重要信息 |
-| 未安装示例内容 | 示例内容包 | 重要信息 |
-| WCM请求过滤器和WCM调试过滤器都被禁用 | WCM 筛选器配置 | 重要信息 |
-| Sling webDAV包和Servlet已正确配置 | WebDAV 运行状况检查 | 重要信息 |
+| 配置Sling Referrer过滤器以防止CSRF攻击 | Sling 引用过滤器 | Important |
+| Adobe Granite HTML Library manager已正确配置 | CQ HTML 库管理器配置 | Important |
+| CRXDE支持包被禁用 | CRXDE 支持 | Important |
+| Sling DavEx捆绑和servlet被禁用 | DavEx 运行状况检查 | Important |
+| 未安装示例内容 | 示例内容包 | Important |
+| WCM请求过滤器和WCM调试过滤器都被禁用 | WCM 筛选器配置 | Important |
+| Sling webDAV包和Servlet已正确配置 | WebDAV 运行状况检查 | Important |
 | Web服务器配置为防止点击劫持 | Web 服务器配置 | 重要信息 |
 | 复制未使用“admin”用户 | 复制和转移用户 | 信息 |
 
@@ -144,23 +144,23 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 | **量度** | **类别** | **失败阈值** |
 |---|---|---|
-| 页面请求错误率% | 关键 | &gt;= 2% |
-| CPU利用率 | 关键 | &gt;= 80% |
-| 磁盘IO等待时间 | 关键 | &gt;= 50% |
-| 95百分点响应时间 | 重要信息 | &gt;=计划级KPI |
-| 峰值响应时间 | 重要信息 | &gt;= 18秒 |
-| 每分钟的页面查看次数 | 重要信息 | &lt;计划级别KPI |
-| 磁盘带宽利用 | 重要信息 | &gt;= 90% |
-| 网络带宽利用 | 重要信息 | &gt;= 90% |
-| 每分钟请求数 | 信息 | &lt; 6000 |
+| 页面请求错误率% | Critical | &gt;= 2% |
+| CPU利用率 | Critical | &gt;= 80% |
+| Disk IO Wait Time | Critical | &gt;= 50% |
+| 95 Percentile Response Time | 重要信息 | &gt;= Program-level KPI |
+| Peak Response Time | 重要信息 | &gt;= 18秒 |
+| Page Views Per Minute | 重要信息 | &lt; Program-level KPI |
+| Disk Bandwidth Utilization | 重要信息 | &gt;= 90% |
+| Network Bandwidth Utilization | 重要信息 | &gt;= 90% |
+| Requests Per Minute | 信息 | &lt; 6000 |
 
 ### 性能测试结果图 {#performance-testing-results-graphs}
 
-新的图形和下载选项已添加到“性能测试结果”对话框。
+New graphs and download options have been added to the Performance Test Results dialog.
 
 打开“性能测试”对话框时，可以展开度量面板以显示图形、提供下载链接或同时显示两者。
 
-对 [!UICONTROL Cloud Manager] 于2018.7.0版，此功能可用于以下指标：
+For  Release 2018.7.0, this functionality is available for the following metrics:[!UICONTROL Cloud Manager]
 
 * **CPU利用率**
    * 测试期间的CPU使用率图。
