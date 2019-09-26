@@ -44,9 +44,9 @@ source-git-commit: 98395c4413b1b6bfbb3a565388ffa32dc3880dff
 
 ## 已知问题 {#known-issues}
 
-* When monitoring data is refreshed, any hidden series are unhidden.
-* Customers wishing to view their existing SLA reports will need to manually navigate until the next release.
+* 刷新监视数据时，任何隐藏的系列都会取消隐藏。
+* 希望查看其现有SLA报告的客户需要手动导航到下一版本。
 
-   To formulate this URL, follow the pattern (), for example, if URL for your Experience Cloud is (), then your SLA reports URL is ().`https://<Experience Cloud URL>/content/mac/<Experience Cloud Tenant>/managedservices/sla.html``https://weretailprod.experiencecloud.adobe.com``https://weretailprod.experiencecloud.adobe.com/content/mac/weretailprod/managedservices/sla/html`
+   要制定此URL，请遵循模式(`https://<Experience Cloud URL>/content/mac/<Experience Cloud Tenant>/managedservices/sla.html`)，例如，如果Experience cloud的URL是(`https://weretailprod.experiencecloud.adobe.com`)，则您的SLA报告URL是(`https://weretailprod.experiencecloud.adobe.com/content/mac/weretailprod/managedservices/sla/html`)。
 
-   This is expected to be resolved in the next release with the availability of SLA reports inside [!UICONTROL Cloud Manager].
+   在下一版本中，SLA报告内部可用性将会解决此问题 [!UICONTROL Cloud Manager]。
