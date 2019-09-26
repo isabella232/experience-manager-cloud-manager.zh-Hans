@@ -1,25 +1,25 @@
 ---
-title: Monitor your Environments
-seo-title: Monitor your Environments
+title: 监视环境
+seo-title: 监视环境
 description: 'null'
-seo-description: Follow this page to learn about System Monitoring in Cloud Manager that is done by observing the individual instances within an environment and tracking a variety of metrics for each instance.
+seo-description: 可查看本页以了解Cloud Manager中的系统监视，具体方法是观察某个环境中的各个实例并跟踪每个实例的各种指标。
 translation-type: tm+mt
 source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
 
-# System Monitoring {#system-monitoring}
+# 系统监控 {#system-monitoring}
 
-System Monitoring in  is done by observing the individual instances within an environment and tracking a variety of metrics for each instance. [!UICONTROL Cloud Manager]Each metric has two defined thresholds – a warning threshold and a critical threshold.****
+在中进行系 [!UICONTROL Cloud Manager] 统监视的方法是，观察环境中的各个实例并跟踪每个实例的各种度量。 每个度量都有两个定义的阈值- *警告阈值* 和严 *重阈值*。
 
-If a metric is over its critical threshold, it is considered to be in a critical state; if a metric is over its warning threshold (but below its critical threshold), it is considered to be in a warning state. The thresholds are set by Adobe Managed Services and can be visualized in . [!UICONTROL Cloud Manager]In most cases, thresholds are consistent between customers, but there are cases where Adobe Managed Services will modify thresholds to match specific customer requirements. 有关阈值的问题应提交给您的客户成功工程师(CSE)。
+如果一个指标超过其临界阈值，则被视为处于临界状态；如果度量超过其警告阈值（但低于其关键阈值），则被视为处于警告状态。 阈值由Adobe Managed services设置，可在中进行可视化 [!UICONTROL Cloud Manager]。 在大多数情况下，客户之间的阈值是一致的，但在某些情况下，Adobe Managed services将修改阈值以符合特定客户要求。 有关阈值的问题应提交给您的客户成功工程师(CSE)。
 
 ## 导航到系统监视 {#navigating-system-monitoring}
 
 导航到“系统监视”功能可通过两种方式完成。
 
-1. Log in to Managed Services - Programs landing page.****
+1. 登录到 **Managed Services —— 程序登录页** 。
 
    ![](assets/ProgramLanding.png)
 
@@ -81,34 +81,34 @@ If a metric is over its critical threshold, it is considered to be in a critical
 
 **网络**
 
-* CQ Port Check: The response time in seconds to access the AEM or Dispatcher port. 创作、发布和调度程序有不同的指标。
+* CQ端口检查：访问AEM或Dispatcher端口的响应时间（以秒为单位）。 创作、发布和调度程序有不同的指标。
 
 **存储**
 
-* Disk Space: The used disk space (in Megabytes) for each mount point on the host. There are different metrics for each mount point. At minimum, you will see metrics for "/" and "/mnt", but additional mount point metrics may be available depending on the specific instance configuration.
-* Folder Size: AEM Segment Store: The used disk space (in Gigabytes) for the AEM Segment Store.
+* 磁盘空间：主机上每个装载点的已用磁盘空间（以兆字节为单位）。 每个装载点有不同的度量。 您至少会看到“/”和“/mnt”的度量，但根据特定实例配置，可能会有其他装载点度量。
+* 文件夹大小：AEM区段商店：AEM区段存储的已用磁盘空间（以GB为单位）。
 
 **应用程序**
 
-* Replication Agent: The time, in seconds, for a test replication event. There are separate metrics for each replication agent.
-* Dispatcher Flush: The number of items currently in the dispatcher flush queue.
+* 复制代理：测试复制事件的时间（以秒为单位）。 每个复制代理都有单独的度量。
+* 调度程序刷新：调度程序刷新队列中当前的项目数。
 
-## SLA Reporting {#sla-reporting}
+## SLA报告 {#sla-reporting}
 
-Customers are able to see the performance of their production AEM environment relative to their contracted Service Level Agreement (SLA). This is available through a sub-menu on the Reports screen.
-For example, the graph below shows the monthly SLA attainment for 2018.
+客户能够查看其生产AEM环境相对于其合同服务级别协议(SLA)的性能。 可通过“报告”屏幕上的子菜单执行此操作。
+例如，下图显示了2018年的月度SLA水平。
 
 ![](assets/sla-reporting1.png)
 
-As with the system monitoring graphs, rolling over a data point shows the specific values for that month.
+与系统监视图一样，滚动数据点会显示该月的特定值。
 
 ![](assets/sla-reporting2.png)
 
-The Event Analysis section under this graph shows the set of incidents which occurred for the program during the currently selected year. 每个事件都有一个时间范围、一个原因和一组注释。
+此图下的“事件分析”部分显示了在当前选定年份为程序发生的事件集。 每个事件都有一个时间范围、一个原因和一组注释。
 
 ![](assets/sla-reporting3.png)
 
-## SLA Metrics {#sla-metrics}
+## SLA指标 {#sla-metrics}
 
 * **作者合同**:这是您与Adobe Managed services的合同中为作者层定义的SLA。
 
