@@ -1,6 +1,6 @@
 ---
 title: 2019.3.0发行说明
-seo-title: AEM Cloud manager 2019.3.0发行说明
+seo-title: AEM Cloud manager 2019.3.0版本说明
 description: 可查看本页以获取Cloud Manager 2019.3.0版的相关信息。
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2019.3.0版的信息。
 translation-type: tm+mt
