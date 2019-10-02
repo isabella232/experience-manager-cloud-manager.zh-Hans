@@ -1,15 +1,15 @@
 ---
 title: 首次登录
 seo-title: 首次登录Adobe AEM Cloud Manager
-description: 如果您已设置常规配置并且已准备好首次使用Cloud Manager，请遵循本页。
-seo-description: 如果您已设置常规配置并且已准备好首次使用Adobe AEM Cloud Manager，请遵循本页。
+description: Follow this page if you have set up your general configurations and you are ready to use Cloud Manager for the first time.
+seo-description: Follow this page if you have set up your general configurations and you are ready to use Adobe AEM Cloud Manager for the first time.
 uuid: 7c8458a6-6de8-4946-ac0c-fb10bce17a15
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: 入门
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: fea7cbe19989272100d76092198afcfac17c1c3a
+source-git-commit: ec35af20dceeb50610bc365c8e00d5ee0374ea34
 
 ---
 
@@ -21,6 +21,14 @@ source-git-commit: fea7cbe19989272100d76092198afcfac17c1c3a
 >[!NOTE]
 >
 >根据中分配的角色和应 [!UICONTROL Cloud Manager] 用程序的状态，您在使用UI时将看到不同的屏 [!UICONTROL Cloud Manager] 幕。
+
+## 计划概述 {#programs-video}
+
+以下视频为Cloud manager计划提供了概述，它们代表支持业务计划逻辑集的AEM环境集，通常对应于购买的服务级别协议(SLA)。
+
+
+[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&captions=chi_hans)
+
 
 ## 首次登录 {#logging-in-for-the-first-time}
 
