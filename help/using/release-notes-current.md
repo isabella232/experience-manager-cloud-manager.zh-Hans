@@ -1,41 +1,34 @@
 ---
-title: 2019.9.0发行说明
-seo-title: AEM Cloud Manager 2019.9.0版本说明
-description: 可查看本页以获取Cloud Manager 2019.9.0版的相关信息。
-seo-description: 可查看本页以获取有关AEM Cloud Manager 2019.9.0版的信息。
+title: 2019.10.0发行说明
+seo-title: AEM Cloud Manager 2019.10.0版本说明
+description: 可查看本页以获取Cloud Manager 2019.10.0版的相关信息。
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2019.10.0版的信息。
 translation-type: tm+mt
-source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
+source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 ---
 
-# 2019.9.0发行说明 {#release-notes-for}
+# 2019.10.0发行说明 {#release-notes-for}
 
-2019. [!UICONTROL Cloud Manager] 9.0版本更新了安全测试标准，添加了可下载的监视图形，并修复了客户报告的一些可用性问题。
+2019. [!UICONTROL Cloud Manager] 10.0版本更新了安全测试标准，添加了可下载的监控图形，并修复了客户报告的一些可用性问题。
 
 ## 发布日期 {#release-date}
 
-版本2019.9.0 [!UICONTROL Cloud Manager] 的发布日期为2019年9月12日。
+版本2019.10.0 [!UICONTROL Cloud Manager] 的发布日期为2019年10月12日。
 
 ## 新增功能 {#whats-new}
 
-* Sling Referrer过滤器运行状况检查的分类已从“关键”更改为“重要”。
-* HTML库管理器配置运行状况检查的分类已从“关键”更改为“重要”。
-* 现在可以下载监视图形。 有关更多详细信息， [请参阅监视您的环境](monitor-your-environments.md) 。
-* 如果某个程序没有生产AEM环境，则单击登录页面中的程序卡将导航到Cloud manager概述页面，而不会生成错误对话框。
-* “概 **述”(Overview** )页面上的“管线设 **置卡”(Pipeline Settings** Card)已被标题为“生产管 **线设置”(Production Pipeline Settings**)。
-* “重要故障行为”单选按钮已从仅代码质量的管道中删除。
-* “活 **动** ”页面现在显示每个执行的管道名称。
-* 执行页面现在显示管道的名称。
-* “代码质量”摘要对话框现在显示每个评级的说明。
+* 部署步骤中的重要部分提高了性能。
+* 如果适用，内部版本Maven项目的版本现在将以git的形式并入项目版本。
+* 在构建时，新的环境变量可用。
+* 非生产管道可以从概述页面上的卡以及API中删除。
+* 在阶段部署步骤之后，但在安全测试步骤之前，会立即出现一个新的可选批准步骤。
+* 在配置CI/CD管道时，可以跳过从负载平衡器分离和附加调度程序实例，以用于开发和舞台环境。
+* Cloud Manager CLI已得到扩展，可支持访问执行步骤日志。
+* Cloud Manager API现在支持编辑管道的已配置分支。
+* 性能测试期间执行的请求现在在用户代理中包含特定令牌(“CloudManagerTest”)。
 
 ## 错误修复 {#bug-fixes}
 
-* 某些用户在等待批准时无法查看执行详细信息。
-* 在“ **概述** ”页面上，右边距不一致。
-* 构建容器可能会在大型项目中内存不足。
-* 在某些情况下，UnbardPaths OakPAL规则未在/libs下识别已安装的内容。
-* 拒绝质量门时，对话框标题仍显示“部 *分通过”*。
-
-## 已知问题 {#known-issues}
-
-* Safari中不提供监视图形的下载。
+* “概述”页面上的某些卡未正确垂直对齐。
+* 某些故障情况未导致管道执行被正确标记并阻止后续执行。
