@@ -4,7 +4,7 @@ seo-title: 监视环境
 description: 'null'
 seo-description: 可查看本页以了解Cloud Manager中的系统监视，具体方法是观察某个环境中的各个实例并跟踪每个实例的各种指标。
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -48,6 +48,13 @@ source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 >[!NOTE]
 >
 >默认情况下，在导航到此页面时，生产环境实例是可见的，但也可以打开其他环境。
+
+## 概述视频到报表 {#video-reports}
+
+Cloud manager报告通过一组图表提供对计划环境和AEM实例的视图，这些图表报告并跟踪每个AEM实例的各种指标。
+有关更多详细信息，请参阅以下视频。
+
+>[!VIDEO](https://video.tv.adobe.com/v/26315/?captions=chi_hans)
 
 ## 系统监视详细信息 {#system-monitoring-detail}
 
