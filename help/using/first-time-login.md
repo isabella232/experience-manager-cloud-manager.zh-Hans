@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: 入门
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: eea425b9bfa178720cbea0653cf8c8f17702281b
+source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 ---
 
@@ -26,6 +26,7 @@ source-git-commit: eea425b9bfa178720cbea0653cf8c8f17702281b
 
 以下视频为Cloud manager计划提供了概述，它们代表支持业务计划逻辑集的AEM环境集，通常对应于购买的服务级别协议(SLA)。
 
+>[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=chi_hans)
 
 ## 首次登录 {#logging-in-for-the-first-time}
 
