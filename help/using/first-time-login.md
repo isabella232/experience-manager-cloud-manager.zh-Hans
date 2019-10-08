@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: 入门
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 >
 >根据中分配的角色和应 [!UICONTROL Cloud Manager] 用程序的状态，您在使用UI时将看到不同的屏 [!UICONTROL Cloud Manager] 幕。
 
-## 计划概述 {#programs-video}
+## 概述视频到节目 {#programs-video}
 
 以下视频为Cloud manager计划提供了概述，它们代表支持业务计划逻辑集的AEM环境集，通常对应于购买的服务级别协议(SLA)。
 
@@ -47,3 +47,9 @@ source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
    >[!NOTE]
    >
    >请参阅 [设置程序](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) ，以完成后续步骤。
+
+## “活动”选项卡 {#activity-video}
+
+Cloud Manager提供计划活动的综合视图，列出所有CI/CD管道执行（生产和非生产），允许您了解过去和现在的活动，并可以查看任何活动的详细信息。
+
+>[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=chi_hans)
