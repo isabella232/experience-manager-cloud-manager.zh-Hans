@@ -4,7 +4,7 @@ sub-product: experience manager cloud manager
 archetype: 管理员
 user-guide-title: Experience Manager Cloud manager帮助
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 ---
 
@@ -43,7 +43,8 @@ source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
 + 发行说明 {#release-notes}
-   + [最新版本说明(2019.9.0)](release-notes-current.md)
+   + [最新版本说明(2019.10.0)](release-notes-current.md)
+   + [2019.9.0发行说明](release-notes-2019-9-0.md)
    + [2019.8.0发行说明](release-notes-2019-8-0.md)
    + [2019.7.0发行说明](release-notes-2019-7-0.md)
    + [2019.6.0发行说明](release-notes-2019-6-0.md)
