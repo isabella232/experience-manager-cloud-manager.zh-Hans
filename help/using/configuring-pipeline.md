@@ -10,7 +10,7 @@ topic-tags: using
 content-type: 引用
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -169,6 +169,13 @@ source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
 
 除了部署到舞台和生产的主要管道外，客户还能建立额外的管道，称为 **非生产管道**。 这些管线始终执行构建和代码质量步骤。 它们也可以选择部署到Adobe Managed services环境。
 
+### 非生产和仅代码质量管道视频
+
+CI/CD非生产管道分为两类：代码质量管道和部署管道。 Code Quality（代码质量）将Git分支中的所有代码输入管道，以根据Cloud manager的代码质量扫描构建和评估。
+有关更多详细信息，请参阅以下视频。
+
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=chi_hans)
+
 在主屏幕上，新卡中列出了以下管线：
 
 1. 从Cloud **Manager主屏幕访问非生产管道拼贴** 。
@@ -181,7 +188,7 @@ source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
 
    ![](assets/Configuring_Pipeline_Add-Production2.png)
 
-1. 单 **击** “保存”(Save)，管道将显示在主屏幕的卡片上，并执行以下三个操作：
+1. 单 **击** “保存”(Save)，管线将显示在主屏幕的卡片上，并执行以下三个操作：
 
    * **编辑** -允许编辑管道设置
    * **Detail** —— 显示上次管线执行（如果有）
