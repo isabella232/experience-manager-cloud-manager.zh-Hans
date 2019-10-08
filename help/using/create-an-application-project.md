@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: 入门
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -186,7 +186,9 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
         </profile>
 ```
 
-## 自定义环境变量
+## 环境变量 {#environment-variables}
+
+### 标准环境变量 {#standard-environ-variables}
 
 在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在git存储库中。 Cloud manager允许客户成功工程师(CSE)按客户配置这些变量。 这些变量存储在安全的存储位置中，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE以配置其变量。
 
@@ -276,7 +278,7 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 在Cloud manager中，构建可能生成任意数量的内容包。
 出于各种原因，可能需要制作内容包，但不要部署它。 这可能很有用，例如，在构建仅用于测试的内容包时，或者在构建过程中将通过另一个步骤重新打包的内容包（即，作为另一个包的子包）时。
 
-为了适应这些情况，Cloud manager将在构建内容包的属性中 ***查找名为cloudManagerTarget*** 的属性。 如果此属性设置为none，则将跳过并且不部署包。 设置此属性的机制取决于构建生成内容包的方式。 例如，使用filevault-maven-plugin可以配置插件，如下所示：
+为了适应这些情况，Cloud manager将在构建内容包的属性中查找名 ***为cloudManagerTarget*** 的属性。 如果此属性设置为none，则将跳过并且不部署包。 设置此属性的机制取决于构建生成内容包的方式。 例如，使用filevault-maven-plugin可以配置插件，如下所示：
 
 ```xml
         <plugin>
