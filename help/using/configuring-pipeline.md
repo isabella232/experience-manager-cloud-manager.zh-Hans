@@ -10,7 +10,7 @@ topic-tags: using
 content-type: 引用
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
@@ -127,6 +127,11 @@ source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
    单击 **保存** ，以保留此配置。
 
    ![](assets/image2018-8-7_15-4-30.png)
+
+   **在阶段部署后批准**&#x200B;在阶段部署后 **批准有一个可选步骤** ，可以在生产管道中配置该步骤。
+   >[!NOTE]
+   >
+   >**在Stage Deployment** （在工作阶段部署之前）的功能与在生产部署之前的批准类似，但是在紧接着工作阶段部署步骤之后（即在完成任何测试之前）进行批准，而在生产部署之前（在完成所有测试之后）进行批准。
 
 1. 访问“ **测试** ”选项卡，为程序定义测试条件。
 
