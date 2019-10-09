@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: 入门
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
 
 ---
 
@@ -108,11 +108,56 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 * Maven始终使用以下命令运行：mvn *—batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent包*
 * Maven在系统级别上配置了settings.xml文件，该文件自动包括公共Adobe **Artifact存储库** 。 (有关更多详细 [信息，请参阅Adobe Public Maven Repository](https://repo.adobe.com/) )。
 
+
+## 环境变量 {#environment-variables}
+
+### 标准环境变量 {#standard-environ-variables}
+
+在某些情况下，客户会发现有必要根据有关计划或管道的信息来改变构建过程。
+
+例如，如果正在通过gulp等工具进行构建时间JavaScript微型化，则在为开发环境构建时可能希望使用不同的微型化级别，而不是为舞台和生产构建。
+
+为了支持此功能，Cloud Manager将这些标准环境变量添加到构建容器，以便每次执行。
+
+| **变量名称** | **定义** |
+|---|---|
+| CM_BUILD | 始终设置为“true” |
+| 分支 | 为执行配置的分支 |
+| CM_PIPELINE_ID | 数字管线标识符 |
+| CM_PIPELINE_NAME | 管道名称 |
+| CM_PROGRAM_ID | 数字程序标识符 |
+| CM_PROGRAM_NAME | 程序名称 |
+| ARTIFACTS_VERSION | 对于舞台或生产管道，由Cloud manager生成的合成版本 |
+
+### 自定义环境变量 {#custom-environ-variables}
+
+在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在git存储库中。 Cloud manager允许客户成功工程师(CSE)按客户配置这些变量。 这些变量存储在安全的存储位置中，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE以配置其变量。
+
+配置后，这些变量将作为环境变量可用。 要将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在上述配置文件中引用它们：
+
+```xml
+        <profile>
+            <id>cmBuild</id>
+            <activation>
+                  <property>
+                        <name>env.CM_BUILD</name>
+                  </property>
+            </activation>
+            <properties>
+                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
+            </properties>
+        </profile>
+```
+
+>[!NOTE]
+>
+>环境变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。
+
 ## 在Cloud manager中激活Maven配置文件 {#activating-maven-profiles-in-cloud-manager}
 
 在某些有限的情况下，在Cloud manager中运行时，与在开发人员工作站上运行时相比，您可能需要稍微改变构建过程。 对于这些情况， [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) （Maven配置文件）可用于定义构建在包括Cloud manager在内的不同环境中的不同之处。
 
-在Cloud manager构建环境中激活Maven配置文件时，应通过查找名为的环境变量来完成 `CM_BUILD`。 此变量将始终设置在Cloud manager构建环境中。 相反，只有在Cloud manager构建环境之外才能使用的配置文件，应通过查找此变量的大小来完成。
+在Cloud manager构建环境中激活Maven配置文件应通过查找上述CM_BUILD环境变量来完成。 相反，只有在Cloud manager构建环境之外才能使用的配置文件，应通过查找此变量的大小来完成。
 
 例如，如果您希望仅在构建在Cloud manager中运行时输出简单消息，您可以执行以下操作：
 
@@ -186,31 +231,6 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
         </profile>
 ```
 
-## 环境变量 {#environment-variables}
-
-### 标准环境变量 {#standard-environ-variables}
-
-在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在git存储库中。 Cloud manager允许客户成功工程师(CSE)按客户配置这些变量。 这些变量存储在安全的存储位置中，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE以配置其变量。
-
-配置后，这些变量将作为环境变量可用。 要将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在上述配置文件中引用它们：
-
-```xml
-        <profile>
-            <id>cmBuild</id>
-            <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
-            </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
-        </profile>
-```
-
->[!NOTE]
->
->环境变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。
 
 ## 安装其他系统包 {#installing-additional-system-packages}
 
