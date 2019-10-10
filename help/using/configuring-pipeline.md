@@ -10,7 +10,7 @@ topic-tags: using
 content-type: 引用
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
+source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
 
 ---
 
@@ -193,8 +193,6 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 ## 仅限非生产和代码质量的管道
 
 除了部署到舞台和生产的主要管道外，客户还能建立额外的管道，称为 **非生产管道**。 这些管线始终执行构建和代码质量步骤。 它们也可以选择部署到Adobe Managed services环境。
-
-## 非生产和仅代码质量管道视频
 
 ## 视频教程 {#video-tutorial-two}
 
