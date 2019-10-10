@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 ---
 
@@ -22,10 +22,11 @@ Cloud manager的 **概述** ，页面中包括列出所 **有受管AEM环境的�
 
 ![](assets/Manage_Environments1.png)
 
-## 概述视频到环境 {#environments-video}
+## 视频教程 {#video-tutorial}
+
+### Cloud manager环境概述 {#environ-video}
 
 以下视频概述了由AEM作者、AEM Publish和调度程序实例组成的Cloud manager环境。
-有关更多详细信息，请参阅以下视频。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318/?captions=chi_hans)
 
