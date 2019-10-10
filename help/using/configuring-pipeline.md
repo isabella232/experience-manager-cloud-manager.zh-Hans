@@ -10,7 +10,7 @@ topic-tags: using
 content-type: 引用
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
 
 ---
 
@@ -18,6 +18,15 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 # 配置CI/CD管道 {#configure-your-ci-cd-pipeline}
 
 下页介绍如何配置管 **线**。 要查看有关管道工作方式的更多概念性信息，请参阅 [CI/CD管道概述](ci-cd-pipeline.md)。
+
+## 视频教程 {#video-tutorial-one}
+
+### 在Cloud manager中配置管道 {#config-pipeline-video}
+
+CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=chi_hans)
+
 
 ## 了解流 {#understanding-the-flow}
 
@@ -100,6 +109,21 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 >
 >“使 **用CSE监督** ”选项并不适用于所有客户。
 
+**在阶段部署后批准**
+
+在Stage Deployment之后有一个可 **选步骤** ,Approve after Stage Deployment可在Production Pipeline中配置。
+在“管线编辑”(Pipeline Edit)屏幕的新选项中启 **用了此选项** :
+
+![](assets/post_deployment1.png)
+
+然后，在管道执行过程中，它将显示为一个单独的步骤：
+
+![](assets/post_deployment2.png)
+
+>[!NOTE]
+>
+>**在Stage Deployment** （在工作阶段部署之前）的功能与在生产部署之前的批准类似，但是在紧接着工作阶段部署步骤之后（即在完成任何测试之前）进行批准，而在生产部署之前（在完成所有测试之后）进行批准。
+
 **调度程序失效**
 
 作为部署管理器，您有机会在设置或编辑管道时配置一组路径，这些路径将 **从** AEM **Dispatcher缓存中失效或刷新** 。
@@ -127,18 +151,6 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
    单击 **保存** ，以保留此配置。
 
    ![](assets/image2018-8-7_15-4-30.png)
-
-   **在阶段部署后批准**&#x200B;在阶段部署后 **批准有一个可选步骤** ，可以在生产管道中配置该步骤。
-在“管线编辑”(Pipeline Edit)屏幕的新选项中启 **用了此选项** :
-
-   ![](assets/post_deployment1.png)
-
-   然后，在管道执行过程中，它将显示为一个单独的步骤：
-   ![](assets/post_deployment2.png)
-
-   >[!NOTE]
-   >
-   >**在Stage Deployment** （在工作阶段部署之前）的功能与在生产部署之前的批准类似，但是在紧接着工作阶段部署步骤之后（即在完成任何测试之前）进行批准，而在生产部署之前（在完成所有测试之后）进行批准。
 
 
 1. 访问“ **测试** ”选项卡，为程序定义测试条件。
@@ -182,10 +194,13 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 除了部署到舞台和生产的主要管道外，客户还能建立额外的管道，称为 **非生产管道**。 这些管线始终执行构建和代码质量步骤。 它们也可以选择部署到Adobe Managed services环境。
 
-### 非生产和仅代码质量管道视频
+## 非生产和仅代码质量管道视频
+
+## 视频教程 {#video-tutorial-two}
+
+### Cloud manager非生产和代码质量专用管道 {#non-prod-video}
 
 CI/CD非生产管道分为两类：代码质量管道和部署管道。 Code Quality（代码质量）将Git分支中的所有代码输入管道，以根据Cloud manager的代码质量扫描构建和评估。
-有关更多详细信息，请参阅以下视频。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=chi_hans)
 
