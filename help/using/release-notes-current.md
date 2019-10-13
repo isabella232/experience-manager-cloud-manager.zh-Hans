@@ -4,7 +4,7 @@ seo-title: AEM Cloud Manager 2019.10.0版本说明
 description: 可查看本页以获取Cloud Manager 2019.10.0版的相关信息。
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2019.10.0版的信息。
 translation-type: tm+mt
-source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
+source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
 
 ## 发布日期 {#release-date}
 
-版本2019.10.0 [!UICONTROL Cloud Manager] 的发布日期为2019年10月12日。
+版本2019.10.0 [!UICONTROL Cloud Manager] 的发布日期为2019年10月10日。
 
 ## 新增功能 {#whats-new}
 
