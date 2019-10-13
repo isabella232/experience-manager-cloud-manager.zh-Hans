@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
 ---
 
@@ -125,7 +125,7 @@ Cloud manager将构建过程生成的所有目标/*.zip文件上传到存储位�
 
    >[!NOTE]
    >
-   >您可以跳过开发和阶段部署中的负载允许更改，即在非生产管道中为开发人员环境分离和附加步骤，在生产管道中为舞台环境分离和附加步骤。 此功能预计主要由1-1-1客户使用。
+   >您可以跳过开发和阶段部署中的负载允许更改，即在非生产管道中为开发人员环境分离和附加步骤，在生产管道中为舞台环境分离和附加步骤。
 
 ### 部署到生产阶段 {#deployment-production-phase}
 
