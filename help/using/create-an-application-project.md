@@ -1,6 +1,6 @@
 ---
-title: 创建AEM应用程序项目
-seo-title: 创建AEM应用程序项目
+title: 创建 AEM 应用程序项目
+seo-title: 创建 AEM 应用程序项目
 description: 'null'
 seo-description: 可查看本页以了解有关在Cloud manager入门时设置AEM项目的更多信息。
 uuid: 7b976ebf-5358-49d8-a58d-0bae026303fa
@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: 入门
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
+source-git-commit: 8daee34e6cfaddb31fc447f64de9ce5ca7ed54ba
 
 ---
 
 
-# 创建AEM应用程序项目 {#create-an-aem-application-project}
+# 创建 AEM 应用程序项目 {#create-an-aem-application-project}
 
 ## 使用向导创建AEM应用程序项目 {#using-wizard-to-create-an-aem-application-project}
 
@@ -76,7 +76,7 @@ Last Modified Date: 2018-10-08T12:52:50.071-0400
 
 * 可部署的调度程序对象是通过扫描 *zip* 文件(同样，包含在名为 *target*&#x200B;的目录中)来发现的，这些文件的目录名 *为conf* 和 ** conf.d。
 
-* 如果有多个内容包，则不保证包部署的排序。 如果需要特定的顺序，可以使用内容包依赖关系来定义顺序。
+* 如果有多个内容包，则不保证包部署的排序。 如果需要特定的顺序，可以使用内容包依赖关系来定义顺序。 可以从部署 [中跳](#skipping-content-packages) 过包。
 
 <!-- 
 
