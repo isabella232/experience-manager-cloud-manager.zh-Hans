@@ -1,21 +1,21 @@
 ---
-title: 配置CI/CD管道
-seo-title: 配置CI/CD管道
+title: 配置 CI/CD 管线
+seo-title: 配置 CI/CD 管线
 description: 可查看本页以从云管理器配置渠道设置。
 seo-description: '在开始部署代码之前，必须从AEM Cloud manager配置渠道设置。 '
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
-content-type: 引用
+content-type: 参考文件
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
+source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
 
 ---
 
 
-# 配置CI/CD管道 {#configure-your-ci-cd-pipeline}
+# 配置 CI/CD 管线 {#configure-your-ci-cd-pipeline}
 
 下页介绍如何配置管 **线**。 要查看有关管道工作方式的更多概念性信息，请参阅 [CI/CD管道概述](ci-cd-pipeline.md)。
 
@@ -204,7 +204,7 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 Code Qua
 
 在主屏幕上，新卡中列出了以下管线：
 
-1. 从Cloud **Manager主屏幕访问非生产管道拼贴** 。
+1. 从Cloud manager **主屏幕访问非生产管道拼贴** 。
 
    ![](assets/Configuring_Pipeline_Add-Production.png)
 
