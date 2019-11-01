@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
+source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
 
 ---
 
@@ -43,15 +43,16 @@ source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
    Stage **Deployment**，涉及以下步骤：
 
-   * 构建和单元测试
-   * 代码扫描
+   * 验证：此步骤可确保将管道配置为使用当前可用的资源，例如，已配置的分支存在，且环境可用。
+   * 构建和单元测试：此步骤运行容器化构建过程。 有关 [构建环境的详细信息](create-an-application-project.md) ，请参阅创建AEM应用程序项目。
+   * 代码扫描：此步骤将评估应用程序代码的质量。 有关测 [试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
    * 部署到舞台
    ![](assets/Stage_Deployment1.png)
 
    Stage **Testing**，涉及以下步骤：
 
-   * 安全性测试
-   * 性能测试
+   * 安全测试——此步骤评估应用程序代码对AEM环境的安全影响。 有关测 [试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 性能测试——此步骤评估应用程序代码的性能。 有关测 [试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
    ![](assets/Stage_Testing1.png)
 
    生 **产部署**，涉及以下步骤：
