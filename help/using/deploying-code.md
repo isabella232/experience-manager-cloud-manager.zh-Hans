@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
+source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
 
 ---
 
@@ -51,8 +51,8 @@ source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
 
    Stage **Testing**，涉及以下步骤：
 
-   * 安全测试——此步骤评估应用程序代码对AEM环境的安全影响。 有关测 [试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
-   * 性能测试——此步骤评估应用程序代码的性能。 有关测 [试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 安全性测试：此步骤评估应用程序代码对AEM环境的安全影响。 有关测 [试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 性能测试：此步骤将评估应用程序代码的性能。 有关测 [试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
    ![](assets/Stage_Testing1.png)
 
    生 **产部署**，涉及以下步骤：
