@@ -4,7 +4,7 @@ seo-title: 监视环境
 description: 'null'
 seo-description: 可查看本页以了解Cloud Manager中的系统监视，具体方法是观察某个环境中的各个实例并跟踪每个实例的各种指标。
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 1edfbc0adb04026cd29ba93b4ba155d3b61439dc
 
 ---
 
@@ -43,7 +43,7 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 每个类别的状态是单个度量的摘要——如果某个类别中的任何度量处于关键状态，则在概述页面中，整个类别都处于关键状态。 可以在环境级别和实例级别查看相同的摘要。
 
-![](assets/Reports.png)
+![](assets/System-Monitoring-Reports.png)
 
 >[!NOTE]
 >
@@ -107,11 +107,11 @@ Cloud manager报告通过一组图表提供对计划环境和AEM实例的视图�
 客户能够查看其生产AEM环境相对于其合同服务级别协议(SLA)的性能。 可通过“报告”屏幕上的子菜单执行此操作。
 例如，下图显示了2018年的月度SLA水平。
 
-![](assets/sla-reporting1.png)
+![](assets/SLA-Reports-one.png)
 
 与系统监视图一样，滚动数据点会显示该月的特定值。
 
-![](assets/sla-reporting2.png)
+![](assets/SLA-Reports-two.png)
 
 此图下的“事件分析”部分显示了在当前选定年份为程序发生的事件集。 每个事件都有一个时间范围、一个原因和一组注释。
 
