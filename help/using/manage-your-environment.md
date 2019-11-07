@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 72daabd54cd6216743dfbf4d843f685b3b12b3aa
 
 ---
 
@@ -20,7 +20,7 @@ Cloud manager的 **概述** ，页面中包括列出所 **有受管AEM环境的�
 
 列出的每个环境都显示其关联的状态。
 
-![](assets/Manage_Environments1.png)
+![](assets/Manage-Environments1.png)
 
 ## 视频教程 {#video-tutorial}
 
@@ -36,7 +36,7 @@ Cloud manager的 **概述** ，页面中包括列出所 **有受管AEM环境的�
 
 状态是环境中节点间的累计电源状态。 如果所有节点都在运行，则为绿色；如果一个节点停止，则为红色；如果一个节点出现，则为蓝色；如果一个节点的电源状态不可用，则为黄色（按优先级顺序）。
 
-![](assets/manage_environments-screen2.png)
+![](assets/Environments-card-new.png)
 
 ### 环境 {#environments}
 
@@ -48,4 +48,4 @@ Cloud manager的 **概述** ，页面中包括列出所 **有受管AEM环境的�
 >
 >节 **点的STATUS** 表示VM的电源状态，但不反映服务器上AEM的状态。 状态可以是“ **运行** ”（绿色圆）、“已停止 **”（红色圆）、“启动”** （蓝色圆）或“不可 ******** 用”（黄色圆）。
 
-![](assets/Manage_Environments2.png)
+![](assets/Environments-tab.png)
