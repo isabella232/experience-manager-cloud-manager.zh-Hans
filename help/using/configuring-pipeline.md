@@ -10,7 +10,7 @@ topic-tags: using
 content-type: 参考文件
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
+source-git-commit: 06154ad565168d25e18de49c10e5944f39a293c2
 
 ---
 
@@ -58,7 +58,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 1. 单击“ **设置管道** ”(Setup Pipeline)以设置和配置管道。
 
-   ![](assets/Configure_ci-cd-1.png)
+   ![](assets/Setup-Pipeline.png)
 
 1. 将显 **示“设置管道** ”屏幕。
 
@@ -188,7 +188,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
    >
    >此外，设置管道后，您仍可以使用 **UI中的“生产管道设置”拼贴来编辑** 管道的设置 [!UICONTROL Cloud Manager] 。
 
-   ![](assets/Prod-Pipeline-Settings-Dialog.png)
+   ![](assets/Production-Pipeline.png)
 
 ## 仅限非生产和代码质量的管道
 
@@ -206,7 +206,7 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 Code Qua
 
 1. 从Cloud manager **主屏幕访问非生产管道拼贴** 。
 
-   ![](assets/Configuring_Pipeline_Add-Production.png)
+   ![](assets/Non-Production-Pipeline.png)
 
 1. 单击“添加”按钮，指定“管线名称”、“管线类型”和“Git分支”。
 
