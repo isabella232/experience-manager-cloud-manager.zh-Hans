@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
 translation-type: tm+mt
-source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
+source-git-commit: be0350b98c19b3b84519947c04a7e362b46bba21
 
 ---
 
 
 # 通知 {#notifications}
 
-[!UICONTROL Cloud Manager] 允许用户在生产部署开始时以及到达 **Go-Live Approval** （开始审批）和Scheduled（计划）步骤时，在管道开始和完成（成功或失败）时接收 **** 通知。 这些通知通过Adobe通知系统 [!UICONTROL Experience Cloud] 发送。
+[!UICONTROL Cloud Manager] 允许用户在生产管道开始和完成（成功或失败）、生产部署开始以及到达 **Go-Live Approval** 和 **Scheduled** 步骤时接收通知。 这些通知通过Adobe通知系统 [!UICONTROL Experience Cloud] 发送。
 
 >[!NOTE]
 >
