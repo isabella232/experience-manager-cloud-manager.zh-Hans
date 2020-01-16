@@ -1,36 +1,30 @@
 ---
-title: 2019.12.0 版发行说明
-seo-title: AEM Cloud Manager 2019.12.0版本说明
-description: 可查看本页以获取Cloud Manager 2019.12.0版的相关信息。
-seo-description: 可查看本页以获取有关AEM Cloud Manager 2019.12.0版的信息。
+title: 2020.1.0 版发行说明
+seo-title: AEM Cloud Manager 2020.1.0版本说明
+description: 可查看本页以获取Cloud Manager 2020.1.0版的相关信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2020.1.0版的相关信息
 translation-type: tm+mt
-source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
+source-git-commit: e22345e23731cf97502e6a8654d254d68f884ba7
 
 ---
 
-# 2019.12.0 版发行说明 {#release-notes-for}
+# 2020.1.0 版发行说明 {#release-notes-for}
 
-下节概述了2019.12.0版的一般发行说明，并添加了管道执行更新和代码质量扫描增强功能。 [!UICONTROL Cloud Manager] 
-有关更多详细信息，请按照以下部分进行操作。
+以下部分概述了2020.1.0版的一般 [!UICONTROL Cloud Manager] 发行说明，并添加了对访问Git凭据和登录体验的更新。
 
 ## Release Date {#release-date}
 
-版本2019.12.0 [!UICONTROL Cloud Manager] 的发布日期为2019年12月12日。
+版本2020.1.0 [!UICONTROL Cloud Manager] 的发布日期为2020年1月16日。
 
 ## 新增功能 {#whats-new}
 
-* 管道执行中的步骤现在显示每个步骤的完成时间戳。
-* 对于不包含Java代码的项目，代码质量扫描现在报告100%的代码覆盖率。
-* CQ调度程序配置运行状况检查已被删除。
+* 现在可以从Cloud manager用户界面中获取Git凭据。 有关更多 [详细信息](/help/using/accessing-git.md) ，请参阅访问Git。
+* 作为Adobe全部计划的一部分，登录体验和URL结构已发生更改。 旧书签将重定向到新URL。
 
 
 ## 错误修复 {#bug-fixes}
 
-* 某些浏览器中未正确显示日期。
-* 在少数情况下，在性能测试仍在运行时，生产管道将转到批准步骤。
-* 在某些状态下，概述页面顶部区域上的按钮未正确对齐。
-* 在某些情况下，未经授权的用户看到一个按钮以启动管道，但该按钮本身不可单击。
-* 非生产管道的操作按钮有时会显示在错误的位置。
-* 具有granite的包：无法扫描排名节点类型是否存在某些质量规则违规。
-* 代码质量过程中的某些失败被错误地计为错误。
-* 无法为某些拓扑加载监视数据。
+* 部署到仅作者拓扑时未部署调度程序配置更改。
+* 在某些配置中，无法创建仅代码质量管线。
+* 概述页面上的环境摘要卡有时无法正确呈现。
+* 管道执行可能会在大型拓扑上超时。
