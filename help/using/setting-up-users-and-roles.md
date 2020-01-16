@@ -6,15 +6,15 @@ seo-description: 您可以通过在管理控制台中将用户添加到Cloud Man
 uuid: fa204c28-83df-48bb-8360-e158f080dee7
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: 要求
+topic-tags: requirements
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
 translation-type: tm+mt
-source-git-commit: 73203dca7b20570103af429cf933610941b787be
+source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
 
 ---
 
 
-# 添加用户和角色{#add-users-and-roles}
+# 添加用户和角色 {#add-users-and-roles}
 
 中的许多功 [!UICONTROL Cloud Manager] 能需要特定权限才能运行。 例如，仅允许某些用户为程序设置关键绩效指标(KPI)。 这些权限按逻辑分组为角色。
 
@@ -41,16 +41,10 @@ source-git-commit: 73203dca7b20570103af429cf933610941b787be
 |--- |--- |
 | 企业所有者 | 负责定义KPI、批准生产部署和覆盖重要的3层故障。 |
 | 计划经理 | 用于 [!UICONTROL Cloud Manager] 执行团队设置、审核状态和查看KPI。 可以批准重要的3层故障。 |
-| 部署管理器 | 管理部署操作。 用于 [!UICONTROL Cloud Manager] 执行舞台／生产部署。 可以编辑CI/CD管道。 可以批准重要的3层故障。 可以访问Git存储库。 请联系您的CSE/AMS代表以申请。 |
-| 开发人员 | 开发和测试自定义应用程序代码。 主要用 [!UICONTROL Cloud Manager] 于查看状态。 应获得对Git存储库的代码提交访问权限。 在添加具有此角色的用户以授予对Git存储库的访问权限时，请与您的CSE/AMS代表联系。 |
+| 部署管理器 | 管理部署操作。 用于 [!UICONTROL Cloud Manager] 执行舞台／生产部署。 可以编辑CI/CD管道。 可以批准重要的3层故障。 可以访问Git存储库。 |
+| 开发人员 | 开发和测试自定义应用程序代码。 主要用 [!UICONTROL Cloud Manager] 于查看状态。 可以访问Git存储库以进行代码提交。 |
 | 客户成功工程师 | 通常支持AMS客户的成功。 与之交 [!UICONTROL Cloud Manager] 互以执行需要CSE监督的部署。 |
 | 内容作者 | 通常不与交互 [!UICONTROL Cloud Manager]。 可使用 [!UICONTROL Cloud Manager] 程序切换程序(已从中导航 [!UICONTROL Experience Cloud])访问AEM。 |
-
->[!NOTE]
->
->对 [!UICONTROL Cloud Manager] Git存储库的访问由CSE管理。 联系他们以添加和删除用户。
->
->如果新添加的用户需要访问Git存储库，您需要联系CSE/AMS代表以获得访问权限。 这些角色不提供对Git存储库的自动访问。 您最多只能有3个具有Git存储库访问权限的用户。
 
 ## 使用Admin Console创建配置文件 {#using-admin-console-to-create-a-profile}
 
