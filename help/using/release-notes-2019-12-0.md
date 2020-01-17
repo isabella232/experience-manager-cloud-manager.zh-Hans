@@ -4,9 +4,10 @@ seo-title: AEM Cloud Manager 2019.12.0版本说明
 description: 可查看本页以获取Cloud Manager 2019.12.0版的相关信息。
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2019.12.0版的信息。
 translation-type: tm+mt
-source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
+source-git-commit: 0fa1fedccb013e82c8df5838a612ce26a1efb7e8
 
 ---
+
 
 # 2019.12.0 版发行说明 {#release-notes-for}
 
@@ -22,7 +23,6 @@ source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
 * 管道执行中的步骤现在显示每个步骤的完成时间戳。
 * 对于不包含Java代码的项目，代码质量扫描现在报告100%的代码覆盖率。
 * CQ调度程序配置运行状况检查已被删除。
-
 
 ## 错误修复 {#bug-fixes}
 
