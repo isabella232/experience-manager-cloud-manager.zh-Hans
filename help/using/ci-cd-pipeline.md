@@ -1,18 +1,18 @@
 ---
-title: CI/CD管道
-seo-title: CI/CD管道
+title: CI/CD 管线
+seo-title: CI/CD 管线
 description: 'null'
 seo-description: 请按照本节内容了解CI/CD管道，该管道在Cloud Manager中处理舞台和生产部署。
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
-topic-tags: 简介
+topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
-source-git-commit: 949d3cf0239a02875ba4ad1888e081f104dec2e2
+source-git-commit: 2d7b18ea55e2bd5879cf8bd896cafed4d46c0011
 
 ---
 
-
-# CI/CD管道 {#ci-cd-pipeline}
+SHANKARI_TEST_CHANGE
+# CI/CD 管线 {#ci-cd-pipeline}
 
 ## 管道概述 {#pipeline-overview}
 
@@ -65,4 +65,4 @@ CI/CD管道提供质量门或接受标准，在将代码从舞台环境移动到
 
 ### 如何设置门 {#how-to-setup-gates}
 
-有关 **[设置代码、质量和性能门的详细信息](configuring-pipeline.md)** ，请参阅配置门。
+有关 **[设置代码、质量和性能门的详细信息](configuring-pipeline.md)**，请参阅配置门。
