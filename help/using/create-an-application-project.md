@@ -6,10 +6,10 @@ seo-description: 可查看本页以了解有关在Cloud manager入门时设置AE
 uuid: 7b976ebf-5358-49d8-a58d-0bae026303fa
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: 入门
+topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 8daee34e6cfaddb31fc447f64de9ce5ca7ed54ba
+source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 8daee34e6cfaddb31fc447f64de9ce5ca7ed54ba
 
 当客户已登记到Cloud Manager时，他们会获得一个空git存储库。 当前Adobe Managed Services(AMS)客户（或迁移到AMS的内部部署AEM客户）通常已在git（或其他版本控制系统）中包含其项目代码，并将其项目导入Cloud manager存储库。 但是，新客户没有现有项目。
 
-为了帮助新客户入门，Cloud Manger现在可以创建最少的AEM项目作为起点。 此过程基于 [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
+为了帮助新客户入门，Cloud Manger现在可以创建最少的AEM项目作为起点。 此过程基于 [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
 
 <!-- 
 
@@ -38,6 +38,7 @@ Last Modified Date: 2018-10-08T12:52:50.071-0400
 
    ![](assets/image2018-10-3_14-29-44.png)
 
+[Shankari] ，下面介绍的第二步不正确。 请删除它。
 1. 单击 **创建** ，导航到“管线设 **置”屏幕** 。
 
    ![](assets/image2018-10-3_14-30-22.png)
@@ -133,7 +134,7 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 
 在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在git存储库中。 Cloud manager允许客户成功工程师(CSE)按客户配置这些变量。 这些变量存储在安全的存储位置中，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE以配置其变量。
 
-配置后，这些变量将作为环境变量可用。 要将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在上述配置文件中引用它们：
+配置后，这些变量将作为环境变量可用。 要将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在如上所述的配置文件中引用它们：
 
 ```xml
         <profile>
@@ -298,7 +299,7 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 在Cloud manager中，构建可能生成任意数量的内容包。
 出于各种原因，可能需要制作内容包，但不要部署它。 这可能很有用，例如，在构建仅用于测试的内容包时，或者在构建过程中将通过另一个步骤重新打包的内容包（即，作为另一个包的子包）时。
 
-为了适应这些情况，Cloud manager将在构建内容包的属性中查找名 ***为cloudManagerTarget*** 的属性。 如果此属性设置为none，则将跳过并且不部署包。 设置此属性的机制取决于构建生成内容包的方式。 例如，使用filevault-maven-plugin可以配置插件，如下所示：
+为了适应这些情况，Cloud manager将在构建内容包的属性中 ***查找名为cloudManagerTarget*** 的属性。 如果此属性设置为none，则将跳过并且不部署包。 设置此属性的机制取决于构建生成内容包的方式。 例如，使用filevault-maven-plugin可以配置插件，如下所示：
 
 ```xml
         <plugin>
