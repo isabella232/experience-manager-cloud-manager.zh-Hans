@@ -1,30 +1,34 @@
 ---
-title: 2020.1.0 版发行说明
-seo-title: AEM Cloud Manager 2020.1.0版本说明
-description: 可查看本页以获取Cloud Manager 2020.1.0版的相关信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.1.0版的相关信息
+title: 2020.2.0 版发行说明
+seo-title: AEM Cloud Manager 2020.2.0版本说明
+description: 可查看本页以获取Cloud Manager 2020.2.0版的相关信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2020.2.0版的相关信息
 translation-type: tm+mt
-source-git-commit: e22345e23731cf97502e6a8654d254d68f884ba7
+source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 
 ---
 
 # 2020.1.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.1.0版的一般 [!UICONTROL Cloud Manager] 发行说明，并添加了对访问Git凭据和登录体验的更新。
+以下部分概述了2020.2.0版的一般 [!UICONTROL Cloud Manager] 发行说明，并添加了对访问Git凭据和登录体验的更新。
 
 ## Release Date {#release-date}
 
-版本2020.1.0 [!UICONTROL Cloud Manager] 的发布日期为2020年1月16日。
+版本2020.2.0 [!UICONTROL Cloud Manager] 的发布日期为2020年2月13日。
 
 ## 新增功能 {#whats-new}
 
-* 现在可以从Cloud manager用户界面中获取Git凭据。 有关更多 [详细信息](/help/using/accessing-git.md) ，请参阅访问Git。
-* 作为Adobe全部计划的一部分，登录体验和URL结构已发生更改。 旧书签将重定向到新URL。
-
+* Adobe Experience manager原型版本已更新至版本22。
+* 在舞台部署日志中添加活动实例
+* Experience cloud通知中使用的URL已优化，以避免额外重定向。
+* 现在超时的管道执行步骤显式声明此。
+* “代码扫描”步骤现在有可下载的日志。
+* “安全测试”步骤现在有可下载的日志。
+* 性能测试期间访问的页面列表现在可下载。
+* 现在，包含在代码扫描过程中发现的问题的电子表格有一列，其中包含指向特定规则文档的链接。
+* 如果“性能测试”步骤无法启动，则现在会显示失败的原因。
 
 ## 错误修复 {#bug-fixes}
 
-* 部署到仅作者拓扑时未部署调度程序配置更改。
-* 在某些配置中，无法创建仅代码质量管线。
-* 概述页面上的环境摘要卡有时无法正确呈现。
-* 管道执行可能会在大型拓扑上超时。
+* 浏览器安全策略有时会阻止管道执行屏幕中的某些按钮正常工作。
+* “概述”、“环境”和“活动”链接有时可在Cloud manager登录页面上使用。
