@@ -7,10 +7,10 @@ uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
-content-type: 参考文件
+content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
 
 CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
 ## 了解流 {#understanding-the-flow}
@@ -78,7 +78,6 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    * **在Git更改中** -每当向配置的git分支添加提交时，启动CI/CD管道。 即使选择此选项，也始终可以手动启动管线。
    * **手动** -使用UI手动启动管道。
-   * **计划** -此选项即将在即将发布的版本中推出。
    在管道设置或编辑过程中，当在任何质量门（如代码质量、安全测试和性能测试）中遇到重要故障时，部署管理器可以选择定义管道的行为。
 
    这对于希望实现更自动化流程的客户非常有用。 可用选项包括：
@@ -101,7 +100,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 >
 >如果 **选择了** “计划”选项，则可以在阶段部署后将生产部署计划到管道中(如果启用了该选项，则 **使用GoLive Approval******)，以等待设置计划。 用户还可以选择立即执行生产部署。
 >
->请参阅 [**部署代码**](deploying-code.md)，以设置部署计划或立即执行生产。
+>请参阅 [**部署代码&#x200B;**](deploying-code.md)，以设置部署计划或立即执行生产。
 
 ![](assets/Configure_ci-cd-3.png)
 
@@ -200,7 +199,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 CI/CD非生产管道分为两类：代码质量管道和部署管道。 Code Quality（代码质量）将Git分支中的所有代码输入管道，以根据Cloud manager的代码质量扫描构建和评估。
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 在主屏幕上，新卡中列出了以下管线：
 
