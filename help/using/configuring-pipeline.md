@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: f9c8c1d7b63749e6994481324392aee7330046fb
+source-git-commit: fb84c2d41c76c64fc0be1e9f86356ee0cb5bcf9c
 
 ---
 
@@ -211,9 +211,9 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 Code Qua
 
    此外，您还可以从“管道选项”中设置部署触发器和重要失败行为。
 
-   ![](assets/Configuring_Pipeline_Add-Production2.png)
+   ![](assets/non-prod-pipe.png)
 
-1. 单 **击** “保存”(Save)，管线将显示在主屏幕的卡片上，并执行以下三个操作：
+1. 单 **击** “保存”(Save)，管道将显示在主屏幕的卡片上，并执行以下三个操作：
 
    * **编辑** -允许编辑管道设置
    * **Detail** —— 显示上次管线执行（如果有）
