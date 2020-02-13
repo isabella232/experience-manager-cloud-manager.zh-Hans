@@ -4,13 +4,13 @@ seo-title: AEM Cloud Manager 2020.2.0版本说明
 description: 可查看本页以获取Cloud Manager 2020.2.0版的相关信息
 seo-description: 可查看本页以获取AEM Cloud Manager 2020.2.0版的相关信息
 translation-type: tm+mt
-source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
+source-git-commit: f9c8c1d7b63749e6994481324392aee7330046fb
 
 ---
 
 # 2020.1.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.2.0版的一般 [!UICONTROL Cloud Manager] 发行说明，并添加了对访问Git凭据和登录体验的更新。
+以下部分概述了2020.2.0版 [!UICONTROL Cloud Manager] 的一般发行说明。
 
 ## Release Date {#release-date}
 
@@ -19,7 +19,7 @@ source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 ## 新增功能 {#whats-new}
 
 * Adobe Experience manager原型版本已更新至版本22。
-* 在舞台部署日志中添加活动实例
+* 在舞台部署日志中添加了活动实例
 * Experience cloud通知中使用的URL已优化，以避免额外重定向。
 * 现在超时的管道执行步骤显式声明此。
 * “代码扫描”步骤现在有可下载的日志。
