@@ -4,11 +4,11 @@ seo-title: AEM Cloud Manager 2020.2.0版本说明
 description: 可查看本页以获取Cloud Manager 2020.2.0版的相关信息
 seo-description: 可查看本页以获取AEM Cloud Manager 2020.2.0版的相关信息
 translation-type: tm+mt
-source-git-commit: f9c8c1d7b63749e6994481324392aee7330046fb
+source-git-commit: b030b526ab5501059f4d605c8c4b7423696cbd7f
 
 ---
 
-# 2020.1.0 版发行说明 {#release-notes-for}
+# 2020.2.0 版发行说明 {#release-notes-for}
 
 以下部分概述了2020.2.0版 [!UICONTROL Cloud Manager] 的一般发行说明。
 
