@@ -21,8 +21,8 @@ source-git-commit: 6b6fa995e156fe928c88f55e89a9202c22ec18bc
 + 先决条件 {#requirements}
    + [已授予的访问权限](access-rights-granted.md)
    + [源代码存储库](source-code-repository.md)
-   + [添加用户和角色](setting-up-users-and-roles.md)
    + [基于角色的权限](role-based-permissions.md)
+   + [添加用户和角色](setting-up-users-and-roles.md)
    + [已设置的环境](environments-provisioned.md)
 + 入门 {#getting-started}
    + [首次登录](first-time-login.md)
