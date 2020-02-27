@@ -4,7 +4,7 @@ sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Experience Manager Cloud Manager Help
 translation-type: tm+mt
-source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
+source-git-commit: 6b6fa995e156fe928c88f55e89a9202c22ec18bc
 
 ---
 
@@ -22,6 +22,7 @@ source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
    + [已授予的访问权限](access-rights-granted.md)
    + [源代码存储库](source-code-repository.md)
    + [添加用户和角色](setting-up-users-and-roles.md)
+   + [基于角色的权限](role-based-permissions.md)
    + [已设置的环境](environments-provisioned.md)
 + 入门 {#getting-started}
    + [首次登录](first-time-login.md)
@@ -40,8 +41,8 @@ source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
    + [通知](notifications.md)
    + [自定义代码质量规则](custom-code-quality-rules.md)
 + 管理代码 {#managing-code}
-   + [Maven项目版本处理](activating-maven-project.md)
-   + [访问Git](accessing-git.md)
+   + [Maven 项目版本处理](activating-maven-project.md)
+   + [访问 Git](accessing-git.md)
    + [与Git集成](setup-cloud-manager-git-integration.md)
 + 产品更新向导 {#product-update-wizard}
    + [概述](overview-productupdate-wizard.md)
