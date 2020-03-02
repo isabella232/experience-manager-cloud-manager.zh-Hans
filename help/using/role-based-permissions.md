@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: a038a3d6e35ff28190441e9d11d9c539641a85af
+source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
 
 ---
 
@@ -42,6 +42,7 @@ source-git-commit: a038a3d6e35ff28190441e9d11d9c539641a85af
 |--- |--- |--- |--- |--- |--- |--- |
 | 读取应用程序 | 阅读计划KPI。 | x | x | x | x | x |
 | 编写应用程序 | 程序设置或编辑。 | x |  |  |  |  |
+| 添加计划 | 添加新计划。 | x |  |  |  |  |
 | 阅读环境 | 请参阅环境详细信息。 | x | x | x | x | x |
 | 创建执行 | 启动管道。 | x | x | x |  |  |
 | 读取执行 | 请参阅执行状态。 | x | x | x | x | x |
