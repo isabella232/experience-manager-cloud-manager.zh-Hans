@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
+source-git-commit: 157370b193c104915be063d1a4375f81839b88a2
 
 ---
 
@@ -58,3 +58,5 @@ source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
 | 管道修改批准 | 允许编辑“业务所有者”选项。 |  | x |  |  |  |
 | 管道修改受管部署 | 允许编辑CSE监督选项。 |  | x |  |  |  |
 | 步骤阅读 | 查看步骤质量指标结果。 | x | x | x | x | x |
+| 生成个人访问令牌 | 访问Git。 |  | x |  | x |  |
+
