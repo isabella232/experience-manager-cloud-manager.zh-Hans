@@ -1,34 +1,31 @@
 ---
-title: 2020.2.0 版发行说明
-seo-title: AEM Cloud Manager 2020.2.0版本说明
-description: 可查看本页以获取Cloud Manager 2020.2.0版的相关信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.2.0版的相关信息
+title: 2020.3.0 版发行说明
+seo-title: AEM Cloud Manager 2020.3.0版本说明
+description: 可查看本页以获取Cloud Manager 2020.3.0版的相关信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2020.3.0版的相关信息
 translation-type: tm+mt
-source-git-commit: b030b526ab5501059f4d605c8c4b7423696cbd7f
+source-git-commit: 44671d89edad0ccb6ded998b62beb5fa012678e9
 
 ---
 
-# 2020.2.0 版发行说明 {#release-notes-for}
+# 2020.3.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.2.0版 [!UICONTROL Cloud Manager] 的一般发行说明。
+以下部分概述了2020.3.0版 [!UICONTROL Cloud Manager] 的一般发行说明。
 
 ## Release Date {#release-date}
 
-版本2020.2.0 [!UICONTROL Cloud Manager] 的发布日期为2020年2月13日。
+版本2020.3.0 [!UICONTROL Cloud Manager] 的发布日期为2020年3月5日。
 
 ## 新增功能 {#whats-new}
 
-* Adobe Experience manager原型版本已更新至版本22。
-* 在舞台部署日志中添加了活动实例
-* Experience cloud通知中使用的URL已优化，以避免额外重定向。
-* 现在超时的管道执行步骤显式声明此。
-* “代码扫描”步骤现在有可下载的日志。
-* “安全测试”步骤现在有可下载的日志。
-* 性能测试期间访问的页面列表现在可下载。
-* 现在，包含在代码扫描过程中发现的问题的电子表格有一列，其中包含指向特定规则文档的链接。
-* 如果“性能测试”步骤无法启动，则现在会显示失败的原因。
+* 构建步骤运行时，构建步骤的日志现在可用。
+* 管道执行详细信息页面上的某些消息已经编辑，以便清晰明了。
 
 ## 错误修复 {#bug-fixes}
 
-* 浏览器安全策略有时会阻止管道执行屏幕中的某些按钮正常工作。
-* “概述”、“环境”和“活动”链接有时可在Cloud manager登录页面上使用。
+* 如果部署失败，某些部署配置可能导致部署步骤的日志不可用。
+* Managed Services程序部署步骤中的特定失败可能导致后续执行无法启动。
+* 构建步骤中使用的短暂SonarQube实例在配置的超时内偶尔无法启动。
+* 在特定项目中， *应始终关闭ResourceResolver对象* ，将产生空指针异常；然而，这并不影响管道执行。
+
+
