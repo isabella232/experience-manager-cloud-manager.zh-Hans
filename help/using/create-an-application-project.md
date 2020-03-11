@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: b093f1712d9ca9e91b87e925a43e2992a4f11cc0
+source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
 
 ---
 
@@ -28,10 +28,6 @@ source-git-commit: b093f1712d9ca9e91b87e925a43e2992a4f11cc0
 1. 登录到Cloud Manager并完成基本程序设置后，如果存储库为空，“ **Overview** ”屏幕上将显示一张特殊的行动动员卡。
 
    ![](assets/image2018-10-3_14-29-44.png)
-
-1. 单击 **创建** ，导航到“管线设 **置”屏幕** 。
-
-   ![](assets/image2018-10-3_14-30-22.png)
 
 1. 单 **击创建** ，打开一个对话框，用户可通过该对话框提供AEM项目原型所需的参数。 在默认表单中，对话框要求输入两个值：
 
