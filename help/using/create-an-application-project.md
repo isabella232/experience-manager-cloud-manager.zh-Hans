@@ -2,14 +2,14 @@
 title: 创建 AEM 应用程序项目
 seo-title: 创建 AEM 应用程序项目
 description: 'null'
-seo-description: 可查看本页以了解有关在Cloud manager入门时设置AEM项目的更多信息。
+seo-description: 可查看本页以了解有关在Cloud Manager入门时设置AEM项目的更多信息。
 uuid: 7b976ebf-5358-49d8-a58d-0bae026303fa
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
+source-git-commit: b093f1712d9ca9e91b87e925a43e2992a4f11cc0
 
 ---
 
@@ -18,27 +18,17 @@ source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
 
 ## 使用向导创建AEM应用程序项目 {#using-wizard-to-create-an-aem-application-project}
 
-当客户已登记到Cloud Manager时，他们会获得一个空git存储库。 当前Adobe Managed Services(AMS)客户（或迁移到AMS的内部部署AEM客户）通常已在git（或其他版本控制系统）中包含其项目代码，并将其项目导入Cloud manager存储库。 但是，新客户没有现有项目。
+当客户已登记到Cloud Manager时，他们会获得一个空git存储库。 当前Adobe Managed Services(AMS)客户（或迁移到AMS的内部部署AEM客户）通常已在git（或其他版本控制系统）中包含其项目代码，并将其项目导入Cloud Manager存储库。 但是，新客户没有现有项目。
 
 为了帮助新客户入门，Cloud Manger现在可以创建最少的AEM项目作为起点。 此过程基于 [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
 
-<!-- 
 
-Comment Type: annotation
-Last Modified By: jsyal
-Last Modified Date: 2018-10-08T12:52:50.071-0400
-
-2018.8.0: Added this new section
-
- -->
-
-请按照以下步骤在Cloud manager中创建AEM应用程序项目：
+请按照以下步骤在Cloud Manager中创建AEM应用程序项目：
 
 1. 登录到Cloud Manager并完成基本程序设置后，如果存储库为空，“ **Overview** ”屏幕上将显示一张特殊的行动动员卡。
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-[Shankari] ，下面介绍的第二步不正确。 请删除它。
 1. 单击 **创建** ，导航到“管线设 **置”屏幕** 。
 
    ![](assets/image2018-10-3_14-30-22.png)
@@ -56,7 +46,7 @@ Last Modified Date: 2018-10-08T12:52:50.071-0400
 
    >[!NOTE]
    >
-   >例如，如果标 **题为** We.Finance ***，则Base Maven Artifact id参数将生成为*** com.wefinance ******。 如果需要，可以更改这些值。
+   >例如，如果标 **题为** We.Finance ***，则Base Maven Artifact Id参数将生成为*** com.wefinance ******。 如果需要，可以更改这些值。
    >
    >
    >例如，您可以将生成的 ***值com.wefinance更改为*** net.wefinance ******。
@@ -67,7 +57,7 @@ Last Modified Date: 2018-10-08T12:52:50.071-0400
 
 ### 修改项目设置详细信息 {#modifying-project-setup-details}
 
-为了使用Cloud manager成功构建和部署AEM项目，现有AEM项目需要遵守一些基本规则：
+为了使用Cloud Manager成功构建和部署AEM项目，现有AEM项目需要遵守一些基本规则：
 
 * 项目必须使用Apache Maven构建。
 * Git存储库 *的根中必须有pom.xml* 文件。 此 ** pom.xml文件可以引用多个子模块（这些子模块又可能具有其他子模块等）必要时。
@@ -91,7 +81,7 @@ Last Modified Date: 2018-10-08T09:20:10.106-0400
 
 ## 构建环境详细信息 {#build-environment-details}
 
-Cloud manager使用专用构建环境构建和测试您的代码。 此环境具有以下属性：
+Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具有以下属性：
 
 * 构建环境基于Linux，源自Ubuntu 18.04。
 * 已安装Apache Maven 3.6.0。
@@ -128,13 +118,13 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 | CM_PIPELINE_NAME | 管道名称 |
 | CM_PROGRAM_ID | 数字程序标识符 |
 | CM_PROGRAM_NAME | 程序名称 |
-| ARTIFACTS_VERSION | 对于舞台或生产管道，由Cloud manager生成的合成版本 |
+| ARTIFACTS_VERSION | 对于舞台或生产管道，由Cloud Manager生成的合成版本 |
 
 ### 自定义环境变量 {#custom-environ-variables}
 
-在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在git存储库中。 Cloud manager允许客户成功工程师(CSE)按客户配置这些变量。 这些变量存储在安全的存储位置中，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE以配置其变量。
+在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在git存储库中。 Cloud Manager允许客户成功工程师(CSE)按客户配置这些变量。 这些变量存储在安全的存储位置中，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE以配置其变量。
 
-配置后，这些变量将作为环境变量可用。 要将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在如上所述的配置文件中引用它们：
+配置后，这些变量将作为环境变量可用。 要将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在上述配置文件中引用它们：
 
 ```xml
         <profile>
@@ -154,13 +144,13 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 >
 >环境变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。
 
-## 在Cloud manager中激活Maven配置文件 {#activating-maven-profiles-in-cloud-manager}
+## 在Cloud Manager中激活Maven配置文件 {#activating-maven-profiles-in-cloud-manager}
 
-在某些有限的情况下，在Cloud manager中运行时，与在开发人员工作站上运行时相比，您可能需要稍微改变构建过程。 对于这些情况， [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) （Maven配置文件）可用于定义构建在包括Cloud manager在内的不同环境中的不同之处。
+在某些有限的情况下，在Cloud Manager中运行时，与在开发人员工作站上运行时相比，您可能需要稍微改变构建过程。 对于这些情况， [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) （Maven配置文件）可用于定义构建在包括Cloud Manager在内的不同环境中的不同之处。
 
-在Cloud manager构建环境中激活Maven配置文件应通过查找上述CM_BUILD环境变量来完成。 相反，只有在Cloud manager构建环境之外才能使用的配置文件，应通过查找此变量的大小来完成。
+在Cloud Manager构建环境中激活Maven配置文件应通过查找上述CM_BUILD环境变量来完成。 相反，只有在Cloud Manager构建环境之外才能使用的配置文件，应通过查找此变量的大小来完成。
 
-例如，如果您希望仅在构建在Cloud manager中运行时输出简单消息，您可以执行以下操作：
+例如，如果您希望仅在构建在Cloud Manager中运行时输出简单消息，您可以执行以下操作：
 
 ```xml
         <profile>
@@ -198,7 +188,7 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 >
 >要在开发人员工作站上测试此配置文件，您可以在命令行(随 `-PcmBuild`)或集成开发环境(IDE)中启用它。
 
-如果您希望仅在构建在Cloud manager之外运行时输出简单消息，您可以执行以下操作：
+如果您希望仅在构建在Cloud Manager之外运行时输出简单消息，您可以执行以下操作：
 
 ```xml
         <profile>
@@ -235,7 +225,7 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 
 ## 安装其他系统包 {#installing-additional-system-packages}
 
-某些构建需要安装额外的系统包才能完全运行。 例如，内部版本可能调用Python或ruby脚本，因此需要安装相应的语言解释器。 这可以通过调用exec- [maven-plugin来调用](https://www.mojohaus.org/exec-maven-plugin/) APT来完成。 此执行通常应包含在特定于Cloud manager的Maven配置文件中。 例如，安装python:
+某些构建需要安装额外的系统包才能完全运行。 例如，内部版本可能调用Python或ruby脚本，因此需要安装相应的语言解释器。 这可以通过调用exec- [maven-plugin来调用](https://www.mojohaus.org/exec-maven-plugin/) APT来完成。 此执行通常应包含在特定于Cloud Manager的Maven配置文件中。 例如，安装python:
 
 ```xml
         <profile>
@@ -296,7 +286,7 @@ Cloud manager使用专用构建环境构建和测试您的代码。 此环境具
 
 ## 跳过内容包 {#skipping-content-packages}
 
-在Cloud manager中，构建可能生成任意数量的内容包。
+在Cloud Manager中，构建可能生成任意数量的内容包。
 出于各种原因，可能需要制作内容包，但不要部署它。 这可能很有用，例如，在构建仅用于测试的内容包时，或者在构建过程中将通过另一个步骤重新打包的内容包（即，作为另一个包的子包）时。
 
 为了适应这些情况，Cloud manager将在构建内容包的属性中 ***查找名为cloudManagerTarget*** 的属性。 如果此属性设置为none，则将跳过并且不部署包。 设置此属性的机制取决于构建生成内容包的方式。 例如，使用filevault-maven-plugin可以配置插件，如下所示：
