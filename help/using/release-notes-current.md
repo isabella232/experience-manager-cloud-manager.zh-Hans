@@ -4,7 +4,7 @@ seo-title: AEM Cloud Manager 2020.4.0版本说明
 description: 可查看本页以获取Cloud Manager 2020.4.0版的相关信息
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.4.0版的信息
 translation-type: tm+mt
-source-git-commit: e7da473a22bec1d3d9b3d39bf654af0c596fe86d
+source-git-commit: ee7fc8a23dd0719eda84638c810842c2dc1772bb
 
 ---
 
@@ -18,9 +18,9 @@ source-git-commit: e7da473a22bec1d3d9b3d39bf654af0c596fe86d
 
 ## 新增功能 {#whats-new}
 
-* 对导航CM概述页面的更改允许用户从CM概述页面编辑或切换项目。
-* 允许用户从CM项目上的项目卡编辑登陆页的更改。
-* 新管线状态“管线正在运行”显示在与其关联的环境上。
+* 对导航Cloud Manager概述页面所做的更改允许用户编辑或切换项目。
+* 允许用户从Cloud Manager项目上的项目卡编辑登陆页的更改。
+* 新管线状 **态管线运行** ，显示与其关联的环境。
 * 改进了管道执行页面的可理解性。 这包括管道名称（仅限非生产管道）和类型的显示，以及指示管道状态是否为“进行中／已取消／失败”的徽章。
 * 用于生成Git密码的过程对底层服务层中的问题具有更强的适应性。
 
