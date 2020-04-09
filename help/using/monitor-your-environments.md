@@ -2,69 +2,69 @@
 title: 监视环境
 seo-title: 监视环境
 description: 'null'
-seo-description: 可查看本页以了解Cloud Manager中的系统监视，具体方法是观察某个环境中的各个实例并跟踪每个实例的各种指标。
+seo-description: 可查看本页以了解Cloud Manager中的系统监控，具体方法是观察环境中的各个实例并跟踪每个实例的各种指标。
 translation-type: tm+mt
-source-git-commit: 1edfbc0adb04026cd29ba93b4ba155d3b61439dc
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
 
 # 系统监控 {#system-monitoring}
 
-在中进行系 [!UICONTROL Cloud Manager] 统监视的方法是，观察环境中的各个实例并跟踪每个实例的各种度量。 每个度量都有两个定义的阈值- *警告阈值* 和严 *重阈值*。
+在中进行系 [!UICONTROL Cloud Manager] 统监视是通过观察环境中的单个实例并跟踪每个实例的各种度量来完成的。 每个度量都有两个定义的阈值- *警告阈值* 和严 *重阈值*。
 
-如果一个指标超过其临界阈值，则被视为处于临界状态；如果度量超过其警告阈值（但低于其关键阈值），则被视为处于警告状态。 阈值由Adobe Managed services设置，可在中进行可视化 [!UICONTROL Cloud Manager]。 在大多数情况下，客户之间的阈值是一致的，但在某些情况下，Adobe Managed services将修改阈值以符合特定客户要求。 有关阈值的问题应提交给您的客户成功工程师(CSE)。
+如果一个指标超过其临界阈值，则被视为处于临界状态；如果度量超过其警告阈值（但低于其关键阈值），则被视为处于警告状态。 阈值由Adobe Managed Services设置，可在中进行可视化 [!UICONTROL Cloud Manager]。 在大多数情况下，客户之间的阈值是一致的，但在某些情况下，Adobe Managed Services将修改阈值以符合特定客户要求。 有关阈值的问题应提交给您的客户成功工程师(CSE)。
 
 ## 导航到系统监视 {#navigating-system-monitoring}
 
 导航到“系统监视”功能可通过两种方式完成。
 
-1. 登录到 **Managed Services —— 程序登录页** 。
+1. 登录到 **Managed Services -项目** 登陆页。
 
    ![](assets/ProgramLanding.png)
 
-1. 单击程序卡上的第三个图标。
+1. 单击项目卡上的第四个图标。
 
-   ![](assets/program-card.png)
+   ![](assets/first-timea1.png)
 
    *或者*,
 
-* 通过Reports全局 **导航菜单项** ，导航到 **System Monitoring登录页面**[!UICONTROL Cloud Manager]。
+* 通过Reports全局 **导航菜单项** ，导航到 **System Monitoring** (系统监 [!UICONTROL Cloud Manager]视)登陆页。
 
 
 ## “系统监视：概述”页 {#system-monitoring-overview-page}
 
-“系统监视概述”页列出了计划中受监视的环境，并报告了四个不同类别的高级别健康状况：
+“系统监视概述”页面列表了项目中被监视的环境，并跨四个单独的类别报告了其高级健康：
 
 * **主机**
 * **存储**
 * **网络**
 * **应用程序**
 
-每个类别的状态是单个度量的摘要——如果某个类别中的任何度量处于关键状态，则在概述页面中，整个类别都处于关键状态。 可以在环境级别和实例级别查看相同的摘要。
+每个类别的状态是单个度量的摘要——如果类别中的任何度量处于关键状态，则整个类别在概述页面中都处于关键状态。 可以在环境级别和实例级别查看相同的摘要。
 
 ![](assets/System-Monitoring-Reports.png)
 
 >[!NOTE]
 >
->默认情况下，在导航到此页面时，生产环境实例是可见的，但也可以打开其他环境。
+>默认情况下，导航到此页面时，生产环境实例可见，但也可以打开其他环境。
 
 ## 视频教程 {#video-tutorial}
 
-### Cloud manager报告概述 {#reports-video}
+### Cloud Manager报告概述 {#reports-video}
 
-Cloud manager报告通过一组图表提供对计划环境和AEM实例的视图，这些图表报告并跟踪每个AEM实例的各种指标。
+Cloud Manager报告通过一组图表为项目的环境和AEM实例提供一个视图，这些图表报告并跟踪每个AEM实例的各种指标。
 有关更多详细信息，请参阅以下视频。
 
->[!VIDEO](https://video.tv.adobe.com/v/26315/?captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/26315/)
 
 ## 系统监视详细信息 {#system-monitoring-detail}
 
-要查看特定度量的详细信息，您可以单击左侧导航中的某个类别，或单击特定实例的某个类别指示符。 每个详细信息页面都显示该类别中度量的一系列图形。 您可以查看环境中所有实例的度量或特定实例的度量。 您可以使用右上角的下拉框在环境和实例之间切换。
+要视图特定度量的详细信息，您可以单击左侧导航中的某个类别，或单击特定实例的某个类别指示符。 每个详细信息页面都显示该类别中度量的一系列图形。 您可以视图环境中所有实例的度量，也可以是特定实例的度量。 您可以使用右上角的下拉框在环境和实例之间切换。
 
 ![](assets/System_Monitoring1.png)
 
-左侧的导航将显示当前选定类别中的可用度量，其中存在当前选定环境和实例的数据。
+左侧的导航将显示当前选定类别中的可用度量，其中有当前选定环境和实例的数据。
 
 ![](assets/System_Monitoring2.png)
 
@@ -113,19 +113,19 @@ Cloud manager报告通过一组图表提供对计划环境和AEM实例的视图�
 
 ![](assets/SLA-Reports-two.png)
 
-此图下的“事件分析”部分显示了在当前选定年份为程序发生的事件集。 每个事件都有一个时间范围、一个原因和一组注释。
+此图下的事件分析部分显示了在当前选定年份内为项目发生的事件集。 每个事件都有一个时间范围、一个原因和一组注释。
 
 ![](assets/sla-reporting3.png)
 
 ## SLA指标 {#sla-metrics}
 
-* **作者合同**:这是您与Adobe Managed services的合同中为作者层定义的SLA。
+* **作者合同**:这是您与Adobe Managed Services的合同中为作者层定义的SLA。
 
 * **AMS作者SLA**:这是由Adobe或我们的供应商引起的生产作者层保理事件的可测量正常运行时间。
 
 * **作者SLA**:这是作者层（忽略计划停机时间，如维护窗口）的度量正常运行时间。
 
-* **最终用户合同**:这是您与Adobe Managed services的合同中为发布层定义的SLA。
+* **最终用户合同**:这是您与Adobe Managed Services的合同中为发布层定义的SLA。
 
 * **AMS最终用户SLA**:这是由Adobe或我们的供应商引起的生产发布层保理事件的可测量正常运行时间。
 
