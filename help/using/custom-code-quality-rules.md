@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: cd6272bfd1ffdbf1802c30217e0c615392076109
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2282'
 ht-degree: 6%
 
 ---
@@ -558,6 +558,35 @@ public void doThis(Resource resource) {
 }
 ```
 
+### 不应使用Sling调度程序 {#sonarqube-sling-scheduler}
+
+**密钥**: CQRules:AMSCORE-554
+
+**类型**: 代码气味
+
+**严重性**: 次要
+
+**自**: 版本2020.5.0
+
+Sling调度程序不得用于需要有保证执行的任务。 Sling Scheduled Jobs可确保执行，并更适合群集和非群集环境。
+
+请参阅 [Apache Sling Eventing和作业处理](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) ，进一步了解如何在群集环境中处理Sling Job。
+
+### 不应使用AEM已弃用的API {#sonarqube-aem-deprecated}
+
+**密钥**: AMSCORE-553
+
+**类型**: 代码气味
+
+**严重性**: 次要
+
+**自**: 版本2020.5.0
+
+AEM API表面处于不断修订的状态，用于标识不建议使用的API，因此被视为已弃用。
+
+在很多情况下，这些API使用标准Java@ *Deprecated* annotation弃用，如由标识 `squid:CallToDeprecatedMethod`。
+
+但是，在某些情况下，AEM上下文中已弃用API，但其他上下文中可能不弃用。 此规则标识此第二类。
 
 ## OakPAL内容规则 {#oakpal-rules}
 
@@ -642,7 +671,7 @@ public void doThis(Resource resource) {
       + rtePlugins [nt:unstructured]
 ```
 
-#### 包不应重叠 {#oakpal-no-overlap}
+### 包不应重叠 {#oakpal-no-overlap}
 
 **密钥**: 包重叠
 
@@ -654,7 +683,7 @@ public void doThis(Resource resource) {
 
 与“包不 *应包含重复OSGi配置* ”类似，这是复杂项目中的常见问题，在这些复杂项目中，同一个节点路径由多个单独的内容包写入。 使用内容包依赖关系可以确保结果一致，但最好避免完全重叠。
 
-#### OakPAL —— 默认创作模式不应为经典UI {#oakpal-default-authoring}
+### 默认创作模式不应为经典UI {#oakpal-default-authoring}
 
 **密钥**: ClassicUIAuthoringMode
 
@@ -666,7 +695,7 @@ public void doThis(Resource resource) {
 
 OSGi配置定 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 义AEM中的默认创作模式。 自AEM 6.4起，经典UI已弃用，现在将默认创作模式配置为经典UI时，会引发问题。
 
-#### OakPal —— 具有对话框的组件应具有触屏UI对话框 {#oakpal-components-dialogs}
+### 具有对话框的组件应具有触屏UI对话框 {#oakpal-components-dialogs}
 
 **密钥**: ComponentWithOnlyClassicUIDialog
 
@@ -684,7 +713,7 @@ OSGi配置定 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 义AEM中的
 
 AEM现代化工具文档提供了如何将组件从经典UI转换为触屏UI的文档和工具。 有关更 [多详细信息，请参](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) 阅AEM现代化工具。
 
-#### OakPal —— 软件包不应混合可变和不可变内容 {#oakpal-packages-immutable}
+### 包不应混合可变和不可变内容 {#oakpal-packages-immutable}
 
 **密钥**: ImmutableMutableMixedPackage
 
@@ -698,7 +727,7 @@ AEM现代化工具文档提供了如何将组件从经典UI转换为触屏UI的�
 
 有关更 [多详细信息，请参](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 阅AEM项目结构。
 
-### OakPal —— 不应使用反向复制代理 {#oakpal-reverse-replication}
+### 不应使用反向复制代理 {#oakpal-reverse-replication}
 
 **密钥**: 反向复制
 
@@ -712,35 +741,7 @@ AEM现代化工具文档提供了如何将组件从经典UI转换为触屏UI的�
 
 使用反向复制的客户应与Adobe联系以获得其他解决方案。
 
-### SonarQube —— 不应使用Sling调度程序 {#sonarqube-sling-scheduler}
 
-**密钥**: CQRules:AMSCORE-554
-
-**类型**: 代码气味
-
-**严重性**: 次要
-
-**自**: 版本2020.5.0
-
-Sling调度程序不得用于需要有保证执行的任务。 Sling Scheduled Jobs可确保执行，并更适合群集和非群集环境。
-
-请参阅 [Apache Sling Eventing和作业处理](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) ，进一步了解如何在群集环境中处理Sling Job。
-
-### SonarQube - SonarQube —— 不应使用AEM已弃用的API {#sonarqube-aem-deprecated}
-
-**密钥**: AMSCORE-553
-
-**类型**: 代码气味
-
-**严重性**: 次要
-
-**自**: 版本2020.5.0
-
-AEM API表面处于不断修订的状态，用于标识不建议使用的API，因此被视为已弃用。
-
-在很多情况下，这些API使用标准Java@ *Deprecated* annotation弃用，如由标识 `squid:CallToDeprecatedMethod`。
-
-但是，在某些情况下，AEM上下文中已弃用API，但其他上下文中可能不弃用。 此规则标识此第二类。
 
 
 
