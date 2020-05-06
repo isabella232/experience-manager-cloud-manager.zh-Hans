@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: 4edbbff4e519a1403c3140cc742def35f9516eff
 workflow-type: tm+mt
 source-wordcount: '1461'
 ht-degree: 6%
@@ -54,7 +54,7 @@ ht-degree: 6%
 | 跳过的单元测试 | 跳过的单元测试数。 | 信息 | > 1 |
 | 未解决问题 | 总体问题类型——漏洞、错误和代码气味 | 信息 | > 1 |
 | 复制行 | 重复块中涉及的行数。 <br/>对于要视为重复的代码块： <br/><ul><li>**非Java项目：**</li><li>至少应有100个连续令牌和重复令牌。</li><li>这些令牌至少应在以下位置传播： </li><li>COBOL的30行代码 </li><li>ABAP的20行代码 </li><li>10行代码，适用于其他语言</li><li>**Java项目：**</li><li> 无论令牌和行的数量如何，都至少应有10个连续和重复的语句。</li></ul> <br/>在检测重复时，会忽略缩进和字符串文本中的差异。 | 信息 | > 1% |
-| 云服务兼容性 | 已识别的云服务兼容性问题数。 | 信息 | >0 |
+| 云服务兼容性 | 已识别的云服务兼容性问题数。 | 信息 | > 0 |
 
 
 >[!NOTE]
