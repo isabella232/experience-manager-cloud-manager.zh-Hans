@@ -4,9 +4,9 @@ sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Experience Manager Cloud Manager 帮助
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: 0652436ec0c1c95d270a06a600424dbfd0140b27
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '201'
 ht-degree: 87%
 
 ---
@@ -51,7 +51,8 @@ ht-degree: 87%
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
 + 发行说明 {#release-notes}
-   + [最新发行说明（2020.5.0 版）](release-notes-current.md)
+   + [最新发行说明（2020.6.0 版）](release-notes-current.md)
+   + [2020.5.0 版发行说明](release-notes-2020-5-0.md)
    + [2020.4.0 版发行说明](release-notes-2020-4-0.md)
    + [2020.3.0 版发行说明](release-notes-2020-3-0.md)
    + [2020.2.0 版发行说明](release-notes-2020-2-0.md)
