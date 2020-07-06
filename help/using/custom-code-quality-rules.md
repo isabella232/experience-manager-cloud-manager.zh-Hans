@@ -2,14 +2,14 @@
 title: 自定义代码质量规则
 seo-title: 自定义代码质量规则
 description: 可查看本页以了解由云管理器执行的自定义代码质量规则。
-seo-description: 可查看本页以了解由Adobe Experience Manager Cloud Manager执行的自定义代码质量规则。
+seo-description: 可查看本页以了解由Adobe Experience Manager云管理器执行的自定义代码质量规则。
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 3663bd773c0043282359d690621de5023fa2974c
+source-git-commit: 8c651bcb187d911448475f6031c93bf956277e9f
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 6%
@@ -621,7 +621,8 @@ AEM API表面处于不断修订的状态，用于标识不建议使用的API，�
 
 #### 不符合规范的代码 {#non-compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + projectA
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -632,7 +633,8 @@ AEM API表面处于不断修订的状态，用于标识不建议使用的API，�
 
 #### 符合规范的代码 {#compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + shared-config
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -705,7 +707,7 @@ OSGi配置定 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 义AEM中的
 
 **自**: 版本2020.5.0
 
-具有经典UI对话框的AEM组件应始终具有相应的触屏UI对话框，以提供最佳创作体验，并与不支持经典UI的云服务部署模型兼容。 此规则验证以下情况：
+具有经典UI对话框的AEM组件应始终具有相应的触屏UI对话框，以提供最佳创作体验并与不支持经典UI的Cloud Service部署模型兼容。 此规则验证以下情况：
 
 * 具有经典UI对话框（即对话框子节点）的组件必须具有相应的触屏UI对话框(即子 `cq:dialog` 节点)。
 * 具有经典UI设计对话框（即design_dialog节点）的组件必须具有相应的触屏UI设计对话框(即子 `cq:design_dialog` 节点)。
@@ -723,9 +725,9 @@ AEM现代化工具文档提供了如何将组件从经典UI转换为触屏UI的�
 
 **自**: 版本2020.5.0
 
-为了与云服务部署模型兼容，单个内容包必须包含存储库不可变区域的内容（即，不应由客户代码修改并将导致单独的违规）或可变区域（即其他所有内容），但不能同时包含这两个内容。 `/apps and /libs, although /libs` 例如，包中同时包含这 `/apps/myco/components/text and /etc/clientlibs/myco` 两者的包与云服务不兼容，并会导致报告问题。
+为了与Cloud Service部署模型兼容，单个内容包必须包含存储库不可变区域的内容（即，不应由客户代码修改并将导致单独的违规）或可变区域（即，其他所有内容），但不能同时包含这两者。 `/apps and /libs, although /libs` 例如，包中同时包含这两 `/apps/myco/components/text and /etc/clientlibs/myco` 者的Cloud Service与不兼容，并会导致报告问题。
 
-有关更 [多详细信息，请参](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 阅AEM项目结构。
+Refer to [AEM Project Structure](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) for more details.
 
 ### 不应使用反向复制代理 {#oakpal-reverse-replication}
 
@@ -737,7 +739,7 @@ AEM现代化工具文档提供了如何将组件从经典UI转换为触屏UI的�
 
 **自**: 版本2020.5.0
 
-如发行说明所述，云服务部署中不支持反向 [复制： 删除复制代理](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents)。
+Cloud Service部署中不支持反向复制，如发行说明 [所述： 删除复制代理](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents)。
 
 使用反向复制的客户应与Adobe联系以获得其他解决方案。
 
