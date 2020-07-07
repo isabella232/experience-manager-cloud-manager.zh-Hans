@@ -8,16 +8,19 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 7769911253c149f4b1f7d9dec5d94888ccdbcb59
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 4%
 
 ---
 
 
 # 概述 {#overview-product-update-wizard}
 
-产品更新向导是Cloud manager客户的指导式分步体验，这些客户正在升级到最新的Adobe Experience Manager(AEM)6.5。它简化了端对端流程，确保使用Cloud Manager的CI/CD框架和内置的自动测试符合AEM最佳做法。
+产品更新向导是针对升级到最新Adobe Experience Manager(AEM)6.5的Cloud Manager客户的引导式分步体验。它简化了端对端流程，确保使用Cloud Manager的CI/CD框架和内置的自动测试遵循AEM最佳实践。
 
-该向导包括五个阶段，这些阶段指导用户在AEM产品更新过程中：
+该向导包括五个阶段，这些阶段在AEM产品更新过程中指导用户：
 
 * **评估**
 * **修正**
@@ -26,14 +29,15 @@ source-git-commit: 7769911253c149f4b1f7d9dec5d94888ccdbcb59
 * **完成**
 
 
-## 使用产品更新向导 {#using-product-update-wizard}
+## Using Product Update Wizard {#using-product-update-wizard}
 
 >[!NOTE]
->已装载到Cloud manager且有资格升级到AEM 6.5的客户将能够利用产品更新向导。 有关更多详细信息，请与您的客户成功工程师(CSE)联系。
+>
+>已装载到Cloud Manager并有资格升级到AEM 6.5的客户将能够利用产品更新向导。 有关更多详细信息，请联系您的客户成功工程师(CSE)。
 
-1. 您将通过Cloud manager收到一条脉冲通知，通知您AEM 6.5可用于您的程序。
+1. 您将通过Cloud Manager收到一条脉冲通知，通知您AEM 6.5对您的项目可用。
 
-1. 卡 **[!UICONTROL AEM 6.5 Update]** 显示在的概述屏幕上 [!UICONTROL Cloud Manager]。 此卡将帮助跟踪您当前处于更新过程的哪个阶段，并将通知您下一步将采取什么步骤。 选择 **[!UICONTROL Start Update]** 以启动向导。
+1. 卡 **[!UICONTROL AEM 6.5 Update]** 显示在的概述屏幕上 [!UICONTROL Cloud Manager]。 此卡将帮助跟踪您当前处于更新过程的哪个阶段，并通知您下一步将采取什么步骤。 选择 **[!UICONTROL Start Update]** 以启动向导。
 
    ![](assets/Start-Update.png)
 
