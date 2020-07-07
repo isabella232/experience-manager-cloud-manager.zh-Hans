@@ -8,44 +8,49 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 9e33b90818c686f0b7aacaf0955c3f2eba05488f
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
 
 # 评估阶段 {#evaluation}
 
-“产品更新”向导的第一阶段是阶 **[!UICONTROL Evaluation]** 段。
-您可以在此处使用可从向导直接访问的模式检测器来评估升级复杂性。 在此步骤结束时，您将有权访问评估报告。
+“产品更新”向导的第一阶段为 **[!UICONTROL Evaluation]** 阶段。
+在这里，您可以使用可从向导直接访问的模式检测器来评估升级复杂性。 在此步骤结束时，您将有权访问评估报告。
 
-生成的报告允许您通过检测以下模式来检查作者实例的升级性：
+生成的报告允许您通过检测以下模式检查作者实例的可升级性：
 
 * 违反某些规则，并在受升级影响或覆盖的区域执行。
 
-* 使用AEM 6.x功能或在新AEM上不向后兼容的API，它们在升级后可能会中断。
+* 请使用在新AEM上向后不兼容并可能在升级后中断的AEM 6.x功能或API。
 
 这是对升级到Adobe Experience Manager(AEM)6.5所涉及的开发工作的评估。
 
 >[!NOTE]
->要了解有关模式检测器的更多信息，请参 [阅使用模式检测器评估升级复杂性](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
+>
+>要进一步了解模式检测器，请参 [阅使用模式检测器评估升级复杂性](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
 
-## 运行求值器 {#running-evaluator}
+## 运行计算器 {#running-evaluator}
 
 请按照以下步骤生成评估报告：
 
 1. 单击 **[!UICONTROL Run Evaluation]**。
 
    >[!NOTE]
-   >该图案检测器可运行于任何环境。 但是，为了提高检测率并避免关键业务实例出现任何速度减慢，Cloud Manager将在创作实例的分阶段环境中运行它。
+   >图案检测器可以在任何环境上运行。 但是，为了提高检测率并避免关键业务实例的任何运行速度减慢，Cloud Manager将在创作实例的暂存环境运行它。
 
    ![](assets/Run-Evaluation.png)
 
-1. 向导会通知您操作的状态。 在生成评 **估报告时** ，您 **** 会注意到正在进行或已完成。
+1. 向导会通知您操作的状态。 在生成评 **估报告****时，您** 会注意到“正在进行”或“已完成”（如果适用）。
 
    生成报告后，您可以单击以 **[!UICONTROL Download report]** 保存副本。
 
    ![](assets/Evaluation-1.png)
 
 
->[!NOTE]
->Cloud Manager中当前版本的产品更新向导仅支持评估 **阶段** 。 其他四个阶段，即 **补救**、执 **行**、验证 ******和完** 成计划即将推出。
+   >[!NOTE]
+   >
+   >Cloud Manager中当前版本的产品更新向导仅支持 **评估** 阶段。 其他四个阶段，即 **补救**、执 **行**、验 **证**&#x200B;和完 **成即** 将推出。
