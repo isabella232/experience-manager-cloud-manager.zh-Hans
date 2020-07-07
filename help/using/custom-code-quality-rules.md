@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 8c651bcb187d911448475f6031c93bf956277e9f
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 6%
@@ -593,6 +593,7 @@ AEM API表面处于不断修订的状态，用于标识不建议使用的API，�
 请在Cloud Manager执行的OakPAL检查下找到。
 
 >[!NOTE]
+>
 >OakPAL是由AEM合作伙伴（2019年AEM Rockstar北美奖得主）开发的框架，该框架使用独立的Oak存储库验证内容包。
 
 ### 客户包不应在/libs下创建或修改节点 {#oakpal-customer-package}
