@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
+source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 7%
 
 ---
 
@@ -18,9 +21,9 @@ source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
 
 ## 使用向导创建AEM应用程序项目 {#using-wizard-to-create-an-aem-application-project}
 
-当客户已登记到Cloud Manager时，他们会获得一个空git存储库。 当前Adobe Managed Services(AMS)客户（或迁移到AMS的内部部署AEM客户）通常已在git（或其他版本控制系统）中包含其项目代码，并将其项目导入Cloud Manager存储库。 但是，新客户没有现有项目。
+当客户已载入Cloud Manager时，他们将获得一个空的git存储库。 当前Adobe Managed Services(AMS)客户（或迁移到AMS的内部部署AEM客户）通常已将其项目代码放在git（或其他版本控制系统）中，并将其项目导入Cloud Manager Git存储库。 但是，新客户没有现有项目。
 
-为了帮助新客户入门，Cloud Manger现在可以创建最少的AEM项目作为起点。 此过程基于 [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
+为了帮助新客户入门，Cloud Manger现在可以创建最少的AEM项目作为起点。 此过程基于AEM项 [**目原型&#x200B;**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
 
 
 请按照以下步骤在Cloud Manager中创建AEM应用程序项目：
@@ -29,41 +32,41 @@ source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-1. 单 **击创建** ，打开一个对话框，用户可通过该对话框提供AEM项目原型所需的参数。 在默认表单中，对话框要求输入两个值：
+1. 单 **击创建** 以打开一个对话框，通过该对话框，用户可以提供AEM项目原型所需的参数。 在默认表单中，对话框要求输入两个值：
 
-   * **标题** -默认情况下，它设置为程序 *名称*
+   * **标题** -默认情况下，它设置为 *项目名*
 
-   * **新分支名称** -默认情况下，此名称为主 *页*
+   * **新分支名称** -默认情况下，此名称为 *主控*
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
-   该对话框有一个抽屉，可以通过单击对话框底部的手柄打开该抽屉。 该对话框在其展开形式中显示Archetype的所有配置参数。 其中许多参数都具有默认值，这些默认值是根据“标题” **生成的**。
+   该对话框有一个抽屉，可以通过单击对话框底部的手柄来打开该抽屉。 在其扩展形式中，该对话框显示原型的所有配置参数。 这些参数中的许多参数具有根据标题生成的默 **认值**。
 
    ![](assets/screen_shot_2018-10-08at60032am.png)
 
    >[!NOTE]
    >
-   >例如，如果标 **题为** We.Finance ***，则Base Maven Artifact Id参数将生成为*** com.wefinance ******。 如果需要，可以更改这些值。
+   >例如，如果标 **题为** We. ***Finance***，则Base Maven Artifact Id参数将生成为 ***com.wefinance***。 如果需要，可以更改这些值。
    >
    >
-   >例如，您可以将生成的 ***值com.wefinance更改为*** net.wefinance ******。
+   >例如，您可以将生成的 ***值com.wefinance更改******为net.wefinance***。
 
-1. 在上 **一步中** ，单击创建，使用原型创建启动项目并提交到指定的git分支。 完成此操作后，您可以设置管道。
+1. 在上 **一步中** ，单击“创建”，使用原型创建启动项目并提交到指定的git分支。 完成此操作后，可设置管道。
 
 ## 设置项目 {#setting-up-your-project}
 
 ### 修改项目设置详细信息 {#modifying-project-setup-details}
 
-为了使用Cloud Manager成功构建和部署AEM项目，现有AEM项目需要遵守一些基本规则：
+为了成功构建和部署Cloud Manager，现有AEM项目需要遵守一些基本规则：
 
 * 项目必须使用Apache Maven构建。
-* Git存储库 *的根中必须有pom.xml* 文件。 此 ** pom.xml文件可以引用多个子模块（这些子模块又可能具有其他子模块等）必要时。
+* 在Git存储 *库的根目录中* ，必须有pom.xml文件。 此 *pom.xml* 文件可以引用多个子模块（这些子模块又可能具有其他子模块等） 必要时。
 
-* 您可以在 *pom.xml文件中添加对其他Maven对象存储库的引用* 。 但是，不支持访问受口令保护或受网络保护的对象存储库。
-* 通过扫描名为target的目录中包含的内容包 *zip* ，可以发现可部署的内容包 **。 任意数量的子模块可以生成内容包。
+* 您可以在pom.xml文件中添加对其他Maven *项目存储库的引* 用。 但是，不支持访问受密码保护或受网络保护的对象存储库。
+* 可部署的内容包是通过扫描内容包 *zip* 文件来发现的，这些文件包含在名为 *目标的目录中*。 任何数量的子模块都可以生成内容包。
 
-* 可部署的调度程序对象是通过扫描 *zip* 文件(同样，包含在名为 *target*&#x200B;的目录中)来发现的，这些文件的目录名 *为conf* 和 ** conf.d。
+* 通过扫描zip文件(同样，包含在名为 *Dispatcher的目录中* )发现可部署的目标对象，该目录具有名 *为conf**和conf.d***&#x200B;的目录。
 
-* 如果有多个内容包，则不保证包部署的排序。 如果需要特定的顺序，可以使用内容包依赖关系来定义顺序。 可以从部署 [中跳](#skipping-content-packages) 过包。
+* 如果有多个内容包，则无法保证包部署的顺序。 如果需要特定的订单，可以使用内容包依赖关系定义订单。 可以从部署 [中跳](#skipping-content-packages) 过包。
 
 <!-- 
 
@@ -80,31 +83,62 @@ Last Modified Date: 2018-10-08T09:20:10.106-0400
 Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具有以下属性：
 
 * 构建环境基于Linux，源自Ubuntu 18.04。
-* 已安装Apache Maven 3.6.0。
-* 安装的Java版本为Oracle JDK 8u202。
+* Apache Maven 3.6.0已安装。
+* 安装的Java版本为Oracle JDK 8u202和11.0.2。
 * 还安装了一些其他系统包，这是必需的：
 
    * bzip2
-   * unzip
+   * 解压缩
    * libpng
    * imagemagick
    * graphicsmagick
 
-* 其他包可能会在构建时安装，如下 [所述](#installing-additional-system-packages)。
-* 每栋建筑都建在原始环境中；构建容器不会在执行之间保留任何状态。
-* Maven始终使用以下命令运行：mvn *—batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent包*
-* Maven在系统级别上配置了settings.xml文件，该文件自动包括公共Adobe **Artifact存储库** 。 (有关更多详细 [信息，请参阅Adobe Public Maven Repository](https://repo.adobe.com/) )。
+* 其他软件包可以在构建时安装，如 [下所述](#installing-additional-system-packages)。
+* 每栋建筑都建在原始环境上； 构建容器不会在执行之间保持任何状态。
+* Maven始终使用以下命令运行： *mvn —batch-mode clean org.jacoco:jaco-maven-plugin:prepare-agent包*
+* Maven在系统级别上配置了一个settings.xml文件，该文件自动包括公共Adobe Artifact **存储库** 。 (有关更多详 [细信息，请参阅Adobe](https://repo.adobe.com/) Public Maven Repository)。
 
+### 使用Java 11 {#using-java-11}
+
+Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情况下，项目是使用Java 8构建的。 计划在其项目中使用Java 11的客户可以使用Apache Maven Toolchains [插件进行此操作](https://maven.apache.org/plugins/maven-toolchains-plugin/)。
+
+为此，请在pom.xml文件中添加一个 `<plugin>` 如下的条目：
+
+```xml
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-toolchains-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>toolchain</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <toolchains>
+                    <jdk>
+                    <version>11</version>
+                    <vendor>oracle</vendor>
+                    </jdk>
+                </toolchains>
+            </configuration>
+        </plugin>
+```
+
+>[!NOTE]
+>支持的供应商是Oracle和Sun Microsystems，支持的版本是1.8、1.11和11。
 
 ## 环境变量 {#environment-variables}
 
 ### 标准环境变量 {#standard-environ-variables}
 
-在某些情况下，客户会发现有必要根据有关计划或管道的信息来改变构建过程。
+在某些情况下，客户发现有必要根据有关项目或管道的信息改变构建流程。
 
-例如，如果正在通过gulp等工具进行构建时间JavaScript微型化，则在为开发环境构建时可能希望使用不同的微型化级别，而不是为舞台和生产构建。
+例如，如果正在通过gulp等工具完成构建时间JavaScript微型化，则在为开发环境构建时可能希望使用不同的微型化级别，而不是为舞台和生产构建。
 
-为了支持此功能，Cloud Manager将这些标准环境变量添加到构建容器，以便每次执行。
+为支持此功能，Cloud Manager会将这些标准环境变量添加到每次执行的构建容器中。
 
 | **变量名称** | **定义** |
 |---|---|
@@ -112,41 +146,47 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
 | 分支 | 为执行配置的分支 |
 | CM_PIPELINE_ID | 数字管线标识符 |
 | CM_PIPELINE_NAME | 管道名称 |
-| CM_PROGRAM_ID | 数字程序标识符 |
-| CM_PROGRAM_NAME | 程序名称 |
-| ARTIFACTS_VERSION | 对于舞台或生产管道，由Cloud Manager生成的合成版本 |
+| CM_项目_ID | 数字项目标识符 |
+| CM_项目_NAME | 项目名称 |
+| AFTRACTS_VERSION | 对于舞台或生产管道，由Cloud Manager生成的合成版本 |
 
-### 自定义环境变量 {#custom-environ-variables}
+### 管道变量 {#pipeline-variables}
 
-在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在git存储库中。 Cloud Manager允许客户成功工程师(CSE)按客户配置这些变量。 这些变量存储在安全的存储位置中，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE以配置其变量。
+在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放置在git存储库中。 Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这些变量。 变量可以以纯文本形式存储，也可以在静态时加密。 在任何一种情况下，在构建环境中变量都作为环境变量可用，然后从pom.xml文件或其他构建脚本中引用该变量。
 
-配置后，这些变量将作为环境变量可用。 要将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在上述配置文件中引用它们：
+要使用CLI设置变量，请运行如下命令：
+
+`$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
+
+可以列出当前变量：
+
+`$ aio cloudmanager:list-pipeline-variables PIPELINEID`
+
+变量名称只能包含字母数字和下划线字符。 按照惯例，这些名称应全部为大写。 每个管道限制为200个变量，每个名称必须少于100个字符，每个值必须少于2048个字符。
+
+当在Maven pom.xml文件中使用时，通常可以使用与以下类似的语法将这些变量映射到Maven属性：
 
 ```xml
         <profile>
             <id>cmBuild</id>
             <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
+            <property>
+                <name>env.CM_BUILD</name>
+            </property>
             </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
+                <properties>
+                <my.custom.property>${env.MY_CUSTOM_VARIABLE}</my.custom.property> 
+                </properties>
         </profile>
 ```
 
->[!NOTE]
->
->环境变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。
+## 在Cloud Manager中激活Maven用户档案 {#activating-maven-profiles-in-cloud-manager}
 
-## 在Cloud Manager中激活Maven配置文件 {#activating-maven-profiles-in-cloud-manager}
+在某些有限情况下，在Cloud Manager中运行时，您可能需要稍微改变构建过程，而不是在开发人员工作站上运行。 对于这些情 [况，Maven用户档案](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) 可用于定义不同环境（包括Cloud Manager）中构建内容的不同方式。
 
-在某些有限的情况下，在Cloud Manager中运行时，与在开发人员工作站上运行时相比，您可能需要稍微改变构建过程。 对于这些情况， [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) （Maven配置文件）可用于定义构建在包括Cloud Manager在内的不同环境中的不同之处。
+在Cloud Manager构建激活中环境Maven用户档案，应通过查找上述CM_BUILD环境变量来完成。 相反，只有在Cloud Manager构建用户档案之外才能使用的环境应通过查找此变量的基本含义来完成。
 
-在Cloud Manager构建环境中激活Maven配置文件应通过查找上述CM_BUILD环境变量来完成。 相反，只有在Cloud Manager构建环境之外才能使用的配置文件，应通过查找此变量的大小来完成。
-
-例如，如果您希望仅在构建在Cloud Manager中运行时输出简单消息，您可以执行以下操作：
+例如，如果您希望仅在构建在云管理器中运行时输出简单消息，您可以执行以下操作：
 
 ```xml
         <profile>
@@ -182,9 +222,9 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
 
 >[!NOTE]
 >
->要在开发人员工作站上测试此配置文件，您可以在命令行(随 `-PcmBuild`)或集成开发环境(IDE)中启用它。
+>要在开发人员工作站上测试此用户档案，您可以在命令行上（通过）或在集 `-PcmBuild`成开发环境(IDE)中启用它。
 
-如果您希望仅在构建在Cloud Manager之外运行时输出简单消息，您可以执行以下操作：
+如果您希望仅在构建在Cloud Manager外部运行时输出简单消息，您可以执行以下操作：
 
 ```xml
         <profile>
@@ -218,10 +258,9 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
         </profile>
 ```
 
-
 ## 安装其他系统包 {#installing-additional-system-packages}
 
-某些构建需要安装额外的系统包才能完全运行。 例如，内部版本可能调用Python或ruby脚本，因此需要安装相应的语言解释器。 这可以通过调用exec- [maven-plugin来调用](https://www.mojohaus.org/exec-maven-plugin/) APT来完成。 此执行通常应包含在特定于Cloud Manager的Maven配置文件中。 例如，安装python:
+某些构建需要安装额外的系统包才能完全运行。 例如，生成可能调用Python或ruby脚本，因此需要安装相应的语言解释器。 这可以通过调用exec- [maven-plugin来调用](https://www.mojohaus.org/exec-maven-plugin/) APT来完成。 此执行通常应包含在特定于Cloud Manager的Maven用户档案中。 例如，安装python:
 
 ```xml
         <profile>
@@ -274,16 +313,16 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
         </profile>
 ```
 
-此技术同样可用于安装特定于语言的包，即使用RubyGems或 `gem` Python包 `pip` 安装这些包。
+此技术同样可用于安装语言特定的软件包，即用于 `gem` RubyGems或 `pip` Python软件包。
 
 >[!NOTE]
 >
->以这种方式安装系统包 **不会** ，而是将它安装在用于运行Adobe Experience Manager的运行时环境中。 如果您需要在AEM环境中安装系统包，请与您的客户成功工程师(CSE)联系。
+>以这种方式安装系统包不 **会将** 它安装在用于运行Adobe Experience Manager的运行时环境中。 如果您需要在AEM环境上安装系统包，请与客户成功工程师(CSE)联系。
 
 ## 跳过内容包 {#skipping-content-packages}
 
 在Cloud Manager中，构建可能生成任意数量的内容包。
-出于各种原因，可能需要制作内容包，但不要部署它。 这可能很有用，例如，在构建仅用于测试的内容包时，或者在构建过程中将通过另一个步骤重新打包的内容包（即，作为另一个包的子包）时。
+由于各种原因，可能希望生成内容包，但不要部署它。 这可能很有用，例如，在构建仅用于测试的内容包时，或者在构建过程中的另一步骤（即作为另一个包的子包）重新打包的内容包时。
 
 为了适应这些情况，Cloud manager将在构建内容包的属性中 ***查找名为cloudManagerTarget*** 的属性。 如果此属性设置为none，则将跳过并且不部署包。 设置此属性的机制取决于构建生成内容包的方式。 例如，使用filevault-maven-plugin可以配置插件，如下所示：
 
@@ -319,4 +358,4 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
 
 ## 根据最佳实践开发代码 {#develop-your-code-based-on-best-practices}
 
-Adobe工程和咨询团队为AEM开发 [人员开发了一整套最佳做法](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html)。
+Adobe工程和咨询团队为AEM开 [发人员开发了一整套最佳做法](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html)。
