@@ -1,55 +1,58 @@
 ---
-title: Manage your Dispatcher Configurations
+title: 管理调度程序配置
 seo-title: 管理调度程序配置
 description: 'null'
 seo-description: 可查看本页以了解有关配置调度程序的信息。
 uuid: 3ecd8ca3-5241-4811-87fd-3284a8012eda
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: 入门
+topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: e0a280efddb1e31f5aef65f0f52fc5b4e71de3da
+source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+workflow-type: tm+mt
+source-wordcount: '603'
+ht-degree: 2%
 
 ---
 
 
 # 管理调度程序配置 {#manage-your-dispatcher-configurations}
 
-## 使用Cloud manager部署调度程序配置文件 {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
+## 使用云管理器部署Dispatcher配置文件 {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
 
-Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文件存储在 **Git存储库中**)，以及常规AEM内容包。
+Cloud Manager能够部署Web服务器和Dispatcher配置文件(假定这些文件存储在 **Git存储库中**)，以及普通AEM内容包。
 
-要利用此功能，Maven构建应生成一个zip文件，其中至少包含两个目录- ***conf******和conf.d***。 可以使用maven-assembly-plugin生成此zip文件。 由Cloud manager使用内置向导生成的项目 [](create-an-application-project.md) ，在项目创建过程中会创建正确的Maven项目结构。 这是新Managed services客户的推荐路径。
+要利用此功能，Maven构建应生成一个zip文件，其中至少包含两个目 ***录*** - ***conf和conf.d***。 可以使用maven-assembly-plugin生成此zip文件。 由Cloud Manager使用内置向导生成的项 [目](/help/using/create-an-application-project.md) ，在创建项目时会创建正确的Maven项目结构。 这是新Managed Services客户的推荐路径。
 
-部署到调度程序实 **例后**，这些目录的内容将覆盖Dispatcher实例中这些目录的内容。 由于Web服务器和Dispatcher配置文件经常需要特定于环境的信息，为了使此功能正确使用，您首先需要与客户成功工程师(CSE)合作，以在 ***/etc/sysconfig/httpd中设置这些环境变量***。
+部署到调度程 **序实例**&#x200B;时，这些目录的内容将覆盖Dispatcher实例中这些目录的内容。 由于Web服务器和Dispatcher配置文件经常需要环境特定信息，为了使此功能正确使用，您首先需要与客户成功工程师(CSE)合作，在/etc/sysconfig/httpd中设 ***置这些环境变量***。
 
-### 为现有Managed services客户配置Dispatcher的步骤 {#steps-for-configuring-dispatcher}
+### 为现有Managed Services客户配置Dispatcher的步骤 {#steps-for-configuring-dispatcher}
 
-按照以下步骤完成配置Dispatcher的初始过程：
+请按照以下步骤完成配置Dispatcher中的初始过程：
 
-1. 从您的CSE获取当前生产配置文件。
-1. 删除硬编码的环境特定数据（例如，发布渲染器IP）并替换为变量。
-1. 在每个目标调度程序的键值对中定义所需的变量，并请求您的CSE在每个实例上添加到 ***/etc/sysconfig/httpd*** 。
-1. 在您的舞台环境中测试更新的配置，然后请求CSE部署到生产。
-1. 将文件提交 **到Git存储库**。
+1. 从CSE获取当前生产配置文件。
+1. 删除硬编码的环境特定数据（例如，发布呈现器IP）并替换为变量。
+1. 在每个目标Dispatcher的键值对中定义所需的变量，并请求CSE在每个实例 ***上添加到/etc/sysconfig*** /httpd。
+1. 在您的阶段环境测试更新的配置，然后请求CSE部署到生产。
+1. 将文件提 **交到Git存储库**。
 
-1. 通过Cloud manager进行部署。
+1. 通过云管理器进行部署。
 
 >[!NOTE]
 >
->将Dispatcher和Web服务器配置迁移到 **Git Repository** (Git Repository)可在Cloud Manager入门期间完成，但也可在以后的时间点完成。
+>将Dispatcher和Web服务器配 **置迁移到Git** Repository可在Cloud Manager上线期间完成，但也可在以后的时间点完成。
 
 ### 示例 {#example}
 
-具体的文件和目录结构可能因项目的具体情况而异，但本示例应提供如何将项目结构化以包括Apache和调度程序配置的具体指南。
+具体的文件和目录结构可能因项目的具体情况而异，但本示例应提供具体的指南，说明如何将您的项目结构化为包含Apache和Dispatcher配置。
 
 1. 创建名为的子目录 `dispatcher`。
 
    >[!NOTE]
-   请随时在此处使用任何名称，但此步骤中创建的目录名称必须与步骤6中使用的名称相同。
+   此处可以随意使用任何名称，但此步骤中创建的目录名称必须与步骤6中使用的名称相同。
 
-1. 此子目录将包含一个Maven模块，该模块使用Maven Assembly插件构建Dispatcher zip文件。 要启动此项，请在目 `dispatcher` 录中创建包含此内容 `pom.xml` 的文件，并根据需要更改父引用、artifactId和名称。
+1. 此子目录将包含一个Maven模块，该模块使用Maven Assembly插件构建Dispatcherzip文件。 要开始此内容，请 `dispatcher` 在目录中创 `pom.xml` 建包含此内容的文件，并根据需要更改父引用、artifactId和名称。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -90,9 +93,9 @@ Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文�
    ```
 
    >[!NOTE]
-   As in Step 1, the artifactId and name here can be other values if you want;  here just an example used for simplicity.`dispatcher`
+   如在第1步中所示，如果需要，此处的artifactId和名称可以是其他值； `dispatcher` 这里只有一个简单的例子。
 
-1. The Maven Assembly Plugin requires a *descriptor* to define how the zip file is created. To create this descriptor, create a file (again, in the  subdirectory) named with this content. `dispatcher``assembly.xml`Note that this file name is referenced on line 26 in the `pom.xml` file above.
+1. Maven Assembly插件需要一个描 *述符* ，以定义如何创建zip文件。 要创建此描述符，请创建一个使用此内容命名的文 `dispatcher` 件(同样 `assembly.xml`在子目录中)。 请注意，此文件名在上述文件的第26行 `pom.xml` 上引用。
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -115,8 +118,8 @@ Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文�
    </assembly>
    ```
 
-1. Now, create a subdirectory named  (as referenced in the assembly descriptor above on line 11) inside the dispatcher subdirectory to store the actual Apache and Dispatcher configurations. `src`Within this  directory, create directories named , , , and .`src``conf``conf.d``conf.dispatcher.d``conf.modules.d`
-1. Now you can populate the , , , and  directories with your configuration files. `conf``conf.d``conf.dispatcher.d``conf.modules.d`For example, the default configuration consists of these files and symbolic links.
+1. 现在，在调度程序子 `src` 目录中创建一个名为（如第11行上的程序集描述符中引用的）子目录，以存储实际的Apache和Dispatcher配置。 在此目 `src` 录中，创建名 `conf`为、 `conf.d`、 `conf.dispatcher.d`和的目 `conf.modules.d`录。
+1. 现在，您可以用 `conf`配置 `conf.d`文 `conf.dispatcher.d`件填 `conf.modules.d` 充、和目录。 例如，默认配置由这些文件和符号链接组成。
 
    ```
    dispatcher
@@ -191,9 +194,9 @@ Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文�
            └── 02-dispatcher.conf
    ```
 
-1. Finally, in the pom.xml file in the root of your project, add a  element to include the dispatcher module.`<module>`
+1. 最后，在项目根目录的pom.xml文件中，添加一个元素 `<module>` 以包含调度程序模块。
 
-   For example, if your existing module list is
+   例如，如果现有模块列表
 
    ```xml
        <modules>
@@ -203,7 +206,7 @@ Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文�
        </modules>
    ```
 
-   You should change it to
+   您应将其更改为
 
    ```xml
        <modules>
@@ -215,9 +218,9 @@ Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文�
    ```
 
    >[!NOTE]
-   As noted in Step 1, the value of the  element must match the directory name created.`<module>`****
+   如第1步中所述，元素的值必 `<module>` 须 **与创** 建的目录名匹配。
 
-1. Finally, to test, run mvn clean package in the project root directory. You should see lines like this in the output
+1. 最后，要进行测试，请在项目根目录中运行mvn清理包。 在输出中应该看到这样的行
 
    ```
    [INFO] --- maven-assembly-plugin:3.1.0:single (default) @ dispatcher ---
@@ -225,7 +228,7 @@ Cloud manager能够部署Web服务器和Dispatcher配置文件(假定这些文�
    [INFO] Building zip: /Users/me/mycompany/dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
    ```
 
-   You can also unzip this file to view its contents.
+   您还可以解压缩此文件以视图其内容。
 
    ```shell
    $ unzip -l dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
