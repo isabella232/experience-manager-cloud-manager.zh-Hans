@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 02515ac6e3ac54909e23a276a78f571ea5c249c4
+source-git-commit: 33aeba59c149e5ba3300b9d798356ec5e9bcd4b8
 workflow-type: tm+mt
-source-wordcount: '1518'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -151,37 +151,30 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 | CM_项目_NAME | 项目名称 |
 | AFTRACTS_VERSION | 对于舞台或生产管道，由Cloud Manager生成的合成版本 |
 
-### 管道变量 {#pipeline-variables}
+### 自定义环境变量 {#custom-variables}
 
-在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在Git存储库中。 Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这些变量。
+在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放置在git存储库中。 云管理器允许客户成功工程师(CSE)按客户配置这些变量。
 
-变量可以以纯文本形式存储，也可以在静态时加密。 在任何一种情况下，在构建环境中变量都作为环境变量可用，然后从pom.xml文件或其他构建脚本中引用该变量。
+这些变量存储在安全存储位置，并且仅在特定客户的构建容器中可见。 希望使用此功能的客户需要联系其CSE来配置其变量。
+配置后，这些变量将作为环境变量可用。 为了将它们用作Maven属性，您可以在pom.xml文件中引用它们，可能在上述用户档案中引用它们：
 
-使用下面的命令使用CLI设置变量：
-
-`$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
-
-您可以列表当前变量，如下所示：
-
-`$ aio cloudmanager:list-pipeline-variables PIPELINEID`
-
-变量名称只能包含字母数字和下划线字符。 按照惯例，这些名称应全部为大写。 每个管道限制为200个变量，每个名称必须少于100个字符，每个值必须少于2048个字符。
-
-当在Maven pom.xml文件中使用时，通常可以使用与以下类似的语法将这些变量映射到Maven属性：
 
 ```xml
         <profile>
             <id>cmBuild</id>
             <activation>
-            <property>
-                <name>env.CM_BUILD</name>
-            </property>
+                  <property>
+                        <name>env.CM_BUILD</name>
+                  </property>
             </activation>
-                <properties>
-                <my.custom.property>${env.MY_CUSTOM_VARIABLE}</my.custom.property> 
-                </properties>
+            <properties>
+                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
+            </properties>
         </profile>
 ```
+
+>[!NOTE]
+>环境变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。
 
 ## 在Cloud Manager中激活Maven用户档案 {#activating-maven-profiles-in-cloud-manager}
 
