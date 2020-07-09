@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+source-git-commit: 02515ac6e3ac54909e23a276a78f571ea5c249c4
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1518'
 ht-degree: 7%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 7%
    * **标题** -默认情况下，它设置为 *项目名*
 
    * **新分支名称** -默认情况下，此名称为 *主控*
+
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
    该对话框有一个抽屉，可以通过单击对话框底部的手柄来打开该抽屉。 在其扩展形式中，该对话框显示原型的所有配置参数。 这些参数中的许多参数具有根据标题生成的默 **认值**。
@@ -152,13 +153,15 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 
 ### 管道变量 {#pipeline-variables}
 
-在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放置在git存储库中。 Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这些变量。 变量可以以纯文本形式存储，也可以在静态时加密。 在任何一种情况下，在构建环境中变量都作为环境变量可用，然后从pom.xml文件或其他构建脚本中引用该变量。
+在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放在Git存储库中。 Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这些变量。
 
-要使用CLI设置变量，请运行如下命令：
+变量可以以纯文本形式存储，也可以在静态时加密。 在任何一种情况下，在构建环境中变量都作为环境变量可用，然后从pom.xml文件或其他构建脚本中引用该变量。
+
+使用下面的命令使用CLI设置变量：
 
 `$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
 
-可以列出当前变量：
+您可以列表当前变量，如下所示：
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
