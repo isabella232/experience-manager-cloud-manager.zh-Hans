@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: dd223d678450565c1c9e8f35503eda7e5444c674
+source-git-commit: ae22e0641111096c19d5413f3e78f339010bf512
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 7%
@@ -129,7 +129,7 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 ```
 
 >[!NOTE]
->Supported值 `vendor` 为， `oracle` Supported值 `sun` 为，Supported值为 `version` 、 `1.8`和 `1.11``11`。
+>支持 `vendor` 的值 `oracle` 为，支 `sun` 持的值为 `version` 、 `1.8`和 `1.11``11`。
 
 ## 环境变量 {#environment-variables}
 
