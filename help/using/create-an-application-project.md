@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: ae22e0641111096c19d5413f3e78f339010bf512
+source-git-commit: a4ea83c0b64515915871956c1cd3e53606f1c26b
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1494'
 ht-degree: 7%
 
 ---
@@ -99,6 +99,9 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
 * Maven始终使用以下命令运行： *mvn —batch-mode clean org.jacoco:jaco-maven-plugin:prepare-agent包*
 * Maven在系统级别上配置了一个settings.xml文件，该文件自动包括公共Adobe Artifact **存储库** 。 (有关更多详 [细信息，请参阅Adobe](https://repo.adobe.com/) Public Maven Repository)。
 
+>[!NOTE]
+>尽管Cloud Manager未定义特定版本，但 `jacoco-maven-plugin`使用的版本至少必须为 `0.7.5.201505241946`。
+
 ### 使用Java 11 {#using-java-11}
 
 Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情况下，项目是使用Java 8构建的。 计划在其项目中使用Java 11的客户可以使用Apache Maven Toolchains [插件进行此操作](https://maven.apache.org/plugins/maven-toolchains-plugin/)。
@@ -139,7 +142,7 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 
 例如，如果正在通过gulp等工具完成构建时间JavaScript微型化，则在为开发环境构建时可能希望使用不同的微型化级别，而不是为舞台和生产构建。
 
-为支持此功能，Cloud Manager会将这些标准环境变量添加到每次执行的构建容器中。
+为了支持此功能，Cloud Manager会将这些标准环境变量添加到每次执行的构建容器中。
 
 | **变量名称** | **定义** |
 |---|---|
