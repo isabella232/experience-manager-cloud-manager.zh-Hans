@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 0d46abc386460ccbaf7ba10b93286bc8e4af2395
+source-git-commit: 0fda91c2fe319fb58b3a6dd09f75eac7a60d9038
 workflow-type: tm+mt
-source-wordcount: '1537'
-ht-degree: 7%
+source-wordcount: '1705'
+ht-degree: 6%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 7%
 * 项目必须使用Apache Maven构建。
 * 在Git存储 *库的根目录中* ，必须有pom.xml文件。 此 *pom.xml* 文件可以引用多个子模块（这些子模块又可能具有其他子模块等） 必要时。
 
-* 您可以在pom.xml文件中添加对其他Maven *项目存储库的引* 用。 但是，不支持访问受密码保护或受网络保护的对象存储库。
+* 您可以在pom.xml文件中添加对其他Maven *项目存储库的引* 用。 配置时 [支持访问受密码保护](#password-protected-maven-repositories) 的对象存储库。 但是，不支持访问受网络保护的对象存储库。
 * 可部署的内容包是通过扫描内容包 *zip* 文件来发现的，这些文件包含在名为 *目标的目录中*。 任何数量的子模块都可以生成内容包。
 
 * 通过扫描zip文件(同样，包含在名为 *Dispatcher的目录中* )发现可部署的目标对象，该目录具有名 *为conf**和conf.d***&#x200B;的目录。
@@ -142,7 +142,7 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 
 例如，如果正在通过gulp等工具完成构建时间JavaScript微型化，则在为开发环境构建时可能希望使用不同的微型化级别，而不是为舞台和生产构建。
 
-为支持此功能，Cloud Manager会将这些标准环境变量添加到每次执行的构建容器中。
+为了支持此功能，Cloud Manager会将这些标准环境变量添加到每次执行的构建容器中。
 
 | **变量名称** | **定义** |
 |---|---|
@@ -262,6 +262,75 @@ Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这
                 </plugins>
             </build>
         </profile>
+```
+
+## 受密码保护的Maven存储库支持 {#password-protected-maven-repositories}
+
+要从Cloud Manager中使用受密码保护的Maven存储库，请将密码（以及用户名）指定为机密管 [线变量](#pipeline-variables) ，然后在git存储库中名为的文件中引 `.cloudmanager/maven/settings.xml` 用该机密。 此文件遵循“主设 [置文件”模式](https://maven.apache.org/settings.html) 。 当Cloud Manager构建流程开始时， `<servers>` 此文件中的元素将合并到Cloud Manager提 `settings.xml` 供的默认文件中。 在此文件就位后，服务器ID将从文件内的 `<repository>` 和／或 `<pluginRepository>` 元素中引 `pom.xml` 用。 通常，这 `<repository>` 些和/ `<pluginRepository>` 或元素将包含在特 [定于Cloud Manager的用户档案中]{#activating-maven-profiles-in-cloud-manager}，尽管这并非严格必要。
+
+例如，假设存储库位于https://repository.myco.com/maven2，则Cloud Manager应使用的用户名为， `cloudmanager` 密码为 `secretword`。
+
+首先，将密码设置为管道上的机密：
+
+`$ aio cloudmanager:set-pipeline-variables PIPELINEID --secret CUSTOM_MYCO_REPOSITORY_PASSWORD secretword`
+
+然后从文件中引 `.cloudmanager/maven/settings.xml` 用它：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>myco-repository</id>
+            <username>cloudmanager</username>
+            <password>${env.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
+        </server>
+    </servers>
+</settings>
+```
+
+最后引用文件中的服务 `pom.xml` 器ID:
+
+```xml
+<profiles>
+    <profile>
+        <id>cmBuild</id>
+        <activation>
+                <property>
+                    <name>env.CM_BUILD</name>
+                </property>
+        </activation>
+        <build>
+            <repositories>
+                <repository>
+                    <id>myco-repository</id>
+                    <name>MyCo Releases</name>
+                    <url>https://repository.myco.com/maven2</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>myco-repository</id>
+                    <name>MyCo Releases</name>
+                    <url>https://repository.myco.com/maven2</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+        </build>
+    </profile>
+</profiles>
 ```
 
 ## 安装其他系统包 {#installing-additional-system-packages}
