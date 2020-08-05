@@ -2,7 +2,7 @@
 title: 配置 CI/CD 管线
 seo-title: 配置 CI/CD 管线
 description: 可查看本页以从云管理器配置管道设置。
-seo-description: '在开始部署代码之前，必须从AEM Cloud Manager配置管道设置。 '
+seo-description: '在开始部署代码之前，必须从AEM Cloud Manager配置渠道设置。 '
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: afbb9a9f9f227309946f0d1891172a89d15de7a7
+source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 2%
+source-wordcount: '1755'
+ht-degree: 1%
 
 ---
 
@@ -102,7 +102,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 >[!NOTE]
 >
->如果 **选择** “计划”选项，则可以将生产部署计划到阶段部署后的 **管道** (如果已启 **用GoLive Approval**，则使用它)，以等待计划设置。 用户还可以选择立即执行生产部署。
+>如果 **选择** “计划”选项，则可以将生产部署计划到阶段部署后的 **管道** (如果启用了GoLive批准 **，则使用批准**)，以等待计划设置。 用户还可以选择立即执行生产部署。
 >
 >请参阅 [**部署代码&#x200B;**](deploying-code.md)，设置部署计划或立即执行生产。
 
@@ -127,21 +127,21 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 >
 >**在Stage Deployment功能后进行批准** ，类似于生产部署前的批准，但在阶段部署步骤后立即进行，即在完成任何测试之前，与在完成所有测试后完成生产部署前的批准相比。
 
-**Dispatcher失效**
+**调度程序失效**
 
-作为部署管理器，您可以配置一组内容路径，在设置或编辑 **管道时** , **这些路** 径将失效或从AEMDispatcher缓存中刷新。
+作为部署管理器，您可以配置一组内容路径，在设置或编辑管道时，这些 **路径将****失效** 或从AEM Dispatcher缓存中刷新。
 
-您可以为舞台和生产部署配置一组单独的路径。 如果已配置，则这些缓存操作将作为部署管道步骤的一部分执行，就在部署任何内容包之后。 这些设置使用标准AEMDispatcher行为——失效执行缓存失效，与从创作到发布激活内容时类似； flush执行缓存删除。
+您可以为舞台和生产部署配置一组单独的路径。 如果已配置，则这些缓存操作将作为部署管道步骤的一部分执行，就在部署任何内容包之后。 这些设置使用标准的AEM Dispatcher行为- invalidate执行缓存失效，与从创作到发布激活内容时类似； flush执行缓存删除。
 
 通常，最好使用失效操作，但有时可能需要刷新，尤其是在使用AEM HTML客户端库时。
 
 >[!NOTE]
 >
->请参阅Dispatcher [概述](dispatcher-configurations.md) ，获取有关Dispatcher缓存的更多信息。
+>请参阅“Dispatcher [概述](dispatcher-configurations.md) ”，获取有关Dispatcher缓存的更多信息。
 
-请按照以下步骤配置Dispatcher失效：
+请按照以下步骤配置调度程序失效：
 
-1. 单击 **Dispatcher** “配置”标题下的配置
+1. 单击“ **调度程序** ”配置标题下的“配置”
 
    ![](assets/image2018-8-7_14-53-24.png)
 
@@ -164,7 +164,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    **AEM Sites:**
 
-   Cloud Manager在30分钟的测试时间内在舞台发布服务器上请求页面（作为未经身份验证的用户），并测量每个页面的响应时间以及各种系统级度量，从而执行AEM Sites项目的性能测试。
+   Cloud Manager在30分钟的测试期内在舞台发布服务器上请求页面（默认为未验证的用户），并测量每个页面的响应时间以及各种系统级度量，从而执行AEM Sites项目的性能测试。
 
    在30分钟测试期开始之前，Cloud Manager将使用由客户成功工程师配置的一组或多个种子 *URL* 爬网舞台环境。 从这些URL开始，将检查每个页面的HTML，并以宽度优先的方式遍历链接。 此搜索过程最多限制为5000页。 来自Crawler的请求的固定超时为10秒。
 
@@ -177,6 +177,9 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
    * 新页面集中的3000页中每页将点击一次-((200 * 0.5)/ 3000)* 30 = 1
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
+
+
+   请参阅经 [身份验证的站点性能测试](configuring-pipeline.md#authenticated-sites-performance) ，了解如何验证AEM Sites性能测试。
 
    **AEM Assets:**
 
@@ -198,9 +201,25 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    ![](assets/Production-Pipeline.png)
 
+### 经身份验证的站点性能测试 {#authenticated-sites-performance}
+
+具有已验证站点的Adobe Managed Services(AMS)客户可以指定Cloud Manager在站点性能测试期间用来访问该网站的用户名和密码。
+
+用户名和密码指定为带有名称和的管道变 `CM_PERF_TEST_BASIC_USERNAME` 量 `CM_PERF_TEST_BASIC_PASSWORD` 。
+
+>[!NOTE]
+> 尽管并非严格要求，但建议将字符串变量类型用于用户名，将secretString变量类型用于密码。 如果同时指定了这两个凭据，则性能测试Crawler和测试虚拟用户的每个请求都将包含这些凭据作为HTTP Basic身份验证。
+
+要使用Cloud Manager CLI设置这些变量，请运行：
+
+`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
+
+
+
+
 ## 仅限非生产和代码质量的管道
 
-除了部署到舞台和生产的主要管道外，客户还能够建立额外的管道，称 **为非生产管道**。 这些管线始终执行构建和代码质量步骤。 他们还可以选择部署到Adobe Managed Services环境。
+除了部署到舞台和生产的主要管道外，客户还能够建立额外的管道，称 **为非生产管道**。 这些管线始终执行构建和代码质量步骤。 它们还可以选择部署到Adobe Managed Services环境。
 
 ## 视频教程 {#video-tutorial-two}
 
@@ -232,7 +251,7 @@ CI/CD非生产管道分为两个类别，代码质量管道和部署管道。 �
 
    >[!NOTE]
    >
-   >管线运行时，将显示当前步骤，并且只有“详 **细信息** ”操作可用。
+   >管线运行时，将显示当前步骤，并且只有“详细 **信息** ”操作可用。
 
 ## 后续步骤 {#the-next-steps}
 
