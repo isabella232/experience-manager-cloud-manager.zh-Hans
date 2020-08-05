@@ -1,43 +1,50 @@
 ---
-title: 2020.7.0 版发行说明
-seo-title: AEM Cloud Manager 2020.7.0版本说明
-description: 可查看本页以获取Cloud Manager Release 2020.7.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager Release 2020.7.0的相关信息
+title: 2020.8.0 版发行说明
+seo-title: AEM Cloud Manager 2020.8.0发行说明
+description: 可查看本页以获取Cloud Manager Release 2020.8.0的信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2020.8.0版的相关信息
 translation-type: tm+mt
-source-git-commit: 0d46abc386460ccbaf7ba10b93286bc8e4af2395
+source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 6%
+source-wordcount: '243'
+ht-degree: 20%
 
 ---
 
-# 2020.7.0 版发行说明 {#release-notes-for}
+# 2020.8.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.7.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
+以下部分概述了2020.8.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
 
 ## 发布日期 {#release-date}
 
-版本2020.7.0 [!UICONTROL Cloud Manager] 的发布日期为2020年7月9日。
+版本2020.8.0 [!UICONTROL Cloud Manager] 的发布日期为2020年8月06日。
 
 ## 新增功能 {#whats-new}
 
-* 现在，在生产部署过程中从负载平衡器分离和附加调度程序实例可以以更一致的方式工作。
+* 站点性能测试现在支持身份验证的可选使用。
 
-* Cloud Manager构建容器现在支持Java 8和Java 11。
+   有关详细信息，请参阅。
 
-* Cloud Manager管道现在支持客户集变量和秘密。
-有关更多 [详细信息](/help/using/create-an-application-project.md#pipeline-variables) ，请参阅管道变量。
+* 现在支持身份验证绑定的私有Maven存储库。
 
 ## 错误修复 {#bug-fixes}
 
-* “非 **生** 产管道编 **辑”(Non-Production Pipeline** Edit)页面上的“取消”(Cancel)和“保存”(Save)选项并不总是可见。
+* 正在执行一些不必要的和不需要的SonarQube插件，作为代码质量扫描的一部分。
 
-* 代码质量过程中的某些失败可能导致日志文件无法正确生成。
+* 在管道执行页面上，分支名称的格式不正确。
 
-* 无法通过用户界面一致地下载某些大型管道步骤日志。
+* 当使用单个发布、单个调度程序和一个冷备用作者部署到拓扑时，调度程序被错误地从负载平衡器中删除。
+
+* 在某些情况下，已完成的管道执行未被成功记录为已完成，从而防止了管道的新执行。
+
+* 管道执行偶尔会因 *内部* 通信问题而卡住。
+
+* 项目卡上的工具提示不一致正确。
+
+* 概述页面上的颜色不匹配。
 
 ## 已知问题 {#known-issues}
 
 * 当AMS环境包含待机实例时，已记录的消息会声明该实例已关闭，而不是处于待机模式。
 
-* 由于代码覆盖率的计算方式发生 _更改_ ,Jacoco插件的最低版本现在为0.7.5.201505241946（发布于2015年5月）。 明确引用旧版本的客户将在代码质量过程中收到错误消息。
+* 由于代码覆盖率的计算方式发生了变化，Jacoco 插件的&#x200B;_最低_&#x200B;版本现在为 0.7.5.201505241946（于 2015 年 5 月发行）。明确引用旧版本的客户将在代码质量控制过程中收到一条错误消息。
