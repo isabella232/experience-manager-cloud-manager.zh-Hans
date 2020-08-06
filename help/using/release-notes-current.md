@@ -4,10 +4,10 @@ seo-title: AEM Cloud Manager 2020.8.0发行说明
 description: 可查看本页以获取Cloud Manager Release 2020.8.0的信息
 seo-description: 可查看本页以获取AEM Cloud Manager 2020.8.0版的相关信息
 translation-type: tm+mt
-source-git-commit: c0881ccf602a14b00b7cc68c3d1fc60e7b6954ed
+source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 6%
+source-wordcount: '166'
+ht-degree: 7%
 
 ---
 
@@ -21,11 +21,7 @@ ht-degree: 6%
 
 ## 新增功能 {#whats-new}
 
-* 站点性能测试现在支持身份验证的可选使用。
-
-   请参阅经 [身份验证的站点性能测试](configuring-pipeline.md#authenticated-sites-performance) ，了解如何验证AEM Sites性能测试。
-
-* 现在支持身份验证绑定的私有Maven存储库。
+现在支持身份验证绑定的私有Maven存储库。
 
 ## 错误修复 {#bug-fixes}
 
