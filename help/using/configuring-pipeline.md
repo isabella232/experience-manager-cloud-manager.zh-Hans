@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
+source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
 workflow-type: tm+mt
-source-wordcount: '1759'
-ht-degree: 1%
+source-wordcount: '1636'
+ht-degree: 2%
 
 ---
 
@@ -178,9 +178,6 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
-
-   请参阅经 [身份验证的站点性能测试](configuring-pipeline.md#authenticated-sites-performance) ，了解如何验证AEM Sites性能测试。
-
    **AEM Assets:**
 
    Cloud Manager通过在30分钟的测试期内重复上传资产并衡量每个资产的处理时间以及各种系统级别指标，执行AEM Assets项目的性能测试。 此功能可以上传图像和PDF文档。 每分钟上传的每种类型的资产数量分布在“管道设置”或“编辑”屏幕中设置。
@@ -201,18 +198,6 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    ![](assets/Production-Pipeline.png)
 
-### 经身份验证的站点性能测试 {#authenticated-sites-performance}
-
-具有已验证站点的Adobe Managed Services(AMS)客户可以指定Cloud Manager在站点性能测试期间用来访问该网站的用户名和密码。
-
-用户名和密码指定为 [Pipeline Variables](create-an-application-project.md#pipeline-variables) ，其名称 `CM_PERF_TEST_BASIC_USERNAME` 为和 `CM_PERF_TEST_BASIC_PASSWORD` 。
-
->[!NOTE]
-> 尽管并非严格要求，但建议将字符串变量类型用于用户名，将secretString变量类型用于密码。 如果同时指定了这两个凭据，则性能测试Crawler和测试虚拟用户的每个请求都将包含这些凭据作为HTTP Basic身份验证。
-
-要使用Cloud Manager CLI设置 [这些变量](https://github.com/adobe/aio-cli-plugin-cloudmanager)，请运行：
-
-`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## 仅限非生产和代码质量的管道
 
