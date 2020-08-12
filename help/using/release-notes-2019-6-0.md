@@ -10,7 +10,7 @@ source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
 
 # 2019.6.0发行说明 {#release-notes-for}
 
-2019. [!UICONTROL Cloud Manager] 6.0版本新增了代码质量规则和产品更新向导。 有关更多详细信息，请按照以下部分进行操作。
+&#x200B;2019. [!UICONTROL Cloud Manager] 6.0版本新增了代码质量规则和产品更新向导。 有关更多详细信息，请按照以下部分进行操作。
 
 ## 发布日期 {#release-date}
 

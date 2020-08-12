@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # 2018.8.0 版发行说明 {#release-notes-for}
 
-2018. [!UICONTROL Cloud Manager] 8.0版本增加了在git提交时自动触发CI/CD管道的支持，并新增了一个用于根据AEM项目原型在git中创建应用程序项目的向导。
+&#x200B;2018. [!UICONTROL Cloud Manager] 8.0版本增加了在git提交时自动触发CI/CD管道的支持，并新增了一个用于根据AEM项目原型在git中创建应用程序项目的向导。
 
 ## 发布日期 {#release-date}
 

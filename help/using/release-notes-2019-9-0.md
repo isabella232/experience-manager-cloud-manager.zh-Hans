@@ -10,7 +10,7 @@ source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 # 2019.9.0发行说明 {#release-notes-for}
 
-2019. [!UICONTROL Cloud Manager] 9.0版本更新了安全测试标准，添加了可下载的监视图形，并修复了客户报告的一些可用性问题。
+&#x200B;2019. [!UICONTROL Cloud Manager] 9.0版本更新了安全测试标准，添加了可下载的监视图形，并修复了客户报告的一些可用性问题。
 
 ## 发布日期 {#release-date}
 

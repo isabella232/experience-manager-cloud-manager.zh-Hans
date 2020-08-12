@@ -13,7 +13,7 @@ ht-degree: 5%
 
 # 2019.8.0 版发行说明 {#release-notes-for}
 
-2019. [!UICONTROL Cloud Manager] 8.0版本增加了对选择性构建内容包的支持，改进了构建性能并修复了各种小错误。
+&#x200B;2019. [!UICONTROL Cloud Manager] 8.0版本增加了对选择性构建内容包的支持，改进了构建性能并修复了各种小错误。
 
 ## 发布日期 {#release-date}
 

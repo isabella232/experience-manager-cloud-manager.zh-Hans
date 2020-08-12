@@ -11,7 +11,7 @@ source-git-commit: b368c46c2a9f40d0c3867db6eb2a333bd71fe22a
 
 # 2019.4.0发行说明 {#release-notes-for}
 
-2019. [!UICONTROL Cloud Manager] 4.0版本不包含重大功能更改。 有关更多详细信息，请按照以下部分进行操作。
+&#x200B;2019. [!UICONTROL Cloud Manager] 4.0版本不包含重大功能更改。 有关更多详细信息，请按照以下部分进行操作。
 
 ## 发布日期 {#release-date}
 

@@ -11,7 +11,7 @@ source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
 
 # 2019.5.0发行说明 {#release-notes-for}
 
-2019. [!UICONTROL Cloud Manager] 5.0版本不包含重大功能更改。 有关更多详细信息，请按照以下部分进行操作。
+&#x200B;2019. [!UICONTROL Cloud Manager] 5.0版本不包含重大功能更改。 有关更多详细信息，请按照以下部分进行操作。
 
 ## 发布日期 {#release-date}
 

@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # 2019.1.0 版发行说明 {#release-notes-for}
 
-2018. [!UICONTROL Cloud Manager] 9.0版本增加了支持测试AEM Assets项目以及运行构建和代码质量步骤的其他管道类型，可以选择部署到非生产环境。
+&#x200B;2018. [!UICONTROL Cloud Manager] 9.0版本增加了支持测试AEM Assets项目以及运行构建和代码质量步骤的其他管道类型，可以选择部署到非生产环境。
 
 ## 发布日期 {#release-date}
 
