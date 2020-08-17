@@ -4,10 +4,10 @@ seo-title: AEM Cloud Manager 2020.8.0发行说明
 description: 可查看本页以获取Cloud Manager Release 2020.8.0的信息
 seo-description: 可查看本页以获取AEM Cloud Manager 2020.8.0版的相关信息
 translation-type: tm+mt
-source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
+source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 7%
+source-wordcount: '192'
+ht-degree: 6%
 
 ---
 
@@ -37,5 +37,9 @@ ht-degree: 7%
 
 * 项目卡上的工具提示不一致正确。
 
-* 概述页面上的颜色不匹配。
+* “概述”页面上存在颜色 **不匹** 配。
+
+* 站点性能测试现在支持身份验证的可选使用。
+
+* 当通过云管理器部署调度程序配置时，创作实例的调度程序缓存会自动刷新。
 
