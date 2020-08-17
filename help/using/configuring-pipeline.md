@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
+source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 2%
+source-wordcount: '1751'
+ht-degree: 1%
 
 ---
 
@@ -95,8 +95,8 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 * **使用实时批准** -部署必须由业务所有者、项目经理或部署经理通过UI手动 [!UICONTROL Cloud Manager] 批准。
 * **使用CSE监督** - CSE用于实际开始部署。 在管道设置或启用CSE监督时进行编辑期间，部署管理器可以选择：
 
-   * **任何CSE**: 引用任何可用的CSE
-   * **我的CSE**: 是指分配给客户或其备份的特定CSE（如果CSE不在办公室）
+   * **任何CSE**:引用任何可用的CSE
+   * **我的CSE**:是指分配给客户或其备份的特定CSE（如果CSE不在办公室）
 
 * **计划** -此选项允许用户启用计划生产部署。
 
@@ -104,7 +104,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 >
 >如果 **选择** “计划”选项，则可以将生产部署计划到阶段部署后的 **管道** (如果启用了GoLive批准 **，则使用批准**)，以等待计划设置。 用户还可以选择立即执行生产部署。
 >
->请参阅 [**部署代码&#x200B;**](deploying-code.md)，设置部署计划或立即执行生产。
+>请参阅 [**部署代码**](deploying-code.md)，设置部署计划或立即执行生产。
 
 ![](assets/configure-pipeline3.png)
 
@@ -129,9 +129,9 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 **调度程序失效**
 
-作为部署管理器，您可以配置一组内容路径，在设置或编辑管道时，这些 **路径将****失效** 或从AEM Dispatcher缓存中刷新。
+作为部署管理器，您可以配置一组内容路径，在设置或编辑管 **线时** , **这些路径将** 从AEM Dispatcher缓存中失效或刷新。
 
-您可以为舞台和生产部署配置一组单独的路径。 如果已配置，则这些缓存操作将作为部署管道步骤的一部分执行，就在部署任何内容包之后。 这些设置使用标准的AEM Dispatcher行为- invalidate执行缓存失效，与从创作到发布激活内容时类似； flush执行缓存删除。
+您可以为舞台和生产部署配置一组单独的路径。 如果已配置，则这些缓存操作将作为部署管道步骤的一部分执行，就在部署任何内容包之后。 这些设置使用标准的AEM Dispatcher行为- invalidate执行缓存失效，与从创作到发布激活内容时类似；flush执行缓存删除。
 
 通常，最好使用失效操作，但有时可能需要刷新，尤其是在使用AEM HTML客户端库时。
 
@@ -168,7 +168,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    在30分钟测试期开始之前，Cloud Manager将使用由客户成功工程师配置的一组或多个种子 *URL* 爬网舞台环境。 从这些URL开始，将检查每个页面的HTML，并以宽度优先的方式遍历链接。 此搜索过程最多限制为5000页。 来自Crawler的请求的固定超时为10秒。
 
-   页面由三个页 **面集选择**; 您可以选择从一个集合到全部三个集合的任意位置。 流量分配基于所选集数，即如果全部三个集合都被选中，则每个集合将占总页面视图的33%; 如果选择两个，则50%将转至每个集合； 如果选择了一个，则100%的流量将流向该集。
+   页面由三个页 **面集选择**;您可以选择从一个集合到全部三个集合的任意位置。 流量分配基于所选集数，即如果全部三个集合都被选中，则每个集合将占总页面视图的33%;如果选择两个，则50%将转至每个集合；如果选择了一个，则100%的流量将流向该集。
 
    例如，假设“常用实时页面”和“新页面”集（在本例中，不使用“其他实时页面”）之间存在50%/50%的拆分，而“新页面”集包含3000页。 页面视图每分钟KPI设置为200。 在30分钟的测试期内：
 
@@ -177,6 +177,8 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
    * 新页面集中的3000页中每页将点击一次-((200 * 0.5)/ 3000)* 30 = 1
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
+
+   有关更多详 [细信息，请参](#authenticated-performance-testing) 阅“Authenticated Performance Testing”。
 
    **AEM Assets:**
 
@@ -198,6 +200,17 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    ![](assets/Production-Pipeline.png)
 
+### 经身份验证的性能测试 {#authenticated-performance-testing}
+
+具有已验证站点的AMS客户可以指定Cloud Manager在站点性能测试期间用来访问网站的用户名和密码。
+
+用户名和密码指定为 [Pipeline Variables](/help/using/create-an-application-project.md#pipeline-variables) (管道变量 `CM_PERF_TEST_BASIC_USERNAME` )，其名称为 `CM_PERF_TEST_BASIC_PASSWORD`和。
+
+尽管并非严格要求，但建议将字符串变量类型用于用户名，将secretString变量类型用于密码。 如果同时指定了这两个凭据，则性能测试Crawler和测试虚拟用户的每个请求都将包含这些凭据作为HTTP Basic身份验证。
+
+要使用Cloud Manager CLI设置 [这些变量](https://github.com/adobe/aio-cli-plugin-cloudmanager)，请运行：
+
+`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## 仅限非生产和代码质量的管道
 
@@ -233,7 +246,7 @@ CI/CD非生产管道分为两个类别，代码质量管道和部署管道。 �
 
    >[!NOTE]
    >
-   >管线运行时，将显示当前步骤，并且只有“详细 **信息** ”操作可用。
+   >管线运行时，将显示当前步骤，并且只有“详 **细信息** ”操作可用。
 
 ## 后续步骤 {#the-next-steps}
 
