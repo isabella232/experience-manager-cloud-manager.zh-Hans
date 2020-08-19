@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
+source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 使用Cloud Manager部署代码 {#deploying-code-with-cloud-manager}
 
-Once you have configured your Production **Pipeline** (repository, environment, and testing environment), you are ready to deploy your code.
+配置Production Pipeline(存储库、环境和测试环境)后，即可部署代码。
 
 1. 单 **击** “从云管理器部署”以开始部署过程。
 
