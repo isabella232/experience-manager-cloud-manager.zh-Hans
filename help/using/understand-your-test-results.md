@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: f062ee126ad12d164c36b2e1535ee709f43b6900
+source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1544'
 ht-degree: 6%
 
 ---
@@ -43,25 +43,31 @@ ht-degree: 6%
 
 ## 代码质量测试 {#code-quality-testing}
 
-作为管道的一部分，将扫描源代码，以确保部署符合特定质量标准。 目前，这是通过SonarQube和使用OakPAL的内容包级别检查的组合来实现的。 有100多个规则，这些规则组合了通用Java规则和特定于AEM的规则。 下表总结了测试标准的等级：
+此步骤将评估应用程序代码的质量。 它是仅代码质量管道的核心目标，在所有非生产和生产管道中立即执行构建步骤。 请参阅 [配置CI-CD管道](/help/using/configuring-pipeline.md) ，进一步了解不同类型的管道。
+
+### 了解代码质量测试 {#understanding-code-quality-testing}
+
+在代码质量测试中，将扫描源代码以确保其部署符合特定质量标准。 目前，这是通过SonarQube和使用OakPAL的内容包级别检查的组合来实现的。 有100多个规则，这些规则结合了通用Java规则和AEM特定规则。 某些AEM特定规则是根据AEM工程部门的最佳实践创建的，称为“自定 [义代码质量规则](/help/using/custom-code-quality-rules.md)”。
+
+您可以在此处下载规则 [列表](/help/using/assets/CodeQuality-rules-latest.xlsx)。
+
+此步骤的结果将作为评 *级*。 下表总结了各种测试标准的评级：
 
 | 名称 | 定义 | 类别 | 失败阈值 |
 |--- |--- |--- |--- |
 | 安全等级 | A = 0漏洞 <br/>B =至少1个次要漏洞<br/> C =至少1个主要漏洞 <br/>D =至少1个关键漏洞 <br/>E =至少1个阻止程序漏洞 | 关键 | &lt; B |
 | 可靠性等级 | A = 0错误 <br/>B =至少1个次要错误 <br/>C =至少1个主要错误 <br/>D =至少1个关键错误<br/>E =至少1个阻止程序错误 | 重要信息 | &lt; C |
 | 可维护性等级 | 代码气味的未平仓修复成本为： <br/><ul><li>&lt;=5%已进入应用程序的时间，评级为A </li><li>评级在6%到10%之间是B </li><li>11%到20%的评级是C </li><li>21%到50%的评级是D</li><li>超过50%的东西</li></ul> | 重要信息 | &lt; A |
-| 范围 | 单位测试线覆盖和条件覆盖的混合使用以下公式： <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>其中： CT =运行单元测试时已至少评估为“true”的条件 <br/>CF =运行单元测试时已至少评估为“false”的条件 <br/>LC =覆盖行=行=到覆盖——未覆盖行 <br/><br/> B =条件总数 <br/>EL =可执行行（lines到覆盖）总数 | 重要信息 | &lt; 50% |
+| 范围 | 单位测试线覆盖和条件覆盖的混合使用以下公式： <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>其中：CT =运行单元测试时已至少评估为“true”的条件 <br/>CF =运行单元测试时已至少评估为“false”的条件 <br/>LC =覆盖行=行=到覆盖——未覆盖行 <br/><br/> B =条件总数 <br/>EL =可执行行（lines到覆盖）总数 | 重要信息 | &lt; 50% |
 | 跳过的单元测试 | 跳过的单元测试数。 | 信息 | > 1 |
 | 未解决问题 | 总体问题类型——漏洞、错误和代码气味 | 信息 | > 0 |
 | 复制行 | 重复块中涉及的行数。 <br/>对于要视为重复的代码块： <br/><ul><li>**非Java项目：**</li><li>至少应有100个连续令牌和重复令牌。</li><li>这些令牌至少应在以下位置传播： </li><li>COBOL的30行代码 </li><li>ABAP的20行代码 </li><li>10行代码，适用于其他语言</li><li>**Java项目：**</li><li> 无论令牌和行的数量如何，都至少应有10个连续和重复的语句。</li></ul> <br/>在检测重复时，会忽略缩进和字符串文本中的差异。 | 信息 | > 1% |
-| 云服务兼容性 | 已识别的云服务兼容性问题数。 | 信息 | > 0 |
+| Cloud Service兼容性 | 已识别的Cloud Service兼容性问题数。 | 信息 | > 0 |
 
 
 >[!NOTE]
 >
 >有关更 [详细的定义](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) ，请参阅度量定义。
-
-您可以在此处下载规 [则列表code-quality-rules.xlsx](/help/using/assets/CodeQuality-rules-latest.xlsx)
 
 >[!NOTE]
 >
@@ -73,7 +79,7 @@ ht-degree: 6%
 
 在这些情况下，可以使用标准Java注释对源代 `@SuppressWarnings` 码进行注释，该注释将规则ID指定为注释属性。 例如，一个常见问题是，用于检测硬编码密码的SonarQube规则在如何识别硬编码密码方面可能具有攻击性。
 
-要查看特定示例，此代码在AEM项目中很常见，该项目中包含连接到某些外部服务的代码：
+要查看特定示例，此代码在AEM项目中很常见，该项目具有连接到某些外部服务的代码：
 
 ```java
 @Property(label = "Service Password")
@@ -103,7 +109,7 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 ## 安全测试 {#security-testing}
 
-[!UICONTROL Cloud Manager] 在部署后 ***在舞台上运行现有*** AEM安全运行状况检查并通过UI报告状态。 结果将从该环境中的所有AEM实例进行聚集。
+[!UICONTROL Cloud Manager] 在部署后 ***在舞台上运行现有*** “AEM安全健康检查”，并通过UI报告状态。 结果从环境中的所有AEM实例进行聚集。
 
 如果任何实例 **报告** ，给定运行状况检查失败，则整个 **环境** 将失败该运行状况检查。 与代码质量和性能测试一样，这些运行状况检查会组织成类别，并使用三层选通系统进行报告。 唯一的区别是在安全测试中没有阈值。 所有运行状况检查都只是通过或失败。
 
@@ -116,13 +122,13 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 | 反序列化防火墙已加载 | 反序列化防火墙已加载 | 关键 |
 | AuthorizableNodeName实现不会在节点名称／路径中显示可授权的ID。 | 可授权的节点名称生成 | 关键 |
 | 默认密码已更改 | 默认登录帐户 | 关键 |
-| Sling默认GET servlet受DOS攻击保护。 | Sling Get Servlet | 关键 |
+| Sling默认GETservlet受DOS攻击保护。 | Sling Get Servlet | 关键 |
 | Sling Java脚本处理程序已正确配置 | Sling Java 脚本处理程序 | 关键 |
 | Sling JSP脚本处理程序已正确配置 | Sling JSP脚本处理程序 | 关键 |
 | 正确配置了SSL | SSL 配置 | 关键 |
 | 未发现明显不安全的用户用户档案策略 | 用户配置文件默认访问 | 关键 |
 | 配置Sling推荐人过滤器以防止CSRF攻击 | Sling 引用过滤器 | 重要信息 |
-| Adobe Granite HTML库管理器已正确配置 | CQ HTML 库管理器配置 | 重要信息 |
+| AdobeGranite HTML库管理器已正确配置 | CQ HTML 库管理器配置 | 重要信息 |
 | 已禁用CRXDE支持包 | CRXDE 支持 | 重要信息 |
 | 已禁用Sling DavEx捆绑和servlet | DavEx 运行状况检查 | 重要信息 |
 | 未安装示例内容 | 示例内容包 | 重要信息 |
@@ -173,7 +179,7 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 * **页面错误率**
    * 测试期间每分钟的页面错误图。
-   * 一个CSV文件，其中列出了测试过程中产生错误的页面。
+   * 一个CSV文件，其中列出了测试过程中出错的页面。
 
 * **磁盘带宽利用**
    * 测试期间磁盘带宽利用率的图表。
