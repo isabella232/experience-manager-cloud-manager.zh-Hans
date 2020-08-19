@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 509a74b2e85d5880bafa56cd0ab3bae9c57b0683
+source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 3%
+source-wordcount: '953'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 ## 使用Cloud Manager部署代码 {#deploying-code-with-cloud-manager}
 
-配置Pipeline **** （存储库、环境和测试环境）后，您便可以部署代码。
+Once you have configured your Production **Pipeline** (repository, environment, and testing environment), you are ready to deploy your code.
 
 1. 单 **击** “从云管理器部署”以开始部署过程。
 
@@ -40,22 +40,25 @@ ht-degree: 3%
    1. 阶段部署
    1. Stage Testing
    1. 生产部署
+
    >[!NOTE]
    >
    >此外，您还可以查看日志或查看测试标准的结果，来查看各个部署流程中的步骤。
 
    Stage **Deployment**，涉及以下步骤：
 
-   * 验证： 此步骤确保管道配置为使用当前可用的资源，例如，已配置的分支存在，环境可用。
-   * 构建和单元测试： 此步骤运行容器化构建过程。 有关 [构建环境的详细信息](create-an-application-project.md) ，请参阅创建AEM应用程序项目。
-   * 代码扫描： 此步骤将评估应用程序代码的质量。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 验证：此步骤确保管道配置为使用当前可用的资源，例如，已配置的分支存在，环境可用。
+   * 构建和单元测试：此步骤运行容器化构建过程。 有关 [构建环境的详细信息](create-an-application-project.md) ，请参阅创建AEM应用程序项目。
+   * 代码扫描：此步骤将评估应用程序代码的质量。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
    * 部署到舞台
+
    ![](assets/Stage_Deployment1.png)
 
    The **Stage Testing**, involves the following steps:
 
-   * 安全测试： 此步骤评估您的应用程序代码对AEM环境的安全影响。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
-   * 性能测试： 此步骤将评估应用程序代码的性能。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 安全测试：此步骤评估应用程序代码对AEM环境的安全影响。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 性能测试：此步骤将评估应用程序代码的性能。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+
    ![](assets/Stage_Testing1.png)
 
    The **Production Deployment**, involves the following steps:
@@ -64,6 +67,7 @@ ht-degree: 3%
    * **计划生产部署** （如果启用）
    * **CSE支持** （如果启用）
    * **部署到生产**
+
    ![](assets/Prod_Deployment1.png)
 
    >[!NOTE]
@@ -106,26 +110,27 @@ Cloud Manager将构建过程生成的所有目标/*.zip文件上传到存储位�
    >
    >此功能主要由1-1-1客户使用。
 
-1. 每个AEM对象都通过包管理器API部署到每个AEM实例，并且包依赖关系会确定部署顺序。
+1. 每个AEM对象都通过包管理器API部署到每个AEM实例，包依赖关系决定部署顺序。
 
    要进一步了解如何使用包安装新功能、在实例之间传输内容以及备份存储库内容，请参阅如何使用包。
 
    >[!NOTE]
    >
-   >所有AEM对象均部署到作者和发布者。 需要节点特定配置时，应利用运行模式。 要进一步了解运行模式如何允许您针对特定目的调整AEM实例，请参阅运行模式。
+   >所有AEM对象都部署到作者和发布者。 需要节点特定配置时，应利用运行模式。 要进一步了解运行模式如何允许您针对特定目的调整AEM实例，请参阅运行模式。
 
 1. 调度程序对象将按如下方式部署到每个调度程序：
 
    1. 当前配置被备份并复制到临时位置
-   1. 除不可变文件外，所有配置都将被删除。 有关更多详细信息，请参阅管理Dispatcher配置。 这将清除目录，以确保不留下任何孤立文件。
+   1. 除不可变文件外，所有配置都将被删除。 有关更多详细信息，请参阅管理调度程序配置。 这将清除目录，以确保不留下任何孤立文件。
    1. 对象会被提取到目 `httpd` 录。  不可改写的文件不会被覆盖。 在部署时，您对git存储库中不可变文件所做的任何更改都将被忽略。  这些文件是AMS调度程序框架的核心，无法更改。
    1. Apache执行配置测试。 如果未找到错误，则重新加载服务。 如果发生错误，则从备份中恢复配置，重新加载服务，并将错误报告回云管理器。
    1. 管道配置中指定的每个路径都无效或从调度程序缓存中刷新。
+
    >[!NOTE]
    >
    >Cloud Manager希望调度程序对象包含完整的文件集。  所有调度程序配置文件都必须在git存储库中。 缺少文件或文件夹将导致部署失败。
 
-1. 将所有AEM和调度程序包成功部署到所有节点后，调度程序将重新添加到负载平衡器，部署完成。
+1. 成功将所有AEM和调度程序包部署到所有节点后，调度程序将添加回负载平衡器，部署完成。
 
    >[!NOTE]
    >
@@ -133,7 +138,7 @@ Cloud Manager将构建过程生成的所有目标/*.zip文件上传到存储位�
 
 ### 部署到生产阶段 {#deployment-production-phase}
 
-部署到生产拓扑的过程略有不同，以最大限度地减少对AEM Site访客的影响。
+部署到生产拓扑的过程略有不同，以最大限度地减少对AEM站点访客的影响。
 
 生产部署通常遵循与上述步骤相同的步骤，但是采用滚动方式：
 
