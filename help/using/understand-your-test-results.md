@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
+source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 6%
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 # 理解测试结果 {#understand-your-test-results}
 
-在Pipeline **流程中** ，会捕获许多指标并将其与由业务所有者定义的关键绩效指标(KPI)或Adobe Managed Services设置的标准进行比较。
+在管道执行过程中，会捕获许多指标并将其与由业务所有者定义的关键绩效指标(KPI)或Adobe Managed Services设置的标准进行比较。
 
 这些信息是使用本节中定义的三层门控系统报告的。
 
@@ -47,9 +47,10 @@ ht-degree: 6%
 
 ### 了解代码质量测试 {#understanding-code-quality-testing}
 
-在代码质量测试中，将扫描源代码以确保其部署符合特定质量标准。 目前，这是通过SonarQube和使用OakPAL的内容包级别检查的组合来实现的。 有100多个规则，这些规则结合了通用Java规则和AEM特定规则。 某些AEM特定规则是根据AEM工程部门的最佳实践创建的，称为“自定 [义代码质量规则](/help/using/custom-code-quality-rules.md)”。
+在“代码质量测试”中，将扫描源代码，确保它满足某些质量标准。 目前，这是通过SonarQube和使用OakPAL的内容包级别检查的组合来实现的。 有100多个规则，这些规则结合了通用Java规则和AEM特定规则。 某些AEM特定规则是根据AEM工程部门的最佳实践创建的，称为“自定 [义代码质量规则](/help/using/custom-code-quality-rules.md)”。
 
-您可以在此处下载规则 [列表](/help/using/assets/CodeQuality-rules-latest.xlsx)。
+>[!NOTE]
+>您可以在此处下载规则的完整 [列表](/help/using/assets/CodeQuality-rules-latest.xlsx)。
 
 此步骤的结果将作为评 *级*。 下表总结了各种测试标准的评级：
 
