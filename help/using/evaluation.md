@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -21,13 +21,13 @@ ht-degree: 0%
 “产品更新”向导的第一阶段为 **[!UICONTROL Evaluation]** 阶段。
 在这里，您可以使用可从向导直接访问的模式检测器来评估升级复杂性。 在此步骤结束时，您将有权访问评估报告。
 
-生成的报告允许您通过检测以下模式检查作者实例的可升级性：
+生成的报告允许您通过检测以下模式检查作者实例是否进行升级：
 
 * 违反某些规则，并在受升级影响或覆盖的区域执行。
 
-* 请使用在新AEM上向后不兼容并可能在升级后中断的AEM 6.x功能或API。
+* 使用AEM 6.x功能或新AEM上不向后兼容的API，升级后可能会中断。
 
-这是对升级到Adobe Experience Manager(AEM)6.5所涉及的开发工作的评估。
+这是对升级到Adobe Experience Manager(AEM)6.5所涉及的发展努力的评估。
 
 >[!NOTE]
 >
