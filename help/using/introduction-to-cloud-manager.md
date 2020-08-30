@@ -6,19 +6,22 @@ seo-description: '本页作为了解 Cloud Manager 的起始点，重点讲述�
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: 简介
+topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: ht
-source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
+translation-type: tm+mt
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '660'
+ht-degree: 91%
 
 ---
 
 
-# [!UICONTROL Cloud Manager] 简介{#introduction-to-cloud-manager}
+# [!UICONTROL Cloud Manager]{#introduction-to-cloud-manager} 简介
 
 ## 简介 {#introduction}
 
-[!UICONTROL Cloud Manager] 是 Adobe 托管云服务的一部分，允许组织在云中自行管理 Experience Manager。它包含一个持续集成和持续交付 (CI/CD) 框架，使 IT 团队和实施合作伙伴能够在不影响性能或安全性的情况下快速交付自定义或更新。
+[!UICONTROL Cloud Manager]作为Adobe Managed Services的一部分，组织可以在云中自行管理Experience Manager。 它包含一个持续集成和持续交付 (CI/CD) 框架，使 IT 团队和实施合作伙伴能够在不影响性能或安全性的情况下快速交付自定义或更新。
 
 通过 [!UICONTROL Cloud Manager] 自助式客户门户，**组织**&#x200B;可以执行以下操作/利用以下功能：
 
@@ -41,7 +44,7 @@ source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
 
 客户可以定义特定于应用程序的关键绩效指标 (KPI)（如每分钟的页面查看峰值和页面加载的预期响应时间），这些指标最终构成衡量部署是否成功的基础。可以轻松定义不同团队成员的角色和权限。新的自助式界面在将控制权重新交还给用户的同时，还提供了到最佳实践的链接，并且能够在需要时联系 Adobe 内可提供必要指导的专家。
 
-要探索并开始使用 [!UICONTROL Cloud Manager] 的 UI，请参阅[首次登录](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/getting-started/first-time-login.translate.html)。
+要浏览UI并开始使 [!UICONTROL Cloud Manager]用，请参阅首 [次登录](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html)。
 
 ### CI/CD 管线 {#ci-cd-pipeline}
 
@@ -49,7 +52,7 @@ source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
 
 通过 [!UICONTROL Cloud Manager] UI，客户能够配置并启动他们的 CI/CD 管线。在执行此管线期间，会执行彻底的代码扫描，以确保只有高质量的应用程序才能投入到生产环境。
 
-要了解有关从 [!UICONTROL Cloud Manager] 的 UI 配置管线的更多信息，请参阅[配置 CI/CD 管线](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.translate.html)。
+要进一步了解如何从UI [!UICONTROL Cloud Manager]配置管道，请 [参阅配置CI/CD管道](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html)。
 
 ### 灵活的部署模式 {#flexible-deployment-modes}
 
