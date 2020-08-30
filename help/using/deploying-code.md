@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%
@@ -127,13 +127,11 @@ Cloud Manager将构建过程生成的所有目标/*.zip文件上传到存储位�
    1. 管道配置中指定的每个路径都无效或从调度程序缓存中刷新。
 
    >[!NOTE]
-   >
    >Cloud Manager希望调度程序对象包含完整的文件集。  所有调度程序配置文件都必须在git存储库中。 缺少文件或文件夹将导致部署失败。
 
 1. 成功将所有AEM和调度程序包部署到所有节点后，调度程序将添加回负载平衡器，部署完成。
 
    >[!NOTE]
-   >
    >您可以跳过开发和阶段部署中的负载平衡器更改，即在非生产管道中(对于开发人员环境)和生产管道中(对于阶段环境)分离并附加步骤。
 
 ### 部署到生产阶段 {#deployment-production-phase}
