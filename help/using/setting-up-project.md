@@ -2,7 +2,7 @@
 title: 设置项目
 description: 可查看本页以了解如何设置项目
 translation-type: tm+mt
-source-git-commit: f73ea3db4bc50891518bebbe5da2d69dd2890a81
+source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 7%
@@ -110,7 +110,7 @@ ht-degree: 7%
 >[!NOTE]
 >受密码保护的Maven存储库中的对象只应非常谨慎地使用，因为通过此机制部署的代码当前未通过Cloud Manager的质量门运行。 因此，它只应用于极少的情况，以及不绑定到AEM的代码。 建议还部署Java源以及整个项目源代码以及二进制代码。
 
-要从Cloud Manager中使用受密码保护的Maven存储库，请将密码（以及用户名）指定为机密管 [线变量](#pipeline-variables) ，然后在git存储库中名为的文件中引 `.cloudmanager/maven/settings.xml` 用该机密。 此文件遵循“主设 [置文件”模式](https://maven.apache.org/settings.html) 。 当Cloud Manager构建流程开始时， `<servers>` 此文件中的元素将合并到Cloud Manager提 `settings.xml` 供的默认文件中。 服务器ID从开 `adobe` 始 `cloud-manager` ，被视为保留ID，不应由自定义服务器使用。 Cloud Manager **将** 永远不会镜像与这些前缀之 `central` 一不匹配的服务器ID或默认ID。 在此文件就位后，服务器ID将从文件内的 `<repository>` 和／或 `<pluginRepository>` 元素中引 `pom.xml` 用。 通常，这 `<repository>` 些和/ `<pluginRepository>` 或元素将包含在特 [定于Cloud Manager的用户档案中](/help/using/create-an-application-project.md#activating-maven-profiles-in-cloud-manager)，尽管这并不是严格必需的。
+要从Cloud Manager中使用受密码保护的Maven存储库，请将密码（以及用户名）指定为机密管 [线变量](/help/using/build-environment-details.md#pipeline-variables) ，然后在git存储库中名为的文件中引 `.cloudmanager/maven/settings.xml` 用该机密。 此文件遵循“主设 [置文件”模式](https://maven.apache.org/settings.html) 。 当Cloud Manager构建流程开始时， `<servers>` 此文件中的元素将合并到Cloud Manager提 `settings.xml` 供的默认文件中。 服务器ID从开 `adobe` 始 `cloud-manager` ，被视为保留ID，不应由自定义服务器使用。 Cloud Manager **将** 永远不会镜像与这些前缀之 `central` 一不匹配的服务器ID或默认ID。 在此文件就位后，服务器ID将从文件内的 `<repository>` 和／或 `<pluginRepository>` 元素中引 `pom.xml` 用。 通常，这 `<repository>` 些和/ `<pluginRepository>` 或元素将包含在特 [定于Cloud Manager的用户档案中](#activating-maven-profiles-in-cloud-manager)，尽管这并不是严格必需的。
 
 例如，假设存储库位于https://repository.myco.com/maven2，则Cloud Manager应使用的用户名为， `cloudmanager` 密码为 `secretword`。
 
