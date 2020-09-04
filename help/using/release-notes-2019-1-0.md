@@ -1,6 +1,6 @@
 ---
 title: 2019.1.0 版发行说明
-seo-title: AEM Cloud Manager 2019.1.0版本说明
+seo-title: AEM Cloud Manager 2019.1.0发行说明
 description: 可查看本页以获取Cloud Manager Release 2019.1.0的相关信息。
 seo-description: 可查看本页以获取AEM Cloud Manager 2019.1.0版的相关信息。
 uuid: 3af5808f-828f-4846-bee4-1e62194b48ad
@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '335'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # 2019.1.0 版发行说明 {#release-notes-for}
 
-&#x200B;2018. [!UICONTROL Cloud Manager] 9.0版本增加了支持测试AEM Assets项目以及运行构建和代码质量步骤的其他管道类型，可以选择部署到非生产环境。
+2018. [!UICONTROL Cloud Manager] 9.0版本增加了对AEM Assets项目以及运行构建和代码质量步骤的其他管道类型的测试支持，可以选择部署到非生产环境。
 
 ## 发布日期 {#release-date}
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 
 * 增加了对AEM Assets性能测试的支持。 有关更多详细信 [息，请参](configuring-pipeline.md)阅配置CI/CD管道。
 * 增加了对仅运行构建和代码质量步骤的管道以及部署到非生产环境的管道的支持。 请参阅配 **置CI/CD管道中的非生产和** 仅代码质量管道 [](configuring-pipeline.md) 部分，了解更多详细信息。
-* 在构建环境中增加了对自定义环境变量的支持。 有关更 [多详细信息，请参阅](/help/using/create-an-application-project.md) “创建AEM应用程序项目”。
+* 在构建环境中增加了对自定义环境变量的支持。
 * 对于具有多个阶段或生产环境的客户，可在“配置CI/CD管道”页面中选择将部署到哪个环境作为生 [产管道的一部分](configuring-pipeline.md) 。
 * 已添加httpxt2dbm以构建容器。
 * 所有帮助菜单项都会打开一个新选项卡。
