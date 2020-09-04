@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
 source-wordcount: '1751'
 ht-degree: 1%
@@ -84,7 +84,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    在管道设置或编辑过程中，当在任何质量门中遇到重要故障时，部署管理器可以选择定义管道的行为，如代码质量、安全测试和性能测试。
 
-   这对于希望实现更自动化流程的客户非常有用。 可用选项有：
+   这对于希望获得更自动化流程的客户非常有用。 可用选项有：
 
 * **每次询问** -这是默认设置，需要手动干预任何重要故障。
 * **立即失败** -如果选中此项，则在出现重要故障时将取消管道。 这实质上是模拟用户手动拒绝每个失败。
@@ -192,7 +192,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
    >
    >存在默认图像和PDF文档，但在大多数情况下，客户需要上传自己的资产。 这可以从“管线设置”(Pipeline Setup)或“编辑”(Edit)屏幕中完成。 支持JPEG、PNG、GIF和BMP等常见图像格式以及Photoshop、Illustrator和Postscript文件。
 
-1. 单击 **“保存** ”(Save)以完成管线流程的设置。
+1. 单击 **“保存** ”(Save)以完成管线进程的设置。
 
    >[!NOTE]
    >
@@ -204,7 +204,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 具有已验证站点的AMS客户可以指定Cloud Manager在站点性能测试期间用来访问网站的用户名和密码。
 
-用户名和密码指定为 [Pipeline Variables](/help/using/create-an-application-project.md#pipeline-variables) (管道变量 `CM_PERF_TEST_BASIC_USERNAME` )，其名称为 `CM_PERF_TEST_BASIC_PASSWORD`和。
+用户名和密码指定为 [Pipeline Variables](/help/using/build-environment-details.md#pipeline-variables) (管道变量 `CM_PERF_TEST_BASIC_USERNAME` )，其名称为 `CM_PERF_TEST_BASIC_PASSWORD`和。
 
 尽管并非严格要求，但建议将字符串变量类型用于用户名，将secretString变量类型用于密码。 如果同时指定了这两个凭据，则性能测试Crawler和测试虚拟用户的每个请求都将包含这些凭据作为HTTP Basic身份验证。
 
@@ -240,7 +240,7 @@ CI/CD非生产管道分为两个类别，代码质量管道和部署管道。 �
 
    * **编辑** -允许编辑管道设置
    * **Detail** —— 显示上次管线执行（如果有）
-   * **构建** -导航到执行页面，可从中执行管道
+   * **构建** -导航到执行页面，可从该页面执行管道
 
    ![](assets/Non-prod-2.png)
 
