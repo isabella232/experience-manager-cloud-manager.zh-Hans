@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 Cloud Manager能够部署Web服务器和调度程序配置文件(假定这些文件存储在 **Git存储库**)以及普通AEM内容包。
 
-要利用此功能，Maven构建应生成一个zip文件，其中至少包含两个目 ***录*** - ***conf和conf.d***。 可以使用maven-assembly-plugin生成此zip文件。 由Cloud Manager使用内置向导生成的项 [目](/help/using/create-an-application-project.md) ，在创建项目时会创建正确的Maven项目结构。 这是Managed Services新客户的推荐途径。
+要利用此功能，Maven构建应生成一个zip文件，其中至少包含两个目 ***录*** - ***conf和conf.d***。 可以使用maven-assembly-plugin生成此zip文件。 由Cloud Manager使用内置向导生成的项 [目](/help/using/using-the-wizard.md) ，在创建项目时会创建正确的Maven项目结构。 这是Managed Services新客户的推荐途径。
 
 部署到调度程 **序实例**&#x200B;时，这些目录的内容将覆盖Dispatcher实例中这些目录的内容。 由于Web服务器和调度程序配置文件经常需要环境特定信息，为了使此功能正确使用，您首先需要与客户成功工程师(CSE)合作，在中设置这些环境变量 `/etc/sysconfig/httpd`。
 
