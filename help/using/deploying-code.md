@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 1%
    Stage **Deployment**，涉及以下步骤：
 
    * 验证：此步骤确保管道配置为使用当前可用的资源，例如，已配置的分支存在，环境可用。
-   * 构建和单元测试：此步骤运行容器化构建过程。 有关 [构建环境的详细信息](create-an-application-project.md) ，请参阅创建AEM应用程序项目。
+   * 构建和单元测试：此步骤运行容器化构建过程。 有 [关构建环境的详细信](/help/using/build-environment-details.md) 息，请参阅了解构建环境。
    * 代码扫描：此步骤将评估应用程序代码的质量。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
    * 部署到舞台
 
