@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '329'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # 2018.8.0 版发行说明 {#release-notes-for}
 
-&#x200B;2018. [!UICONTROL Cloud Manager] 8.0版本增加了在git提交时自动触发CI/CD管道的支持，并新增了一个用于根据AEM项目原型在git中创建应用程序项目的向导。
+2018. [!UICONTROL Cloud Manager] 8.0版本增加了在git提交时自动触发CI/CD管道的支持，并增加了一个新向导，用于根据AEM项目原型在git中创建应用程序项目。
 
 ## 发布日期 {#release-date}
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 ## 新增功能 {#what-s-new}
 
-* **项目设置** -用于在git中使用AEM项目原型创建应用程序项目的新向导请参阅 [创建AEM应用程序项目](/help/using/create-an-application-project.md) ，了解更多信息。
+* **项目设置** -使用AEM Project Archetype在git中创建应用程序项目的新向导
 
 * **CI/CD管道** -以下更改已添加到CI/CD管道。 请参阅配 [置CI/CD管道](configuring-pipeline.md) ，了解更多。
 
