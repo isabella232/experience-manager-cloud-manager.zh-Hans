@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 6%
@@ -162,7 +162,7 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 | 页面视图每分钟 | 重要信息 | &lt;项目级KPI |
 | 磁盘带宽利用 | 重要信息 | >= 90% |
 | 网络带宽利用 | 重要信息 | >= 90% |
-| 每分钟请求数 | 信息 | &lt; 6000 |
+| 每分钟请求数 | 信息 | >= 6000 |
 
 ### 性能测试结果图表 {#performance-testing-results-graphs}
 
@@ -170,7 +170,7 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 打开“性能测试”对话框时，可以展开度量面板以显示图形、提供下载链接或同时显示两者。
 
-对 [!UICONTROL Cloud Manager] 于版本2018.7.0，此功能可用于以下指标：
+对 [!UICONTROL Cloud Manager] 于版本2018.7.0，此功能适用于以下指标：
 
 * **CPU利用率**
    * 测试期间的CPU利用率图。
@@ -180,7 +180,7 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 * **页面错误率**
    * 测试期间每分钟的页面错误图。
-   * 一个CSV文件，其中列出了测试过程中出错的页面。
+   * 一个CSV文件，其中列出了测试过程中产生错误的页面。
 
 * **磁盘带宽利用**
    * 测试期间磁盘带宽利用率的图表。
