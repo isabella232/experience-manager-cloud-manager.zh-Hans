@@ -1,28 +1,28 @@
 ---
-title: 2020.9.0 版发行说明
-seo-title: AEM Cloud Manager 2020.9.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.9.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.9.0版的相关信息
+title: 2020.10.0 版发行说明
+seo-title: AEM Cloud Manager 2020.10.0发行说明
+description: 可查看本页以获取Cloud Manager Release 2020.10.0的信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2020.10.0版的相关信息
 translation-type: tm+mt
-source-git-commit: 92249cbb7134082fcc66455c90dda8bdcb9dbf1d
+source-git-commit: aad2da58e5934999884553619dd97d42cc725d88
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 10%
+source-wordcount: '102'
+ht-degree: 9%
 
 ---
 
-# 2020.9.0 版发行说明 {#release-notes-for}
+# 2020.10.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.9.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
+以下部分概述了2020.10.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
 
 ## 发布日期 {#release-date}
 
-版本2020.9.0 [!UICONTROL Cloud Manager] 的发布日期为2020年9月3日。
+版本2020.10.0 [!UICONTROL Cloud Manager] 的发布日期为2020年10月1日。
 
-## 新增功能 {#whats-new}
+## 错误修复 {#bug-fixes}
 
-* 构建过程已分为三个单独的Maven命令。
-* 如果无法克隆git存储库，则最多将重试3次。
-* 在性能测试期间使用身份验证时，管道执行详细信息页面上现在有一个指示器。
+* 用于性能测试的Crawler错误地将某些资源类型视为有效的Web链接。
 
+* 在某些情况下，性能测试中的完成步骤处理不正确，导致运行时间较长的步骤。
 
+* 为生产部署配置调度程序缓存失效时，有时会执行两次失效。
