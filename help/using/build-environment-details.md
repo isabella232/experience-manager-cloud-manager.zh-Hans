@@ -2,9 +2,9 @@
 title: 了解构建环境
 description: 可查看本页以了解有关环境
 translation-type: tm+mt
-source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
+source-git-commit: 000843f902a180181981de2b1307fd2777d32994
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
-变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。 每个管道限制为200个变量，每个名称必须少于100个字符，每个值必须少于2048个字符。
+变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。 对于字符串类型变量，每个管道限制为200个变量，每个名称必须小于100个字符，对于secretString类型变量，每个值必须小于2048个字符，对于secretString类型变量，限制为500个字符。
 
 在文件内使 `Maven pom.xml` 用时，通常可以使用类似于下面的语法将这些变量映射到Maven属性：
 
@@ -183,5 +183,4 @@ Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这
 此技术同样可用于安装语言特定的软件包，即用于 `gem` RubyGems或 `pip` Python软件包。
 
 >[!NOTE]
->
->以这种方式安装系统包不 **会将** 它安装在用于运行Adobe Experience Manager的运行时环境中。 如果您需要AEM环境上安装系统包，请与客户成功工程师(CSE)联系。
+>以这种方式安装系统包不 **会将** 它安装在用于运行Adobe Experience Manager的运行时环境中。 如果需要在AEM环境上安装系统包，请与Adobe代表联系。
