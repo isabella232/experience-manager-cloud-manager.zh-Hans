@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: a8cd1ac2448b9f875c1d925c62e7fe42c8ceec2a
+source-git-commit: 71a760997ec2a0873a7f39d206086a8b4fd6854e
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2314'
 ht-degree: 6%
 
 ---
@@ -225,7 +225,7 @@ public class DontDoThis implements Page {
 
 从ResourceResolverFactory获取的ResourceResolver对象使用系统资源。 尽管当ResourceResolver不再使用时，已经有可回收这些资源的度量，但通过调用close()方法显式关闭任何已打开的ResourceResolver对象会更有效。
 
-一个比较常见的误解是使用现有JCR会话创建的ResourceResolver对象不应显式关闭，或者这样做将关闭基础JCR会话。 这种情况不存在——无论ResourceResolver如何打开，都应在不再使用时关闭它。 由于ResourceResolver实现了Closeable接口，因此也可以使用try-with-resources语法，而不是显式调用close()。
+一个比较常见的误解是使用现有JCR会话创建的ResourceResolver对象不应显式关闭，或者这样做将关闭基础JCR会话。 这种情况不存在——无论ResourceResolver如何打开，都应在不再使用时关闭它。 由于ResourceResolver实现了Closeable接口，因此也可以使用try-with-resources语法而不是显式调用close()。
 
 #### 不符合规范的代码 {#non-compliant-code-4}
 
@@ -561,7 +561,7 @@ public void doThis(Resource resource) {
 
 **密钥**:CQRules:AMSCORE-554
 
-**类型**:代码气味
+**类型**:代码气味/Cloud Service兼容性
 
 **严重性**:次要
 
@@ -575,7 +575,7 @@ Sling调度程序不得用于需要有保证执行的任务。 Sling Scheduled J
 
 **密钥**:AMSCORE-553
 
-**类型**:代码气味
+**类型**:代码气味/Cloud Service兼容性
 
 **严重性**:次要
 
@@ -689,7 +689,7 @@ AEM内容存储库中的/libs内容树应被客户视为只读，这是一种长
 
 **密钥**:ClassicUIAuthoringMode
 
-**类型**:代码气味
+**类型**:代码气味/Cloud Service兼容性
 
 **严重性**:次要
 
@@ -701,7 +701,7 @@ OSGi配置定 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 义AEM中的
 
 **密钥**:ComponentWithOnlyClassicUIDialog
 
-**类型**:代码气味
+**类型**:代码气味/Cloud Service兼容性
 
 **严重性**:次要
 
@@ -719,7 +719,7 @@ AEM现代化工具文档提供了如何将组件从经典UI转换为触屏UI的�
 
 **密钥**:ImmutableMutableMixedPackage
 
-**类型**:代码气味
+**类型**:代码气味/Cloud Service兼容性
 
 **严重性**:次要
 
@@ -733,7 +733,7 @@ Refer to [AEM Project Structure](https://docs.adobe.com/content/help/zh-Hans/exp
 
 **密钥**:反向复制
 
-**类型**:代码气味
+**类型**:代码气味/Cloud Service兼容性
 
 **严重性**:次要
 
