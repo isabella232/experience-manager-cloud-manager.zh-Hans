@@ -10,9 +10,9 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1776'
 ht-degree: 1%
 
 ---
@@ -164,7 +164,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
    **AEM Sites:**
 
-   Cloud Manager在30分钟的测试期内在舞台发布服务器上请求页面（默认为未验证的用户），并测量每个页面的响应时间以及各种系统级度量，从而执行AEM Sites项目的性能测试。
+   Cloud Manager在30分钟的测试期内在舞台发布服务器上请求页面（默认为未验证的用户），并测量每个页面的响应时间以及各种系统级度量，从而执行AEM Sites项目的性能测试。 这些请求是从一组已知的专用地址发出的。 地址范围可从客户成功工程师或Adobe代表处获取。
 
    在30分钟测试期开始之前，Cloud Manager将使用由客户成功工程师配置的一组或多个种子 *URL* 爬网舞台环境。 从这些URL开始，将检查每个页面的HTML，并以宽度优先的方式遍历链接。 此搜索过程最多限制为5000页。 来自Crawler的请求的固定超时为10秒。
 
