@@ -1,28 +1,36 @@
 ---
-title: 2020.10.0 版发行说明
-seo-title: AEM Cloud Manager 2020.10.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.10.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.10.0版的相关信息
+title: 2020.11.0 版发行说明
+seo-title: AEM Cloud Manager 2020.11.0发行说明
+description: 可查看本页以获取Cloud Manager Release 2020.11.0的信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2020.11.0版的相关信息
 translation-type: tm+mt
-source-git-commit: aad2da58e5934999884553619dd97d42cc725d88
+source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 9%
+source-wordcount: '160'
+ht-degree: 7%
 
 ---
 
-# 2020.10.0 版发行说明 {#release-notes-for}
+# 2020.11.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.10.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
+以下部分概述了2020.11.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
 
 ## 发布日期 {#release-date}
 
-版本2020.10.0 [!UICONTROL Cloud Manager] 的发布日期为2020年10月1日。
+版本2020.11.0 [!UICONTROL Cloud Manager] 的发布日期为2020年11月12日。
+
+## 新增功能 {#whats-new}
+
+* 云管 **理器** 中的“学习”选项卡会通过UI中的新图像刷新。
 
 ## 错误修复 {#bug-fixes}
 
-* 用于性能测试的Crawler错误地将某些资源类型视为有效的Web链接。
+* 现在，某些客户导致的部署错误将在部署日志中显式显示。
 
-* 在某些情况下，性能测试中的完成步骤处理不正确，导致运行时间较长的步骤。
+* 需要下载Maven插件，才能加载执行构建之前完成的依赖项。
 
-* 为生产部署配置调度程序缓存失效时，有时会执行两次失效。
+* 现在，从Cloud Manager页脚中选择语言的链接将导航到正确的位置。
+
+* 有时，在代码扫描过程中，SonarQube进程不会开始。 现在将自动检测并尝试重新启动。
+
+* 在性能测试中使用的站点爬网过程中，将自动重试在前三个深度遍历级别中超时的请求。
