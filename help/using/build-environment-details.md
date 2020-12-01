@@ -10,13 +10,13 @@ ht-degree: 0%
 ---
 
 
-# 了解构建环境 {#build-environment-details}
+# 了解构建环境{#build-environment-details}
 
 Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具有以下属性：
 
 * 构建环境基于Linux，源自Ubuntu 18.04。
 * Apache Maven 3.6.0已安装。
-* 安装的Java版本为Oracle JDK 8u202和11.0.2。
+* 安装的Java版本为OracleJDK 8u202和11.0.2。
 * 还安装了一些其他系统包，这是必需的：
 
    * bzip2
@@ -25,7 +25,7 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
    * imagemagick
    * graphicsmagick
 
-* 其他软件包可以在构建时安装，如 [下所述](#installing-additional-system-packages)。
+* 其他软件包可以在构建时安装，如[下面所述。](#installing-additional-system-packages)
 * 每栋建筑都建在原始环境上；构建容器不会在执行之间保持任何状态。
 * Maven始终使用以下三个命令运行：
 
@@ -33,16 +33,16 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
-* Maven在系统级别上配置了settings.xml文件，该文件自动包括公共Adobe **项库** 。 (有关更多详 [细信息，请参阅Adobe](https://repo.adobe.com/) 公共Maven存储库。)
+* 在系统级别上，Maven配置有设置。xml文件，该文件自动包括公共Adobe **Artifact**&#x200B;存储库。 (有关详细信息，请参阅[Adobe公用主存储库](https://repo.adobe.com/)。)
 
 >[!NOTE]
->尽管Cloud Manager未定义特定版本，但 `jacoco-maven-plugin`使用的版本至少必须为 `0.7.5.201505241946`。
+>虽然Cloud Manager未定义`jacoco-maven-plugin`的特定版本，但使用的版本必须至少为`0.7.5.201505241946`。
 
 ## 使用Java 11 {#using-java-11}
 
-Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情况下，项目是使用Java 8构建的。 计划在其项目中使用Java 11的客户可以使用Apache Maven Toolchains [插件进行此操作](https://maven.apache.org/plugins/maven-toolchains-plugin/)。
+Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情况下，项目是使用Java 8构建的。 计划在其项目中使用Java 11的客户可以使用[Apache Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/)执行此操作。
 
-为此，请在pom.xml文件中添加一个 `<plugin>` 如下的条目：
+为此，在pom.xml文件中，添加如下所示的`<plugin>`条目：
 
 ```xml
         <plugin>
@@ -68,14 +68,14 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 ```
 
 >[!NOTE]
->支持 `vendor` 的值 `oracle` 为，支 `sun` 持的值为 `version` 、 `1.8`和 `1.11``11`。
+>支持的`vendor`值为`oracle`和`sun`，支持的`version`值为`1.8`、`1.11`和`11`。
 
 >[!NOTE]
->Cloud Manager项目构建仍在使用Java 8调用Maven，因此检查或强制工具链插件中通过插件(如 [Apache Maven Enforcer插件)配置的Java版本不起作用](https://maven.apache.org/enforcer/maven-enforcer-plugin/) ，且此类插件不得使用。
+>云管理器项目构建仍在使用Java 8调用Maven，因此检查或强制工具链插件中通过插件（如[Apache Maven Enforcer插件](https://maven.apache.org/enforcer/maven-enforcer-plugin/)）配置的Java版本不起作用，因此不得使用此类插件。
 
-## 环境变量 {#environment-variables}
+## 环境变量{#environment-variables}
 
-### 标准环境变量 {#standard-environ-variables}
+### 标准环境变量{#standard-environ-variables}
 
 在某些情况下，客户发现有必要根据有关项目或管道的信息改变构建流程。
 
@@ -93,11 +93,11 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 | CM_项目_NAME | 项目名称 |
 | AFTRACTS_VERSION | 对于舞台或生产管道，由Cloud Manager生成的合成版本 |
 
-### 管道变量 {#pipeline-variables}
+### 管道变量{#pipeline-variables}
 
 在某些情况下，客户的构建过程可能取决于特定配置变量，这些变量不适合放置在Git存储库中，或者需要在使用同一分支的管道执行之间有所不同。
 
-Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这些变量。 变量可以以纯文本形式存储，也可以在静态时加密。 在任何一种情况下，生成环境中的变量都作为环境变量可用，然后可以从文件或其他生成脚本 `pom.xml` 中引用该变量。
+Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这些变量。 变量可以以纯文本形式存储，也可以在静态时加密。 在任一情况下，在构建环境中变量都可用作环境变量，然后从`pom.xml`文件或其他构建脚本中引用该变量。
 
 要使用CLI设置变量，请运行如下命令：
 
@@ -109,7 +109,7 @@ Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这
 
 变量名称只能包含字母数字和下划线(_)字符。 按照惯例，这些名称应全部为大写。 对于字符串类型变量，每个管道限制为200个变量，每个名称必须小于100个字符，对于secretString类型变量，每个值必须小于2048个字符，对于secretString类型变量，限制为500个字符。
 
-在文件内使 `Maven pom.xml` 用时，通常可以使用类似于下面的语法将这些变量映射到Maven属性：
+当在`Maven pom.xml`文件中使用时，通常可以使用类似于下面的语法将这些变量映射到Maven属性：
 
 ```xml
         <profile>
@@ -125,9 +125,9 @@ Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这
         </profile>
 ```
 
-## 安装其他系统包 {#installing-additional-system-packages}
+## 安装其他系统包{#installing-additional-system-packages}
 
-某些构建需要安装额外的系统包才能完全运行。 例如，生成可能调用Python或ruby脚本，因此需要安装相应的语言解释器。 这可以通过调用exec- [maven-plugin来调用](https://www.mojohaus.org/exec-maven-plugin/) APT来完成。 此执行通常应包含在特定于Cloud Manager的Maven用户档案中。 例如，安装python:
+某些构建需要安装额外的系统包才能完全运行。 例如，生成可能调用Python或ruby脚本，因此需要安装相应的语言解释器。 这可以通过调用[exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/)调用APT来完成。 此执行通常应包含在特定于Cloud Manager的Maven用户档案中。 例如，安装python:
 
 ```xml
         <profile>
@@ -180,7 +180,7 @@ Cloud Manager允许通过Cloud Manager API或Cloud Manager CLI按管道配置这
         </profile>
 ```
 
-此技术同样可用于安装语言特定的软件包，即用于 `gem` RubyGems或 `pip` Python软件包。
+此技术同样可用于安装语言特定的软件包，即使用`gem`（对于RubyGems）或`pip`（对于Python软件包）。
 
 >[!NOTE]
->以这种方式安装系统包不 **会将** 它安装在用于运行Adobe Experience Manager的运行时环境中。 如果需要在AEM环境上安装系统包，请与Adobe代表联系。
+>以这种方式安装系统包时，**不**&#x200B;会将其安装在用于运行Adobe Experience Manager的运行时环境中。 如果需要在AEM环境上安装系统包，请与Adobe代表联系。
