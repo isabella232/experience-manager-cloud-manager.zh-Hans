@@ -21,7 +21,7 @@ ht-degree: 73%
 
 本节简要介绍可帮助您开始使用 [!UICONTROL Cloud Manager] 的资源列表。
 
-Follow the resources below to begin your journey for using [!UICONTROL Cloud Manager], from understanding the key concepts and terminologies to setting up configurations (pre-requisites), that finally lets you get started with [!UICONTROL Cloud Manager].
+按照以下资源开始使用[!UICONTROL Cloud Manager]的旅程，从了解关键概念和术语到设置配置（先决条件），最后开始使用[!UICONTROL Cloud Manager]。
 
 下图说明了您学习 [!UICONTROL Cloud Manager] 的路线图：
 
