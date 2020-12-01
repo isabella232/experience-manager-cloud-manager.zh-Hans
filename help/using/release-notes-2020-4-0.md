@@ -2,7 +2,7 @@
 title: 2020.4.0 版发行说明
 seo-title: AEM Cloud Manager 2020.4.0发行说明
 description: 可查看本页以获取Cloud Manager Release 2020.4.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager Release 2020.4.0的相关信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2020.4.0版的相关信息
 translation-type: tm+mt
 source-git-commit: 278858465592482449080fedc3c0165805db223d
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 37%
 
 # 2020.4.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.4.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
+以下部分概述了[!UICONTROL Cloud Manager] 2020.4.0版的一般发行说明。
 
 ## 发布日期 {#release-date}
 
-版本2020.4.0 [!UICONTROL Cloud Manager] 的发布日期为2020年4月9日。
+[!UICONTROL Cloud Manager]版本2020.4.0的发布日期为2020年4月09日。
 
 ## 新增功能 {#whats-new}
 
@@ -31,7 +31,7 @@ ht-degree: 37%
 
 * 监视数据有时可能以不正确的方式显示，或者根据技术值的微小差异根本不显示。
 * 更新了生成容器中使用的 Maven 配置，以避免下载伪像元数据时出现死锁。
-* 资产性能测试过程有时无法解密AEM密码，导致测试失败。
+* 资产性能测试过程偶尔无法解密AEM密码，导致测试失败。
 * 某些具有待机实例的拓扑在安全测试中可能具有错误负值。
 * 如果阶段环境包含一个已停止的实例，则安全测试步骤有时会失败。
 * 不能终如收到 Experience Cloud 通知。
