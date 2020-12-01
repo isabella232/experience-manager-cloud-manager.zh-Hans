@@ -13,15 +13,15 @@ ht-degree: 7%
 
 # 2020.11.0 版发行说明 {#release-notes-for}
 
-以下部分概述了2020.11.0 [!UICONTROL Cloud Manager] 版的一般发行说明。
+以下部分概述了[!UICONTROL Cloud Manager] 2020.11.0版的一般发行说明。
 
 ## 发布日期 {#release-date}
 
-版本2020.11.0 [!UICONTROL Cloud Manager] 的发布日期为2020年11月12日。
+[!UICONTROL Cloud Manager]版本2020.11.0的发布日期为2020年11月12日。
 
 ## 新增功能 {#whats-new}
 
-* 云管 **理器** 中的“学习”选项卡会通过UI中的新图像刷新。
+* Cloud Manager中的&#x200B;**学习**&#x200B;选项卡会用UI中的新图像刷新。
 
 ## 错误修复 {#bug-fixes}
 
