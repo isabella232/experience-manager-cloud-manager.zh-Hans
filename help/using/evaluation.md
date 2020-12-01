@@ -16,9 +16,9 @@ ht-degree: 0%
 ---
 
 
-# 评估阶段 {#evaluation}
+# 评估阶段{#evaluation}
 
-“产品更新”向导的第一阶段为 **[!UICONTROL Evaluation]** 阶段。
+产品更新向导的第一阶段为&#x200B;**[!UICONTROL Evaluation]**阶段。
 在这里，您可以使用可从向导直接访问的模式检测器来评估升级复杂性。 在此步骤结束时，您将有权访问评估报告。
 
 生成的报告允许您通过检测以下模式检查作者实例是否进行升级：
@@ -31,13 +31,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->要进一步了解模式检测器，请参 [阅使用模式检测器评估升级复杂性](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
+>要进一步了解模式检测器，请参阅[使用模式检测器评估升级复杂性](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
 
-## 运行计算器 {#running-evaluator}
+## 运行求值器{#running-evaluator}
 
 请按照以下步骤生成评估报告：
 
-1. 单击 **[!UICONTROL Run Evaluation]**。
+1. 单击&#x200B;**[!UICONTROL Run Evaluation]**。
 
    >[!NOTE]
    >
@@ -45,13 +45,13 @@ ht-degree: 0%
 
    ![](assets/Run-Evaluation.png)
 
-1. 向导会通知您操作的状态。 在生成评 **估报告****时，您** 会注意到“正在进行”或“已完成”（如果适用）。
+1. 向导会通知您操作的状态。 在生成评估报告时，您会注意到&#x200B;**正在进行**&#x200B;或&#x200B;**已完成**。
 
-   生成报告后，您可以单击以 **[!UICONTROL Download report]** 保存副本。
+   生成报告后，可单击&#x200B;**[!UICONTROL Download report]**&#x200B;保存副本。
 
    ![](assets/Evaluation-1.png)
 
 
    >[!NOTE]
    >
-   >Cloud Manager中当前版本的产品更新向导仅支持 **评估** 阶段。 其他四个阶段，即 **补救**、执 **行**、验 **证**&#x200B;和完 **成即** 将推出。
+   >Cloud Manager中当前版本的产品更新向导仅支持&#x200B;**评估**&#x200B;阶段。 其他四个阶段即&#x200B;**Remediation**、**Execution**、**Validation**&#x200B;和&#x200B;**Completion**&#x200B;即将推出。
