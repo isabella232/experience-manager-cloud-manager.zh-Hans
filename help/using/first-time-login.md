@@ -19,30 +19,30 @@ ht-degree: 8%
 
 # 首次登录 {#first-time-login}
 
-为设置常规配置后， [!UICONTROL Cloud Manager]您便可以使用用户界面(UI) [!UICONTROL Cloud Manager]。
+为[!UICONTROL Cloud Manager]设置常规配置后，您便可以为[!UICONTROL Cloud Manager]使用用户界面(UI)。
 
 >[!NOTE]
->根据中分配的角 [!UICONTROL Cloud Manager] 色和应用程序的状态，您在使用UI时将看到不同的屏 [!UICONTROL Cloud Manager] 幕。
+>根据[!UICONTROL Cloud Manager]中分配的角色和应用程序的状态，您将在使用[!UICONTROL Cloud Manager] UI时看到不同的屏幕。
 
-## 视频教程 {#video-tutorial-one}
+## 视频教程{#video-tutorial-one}
 
-### Cloud Manager项目 {#programs-video}
+### Cloud Manager项目{#programs-video}
 
 以下视频为Cloud Manager项目提供了概述，这些环境代表支持业务计划的逻辑集合的AEM集，通常对应于购买的服务级别协议(SLA)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
-## 首次登录 {#logging-in-for-the-first-time}
+## 首次登录{#logging-in-for-the-first-time}
 
-1. 登录到 **Adobe[!UICONTROL Experience Cloud]** ，您将看到项目的 **列表**。
+1. 登录&#x200B;**Adobe[!UICONTROL Experience Cloud]**，您将看到&#x200B;**项目**&#x200B;的列表。
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
-1. 选择项目(例 **如We.Retail Global**)，然后单击左上角的图标以打开 [!UICONTROL Cloud Manager]。
+1. 选择项目（例如&#x200B;**We.Retail Global**），然后单击左上角的图标以打开[!UICONTROL Cloud Manager]。
 
    ![](assets/first-timea1.png)
 
-1. 显示的仪表板 [!UICONTROL Cloud Manager] 。
+1. 将显示[!UICONTROL Cloud Manager]的仪表板。
 
    ![](assets/FirstLogin1.png)
 
@@ -50,11 +50,11 @@ ht-degree: 8%
 
    >[!NOTE]
    >
-   >请参阅 [设置项目](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) ，以完成后续步骤。
+   >请参阅[设置项目](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html)以完成后续步骤。
 
-## 视频教程 {#video-tutorial-two}
+## 视频教程{#video-tutorial-two}
 
-### Cloud Manager活动选项卡 {#activity-video}
+### Cloud Manager活动选项卡{#activity-video}
 
 Cloud Manager为项目的活动提供整合视图，列出所有CI/CD管道执行（生产和非生产），让您能够了解过去和现在的活动，并可以查看任何活动的详细信息。
 
