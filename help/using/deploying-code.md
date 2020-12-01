@@ -19,17 +19,17 @@ ht-degree: 1%
 
 # 部署代码 {#deploy-your-code}
 
-## 使用Cloud Manager部署代码 {#deploying-code-with-cloud-manager}
+## 使用Cloud Manager {#deploying-code-with-cloud-manager}部署代码
 
 配置Production Pipeline(存储库、环境和测试环境)后，即可部署代码。
 
-1. 单 **击** “从云管理器部署”以开始部署过程。
+1. 单击云管理器中的&#x200B;**部署**&#x200B;以开始部署过程。
 
    ![](assets/Deploy1.png)
 
-1. 将显 **示“管道** 执行”屏幕。
+1. 将显示&#x200B;**管道执行**&#x200B;屏幕。
 
-   单击 **“构建** ”以开始该过程。
+   单击&#x200B;**Build**&#x200B;以开始进程。
 
    ![](assets/Deploy2.png)
 
@@ -48,20 +48,20 @@ ht-degree: 1%
    Stage **Deployment**，涉及以下步骤：
 
    * 验证：此步骤确保管道配置为使用当前可用的资源，例如，已配置的分支存在，环境可用。
-   * 构建和单元测试：此步骤运行容器化构建过程。 有 [关构建环境的详细信](/help/using/build-environment-details.md) 息，请参阅了解构建环境。
-   * 代码扫描：此步骤将评估应用程序代码的质量。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 构建和单元测试：此步骤运行容器化构建过程。 有关构建环境的详细信息，请参阅[了解构建环境](/help/using/build-environment-details.md)。
+   * 代码扫描：此步骤将评估应用程序代码的质量。 有关测试过程的详细信息，请参阅[了解测试结果](understand-your-test-results.md)。
    * 部署到舞台
 
    ![](assets/Stage_Deployment1.png)
 
-   The **Stage Testing**, involves the following steps:
+   **阶段测试**&#x200B;涉及以下步骤：
 
-   * 安全测试：此步骤评估应用程序代码对AEM环境的安全影响。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
-   * 性能测试：此步骤将评估应用程序代码的性能。 有关 [测试过程的详细信息](understand-your-test-results.md) ，请参阅了解测试结果。
+   * 安全测试：此步骤评估应用程序代码对AEM环境的安全影响。 有关测试过程的详细信息，请参阅[了解测试结果](understand-your-test-results.md)。
+   * 性能测试：此步骤将评估应用程序代码的性能。 有关测试过程的详细信息，请参阅[了解测试结果](understand-your-test-results.md)。
 
    ![](assets/Stage_Testing1.png)
 
-   The **Production Deployment**, involves the following steps:
+   **生产部署**&#x200B;涉及以下步骤：
 
    * **申请批准** （如果启用）
    * **计划生产部署** （如果启用）
@@ -72,26 +72,26 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >配置 **管道时** ,计划生产部署处于启用状态。
+   >配置管线时启用&#x200B;**计划生产部署**。
    >
    >
-   >使用此选项，您可以计划生产部署，或单 **击** “立即”执行生产部署。
+   >使用此选项，您可以计划生产部署，或单击&#x200B;**Now**&#x200B;立即执行生产部署。
    >
    >
    >计划的日期和时间根据用户的时区指定。
    >
    >
-   >单击 **确认** ，验证您的设置。
+   >单击&#x200B;**确认**&#x200B;验证设置。
 
    ![](assets/Production_Deployment1.png)
 
    确认部署计划后，代码部署即完成。
 
-   当从上述步骤中选 **择** “立即”选项时，将显示以下屏幕。
+   当从上述步骤中选择&#x200B;**Now**&#x200B;选项时，将显示以下屏幕。
 
    ![](assets/Production_Deployment2.png)
 
-## 部署流程 {#deployment-process}
+## 部署进程{#deployment-process}
 
 以下部分介绍如何在阶段和生产阶段部署AEM和调度程序包。
 
@@ -122,7 +122,7 @@ Cloud Manager将构建过程生成的所有目标/*.zip文件上传到存储位�
 
    1. 当前配置被备份并复制到临时位置
    1. 除不可变文件外，所有配置都将被删除。 有关更多详细信息，请参阅管理调度程序配置。 这将清除目录，以确保不留下任何孤立文件。
-   1. 对象会被提取到目 `httpd` 录。  不可改写的文件不会被覆盖。 在部署时，您对git存储库中不可变文件所做的任何更改都将被忽略。  这些文件是AMS调度程序框架的核心，无法更改。
+   1. 该对象被解压到`httpd`目录。  不可改写的文件不会被覆盖。 在部署时，您对git存储库中不可变文件所做的任何更改都将被忽略。  这些文件是AMS调度程序框架的核心，无法更改。
    1. Apache执行配置测试。 如果未找到错误，则重新加载服务。 如果发生错误，则从备份中恢复配置，重新加载服务，并将错误报告回云管理器。
    1. 管道配置中指定的每个路径都无效或从调度程序缓存中刷新。
 
@@ -134,7 +134,7 @@ Cloud Manager将构建过程生成的所有目标/*.zip文件上传到存储位�
    >[!NOTE]
    >您可以跳过开发和阶段部署中的负载平衡器更改，即在非生产管道中(对于开发人员环境)和生产管道中(对于阶段环境)分离并附加步骤。
 
-### 部署到生产阶段 {#deployment-production-phase}
+### 部署到生产阶段{#deployment-production-phase}
 
 部署到生产拓扑的过程略有不同，以最大限度地减少对AEM站点访客的影响。
 
