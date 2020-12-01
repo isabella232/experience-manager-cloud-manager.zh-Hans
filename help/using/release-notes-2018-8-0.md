@@ -19,17 +19,17 @@ ht-degree: 4%
 
 # 2018.8.0 版发行说明 {#release-notes-for}
 
-2018. [!UICONTROL Cloud Manager] 8.0版本增加了在git提交时自动触发CI/CD管道的支持，并增加了一个新向导，用于根据AEM项目原型在git中创建应用程序项目。
+[!UICONTROL Cloud Manager] 2018.8.0版本增加了在git提交时自动触发CI/CD管道的支持，并增加了一个新向导，用于根据AEM Project Archetype在git中创建应用程序项目。
 
 ## 发布日期 {#release-date}
 
-版本2018.8.0 [!UICONTROL Cloud Manager] 的发布日期为2018年10月4日。
+[!UICONTROL Cloud Manager]版本2018.8.0的发布日期为2018年10月4日。
 
 ## 新增功能 {#what-s-new}
 
 * **项目设置** -使用AEM Project Archetype在git中创建应用程序项目的新向导
 
-* **CI/CD管道** -以下更改已添加到CI/CD管道。 请参阅配 [置CI/CD管道](configuring-pipeline.md) ，了解更多。
+* **CI/CD管道** -以下更改已添加到CI/CD管道。请参阅[配置CI/CD管道](configuring-pipeline.md)以了解更多信息。
 
    * 在Git更改触发器上，当向配置的git分支添加提交时，该触发器将开始CI/CD管道。
    * 主屏幕上的卡现在深入链接到管道执行页面的特定部分。
@@ -41,7 +41,7 @@ ht-degree: 4%
 * **导航** -在中添加了以下更改 [!UICONTROL Cloud Manager]。
 
    * 全局导航中的资源链接将导航到Sharepoint中的Runbook。
-   * 帮助菜单已重新组织，以包含更 [!UICONTROL Cloud Manager]多特定内容。
+   * 帮助菜单已重新组织，以包含更多特定于[!UICONTROL Cloud Manager]的内容。
 
 ## 错误修复 {#bug-fixes}
 
@@ -54,5 +54,5 @@ ht-degree: 4%
 ## 已知问题 {#known-issues}
 
 * 使用应用程序项目向导创建的分支不能包含虚线。
-* 通知 [!UICONTROL Experience Cloud] 提要栏可能不会一致地加载通知。 但是，通知可见于中， [!UICONTROL Experience Cloud] 并且如果配置，仍将通过电子邮件发送。
+* [!UICONTROL Experience Cloud]通知提要栏可能无法一致加载通知。 但是，通知在[!UICONTROL Experience Cloud]中可见，如果配置，仍将通过电子邮件发送。
 
