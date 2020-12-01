@@ -19,23 +19,23 @@ ht-degree: 2%
 
 # 安全性和隐私 {#security-and-privacy}
 
-[!UICONTROL Cloud Manager] 具有预配置的具有适当权限的角色。 本节重点介绍使用AEM Cloud Manager的资产（代码／对象）的安全性和隐私。 此外， [!UICONTROL Cloud Manager] 还具有预配置的具有适当权限的角色。
+[!UICONTROL Cloud Manager] 具有预配置的具有适当权限的角色。本节重点介绍使用AEM Cloud Manager的资产（代码／对象）的安全性和隐私。 此外，[!UICONTROL Cloud Manager]还具有预配置的具有适当权限的角色。
 
-要了解您可以在Admin Console中分配的角色和用户角色权限，请参阅基于角 [色的权限](/help/using/role-based-permissions.md)。
+要了解在Admin Console和用户角色权限中可分配的可能角色，请参阅[基于角色的权限](/help/using/role-based-permissions.md)。
 
 
-## 资源隔离 {#resource-isolation}
+## 资源隔离{#resource-isolation}
 
-使用IMS [!UICONTROL Cloud Manager] 凭据的客户将需要进行身份验证，因为将配置与其IMS组 [!UICONTROL Cloud Manager] 织关联的所有权限并将其绑定到IMS组织。 在入门过程中，供应团队确保在中强制实施资源隔离 [!UICONTROL Cloud Manager]。
+使用[!UICONTROL Cloud Manager]的客户将需要其IMS凭据进行身份验证，因为将配置与[!UICONTROL Cloud Manager]关联的所有权限并将其绑定到其IMS组织。 在入门过程中，供应团队确保在[!UICONTROL Cloud Manager]中强制实施资源隔离。
 
-## 数据安全 {#data-security}
+## 数据安全{#data-security}
 
-传输中 [!UICONTROL Cloud Manager] 的代码经过加密。 Cloud Manager构建的二进制文件在传输中也经过加密，在存储时也经过加密。
+[!UICONTROL Cloud Manager]中的代码在传输中被加密。 Cloud Manager构建的二进制文件在传输中也经过加密，在存储时也经过加密。
 
-每个客户都会获得自己 **的Git存储库** ，并且其代码是安全的，不会与任何其他组织 **共享**。
+每个客户都会获得自己的&#x200B;**Git存储库**，其代码是安全的，不会与任何其他&#x200B;**组织**&#x200B;共享。
 
-## 数据隐私 {#data-privacy}
+## 数据隐私{#data-privacy}
 
-[!UICONTROL Cloud Manager] 遵守Adobe定义的隐私原则。 开发人员通过HTTPS将代码安 **全地推送到** Git存储库。
+[!UICONTROL Cloud Manager] 遵守由Adobe定义的隐私原则。开发人员通过HTTPS将代码安全地推送到&#x200B;**Git存储库**。
 
-用户界面(UI) [!UICONTROL Cloud Manager] 构建在符合Adobe定义的通用控制框架的服务之上。 用户界面， [!UICONTROL Cloud Manager] 使用来自多个云提供商的安全服务。
+[!UICONTROL Cloud Manager]的用户界面(UI)构建在符合由Adobe定义的通用控制框架的服务之上。 [!UICONTROL Cloud Manager]的用户界面使用来自多个云提供商的安全服务。
