@@ -6,10 +6,10 @@ user-guide-title: Experience Manager Cloud Manager 指南
 breadcrumb-title: Cloud Manager 指南
 user-guide-description: 了解如何使用 Adobe Managed Services 在云中自我管理 Experience Manager。
 translation-type: tm+mt
-source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
+source-git-commit: f5359dee907b32cefa2db2c4ad2baf8e337f6060
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 85%
+source-wordcount: '249'
+ht-degree: 83%
 
 ---
 
@@ -52,6 +52,7 @@ ht-degree: 85%
    + [Maven 项目版本处理](activating-maven-project.md)
    + [访问 Git](accessing-git.md)
    + [与Git集成](setup-cloud-manager-git-integration.md)
+   + [使用多源Git存储库](/help/using/working-with-multiple-source-git-repos.md)
 + 产品更新向导 {#product-update-wizard}
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
