@@ -12,14 +12,14 @@ translation-type: tm+mt
 source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '275'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
 
 # 2018.9.0 版发行说明 {#release-notes-for}
 
-[!UICONTROL Cloud Manager] 2018.9.0版本增加了对基于Adobe I/O的API(包括事件)的支持，以将[!UICONTROL Cloud Manager]的CI/CD管道与其他系统集成。 在React中还开始重写UI层。
+[!UICONTROL Cloud Manager] 2018.9.0版本增加了对基于Adobe I/O的API(包括事件)的支持，以将[!UICONTROL Cloud Manager]的CI/CD管道与其他系统集成。 此外，该 API 还可以在 React 中重写 UI 层。
 
 ## 发布日期 {#release-date}
 
