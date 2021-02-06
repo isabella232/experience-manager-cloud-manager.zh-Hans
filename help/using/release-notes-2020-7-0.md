@@ -13,7 +13,7 @@ ht-degree: 51%
 
 # 2020.7.0 版发行说明 {#release-notes-for}
 
-以下部分概述了[!UICONTROL Cloud Manager] 2020.7.0版的一般发行说明。
+以下部分概述了[!UICONTROL Cloud Manager] 2020.9.0版的一般发行说明。
 
 ## 发布日期 {#release-date}
 
