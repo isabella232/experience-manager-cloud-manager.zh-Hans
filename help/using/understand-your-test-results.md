@@ -1,7 +1,7 @@
 ---
 title: 理解测试结果
 seo-title: 理解测试结果
-description: 'null'
+description: 在Cloud Manager中运行管道时进一步了解三层门
 seo-description: 可查看本页以了解在Cloud Manager中运行管道、代码扫描、性能和安全测试验证项目时的三层门。
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1556'
 ht-degree: 6%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 6%
 在“代码质量测试”中，将扫描源代码，确保它满足某些质量标准。 目前，这是通过SonarQube和使用OakPAL的内容包级别检查的组合来实现的。 有100多个规则，这些规则结合了通用Java规则和AEM特定规则。 某些AEM特定规则是根据AEM工程部门的最佳实践创建的，称为[自定义代码质量规则](/help/using/custom-code-quality-rules.md)。
 
 >[!NOTE]
->您可以在此处](/help/using/assets/CodeQuality-rules-latest.xlsx)下载规则[的完整列表。
+>您可以在此处](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx)下载规则[的完整列表。
 
 此步骤的结果以&#x200B;*Rating*&#x200B;的形式提供。 下表总结了各种测试标准的评级：
 
