@@ -1,24 +1,42 @@
 ---
-title: 2020.12.0 版发行说明
-seo-title: AEM Cloud Manager 2020.12.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.12.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.12.0版的相关信息
+title: 2021.2.0 版发行说明
+seo-title: AEM Cloud Manager 2021.2.0发行说明
+description: 可查看本页以获取Cloud Manager Release 2021.2.0的相关信息
+seo-description: 可查看本页以获取AEM Cloud Manager 2021.2.0版的相关信息
 translation-type: tm+mt
-source-git-commit: 4767e782019998564f4fd238ef2555ab0a4f6d62
+source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 15%
+source-wordcount: '235'
+ht-degree: 5%
 
 ---
 
 # 2020.12.0 版发行说明 {#release-notes-for}
 
-以下部分概述了[!UICONTROL Cloud Manager] 2020.12.0版的一般发行说明。
+以下部分概述了[!UICONTROL Cloud Manager] 2021.2.0版的一般发行说明。
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager]版本2020.12.0的发布日期为2020年12月10日。
+[!UICONTROL Cloud Manager]版本2021.2.0的发布日期为2021年2月11日。
+
+## 新增功能 {#whats-new}
+
+* 项目和沙箱创建中使用的AEM项目原型已更新为版本25。
+
+* 代码扫描过程中标识的已弃用API的列表已得到改进，以包括最新Cloud ServiceSDK版本中已弃用的其他类和方法。
+
+* 现在，生产部署可并行部署到成对的发布和调度程序实例。
+
+* SonarQueb用户档案, Cloud Manager已更新以删除Sonar规则squid:S2142。 这不再与线程中断检查冲突
+
+* 在客户pom.xml文件中设置的带有声纳前缀的属性现在将动态删除，以避免生成和质量扫描失败。
 
 ## 错误修复 {#bug-fixes}
 
-* 在代码扫描阶段发生的一些故障没有提供已解决的结果。
+* 有时，由于运行负载测试的容器遇到错误，CI/CD（部署）管道在性能测试步骤中失败。
+
+* 有时，即使只发生一个异常，负载测试容器也会将运行报告为失败。 仅当无法恢复测试进程时，才会报告失败。
+
+* 环境名称存储方式之间的某些大小写不匹配会导致性能测试失败。
+
+* 某些管线故障被错误报告为管线错误。
