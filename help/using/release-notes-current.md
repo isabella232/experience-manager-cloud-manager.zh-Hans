@@ -4,14 +4,14 @@ seo-title: AEM Cloud Manager 2021.2.0发行说明
 description: 可查看本页以获取Cloud Manager Release 2021.2.0的相关信息
 seo-description: 可查看本页以获取AEM Cloud Manager 2021.2.0版的相关信息
 translation-type: tm+mt
-source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
+source-git-commit: 67cdd39cb511763a42391c7896924a1433e4e58f
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '231'
 ht-degree: 5%
 
 ---
 
-# 2020.12.0 版发行说明 {#release-notes-for}
+# 2021.2.0 版发行说明 {#release-notes-for}
 
 以下部分概述了[!UICONTROL Cloud Manager] 2021.2.0版的一般发行说明。
 
@@ -27,9 +27,9 @@ ht-degree: 5%
 
 * 现在，生产部署可并行部署到成对的发布和调度程序实例。
 
-* SonarQueb用户档案, Cloud Manager已更新以删除Sonar规则squid:S2142。 这不再与线程中断检查冲突
+* SonarQueb用户档案, Cloud Manager已更新以删除Sonar规则`squid:S2142`。 这不再与线程中断检查冲突。
 
-* 在客户pom.xml文件中设置的带有声纳前缀的属性现在将动态删除，以避免生成和质量扫描失败。
+* 现在，将动态删除客户`pom.xml`文件中设置的“声纳”前缀的属性，以避免生成和质量扫描失败。
 
 ## 错误修复 {#bug-fixes}
 
