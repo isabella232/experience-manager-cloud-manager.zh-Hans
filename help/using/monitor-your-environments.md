@@ -1,12 +1,12 @@
 ---
 title: 监视环境
 seo-title: 监视环境
-description: 'null'
+description: 了解如何在Cloud Manager中监控环境
 seo-description: 可查看本页以了解Cloud Manager中的系统监视，方法是观察环境中的单个实例并跟踪每个实例的各种指标。
 translation-type: tm+mt
-source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
