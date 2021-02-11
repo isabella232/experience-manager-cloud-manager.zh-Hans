@@ -4,10 +4,10 @@ seo-title: AEM Cloud Manager 2021.2.0发行说明
 description: 可查看本页以获取Cloud Manager Release 2021.2.0的相关信息
 seo-description: 可查看本页以获取AEM Cloud Manager 2021.2.0版的相关信息
 translation-type: tm+mt
-source-git-commit: 02d2f91d97847a1ca512c2e0f4e02274e79951de
+source-git-commit: d956c7a2d3833e357920a9602e4f5a5b37f2c98a
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 5%
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 
@@ -30,6 +30,8 @@ ht-degree: 5%
 * SonarQueb用户档案, Cloud Manager已更新以删除Sonar规则`squid:S2142`。 这不再与线程中断检查冲突。
 
 * 现在，将动态删除客户`pom.xml`文件中设置的带声纳前缀的属性，以避免生成和质量扫描失败。
+
+* 已添加其他代码质量规则以解决Cloud Service兼容性问题。
 
 ## 错误修复 {#bug-fixes}
 
