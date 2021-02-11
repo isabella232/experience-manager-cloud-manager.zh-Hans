@@ -1,7 +1,7 @@
 ---
 title: 管理环境
 seo-title: 管理环境
-description: 'null'
+description: 了解Cloud Manager环境
 seo-description: 可查看本页以视图用于在Cloud Manager中设置和运行CI/CD管道的生产和非生产环境的列表。
 uuid: 04e67572-11db-4d5d-acf3-fd7f644a95f0
 contentOwner: jsyal
@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '269'
 ht-degree: 3%
 
 ---
