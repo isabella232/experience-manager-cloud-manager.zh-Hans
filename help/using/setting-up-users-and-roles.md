@@ -1,7 +1,7 @@
 ---
 title: 添加用户和角色
 seo-title: 添加用户和角色
-description: 'null'
+description: 了解用户和角色以及如何使用Admin Console创建用户档案
 seo-description: 您可以通过在Admin Console中将用户添加到Cloud Manager产品用户档案来分配特定角色成员资格。 请按照本节了解更多信息。
 uuid: fa204c28-83df-48bb-8360-e158f080dee7
 contentOwner: jsyal
@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
 translation-type: tm+mt
-source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 29%
+source-wordcount: '630'
+ht-degree: 28%
 
 ---
 
