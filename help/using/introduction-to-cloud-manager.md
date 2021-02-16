@@ -9,19 +9,26 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 213d1b2ee52496cc8cf6bc699488d9da9f7b9946
+source-git-commit: 6ff4b6e950e153c98b6981ec09dfa0648809c693
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 88%
+source-wordcount: '749'
+ht-degree: 85%
 
 ---
 
 
 # [!UICONTROL Cloud Manager]{#introduction-to-cloud-manager} 简介
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_cloudmanager_introduction"
+>title="Cloud Manager 简介"
+>abstract="使组织能够在云中自行管理Experience Manager。 它包含一个持续集成和持续交付 (CI/CD) 框架，使 IT 团队和实施合作伙伴能够在不影响性能或安全性的情况下快速交付自定义或更新。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en#cloud-manager" text="创建项目"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager" text="创建环境"
+
 ## 简介 {#introduction}
 
-[!UICONTROL Cloud Manager]属于Adobe Experience Manager(AEM)的Cloud，使组织能够自行管理云中的Experience Manager。它包含一个持续集成和持续交付 (CI/CD) 框架，使 IT 团队和实施合作伙伴能够在不影响性能或安全性的情况下快速交付自定义或更新。
+[!UICONTROL Cloud Manager]是Adobe Experience Manager(AEM)的一部分，它使组织能够在云中自行管理Experience Manager。它包含一个持续集成和持续交付 (CI/CD) 框架，使 IT 团队和实施合作伙伴能够在不影响性能或安全性的情况下快速交付自定义或更新。
 
 通过 [!UICONTROL Cloud Manager] 自助式客户门户，**组织**&#x200B;可以执行以下操作/利用以下功能：
 
@@ -52,7 +59,7 @@ ht-degree: 88%
 
 通过 [!UICONTROL Cloud Manager] UI，客户能够配置并启动他们的 CI/CD 管线。在执行此管线期间，会执行彻底的代码扫描，以确保只有高质量的应用程序才能投入到生产环境。
 
-要进一步了解如何通过[!UICONTROL Cloud Manager]的UI配置管道，请参阅[配置CI/CD管道](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html)。
+要进一步了解如何从[!UICONTROL Cloud Manager]的UI配置管道，请参阅[配置CI/CD管道](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html)。
 
 ### 灵活的部署模式 {#flexible-deployment-modes}
 
