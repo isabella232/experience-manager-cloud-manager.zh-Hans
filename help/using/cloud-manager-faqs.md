@@ -4,9 +4,9 @@ seo-title: Cloud Manager常见问题解答
 description: 请参阅Cloud Manager常见问题解答，获取一些疑难解答提示
 seo-description: 可查看本页以获取有关Cloud Manager常见问题解答的解答
 translation-type: tm+mt
-source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
+source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,9 @@ AEM Cloud Manager在尝试将内部版本从Java 8切换到11时，生成失败�
 
 1. Cloud Manager会自动将其版本添加到Stage和Production构建中，甚至创建Git分支。 无需特殊配置。 如果跳过上述步骤3，部署仍可正常工作，并且会自动设置一个版本。
 
-1. 如果将版本保留为用于舞台和生产构建或部署的`-SNAPSHOT`，则即使这样也可以。 Cloud Manager会自动设置适当的版本号，并在Git中为您创建标记。 如果需要，可以稍后引用此标记。
+1. 如果将版本保留在`-SNAPSHOT`中用于Stage和Production内部版本或部署，则不存在问题。 Cloud Manager会自动设置适当的版本号，并在Git中为您创建标记。 如果需要，可以稍后引用此标记。
 
-1. 如果您想在开发环境上尝试一些实验性代码，可以创建新的Git分支并设置管道以使用该不同分支。 当部署开始失败，并且您希望使用旧版本的代码进行测试，以查看代码何时断开时，此功能非常有用。
+1. 如果要在“开发”环境上尝试一些实验性代码，您可以创建一个新的Git分支并设置管道以使用该不同的分支。 当部署开始失败，并且您希望使用旧版本的代码进行测试，以查看代码何时断开时，此功能非常有用。
 
    下面的Git命令针对特定的预先存在的提交`485548e4fbafbc83b11c3cb12b035c9d26b6532b`创建名为&#x200B;*testbranch1*&#x200B;的远程分支。  此特殊分支可在Cloud Manager中使用，而不会影响任何其他分支：
 
