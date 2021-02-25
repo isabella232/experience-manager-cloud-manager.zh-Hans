@@ -4,9 +4,9 @@ seo-title: Cloud Manager常见问题解答
 description: 请参阅Cloud Manager常见问题解答，获取一些疑难解答提示
 seo-description: 可查看本页以获取有关Cloud Manager常见问题解答的解答
 translation-type: tm+mt
-source-git-commit: d901fd27626640e71d367d3f138d7ba2e907fa9a
+source-git-commit: 31627bf11a46b2e6f1d0aa196bc4a9cf9648e775
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Cloud Manager常见问题解答{#cloud-manager-faqs}
 
-以下部分对与Cloud Manager相关的一些常见问题解答提供了解答。
+以下部分提供与Cloud Manager相关的常见问题解答。
 
 ## 是否可以将Java 11与Cloud Manager内部版本一起使用？{#java-11-cloud-manager}
 
@@ -22,7 +22,7 @@ AEM Cloud Manager在尝试将内部版本从Java 8切换到11时，生成失败�
 
 * 按照[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started)的说明，添加具有Java 11正确设置的maven-toolchains-plugin。  例如，请参阅[wknd示例项目代码](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)。
 
-* 如果您遇到以下错误，则需要删除maven-scr-plugin的使用，并将所有OSGi注释转换为OSGi R6注释。 有关说明，请参阅[此处](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/)。
+* 如果您遇到以下错误，则需要删除`maven-scr-plugin`的使用，并将所有OSGi注释转换为OSGi R6注释。 有关说明，请参阅[此处](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/)。
 
    `[main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]`
 
@@ -47,11 +47,11 @@ AEM Cloud Manager在尝试将内部版本从Java 8切换到11时，生成失败�
 
 ## 我们是否允许在Maven项目版本中使用SNAPSHOT? 包和捆绑jar文件的版本控制如何用于舞台和生产部署？{#snapshot-version}
 
-1. 对于开发部署，Git分支`pom.xml`文件必须在`<version>`值末尾包含 — SNAPSHOT。 这样，版本未更改的后续部署仍可继续安装。 在开发部署中，不会为Mven内部版本添加或生成任何自动版本。
+1. 对于开发部署，Git分支`pom.xml`文件必须在`<version>`值末尾包含`-SNAPSHOT`。 这样，版本未更改的后续部署仍可继续安装。 在开发部署中，不会为主版本添加或生成任何自动版本。
 
 1. 在舞台和生产部署中，自动版本将生成为文档[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code)。
 
-1. 对于舞台和生产部署中的自定义版本控制，请设置3个部分正确的Maven版本，如`1.0.0`。 每次您必须进行其他部署到生产时都增加版本。
+1. 对于舞台和生产部署中的自定义版本控制，请设置3个部分正确的授权版本，如`1.0.0`。 每次您必须进行其他部署到生产时都增加版本。
 
 1. Cloud Manager会自动将其版本添加到Stage和Production构建中，甚至创建Git分支。 无需特殊配置。 如果跳过上述步骤3，部署仍可正常工作，并且会自动设置一个版本。
 
