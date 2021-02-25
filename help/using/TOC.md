@@ -6,10 +6,10 @@ user-guide-title: Experience Manager Cloud Manager 指南
 breadcrumb-title: Cloud Manager 指南
 user-guide-description: 了解如何使用 Adobe Managed Services 在云中自我管理 Experience Manager。
 translation-type: tm+mt
-source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
+source-git-commit: 12898b57c3e7039da271481a6619d4ad0a0a90d1
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 83%
+source-wordcount: '258'
+ht-degree: 82%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 83%
    + [CI/CD 管线](ci-cd-pipeline.md)
    + [安全性和隐私](security-and-privacy.md)
    + [帮助资源](help-resources.md)
+   + [Cloud Manager常见问题解答](cloud-manager-faqs.md)
 + 先决条件 {#requirements}
    + [已授予的访问权限](access-rights-granted.md)
    + [源代码存储库](source-code-repository.md)
