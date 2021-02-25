@@ -4,9 +4,9 @@ seo-title: Cloud Manager常见问题解答
 description: 请参阅Cloud Manager常见问题解答，获取一些疑难解答提示
 seo-description: 可查看本页以获取有关Cloud Manager常见问题解答的解答
 translation-type: tm+mt
-source-git-commit: cb63a8bbe30b28668313dc851f17aa34fc166474
+source-git-commit: 1d4f07ba0aa4630585ccbb35f2d48f0c7e1f3df2
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Cloud Manager常见问题解答{#cloud-manager-faqs}
 
-以下部分对与Cloud Manager相关的常见问题解答提供了解答。
+以下部分对与Cloud Manager相关的一些常见问题解答提供了解答。
 
 ## 1.是否可以将Java 11与Cloud Manager版本一起使用？{#java-11-cloud-manager}
 
-AEM Cloud Manager在尝试将内部版本从Java 8切换到Java 11时，生成失败。 问题可能有许多原因，最常见的原因如下：
+AEM Cloud Manager在尝试将内部版本从Java 8切换到11时，生成失败。 问题可能有许多原因，最常见的原因如下：
 
 * 按照[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started)的说明，添加具有Java 11正确设置的maven-toolchains-plugin。  例如，请参阅[wknd示例项目代码](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)。
 
@@ -43,7 +43,7 @@ AEM Cloud Manager在尝试将内部版本从Java 8切换到Java 11时，生成�
 * *性能步骤*&#x200B;是Web性能步骤 — 表示是使用Web浏览器加载页面的时间。
 * 测试过程中，结果CSV文件中列出的URL将加载到Cloud Manager基础架构中的Chrome浏览器中。
 * 失败的常见度量是&#x200B;*错误率*。 要传递URL，主URL必须以200状态在20秒内加载。 超过20秒的页面加载被标记为504个错误。
-* 如果您的站点需要用户身份验证，请参阅此文档以配置测试以验证您的站点。
+* 如果您的站点需要用户身份验证，请参阅[已验证性能测试](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use)以配置测试以验证您的站点。
 
 ## 4.我们是否允许在主项目的版本中使用SNAPSHOT? 包和捆绑jar文件的版本控制如何用于舞台和生产部署？{#snapshot-version}
 
@@ -75,7 +75,7 @@ AEM Cloud Manager在尝试将内部版本从Java 8切换到Java 11时，生成�
 
 ## 6.无法通过aio cloud manager设置管道变量来设置变量。 如何调试这些问题？{#set-variable}
 
-如果您尝试通过类似于以下命令的命令列表或设置管道变量时遇到403错误，则需要在管理控制台中将您添加为&#x200B;*Deployment Manager* Cloud Manager产品角色。\
+如果您尝试通过类似于以下命令的命令列表或设置管道变量时遇到403错误，则需要在Admin Console中将您添加为&#x200B;*部署管理器*&#x200B;云管理器产品角色。\
 有关详细信息，请参阅[API权限](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md)。
 
 相关命令和错误：
