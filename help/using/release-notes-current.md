@@ -4,9 +4,9 @@ seo-title: AEM Cloud Manager 2021.3.0发行说明
 description: 可查看本页以获取Cloud Manager 2021.3.0版的信息
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2021.3.0版的信息
 translation-type: tm+mt
-source-git-commit: e12adf3549af6ecd5e7487ef27f25abc44eaa794
+source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '289'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
    * 将站点（或资产）从包含站点和资产的现有项目中删除。
    * 可以对现有项目或作为新项目添加（返回）解决方案。
 
-* 引入了新的代码质量工具来验证客户调度程序配置(Dispatcher Optimization Tool)。
+* 新的代码质量工具[调度程序优化工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules)已引入以验证客户调度程序配置。
 
 * 用户现在可以在导航到Unified Shell的“用户用户档案”图标（右上方）后，选择&#x200B;**“视图 Cloud Manager角色”**&#x200B;选项，查看其Cloud Manager角色。
 
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 * **版本**&#x200B;标签已重新标记到“生产”管线执行屏幕中的&#x200B;**Git标签**。
 
-* 当重要量度未达到定义的阈值时定义行为的标签已重新标记，以反映其真实行为 — *取消立即*&#x200B;和批准&#x200B;*立即*。
+* 当重要量度未达到定义的阈值时定义行为的标签已重新标记，以反映其真实行为 — **取消立即**&#x200B;和&#x200B;**批准立即**。
 
 * 类和方法弃用列表已根据AEM Cloud Service SDK的`2021.3.4997.20210303T022849Z-210225`版本进行更新。
 
