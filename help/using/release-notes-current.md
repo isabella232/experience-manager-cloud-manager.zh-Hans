@@ -4,7 +4,7 @@ seo-title: AEM Cloud Manager 2021.3.0发行说明
 description: 可查看本页以获取Cloud Manager 2021.3.0版的信息
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2021.3.0版的信息
 translation-type: tm+mt
-source-git-commit: b0c29ed6712abd556458aea6d49f6382f183cdae
+source-git-commit: e12adf3549af6ecd5e7487ef27f25abc44eaa794
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 4%
@@ -23,7 +23,7 @@ ht-degree: 4%
 
 * 拥有必需权限的用户现在可以编辑项目，允许他们以自助方式执行以下操作：
 
-   *将“站点”解决方案添加到包含资产的现有项目（反之亦然）。
+   * 将“站点”解决方案添加到包含资产的现有项目（反之亦然）。
    * 将站点（或资产）从包含站点和资产的现有项目中删除。
    * 可以对现有项目或作为新项目添加（返回）解决方案。
 
