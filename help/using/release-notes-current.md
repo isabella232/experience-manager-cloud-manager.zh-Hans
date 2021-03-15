@@ -4,9 +4,9 @@ seo-title: AEM Cloud Manager 2021.3.0发行说明
 description: 可查看本页以获取Cloud Manager 2021.3.0版的信息
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2021.3.0版的信息
 translation-type: tm+mt
-source-git-commit: 47424ea0e087f1f69db0aef8ca2122de2352a6e0
+source-git-commit: fde8cbd22ff36e0d30409f68e8a0523c814ccf90
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '315'
 ht-degree: 3%
 
 ---
@@ -18,10 +18,11 @@ ht-degree: 3%
 ## 发布日期 {#release-date}
 
 [!UICONTROL Cloud Manager]版本2021.3.0的发布日期为2021年3月11日。
+下一版本计划于2021年4月08日发布。
 
 ## 新增功能 {#whats-new}
 
-* 拥有必需权限的用户现在可以编辑项目，允许他们以自助方式执行以下操作：
+* 具有必需权限的用户现在可以编辑项目，允许他们以自助方式执行以下操作：
 
    * 将“站点”解决方案添加到包含资产的现有项目（反之亦然）。
    * 将站点（或资产）从包含站点和资产的现有项目中删除。
