@@ -4,10 +4,10 @@ seo-title: AEM Cloud Manager 2021.3.0发行说明
 description: 可查看本页以获取Cloud Manager 2021.3.0版的信息
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2021.3.0版的信息
 translation-type: tm+mt
-source-git-commit: fde8cbd22ff36e0d30409f68e8a0523c814ccf90
+source-git-commit: 8c057ca2d3dfe8c8575300084b7bc83c95556d67
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 3%
+source-wordcount: '257'
+ht-degree: 4%
 
 ---
 
@@ -21,12 +21,6 @@ ht-degree: 3%
 下一版本计划于2021年4月08日发布。
 
 ## 新增功能 {#whats-new}
-
-* 具有必需权限的用户现在可以编辑项目，允许他们以自助方式执行以下操作：
-
-   * 将“站点”解决方案添加到包含资产的现有项目（反之亦然）。
-   * 将站点（或资产）从包含站点和资产的现有项目中删除。
-   * 可以对现有项目或作为新项目添加（返回）解决方案。
 
 * 新的代码质量工具[调度程序优化工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules)已引入以验证客户调度程序配置。
 
