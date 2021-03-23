@@ -1,13 +1,14 @@
 ---
 title: 2020.8.0 版发行说明
 seo-title: AEM Cloud Manager 2020.8.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.8.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.8.0版的相关信息
+description: 可查看本页以获取Cloud Manager 2020.8.0版的信息
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.8.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 6%
+source-wordcount: '194'
+ht-degree: 7%
 
 ---
 
@@ -29,17 +30,17 @@ ht-degree: 6%
 
 * 在管道执行页面上，分支名称的格式不正确。
 
-* 当使用单个发布、单个调度程序和一个冷备用作者部署到拓扑时，调度程序被错误地从负载平衡器中删除。
+* 使用单个发布、单个调度程序和冷备用作者部署到拓扑时，从负载平衡器中错误地删除了调度程序。
 
-* 在某些情况下，已完成的管道执行未被成功记录为已完成，从而防止了管道的新执行。
+* 在某些情况下，已完成的管道执行没有被成功记录为已完成，从而防止管道的新执行。
 
-* 由于内部通信问题，管道执行偶尔会被卡住&#x200B;*。*
+* 由于内部通信问题，管道执行偶尔会遇到&#x200B;*卡住*。
 
-* 项目卡上的工具提示不一致正确。
+* 项目卡上的工具提示并不一致。
 
-* **概述**&#x200B;页面的颜色不匹配。
+* **概述**&#x200B;页面上存在颜色不匹配。
 
-* 站点性能测试现在支持身份验证的可选使用。
+* 站点性能测试现在支持可选使用身份验证。
 
-* 当通过云管理器部署调度程序配置时，创作实例的调度程序缓存会自动刷新。
+* 当通过Cloud Manager部署调度程序配置时，创作实例的调度程序缓存会自动刷新。
 
