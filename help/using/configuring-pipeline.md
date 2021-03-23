@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
+source-git-commit: 7a33d6dc2240b61c9413bba34880ee5e7d49e02d
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 1%
+source-wordcount: '1249'
+ht-degree: 2%
 
 ---
 
@@ -99,7 +99,6 @@ CI/CD生产管道配置定义将启动管道的触发器，参数控制生产部
 * **计划**  — 此选项允许用户启用计划生产部署。
 
 >[!NOTE]
->
 >如果选择了&#x200B;**Scheduled**&#x200B;选项，则可以在阶段部署&#x200B;**之后将生产部署计划到管道**(如果已启用，则使用GoLive批准&#x200B;**)，以等待设置计划。**&#x200B;用户还可以选择立即执行生产部署。
 >
 >请参阅&#x200B;[**部署代码**](deploying-code.md)&#x200B;以设置部署计划或立即执行生产。
@@ -153,62 +152,17 @@ CI/CD生产管道配置定义将启动管道的触发器，参数控制生产部
 
    ![](assets/image2018-8-7_15-4-30.png)
 
+1. 访问&#x200B;**测试**&#x200B;选项卡，为项目定义测试条件。 您现在可以配置性能测试参数。
 
-1. 访问&#x200B;**测试**&#x200B;选项卡，为项目定义测试条件。
-
-   现在，您可以配置性能测试参数。
-
-   您可以配置&#x200B;*AEM Sites*&#x200B;和&#x200B;*AEM Assets*&#x200B;性能测试，具体取决于您已授权哪些产品。
-
-   **AEM Sites:**
-
-   Cloud Manager通过在舞台发布服务器上请求页面（默认情况下，作为未经过身份验证的用户）30分钟的测试时间段，并测量每个页面的响应时间以及各种系统级度量，执行AEM Sites项目的性能测试。 这些请求是从一组已知的专用地址发出的。 地址范围可从客户成功工程师或Adobe代表处获取。
-
-   在30分钟测试期开始之前，Cloud Manager将使用由客户成功工程师配置的一组或多个&#x200B;*种子* URL爬网舞台环境。 从这些URL开始，将检查每个页面的HTML，并以宽度优先的方式遍历链接。 此爬网过程最多限制为5000页。 来自Crawler的请求具有10秒的固定超时。
-
-   页面由三个&#x200B;**页集**&#x200B;选择；您可以从1集到3集的任意位置进行选择。 流量的分配基于所选集数，即如果全部选择了三个集，则每组将占总页面视图的33%;如果选择了两个，则50%将转至每个集；如果选择了一个，则100%的流量将转到该集。
-
-   例如，假设“常用实时页面”和“新页面”集（在此示例中，不使用其他实时页面）之间存在50%/50%的拆分，而“新页面”集包含3000页。 页面视图每分钟KPI设置为200。 在30分钟的测试期间：
-
-   * “热门实时页面”集中的25页中的每页将被点击120次 — ((200 * 0.5)/ 25)* 30 = 120
-
-   * “新页面”集中的3000页中的每页将点击一次 — ((200 * 0.5)/ 3000)* 30 = 1
-
-   ![](assets/Configuring_Pipeline_AEM-Sites.png)
-
-   有关详细信息，请参阅[已验证的性能测试](#authenticated-performance-testing)。
-
-   **AEM Assets:**
-
-   Cloud Manager通过以下方式执行AEM Assets项目的性能测试：在30分钟的测试时间内重复上传资产，并测量每个资产的处理时间以及各种系统级指标。 此功能可以上传图像和PDF文档。 在“管道设置”或“编辑”屏幕中设置每分钟上传的每种类型资源的分布。
-
-   例如，如下图所示，如果使用70/30拆分。 每分钟上传10个资产，每分钟上传7个图像，3个文档。
-
-   ![](assets/Configuring_Pipeline_AEM-Assets.png)
-
-   >[!NOTE]
-   >
-   >存在默认图像和PDF文档，但在大多数情况下，客户需要上传自己的资产。 这可以从“管线设置”(Pipeline Setup)或“编辑”(Edit)屏幕中完成。 支持JPEG、PNG、GIF和BMP等常见图像格式以及Photoshop、Illustrator和Postscript文件。
+   您可以配置&#x200B;*AEM Sites*&#x200B;和&#x200B;*AEM Assets*&#x200B;性能测试，具体取决于您已授权哪些产品。 有关详细信息，请参阅[性能测试](understand-your-test-results.md#performance-testing)。
 
 1. 单击&#x200B;**保存**&#x200B;以完成管线进程的设置。
 
    >[!NOTE]
-   >
    >此外，设置管线后，您仍可以使用[!UICONTROL Cloud Manager] UI中的&#x200B;**生产管线设置**&#x200B;拼贴编辑相同的设置。
 
    ![](assets/Production-Pipeline.png)
 
-### 已验证的性能测试{#authenticated-performance-testing}
-
-具有已验证站点的AMS客户可以指定Cloud Manager在站点性能测试期间用来访问网站的用户名和密码。
-
-用户名和密码指定为[管道变量](/help/using/build-environment-details.md#pipeline-variables)，名称为`CM_PERF_TEST_BASIC_USERNAME`和`CM_PERF_TEST_BASIC_PASSWORD`。
-
-尽管并非严格要求，但建议将字符串变量类型用于用户名，将secretString变量类型用于密码。 如果同时指定了这两个凭据，则来自性能测试Crawler和测试虚拟用户的每个请求都将包含这些凭据作为HTTP Basic身份验证。
-
-要使用[Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)设置这些变量，请运行：
-
-`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## 仅限非生产和代码质量管道
 
