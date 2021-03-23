@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 7061910ae2cb0aae10876faf448838570f02d9be
+source-git-commit: f62c967feec3960499de93443548422167fedfa7
 workflow-type: tm+mt
-source-wordcount: '2593'
-ht-degree: 4%
+source-wordcount: '2681'
+ht-degree: 3%
 
 ---
 
@@ -112,28 +112,30 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 [!UICONTROL Cloud Manager] 在部署后 ***运行现*** 有的AEM安全健康检查阶段，并通过UI报告状态。结果将从该环境中的所有AEM实例聚集。
 
+可以随时通过Web控制台或操作仪表板执行这些相同的运行状况检查。
+
 如果任何&#x200B;**实例**&#x200B;报告给定运行状况检查失败，则整个&#x200B;**环境**&#x200B;将失败该运行状况检查。 与代码质量和性能测试一样，这些运行状况检查会组织到类别中，并使用三层选通系统报告。 唯一的区别是，在安全测试方面没有阈值。 所有健康检查都是通过或失败的。
 
 下表列表了当前检查：
 
 | **名称** | **运行状况检查实施** | **类别** |
 |---|---|---|
-| 反序列化防火墙连接API就绪状态为可接受状态 | 反序列化防火墙连接 API 已准备就绪 | 关键 |
-| 反序列化防火墙功能正常 | 反序列化防火墙运行正常 | 关键 |
-| 反序列化防火墙已加载 | 反序列化防火墙已加载 | 关键 |
-| AuthorizableNodeName实现不会在节点名称/路径中显示可授权ID。 | 可授权的节点名称生成 | 关键 |
-| 默认密码已更改 | 默认登录帐户 | 关键 |
+| 反序列化防火墙连接API就绪状态为可接受状态 | [反序列化防火墙连接 API 已准备就绪](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | 关键 |
+| 反序列化防火墙功能正常 | [反序列化防火墙运行正常](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | 关键 |
+| 反序列化防火墙已加载 | [反序列化防火墙已加载](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | 关键 |
+| AuthorizableNodeName实现不会在节点名称/路径中显示可授权ID。 | [可授权的节点名称生成](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security-checklist.html?lang=en#security) | 关键 |
+| 默认密码已更改 | [默认登录帐户](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#users-and-groups-in-aem) | 关键 |
 | Sling默认GETServlet受DOS攻击保护。 | Sling Get Servlet | 关键 |
 | Sling Java脚本处理程序已正确配置 | Sling Java 脚本处理程序 | 关键 |
 | Sling JSP脚本处理程序已正确配置 | Sling JSP脚本处理程序 | 关键 |
 | 正确配置了SSL | SSL 配置 | 关键 |
 | 未发现明显不安全的用户用户档案策略 | 用户配置文件默认访问 | 关键 |
-| 配置Sling推荐人过滤器以防止CSRF攻击 | Sling 引用过滤器 | 重要 |
+| 配置Sling推荐人过滤器以防止CSRF攻击 | [Sling 引用过滤器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en#security) | 重要 |
 | Adobe Granite HTML库管理器已正确配置 | CQ HTML 库管理器配置 | 重要 |
 | 已禁用CRXDE支持包 | CRXDE 支持 | 重要 |
 | 已禁用Sling DavEx捆绑包和Servlet | DavEx 运行状况检查 | 重要 |
 | 未安装示例内容 | 示例内容包 | 重要 |
-| WCM请求过滤器和WCM调试过滤器都被禁用 | WCM 筛选器配置 | 重要 |
+| WCM请求过滤器和WCM调试过滤器都被禁用 | [WCM 筛选器配置](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=en#configuring) | 重要 |
 | Sling WebDAV包和Servlet已正确配置 | WebDAV 运行状况检查 | 重要 |
 | Web服务器配置为防止点击劫持 | Web 服务器配置 | 重要 |
 | 复制未使用“admin”用户 | 复制和转移用户 | 信息 |
@@ -172,7 +174,7 @@ Cloud Manager可对AEM Sites项目执行性能测试。 通过启动虚拟用户
 
       * “新页面”集中的3000页中的每页将点击一次 — ((200 * 0.5)/ 3000)* 30 = 1
 
-### 测试和报告{#testing-reporting}
+#### 测试和报告{#testing-reporting}
 
 Cloud Manager在30分钟的测试时间内在舞台发布服务器上请求页面（默认情况下为未经过身份验证的用户），并测量（虚拟）用户生成的量度(响应时间、错误率、每分钟视图等)，从而执行AEM Sites项目的性能测试 以及所有实例的各种系统级度量（CPU、内存、网络数据）。\
 下表总结了使用三层门控系统的性能测试指标：
@@ -230,10 +232,10 @@ Cloud Manager通过在30分钟的测试时间内重复上传资产，执行AEM A
 
 1. **测试和报告**
 
-   Cloud Manager将使用CSE在上述步骤#1(Onbrading Requirements)中设置的用户名和密码在作者实例上创建一个文件夹，并使用开放源的库在该文件夹中上传资产。 通过“资产”测试步骤运行的测试是使用此开放源库 — https://github.com/adobe/toughday2编写的。 每个资产的处理时间以及各种系统级量度都会在30分钟的测试持续时间内进行测量。 此功能可以上传图像和PDF文档。
+   Cloud Manager将使用CSE在上述步骤#1（入门要求）中设置的用户名和密码在作者实例上创建一个文件夹，并使用开放源代码库在文件夹中上传资产。 使用此[开源库](https://github.com/adobe/toughday2)写入Assets测试步骤运行的测试。 每个资产的处理时间以及各种系统级量度都会在30分钟的测试持续时间内进行测量。 此功能可以上传图像和PDF文档。
 
    >[!NOTE]
-   >您可以从[配置CI/CD管道](configuring-pipeline.md)了解有关配置性能测试的更多信息。 请参阅[设置项目](setting-up-program.md)，了解如何设置项目和定义KPI，请参阅。
+   >您可以从[配置CI/CD管道](configuring-pipeline.md)了解有关配置性能测试的更多信息。 请参阅[设置项目](setting-up-program.md)，了解如何设置项目和定义KPI。
 
 ### 性能测试结果图表{#performance-testing-results-graphs}
 
