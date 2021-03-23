@@ -1,13 +1,14 @@
 ---
 title: 2020.12.0 版发行说明
 seo-title: AEM Cloud Manager 2020.12.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.12.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.12.0版的相关信息
+description: 可查看本页以获取Cloud Manager 2020.12.0版的相关信息
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.12.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 15%
+source-wordcount: '68'
+ht-degree: 17%
 
 ---
 
@@ -21,4 +22,4 @@ ht-degree: 15%
 
 ## 错误修复 {#bug-fixes}
 
-* 在代码扫描阶段发生的一些故障没有提供已解决的结果。
+* 在代码扫描阶段发生的一些失败事件没有解决结果。
