@@ -1,13 +1,14 @@
 ---
 title: 2020.5.0 版发行说明
 seo-title: AEM Cloud Manager 2020.5.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.5.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.5.0版的相关信息
+description: 可查看本页以获取Cloud Manager 2020.5.0版的信息
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.5.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 0652436ec0c1c95d270a06a600424dbfd0140b27
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 66%
+source-wordcount: '189'
+ht-degree: 67%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 66%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager]版本2020.5.0的发布日期为2020年5月7日。
+[!UICONTROL Cloud Manager]版本2020.5.0的发布日期为2020年5月07日。
 
 ## 新增功能 {#whats-new}
 
@@ -39,5 +40,5 @@ ht-degree: 66%
 
 * 概述页面上的某些信息卡无法正确显示实体名称。
 
-* 某些拓扑配置会导致性能测试步骤生成错误，而不是报告缺少的度量。
+* 某些拓扑配置会导致性能测试步骤生成错误，而不是报告丢失量度。
 
