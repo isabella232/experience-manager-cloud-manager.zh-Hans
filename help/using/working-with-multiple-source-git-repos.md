@@ -1,23 +1,24 @@
 ---
 title: 使用多源Git存储库
-description: 使用多源Git存储库——云管理器
+description: 使用多源Git存储库 — Cloud Manager
+feature: Git存储库
 translation-type: tm+mt
-source-git-commit: f5359dee907b32cefa2db2c4ad2baf8e337f6060
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 
-# 使用多源Git存储库{#working-with-multiple-source-git-repos}
+# 使用多个源Git存储库{#working-with-multiple-source-git-repos}
 
 
 ## 同步客户管理的Git存储库{#syncing-customer-managed-git-repositories}
 
-客户可以使用自己的Git存储库或多个自己的Git存储库，而不是直接使用Cloud Manager的Git存储库。 在这些情况下，应设置自动同步过程，以确保Cloud Manager的Git存储库始终保持最新。 根据客户的Git存储库托管位置，可以使用GitHub操作或像Jenkins这样的持续集成解决方案来设置自动化。 有了自动化，每次推送到客户拥有的Git存储库时，都可自动转发到Cloud Manager的Git存储库。
+客户可以使用自己的Git存储库或多个自己的Git存储库，而不是直接使用Cloud Manager的Git存储库。 在这些情况下，应设置自动同步过程，以确保Cloud Manager的Git存储库始终保持最新。 根据客户的Git存储库的托管位置，可以使用GitHub操作或Jenkins等连续集成解决方案来设置自动化。 有了自动化，每次推送到客户拥有的Git存储库时，都可自动转发到Cloud Manager的Git存储库。
 
-虽然对于单个客户拥有的Git存储库，这种自动化是直接进行的，但对多个存储库进行此设置需要初始设置。 来自多个Git存储库的内容需要映射到单个Cloud Manager的Git存储库中的不同目录。  需要为Cloud Manager的Git存储库配置根Maven pom，并在模块部分列出不同的子项目
+尽管对单个客户拥有的Git存储库进行此类自动化是直接进行的，但为多个存储库设置此设置需要初始设置。 来自多个Git存储库的内容需要映射到单个Cloud Manager的Git存储库中的不同目录。  Cloud Manager的Git存储库需要配置一个根Maven pom，并在模块部分列出不同的子项目
 
 以下是两个客户拥有的Git存储库的示例pom:第一个项目将放入名为`project-a`的目录中，第二个项目将放入名为`project-b`的目录中。
 
@@ -40,22 +41,22 @@ ht-degree: 0%
 </project>
 ```
 
-此类根pom将推送到Cloud Manager的Git存储库中的分支。 然后，需要设置这两个项目以自动将更改转发到Cloud Manager的Git存储库。
+此类根pom将推送到Cloud Manager的Git存储库中的分支。 然后，需要设置这两个项目，以自动将更改转发到Cloud Manager的Git存储库。
 
-例如，GitHub操作可通过推送到项目A中的分支来触发。此操作将签出项目A和Cloud Manager Git存储库，并将项目A的所有内容复制到Cloud Manager的Git存储库中的目录`project-a`，然后提交——推送更改。 例如，项目A中主分支的更改会自动推送到Cloud Manager的git存储库中的主分支。 当然，可能存在分支之间的映射，如将项目A中名为“dev”的分支推送到Cloud Manager的Git存储库中名为“development”的分支。 项目B需要执行类似步骤。
+例如，GitHub操作可通过推送到项目A中的分支来触发。此操作将签出项目A和Cloud Manager Git存储库，并将项目A中的所有内容复制到Cloud Manager的Git存储库中的`project-a`目录，然后提交推送更改。 例如，项目A中主分支的更改会自动推送到Cloud Manager的git存储库中的主分支。 当然，在分支之间可能存在映射，如将项目A中名为“dev”的分支推送到Cloud Manager的Git存储库中名为“development”的分支。 项目B需要执行类似步骤。
 
-根据分支策略和工作流，可以为不同的分支配置同步。 如果使用的Git存储库没有提供类似于GitHub操作的概念，也可以通过Jenkins（或类似方式）进行集成。 在这种情况下，webhook会触发Jenkins作业，该作业负责工作。
+根据分支策略和工作流，可以为不同的分支配置同步。 如果使用的Git存储库未提供类似于GitHub操作的概念，则还可以通过Jenkins（或类似）进行集成。 在这种情况下，webhook会触发Jenkins作业，该作业负责工作。
 
 请按照以下步骤添加新的（第三个）源或存储库：
 
-1. 向新存储库添加新的GitHub操作，该操作将更改从该存储库推送到Cloud Manager的Git存储库。
+1. 向新存储库添加新的GitHub操作，新存储库将更改从该存储库推送到Cloud Manager的Git存储库。
 1. 至少执行一次该操作，以确保项目代码位于Cloud Manager的Git存储库中。
 1. 在Cloud Manager Git存储库的根Maven pom中添加对新目录的引用。
 
 
 ## 示例GitHub操作{#sample-github-action}
 
-这是一个示例GitHub操作，它通过推送到主分支，然后推送到Cloud Manager的Git存储库的子目录触发。 GitHub操作需要提供两个秘密，即`MAIN_USER`和`MAIN_PASSWORD`，才能连接并推送到Cloud Manager的Git存储库。
+这是一个GitHub操作示例，它通过推送到主分支，然后推送到Cloud Manager的Git存储库的子目录触发。 GitHub操作需要提供两个秘密，即`MAIN_USER`和`MAIN_PASSWORD`，才能连接并推送到Cloud Manager的Git存储库。
 
 ```java
 name: SYNC
@@ -115,15 +116,15 @@ jobs:
 如上所示，使用GitHub操作非常灵活。 可以执行Git存储库分支之间的任何映射，以及将单独的git项目映射到主项目的目录布局。
 
 >[!NOTE]
->上述脚本使用`git add`更新假定包含删除的存储库——根据Git的默认配置，这需要替换为`git add --all`。
+>上述脚本使用`git add`更新假定包含删除的存储库 — 根据Git的默认配置，需要用`git add --all`替换。
 
 ## 示例Jenkins作业{#sample-jenkins-job}
 
-这是可用于Jenkins作业或类似作业的示例脚本。 它由Git存储库中的更改触发。 Jenkins作业检出该项目或分支的最新状态，然后触发此脚本。
+这是可用于Jenkins作业或类似作业的示例脚本。 它由Git存储库中的更改触发。 Jenkins作业检查该项目或分支的最新状态，然后触发此脚本。
 
 此脚本随后会签出Cloud Manager的Git存储库，并将项目代码提交到子目录。
 
-Jenkins作业需要提供两个秘密，`MAIN_USER`和`MAIN_PASSWORD`，才能连接并推送到Cloud Manager的Git存储库。
+Jenkins作业需要提供两个秘密，即`MAIN_USER`和`MAIN_PASSWORD`，才能连接并推送到Cloud Manager的Git存储库。
 
 ```java
 # Username/email used to commit to Cloud Manager's Git repository
@@ -180,4 +181,4 @@ git push
 如上所示，使用Jenkins作业非常灵活。 可以执行Git存储库分支之间的任何映射，以及将单独的Git项目映射到主项目的目录布局。
 
 >[!NOTE]
->上述脚本使用`git add`更新假定包含删除的存储库——根据Git的默认配置，这需要替换为`git add --all`。
+>上述脚本使用`git add`更新假定包含删除的存储库 — 根据Git的默认配置，需要用`git add --all`替换。
