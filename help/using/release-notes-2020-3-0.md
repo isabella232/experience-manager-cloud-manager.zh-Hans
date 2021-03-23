@@ -1,12 +1,13 @@
 ---
 title: 2020.3.0 版发行说明
 seo-title: AEM Cloud Manager 2020.3.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.3.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.3.0版的相关信息
+description: 可查看本页以获取Cloud Manager 2020.3.0版的信息
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.3.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: e7da473a22bec1d3d9b3d39bf654af0c596fe86d
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '164'
 ht-degree: 51%
 
 ---
@@ -27,6 +28,6 @@ ht-degree: 51%
 ## 错误修复 {#bug-fixes}
 
 * 如果部署失败，某些部署配置可能导致部署步骤的日志不可用。
-* Managed Services项目部署步骤中的特定故障可能导致后续执行无法开始。
+* Managed Services项目的部署步骤中的特定失败可能导致后续执行无法开始。
 * 偶尔，构建步骤中使用的临时 SonarQube 实例无法在配置的超时时间内启动。
 * 在特定项目中，应始终关闭 *ResourceResolver对象*，这将产生空指针异常；不过，这并不影响管道执行。
