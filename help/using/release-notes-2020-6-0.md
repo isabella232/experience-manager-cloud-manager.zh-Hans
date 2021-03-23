@@ -1,13 +1,14 @@
 ---
 title: 2020.6.0 版发行说明
 seo-title: AEM Cloud Manager 2020.6.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.6.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.6.0版的相关信息
+description: 可查看本页以获取Cloud Manager 2020.6.0版的信息
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.6.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: f673a7c6e0d8e0814101beab1ad529ea69350a2a
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 63%
+source-wordcount: '179'
+ht-degree: 64%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 63%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager]版本2020.6.0的发布日期为2020年6月4日。
+[!UICONTROL Cloud Manager]版本2020.6.0的发布日期为2020年6月04日。
 
 ## 新增功能 {#whats-new}
 
