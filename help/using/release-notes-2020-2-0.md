@@ -1,12 +1,13 @@
 ---
 title: 2020.2.0 版发行说明
 seo-title: AEM Cloud Manager 2020.2.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.2.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.2.0版的相关信息
+description: 可查看本页以获取Cloud Manager 2020.2.0版的信息
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.2.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 44671d89edad0ccb6ded998b62beb5fa012678e9
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '196'
 ht-degree: 55%
 
 ---
@@ -27,7 +28,7 @@ ht-degree: 55%
 * 现在，超时的管道执行步骤会明确地指出这一点。
 * 现在，“代码扫描”步骤有可下载的日志。
 * 安全测试步骤现在有可下载的日志。
-* 性能测试期间访问的页面列表现已可下载。
+* 性能测试期间访问的页面列表现在可下载。
 * 现在，包含代码扫描过程所发现问题的电子表格有这样一列：该列包含指向特定规则文档的链接。
 * 如果性能测试步骤无法开始，则现在会显示失败的原因。
 
