@@ -1,13 +1,14 @@
 ---
 title: 2020.1.0 版发行说明
 seo-title: AEM Cloud Manager 2020.1.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2020.1.0的信息
-seo-description: 可查看本页以获取AEM Cloud Manager 2020.1.0版的相关信息
+description: 可查看本页以获取Cloud Manager 2020.1.0版的信息
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.1.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 7%
+source-wordcount: '153'
+ht-degree: 9%
 
 ---
 
@@ -21,8 +22,8 @@ ht-degree: 7%
 
 ## 新增功能 {#whats-new}
 
-* 现在可以从Cloud Manager用户界面中获取Git凭据。 有关更多详细信息，请参阅[访问Git](/help/using/accessing-git.md)。
-* 登录体验和URL结构已作为整个Adobe计划的一部分发生更改。 旧书签将重定向到新URL。
+* 现在可以从Cloud Manager用户界面中获取Git凭据。 有关详细信息，请参阅[访问Git](/help/using/accessing-git.md)。
+* 作为整个Adobe计划的一部分，登录体验和URL结构已发生更改。 旧书签将重定向到新URL。
 
 
 ## 错误修复 {#bug-fixes}
@@ -30,4 +31,4 @@ ht-degree: 7%
 * 部署到仅作者拓扑时未部署调度程序配置更改。
 * 在某些配置中，无法创建仅代码质量管线。
 * 概述页面上的环境摘要卡有时无法正确呈现。
-* 管道执行可能会在大型拓扑上超时。
+* 在大型拓扑上，管道执行可能会超时。
