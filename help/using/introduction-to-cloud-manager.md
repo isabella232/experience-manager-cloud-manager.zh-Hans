@@ -8,10 +8,12 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
+feature: 入门
+level: 初学者
 translation-type: tm+mt
-source-git-commit: 6ff4b6e950e153c98b6981ec09dfa0648809c693
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '752'
 ht-degree: 85%
 
 ---
