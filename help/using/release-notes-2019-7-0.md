@@ -1,19 +1,20 @@
 ---
 title: 2019.7.0 版发行说明
 seo-title: AEM Cloud Manager 2019.7.0发行说明
-description: 可查看本页以获取Cloud Manager Release 2019.7.0的相关信息。
-seo-description: 可查看本页以获取AEM Cloud Manager 2019.7.0版的相关信息。
+description: 可查看本页以获取Cloud Manager 2019.7.0版的信息。
+seo-description: 可查看本页以获取有关AEM Cloud Manager 2019.7.0版的信息。
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 7%
+source-wordcount: '159'
+ht-degree: 8%
 
 ---
 
 # 2019.7.0 版发行说明 {#release-notes-for}
 
-[!UICONTROL Cloud Manager] 2019.7.0版本添加了对Experience Cloud通知的更新和改进，作为错误修复。 有关更多详细信息，请按照以下部分进行操作。
+[!UICONTROL Cloud Manager] 2019.7.0版本添加了对Experience Cloud通知的更新，并作为错误修复添加了改进。 有关更多详细信息，请参阅以下各节。
 
 ## 发布日期 {#release-date}
 
@@ -26,8 +27,8 @@ ht-degree: 7%
 ## 错误修复 {#bug-fixes}
 
 * 在某些情况下，Cloud Manager将对Python和PHP文件执行静态代码分析。
-* 包含FileVault InstallHooks的包在代码质量步骤中运行不一致。
+* 包含FileVault InstallHooks的包未通过代码质量步骤一致运行。
 * 在某些组合中，代码质量问题的排序不一致。
-* 管道执行页面上存在一些可视问题。
-* 性能测试步骤有时可能因基础云基础架构的资源限制而随机失败。
-* 某些客户构建将因网络问题而失败。
+* 管道执行页面上存在一些可视化问题。
+* 性能测试步骤有时可能会因基础云基础架构的资源限制而随机失败。
+* 某些客户构建会因网络问题而失败。
