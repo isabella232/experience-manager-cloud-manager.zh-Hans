@@ -1,15 +1,15 @@
 ---
 title: 2021.3.0 版发行说明
-seo-title: AEM Cloud Manager 2021.3.0发行说明
 description: 可查看本页以获取Cloud Manager 2021.3.0版的信息
-seo-description: 可查看本页以获取有关AEM Cloud Manager 2021.3.0版的信息
+feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 8c057ca2d3dfe8c8575300084b7bc83c95556d67
+source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 4%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
+
 
 # 2021.3.0 版发行说明 {#release-notes-for}
 
