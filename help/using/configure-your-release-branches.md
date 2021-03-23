@@ -1,17 +1,18 @@
 ---
 title: 配置发布分支
 seo-title: 配置发布分支
-description: 在Git中为AEM Cloud Manager配置发布分支
+description: 在Git中为AEM Cloud Manager配置发行分支
 seo-description: 可查看本页以了解如何在git中配置您的发行分支。
 uuid: d12a8b85-b7fd-4b55-a05a-a0f874ce598c
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 53807ea6-9464-429d-9322-85c9f405dff6
+feature: Git存储库
 translation-type: tm+mt
-source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
+source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '309'
 ht-degree: 3%
 
 ---
@@ -21,9 +22,9 @@ ht-degree: 3%
 
 ## 在Git {#setting-up-your-first-branch-in-git}中设置您的第一个分支
 
-为Cloud Manager中已载入的每个项目设置单个（最初为空）**Git存储库**。 此存储库可以包含开发流程所遵循的多个（或少的）分支，但至少有一个分支被CI/CD管道使用，以将应用程序代码部署到舞台和生产。 最佳实践是使用`master`作为此分支的名称。 方便的是，这是Git客户端在设置新项目时的默认行为。
+为Cloud Manager中已登入的每个项目配置了单个（最初为空的）**Git存储库**。 此存储库可以像您的开发过程那样包含多（或少）个分支，但CI/CD管道至少使用一个分支来将应用程序代码部署到舞台和生产。 最佳做法是使用`master`作为此分支的名称。 很方便，这是Git客户端在设置新项目时的默认行为。
 
-例如，在设置新项目时，您将运行一组如下命令：
+例如，在设置新项目时，您将运行一组命令，如下：
 
 ```shell
 $ git init
@@ -55,11 +56,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->它不要求使用命令行客户端。 有多种图形Git客户端可作为独立应用程序或集成开发环境(IDE)（如Eclipse或IntelliJ）的一部分提供。 只要客户端应用程序支持使用HTTPS的Git，它就应与[!UICONTROL Cloud Manager]兼容。
+>它不要求使用命令行客户端。 有多种图形化Git客户端可作为独立应用程序或集成开发环境(IDE)（如Eclipse或IntelliJ）的一部分提供。 只要客户端应用程序支持使用HTTPS的Git，它就应与[!UICONTROL Cloud Manager]兼容。
 
 ## 推送您的第一个分支{#pushing-your-first-branch}
 
-提交至少一个修订版本后，您可以将[!UICONTROL Cloud Manager]存储库添加为&#x200B;**remote**，然后将提交推送到它：
+提交至少一个修订版本后，您可以将[!UICONTROL Cloud Manager]存储库添加为&#x200B;**remote** ，然后将提交推送到它：
 
 ```shell
 $ git remote add adobe <url>
@@ -75,11 +76,11 @@ To <url>
 
 >[!NOTE]
 >
->在[!UICONTROL Cloud Manager]入门过程中，客户成功工程部门将向您提供特定URL和凭据。
+>在[!UICONTROL Cloud Manager]入职期间，客户成功工程部门将向您提供特定URL和您的凭据。
 
 ## 其他分支{#additional-branches}
 
-单个`master`分支可能足以完成非常简单的项目，但在大多数情况下，需要更复杂的分支策略。 许多客户遵循的流程是，在名为`develop`的分支上执行日常开发活动，而在需要部署时，开发分支会合并到`master`分支中。
+单个`master`分支可以满足非常简单的项目，但在大多数情况下，需要更复杂的分支策略。 许多客户遵循一个流程，即在名为`develop`的分支上执行日常开发活动，并在部署时将开发分支合并到`master`分支中。
 
 >[!NOTE]
 >
