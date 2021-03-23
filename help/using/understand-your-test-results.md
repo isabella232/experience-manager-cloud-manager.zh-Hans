@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: 7061910ae2cb0aae10876faf448838570f02d9be
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 6%
+source-wordcount: '2593'
+ht-degree: 4%
 
 ---
 
@@ -140,15 +140,42 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 
 ## 性能测试{#performance-testing}
 
-*性* 能测试 [!UICONTROL Cloud Manager] 使用30分钟测试实现。
+### AEM Sites {#aem-sites}
 
-在管道设置期间，部署管理器可以决定要将多少流量引导到每个存储桶。
+Cloud Manager可对AEM Sites项目执行性能测试。 通过启动虚拟用户(容器)来运行性能测试约30分钟，这些虚拟用户模拟实际用户访问舞台环境上的页面并模拟流量。 这些页面是使用Crawler找到的。
 
-您可以从[配置CI/CD管线](configuring-pipeline.md)中了解有关存储桶控件的更多信息。
+1. **虚拟用户**
 
->[!NOTE]
->
->要设置项目并定义KPI，请参阅[设置项目](setting-up-program.md)。
+   由Cloud Manager启动的虚拟用户或容器的数量由[创建或编辑项目](setting-up-program.md)时用户在“业务所有者”角色中定义的KPI（响应时间和页面查看次数/分钟）驱动。 根据定义的KPI，最多将生成10个容器，模拟实际用户。 为测试选择的页面将拆分并分配给每个虚拟页面。
+
+1. **Crawler**
+
+   在30分钟测试期开始之前，Cloud Manager将使用由客户成功工程师配置的一组一个或多个种子URL来爬网舞台环境。 从这些URL开始，将检查每个页面的HTML，并以宽度优先的方式遍历链接。 此爬网过程最多限制为5000页。 来自Crawler的请求具有10秒的固定超时。
+
+1. **用于测试的页面集**
+
+   页面由三个页面集选择。 Cloud Manager使用跨生产和舞台的AEM实例中的访问日志来确定以下三个时段：
+
+   * *热门实时页面*:选中此选项可确保测试实时客户访问的最受欢迎页面。Cloud Manager将读取访问日志并确定活动客户访问量最大的25个页面，以生成前`Popular Live Pages`的列表。 这些在舞台中也存在的交集随后在舞台环境上爬网。
+
+   * *其他实时页面*:选中此选项可确保测试不在前25个热门实时页面之外、但对测试很重要的页面。与“常用”活动页面类似，这些活动页面从访问日志中提取，并且必须也存在在舞台上。
+
+   * *新页面*:选择此选项以测试可能仅部署到舞台且尚未部署到生产但必须测试的新页面。
+
+      **所选页面集之间的流量分布**
+
+      在管线配置（“插入”链接）的“测试”选项卡中，您可以从一组到三组的任意位置进行选择。 流量的分配基于所选集数，即如果全部选择了三个集，则每组将占总页面视图的33%;如果选择了两个，则50%将转至每个集；如果选择了一个，则100%的流量将转到该集。
+
+      例如，假设“常用实时页面”和“新页面”集（在此示例中，不使用其他实时页面）之间存在50% - 50%的拆分，而“新页面”集包含3000页。 页面视图每分钟KPI设置为200。 在30分钟的测试期间：
+
+      * “热门实时页面”集中的25页中的每页将被点击120次 — ((200 * 0.5)/ 25)* 30 = 120
+
+      * “新页面”集中的3000页中的每页将点击一次 — ((200 * 0.5)/ 3000)* 30 = 1
+
+### 测试和报告{#testing-reporting}
+
+Cloud Manager在30分钟的测试时间内在舞台发布服务器上请求页面（默认情况下为未经过身份验证的用户），并测量（虚拟）用户生成的量度(响应时间、错误率、每分钟视图等)，从而执行AEM Sites项目的性能测试 以及所有实例的各种系统级度量（CPU、内存、网络数据）。\
+下表总结了使用三层门控系统的性能测试指标：
 
 下表总结了使用三层门控系统的性能测试矩阵：
 
@@ -163,6 +190,50 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 | 磁盘带宽利用 | 重要 | >= 90% |
 | 网络带宽利用 | 重要 | >= 90% |
 | 每分钟请求数 | 信息 | >= 6000 |
+
+有关使用基本身份验证进行站点和资产性能测试的详细信息，请参阅下面的&#x200B;**已验证的性能测试**&#x200B;部分。
+
+>[!NOTE]
+>在测试期间，将监视每个实例，包括发布和作者。 如果未获取任何度量，则该度量将报告为未知，且相应步骤将失败。
+
+#### 已验证的性能测试{#authenticated-performance-testing}
+
+此功能为“站点”可选。
+具有已验证站点的AMS客户可以指定Cloud Manager在站点性能测试期间用来访问网站的用户名和密码。
+用户名和密码指定为名称为`CM_PERF_TEST_BASIC_USERNAME`和`CM_PERF_TEST_BASIC_PASSWORD`的Pipeline Variables。
+尽管并非严格要求，但建议将字符串变量类型用于用户名，将secretString变量类型用于密码。 如果同时指定了这两个凭据，则来自性能测试Crawler和测试虚拟用户的每个请求都将包含这些凭据作为HTTP Basic身份验证。
+
+要使用Cloud Manager CLI设置这些变量，请运行：
+
+```shell
+$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
+```
+
+请参阅[变量](https://www.adobe.io/apis/experiencecloud/cloud-manager/api-reference.html#/Variables/patchPipelineVariables)以了解如何使用API。
+
+### AEM Assets {#aem-assets}
+
+Cloud Manager通过在30分钟的测试时间内重复上传资产，执行AEM Assets项目的性能测试。
+
+1. **入职要求**
+
+   对于Assets性能测试，您的客户成功工程师将在创作到阶段环境的启动过程中创建一个`cloudmanager`用户（和密码）。 性能测试步骤需要名为`cloudmanager`的用户以及由CSE设置的关联密码。 不应从作者中删除，也不应将其更改为权限。 这样做很可能会失败Assets性能测试。
+
+1. **用于测试的图像和资产**
+
+   客户可以上传自己的资产进行测试。 这可以从“管线设置”(Pipeline Setup)或“编辑”(Edit)屏幕中完成。 支持JPEG、PNG、GIF和BMP等常见图像格式以及Photoshop、Illustrator和Postscript文件。 但是，如果未上传图像，Cloud Manager将使用默认图像和PDF文档进行测试。
+
+1. **用于测试的资产分发**
+
+   在“管道设置”或“编辑”屏幕中设置每分钟上传的每种类型资源的分布。
+例如，如下图所示，如果使用70/30拆分。 每分钟上传10个资产，每分钟上传7个图像，3个文档。
+
+1. **测试和报告**
+
+   Cloud Manager将使用CSE在上述步骤#1(Onbrading Requirements)中设置的用户名和密码在作者实例上创建一个文件夹，并使用开放源的库在该文件夹中上传资产。 通过“资产”测试步骤运行的测试是使用此开放源库 — https://github.com/adobe/toughday2编写的。 每个资产的处理时间以及各种系统级量度都会在30分钟的测试持续时间内进行测量。 此功能可以上传图像和PDF文档。
+
+   >[!NOTE]
+   >您可以从[配置CI/CD管道](configuring-pipeline.md)了解有关配置性能测试的更多信息。 请参阅[设置项目](setting-up-program.md)，了解如何设置项目和定义KPI，请参阅。
 
 ### 性能测试结果图表{#performance-testing-results-graphs}
 
