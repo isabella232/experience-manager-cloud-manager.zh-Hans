@@ -3,7 +3,7 @@ title: Maven 项目版本处理
 seo-title: Maven 项目版本处理
 description: 了解有关Maven项目版本处理的更多信息。
 seo-description: 可查看本页以了解有关Maven项目版本处理的更多信息。
-feature: 入门
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

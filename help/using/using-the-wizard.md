@@ -1,7 +1,7 @@
 ---
 title: 使用向导
 description: 可查看本页以了解如何使用向导创建AEM应用程序项目
-feature: 入门
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

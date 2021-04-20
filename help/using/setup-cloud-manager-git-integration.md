@@ -3,7 +3,7 @@ title: 与Adobe Cloud Manager集成
 description: 一个视频系列，可指导客户管理的（内部部署）git存储库与Adobe Cloud Manager的设置和集成。
 seo-title: 与Adobe Cloud Manager集成
 seo-description: 一个视频系列，可指导客户管理的（内部部署）git存储库与Adobe Cloud Manager的设置和集成。
-feature: Git存储库
+feature: Git Repositories
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

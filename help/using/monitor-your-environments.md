@@ -3,7 +3,7 @@ title: 监视环境
 seo-title: 监视环境
 description: 了解如何在Cloud Manager中监控环境
 seo-description: 可查看本页以了解有关Cloud Manager中的系统监视的信息，具体方法是观察某个环境中的各个实例并跟踪每个实例的各种量度。
-feature: 环境
+feature: Environments
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

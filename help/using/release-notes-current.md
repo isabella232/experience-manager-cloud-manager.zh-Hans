@@ -1,7 +1,7 @@
 ---
 title: 2021.4.0 版发行说明
 description: 可查看本页以获取Cloud Manager 2021.4.0版的相关信息
-feature: 发行信息
+feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
 source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d

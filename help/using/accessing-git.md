@@ -3,7 +3,7 @@ title: 访问 Git
 seo-title: 访问 Git
 description: 本页介绍如何访问和管理Git存储库。
 seo-description: 可查看本页以了解如何访问和管理您的Git存储库。
-feature: Git存储库
+feature: Git Repositories
 translation-type: tm+mt
 source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt

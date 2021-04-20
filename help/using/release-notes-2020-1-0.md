@@ -3,7 +3,7 @@ title: 2020.1.0 版发行说明
 seo-title: AEM Cloud Manager 2020.1.0发行说明
 description: 可查看本页以获取Cloud Manager 2020.1.0版的信息
 seo-description: 可查看本页以获取有关AEM Cloud Manager 2020.1.0版的信息
-feature: 发行信息
+feature: Release Information
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
