@@ -1,15 +1,15 @@
 ---
 title: 设置项目
 description: 可查看本页以了解如何设置项目
-feature: Getting Started, Production
+feature: 快速入门，制作项目
+exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+source-git-commit: cf19c7dfd593810779c03c51e08081954f8fc11e
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '877'
 ht-degree: 8%
 
 ---
-
 
 # 设置项目{#setting-up-your-project}
 
