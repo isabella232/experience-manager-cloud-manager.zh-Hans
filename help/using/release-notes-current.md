@@ -3,10 +3,10 @@ title: 2021.5.0 版发行说明
 description: 可查看本页以获取Cloud Manager 2021.5.0版的信息
 feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 3d6f9a760a1e5bafdae6ece5627358524467a0d2
+source-git-commit: 849a2df2f272973740c1dd8580daaa518f2c9ec4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '181'
+ht-degree: 7%
 
 ---
 
@@ -32,8 +32,6 @@ ht-degree: 0%
 * 编辑项目体验已刷新。
 
 ## 错误修复 {#bug-fixes}
-
-* 有时，即使未部署IP，用户也可能在IP旁看到绿色的&#x200B;*活动允许列表*&#x200B;状态。
 
 * 管道变量API将仅以状态“DELETED”标记它们，而不是删除“deleted”变量。
 
