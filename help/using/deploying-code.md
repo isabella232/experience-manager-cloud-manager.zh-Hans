@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Code Deployment
+feature: 代码部署
+exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
-
 
 # 部署代码 {#deploy-your-code}
 
@@ -92,6 +92,19 @@ ht-degree: 1%
 
    ![](assets/Production_Deployment2.png)
 
+## 超时{#timeouts}
+
+如果等待用户反馈，以下步骤将超时：
+
+| 步骤 | 超时 |
+|--- |--- |
+| 代码质量测试 | 7天 |
+| 安全测试 | 7天 |
+| 性能测试 | 7天 |
+| 申请批准 | 7天 |
+| 计划生产部署 | 7天 |
+| CSE支持 | 7天 |
+
 ## 部署进程{#deployment-process}
 
 以下部分介绍如何在阶段阶段和生产阶段部署AEM和调度程序包。
@@ -149,5 +162,3 @@ Cloud Manager将构建过程生成的所有目标/*.zip文件上传到存储位�
 1. 将AEM包部署到publish2，将调度程序包并行地刷新调度程序缓存，部署到dispatcher2。
 1. 将dispatcher2放回负载平衡器中。
 此过程将一直持续到部署到达拓扑中的所有发布者和调度程序为止。
-
-
