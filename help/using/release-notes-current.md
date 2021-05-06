@@ -3,10 +3,10 @@ title: 2021.5.0 版发行说明
 description: 可查看本页以获取Cloud Manager 2021.5.0版的信息
 feature: 发行信息
 translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+source-git-commit: 3d6f9a760a1e5bafdae6ece5627358524467a0d2
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 6%
 ## 发布日期 {#release-date}
 
 [!UICONTROL Cloud Manager]版本2021.5.0的发布日期为2021年5月06日。
-下一版本计划于2021年6月06日发布。
+下一版本计划于2021年6月03日发布。
 
 ## 新增功能 {#whats-new}
 
