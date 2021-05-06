@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-feature: CI-CD Pipeline, Test Results
+feature: CI-CD管道测试结果
+exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2694'
 ht-degree: 3%
 
 ---
-
 
 # 理解测试结果 {#understand-your-test-results}
 
@@ -35,7 +35,7 @@ ht-degree: 3%
 对于每个门，门所识别的问题都有三层结构。
 
 * **关键**  — 这些是门所发现的问题，会导致管道立即失败。
-* **重要**  — 这些是由门识别的问题，它们导致管道进入暂停状态。部署经理、项目经理或业务所有者可以覆盖问题，在这种情况下，管道继续，或者他们可以接受问题，在这种情况下，管道会因故障而停止。
+* **重要**  — 这些是由门识别的问题，它们导致管道进入暂停状态。部署经理、项目经理或业务所有者可以覆盖问题，在这种情况下，管道继续，或者他们可以接受问题，在这种情况下，管道会因故障而停止。 重要故障的覆盖受[超时](deploying-code.md#timeouts)的限制。
 * **Info**  — 这些是门所识别的问题，它们仅用于信息目的，对管道执行没有影响。
 
 >[!NOTE]
@@ -274,4 +274,3 @@ Cloud Manager通过在30分钟的测试时间内重复上传资产，执行AEM A
 ![](assets/understand_test-results-screen1.png)
 
 ![](assets/screen_shot_2018-09-05at83933pm.png)
-
