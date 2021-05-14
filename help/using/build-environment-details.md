@@ -1,15 +1,14 @@
 ---
 title: 了解构建环境
 description: 可查看本页以了解有关环境
-feature: Environments
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: 环境
+exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
+source-git-commit: 0a5556729e64c9e8736d13b357db001dd57bc03a
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
-
 
 # 了解Build环境{#build-environment-details}
 
@@ -34,7 +33,7 @@ Cloud Manager使用专用构建环境构建和测试您的代码。 此环境具
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
-* Maven在系统级别上配置了settings.xml文件，该文件自动包括公共Adobe **Artifact**存储库。
+* Maven在系统级别上配置了settings.xml文件，该文件使用名为`adobe-public`的Adobe自动包括公用用户档案&#x200B;**Artifact**存储库。
 有关详细信息，请参阅[Adobe公共主存储库](https://repo.adobe.com/)。
 
 >[!NOTE]
