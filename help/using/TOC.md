@@ -3,16 +3,15 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Experience Manager Cloud Manager 指南
-breadcrumb-title: Cloud Manager 指南
+breadcrumb-title: 适用于AEM 6.x的Cloud Manager指南
 user-guide-description: 了解如何使用 Adobe Managed Services 在云中自我管理 Experience Manager。
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Administrator
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+source-git-commit: 9cca6fd7d4ef3351fa024bac0f95f5592105dbae
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 83%
+source-wordcount: '270'
+ht-degree: 81%
 
 ---
 
