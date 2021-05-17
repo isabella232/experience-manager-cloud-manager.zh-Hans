@@ -9,17 +9,19 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-feature: CI-CD Pipeline
-translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+feature: CI-CD管道
+exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
+source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1280'
 ht-degree: 2%
 
 ---
 
-
 # 配置 CI/CD 管线 {#configure-your-ci-cd-pipeline}
+
+>[!NOTE]
+>要了解如何将AEM中Cloud Manager的CI/CD管道配置为Cloud Service，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager)。
 
 以下页介绍如何配置&#x200B;**Pipeline**。 要查看有关管道工作原理的更多概念信息，请参阅[CI/CD管道概述](ci-cd-pipeline.md)。
 
