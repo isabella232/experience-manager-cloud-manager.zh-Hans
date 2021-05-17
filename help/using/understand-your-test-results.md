@@ -10,15 +10,17 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD管道测试结果
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-translation-type: tm+mt
-source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '2694'
+source-wordcount: '2722'
 ht-degree: 3%
 
 ---
 
 # 理解测试结果 {#understand-your-test-results}
+
+>[!NOTE]
+>要了解Cloud Manager支持的Cloud Services管道测试结果和测试，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=en#using-cloud-manager)。
 
 在管道执行过程中，会捕获许多量度并将其与由业务所有者定义的关键绩效指标(KPI)或Adobe Managed Services设置的标准进行比较。
 
