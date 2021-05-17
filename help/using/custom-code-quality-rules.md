@@ -8,17 +8,19 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
-feature: Code Quality Rules
-translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+feature: 代码质量规则
+exl-id: 7d118225-5826-434e-8869-01ee186e0754
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3654'
 ht-degree: 4%
 
 ---
 
-
 # 自定义代码质量规则 {#custom-code-quality-rules}
+
+>[!NOTE]
+>要了解作为Cloud Service的AEM中Cloud Manager的自定义代码质量规则，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=en#using-cloud-manager)。
 
 本页介绍由Cloud Manager根据AEM工程的最佳实践创建的自定义代码质量规则。
 
@@ -961,4 +963,3 @@ AEM Cloud Service禁止自定义搜索索引定义（即`oak:QueryIndexDefinitio
 * [DOT — 调度程序发布场过滤器应以允许列表方式指定允许的Sling后缀模式](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
 * [DOT — 在具有根目录路径的VirtualHost Directory部分中，不应使用“Require all ragned”指令](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
-
