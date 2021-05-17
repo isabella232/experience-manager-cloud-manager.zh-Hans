@@ -2,16 +2,19 @@
 title: 2021.5.0 版发行说明
 description: 可查看本页以获取Cloud Manager 2021.5.0版的信息
 feature: 发行信息
-source-git-commit: b9adcc700edb7ba54a92037e86e86df812c93c83
+source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 6%
+source-wordcount: '235'
+ht-degree: 5%
 
 ---
 
 # 2021.5.0 版发行说明 {#release-notes-for}
 
 以下部分概述了[!UICONTROL Cloud Manager] 2021.5.0版的一般发行说明。
+
+>[!NOTE]
+>请参阅[当前发行说明](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access)以查看AEM中Cloud Manager作为Cloud Service的最新发行说明。
 
 ## 发布日期 {#release-date}
 
