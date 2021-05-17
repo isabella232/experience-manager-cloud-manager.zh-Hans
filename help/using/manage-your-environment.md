@@ -8,17 +8,19 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
-feature: Environments
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+feature: 环境
+exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 4%
+source-wordcount: '296'
+ht-degree: 3%
 
 ---
 
-
 # 管理环境 {#manage-your-environments}
+
+>[!NOTE]
+>要了解如何将AEM中的Cloud Manager的环境作为Cloud Service进行管理，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager)。
 
 Cloud Manager的&#x200B;**概述**&#x200B;页面包括列表所有托管AEM环境的&#x200B;**环境**&#x200B;拼贴。
 
