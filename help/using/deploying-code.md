@@ -10,10 +10,9 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: 代码部署
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-translation-type: tm+mt
-source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1020'
 ht-degree: 1%
 
 ---
@@ -21,6 +20,9 @@ ht-degree: 1%
 # 部署代码 {#deploy-your-code}
 
 ## 使用Cloud Manager {#deploying-code-with-cloud-manager}部署代码
+
+>[!NOTE]
+>要了解如何将AEM中Cloud Manager的代码作为Cloud Service部署，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager)。
 
 配置生产管道(存储库、环境和测试环境)后，您就可以部署代码了。
 
@@ -92,7 +94,7 @@ ht-degree: 1%
 
    ![](assets/Production_Deployment2.png)
 
-## 超时{#timeouts}
+## 超时 {#timeouts}
 
 如果等待用户反馈，以下步骤将超时：
 
