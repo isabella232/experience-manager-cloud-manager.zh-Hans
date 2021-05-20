@@ -2,58 +2,57 @@
 title: 管理调度程序配置
 seo-title: 管理调度程序配置
 description: 了解如何使用Cloud Manager部署调度程序配置文件
-seo-description: 可查看本页以了解有关配置调度程序的信息。
+seo-description: 可查看本页以了解有关配置Dispatcher的信息。
 uuid: 3ecd8ca3-5241-4811-87fd-3284a8012eda
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 feature: Dispatcher
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 2%
 
 ---
 
-
 # 管理调度程序配置 {#manage-your-dispatcher-configurations}
 
-## 使用Cloud Manager部署调度程序配置文件{#using-cloud-manager-to-deploy-dispatcher-configuration-files}
+## 使用Cloud Manager部署Dispatcher配置文件{#using-cloud-manager-to-deploy-dispatcher-configuration-files}
 
-Cloud Manager能够部署Web服务器和调度程序配置文件（假定这些文件存储在&#x200B;**Git存储库**&#x200B;中），此外，还可以部署普通的AEM内容包。
+Cloud Manager能够部署Web服务器和Dispatcher配置文件（假定它们存储在&#x200B;**Git存储库**&#x200B;中）以及常规AEM内容包中。
 
-要利用此功能，Maven构建应生成包含至少两个目录（***conf***&#x200B;和&#x200B;***conf.d***）的zip文件。 可以使用maven-assembly-plugin生成此zip文件。 Cloud Manager使用内置的[向导](/help/using/using-the-wizard.md)生成的项目在项目创建过程中创建了正确的Maven项目结构。 这是新Managed Services客户的推荐路径。
+要利用此功能，Maven内部版本应生成一个zip文件，其中至少包含两个目录 — ***conf***&#x200B;和&#x200B;***conf.d***。 可以使用maven-assembly-plugin生成此zip文件。 Cloud Manager使用内置的[向导](/help/using/using-the-wizard.md)生成的项目具有在项目创建过程中创建的正确Maven项目结构。 这是新Managed Services客户的推荐路径。
 
-部署到调度程序&#x200B;**Instance**&#x200B;后，这些目录的内容将覆盖Dispatcher实例中这些目录的内容。 由于Web服务器和Dispatcher配置文件经常需要环境特定信息，为了使此功能正确使用，您首先需要与客户成功工程师(CSE)合作，在`/etc/sysconfig/httpd`中设置这些环境变量。
+部署到调度程序&#x200B;**实例**&#x200B;后，这些目录的内容将覆盖调度程序实例中这些目录的内容。 由于Web服务器和Dispatcher配置文件经常需要特定于环境的信息，因此要正确使用此功能，您首先需要与客户成功工程师(CSE)合作，在`/etc/sysconfig/httpd`中设置这些环境变量。
 
-### 为现有Managed Services客户{#steps-for-configuring-dispatcher}配置调度程序的步骤
+### 为现有Managed Services客户配置Dispatcher的步骤{#steps-for-configuring-dispatcher}
 
 请按照以下步骤完成配置Dispatcher的初始过程：
 
-1. 从您的CSE获取当前生产配置文件。
-1. 删除硬编码的环境特定数据（例如，发布呈示器IP）并替换为变量。
-1. 为每个目标Dispatcher定义键 — 值对中所需的变量，并请求CSE在每个实例上添加到`/etc/sysconfig/httpd`。
-1. 在您的舞台环境上测试更新的配置，然后请求CSE部署到生产。
+1. 从CSE获取当前生产配置文件。
+1. 删除硬编码的环境特定数据（例如，发布渲染器IP）并替换为变量。
+1. 在键值对中为每个目标Dispatcher定义必需变量，并请求CSE在每个实例的`/etc/sysconfig/httpd`中添加。
+1. 在暂存环境中测试更新的配置，然后请求CSE部署到生产环境。
 1. 将文件提交到&#x200B;**Git存储库**。
 
-1. 通过Cloud Manager进行部署。
+1. 通过Cloud Manager部署。
 
 >[!NOTE]
 >
->在Cloud Manager上线期间，可以将Dispatcher和Web服务器配置迁移到&#x200B;**Git存储库**，但也可以在以后的时间完成。
+>可以将Dispatcher和Web服务器配置迁移到&#x200B;**Git存储库**&#x200B;可以在Cloud Manager入门期间完成，但也可以在稍后的时间点完成。
 
 ### 示例 {#example}
 
-具体文件和目录结构可能因项目的具体情况而异，但此示例应提供一个具体指南，说明如何将项目结构化以包含Apache和Dispatcher配置。
+具体的文件和目录结构可能因项目的具体细节而异，但此示例应当提供具体指南，说明如何构建项目以包含Apache和Dispatcher配置。
 
 1. 创建名为`dispatcher`的子目录。
 
    >[!NOTE]
-   请随时在此处使用任何名称，但此步骤中创建的目录名称必须与步骤6中使用的名称相同。
+   请在此处随意使用任何名称，但此步骤中创建的目录名称必须与步骤6中使用的名称相同。
 
-1. 此子目录将包含一个Maven模块，用于使用Maven Assembly Plugin生成Dispatcher zip文件。 要开始此内容，请在`dispatcher`目录中创建一个包含此内容的`pom.xml`文件，并根据需要更改父引用、artifactId和名称。
+1. 此子目录将包含一个Maven模块，该模块使用Maven Assembly插件生成Dispatcher zip文件。 要启动此操作，请在`dispatcher`目录中创建包含此内容的`pom.xml`文件，并根据需要更改父引用、artifactId和名称。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -94,9 +93,9 @@ Cloud Manager能够部署Web服务器和调度程序配置文件（假定这些�
    ```
 
    >[!NOTE]
-   如在第1步中所示，如果需要，此处的artifactId和名称可以是其他值；`dispatcher`此处仅是一个用于简单性的示例。
+   如在第1步中所示，如果需要，此处的artifactId和名称可以是其他值；`dispatcher`此处仅提供一个用于简单性的示例。
 
-1. Maven Assembly Plugin需要&#x200B;*描述符*&#x200B;来定义如何创建zip文件。 要创建此描述符，请使用此内容创建一个名为`assembly.xml`的文件（同样位于`dispatcher`子目录中）。 请注意，此文件名在上面`pom.xml`文件的第26行中引用。
+1. Maven Assembly Plugin需要&#x200B;*descriptor*&#x200B;来定义如何创建zip文件。 要创建此描述符，请使用此内容创建一个名为`assembly.xml`的文件（同样，位于`dispatcher`子目录中）。 请注意，此文件名在上面`pom.xml`文件的第26行中引用。
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -119,8 +118,8 @@ Cloud Manager能够部署Web服务器和调度程序配置文件（假定这些�
    </assembly>
    ```
 
-1. 现在，在调度程序子目录中创建一个名为`src`的子目录（如上面第11行的程序集描述符中引用的子目录），以存储实际的Apache和Dispatcher配置。 在此`src`目录中，创建名为`conf`、`conf.d`、`conf.dispatcher.d`和`conf.modules.d`的目录。
-1. 现在，您可以用配置文件填充`conf`、`conf.d`、`conf.dispatcher.d`和`conf.modules.d`目录。 例如，默认配置由这些文件和符号链接组成。
+1. 现在，在调度程序子目录内创建名为`src`的子目录（如上面第11行的程序集描述符中所引用），以存储实际的Apache和Dispatcher配置。 在此`src`目录中，创建名为`conf`、`conf.d`、`conf.dispatcher.d`和`conf.modules.d`的目录。
+1. 现在，您可以使用配置文件填充`conf`、`conf.d`、`conf.dispatcher.d`和`conf.modules.d`目录。 例如，默认配置由这些文件和符号链接组成。
 
    ```
    dispatcher
@@ -197,7 +196,7 @@ Cloud Manager能够部署Web服务器和调度程序配置文件（假定这些�
 
 1. 最后，在项目根目录的pom.xml文件中，添加一个`<module>`元素以包含调度程序模块。
 
-   例如，如果现有模块列表
+   例如，如果您的现有模块列表为
 
    ```xml
        <modules>
@@ -219,9 +218,9 @@ Cloud Manager能够部署Web服务器和调度程序配置文件（假定这些�
    ```
 
    >[!NOTE]
-   如第1步中所述，`<module>`元素&#x200B;**的值必须**&#x200B;与创建的目录名匹配。
+   如步骤1中所述，`<module>`元素&#x200B;**的值必须**&#x200B;与创建的目录名称匹配。
 
-1. 最后，要进行测试，请在项目根目录中运行mvn clean包。 在输出中应该看到这样的行
+1. 最后，要进行测试，请在项目根目录中运行mvn clean包。 您应会在输出中看到如下行
 
    ```
    [INFO] --- maven-assembly-plugin:3.1.0:single (default) @ dispatcher ---
@@ -229,7 +228,7 @@ Cloud Manager能够部署Web服务器和调度程序配置文件（假定这些�
    [INFO] Building zip: /Users/me/mycompany/dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
    ```
 
-   您还可以解压缩此文件以视图其内容。
+   您也可以解压缩此文件以查看其内容。
 
    ```shell
    $ unzip -l dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
@@ -305,4 +304,3 @@ Cloud Manager能够部署Web服务器和调度程序配置文件（假定这些�
    ---------                     -------
        69017                     66 files
    ```
-
