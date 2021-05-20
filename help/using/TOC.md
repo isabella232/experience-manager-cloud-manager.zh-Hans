@@ -55,7 +55,7 @@ ht-degree: 81%
    + [Maven 项目版本处理](activating-maven-project.md)
    + [访问 Git](accessing-git.md)
    + [与Git集成](setup-cloud-manager-git-integration.md)
-   + [使用多源Git存储库](/help/using/working-with-multiple-source-git-repos.md)
+   + [使用多个源Git存储库](/help/using/working-with-multiple-source-git-repos.md)
 + 产品更新向导 {#product-update-wizard}
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
