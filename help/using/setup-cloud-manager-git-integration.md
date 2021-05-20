@@ -1,43 +1,42 @@
 ---
-title: 与Adobe Cloud Manager集成
-description: 一个视频系列，可指导客户管理的（内部部署）git存储库与Adobe Cloud Manager的设置和集成。
-seo-title: 与Adobe Cloud Manager集成
-seo-description: 一个视频系列，可指导客户管理的（内部部署）git存储库与Adobe Cloud Manager的设置和集成。
-feature: Git Repositories
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+title: 与Git Cloud Manager的集成Adobe
+description: 一个视频系列，介绍如何设置和集成由Adobe管理（内部部署）的git存储库与Adobe Cloud Manager。
+seo-title: 与Git Cloud Manager的集成Adobe
+seo-description: 一个视频系列，介绍如何设置和集成由Adobe管理（内部部署）的git存储库与Adobe Cloud Manager。
+feature: Git存储库
+exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 5%
 
 ---
 
+# 与Git Cloud Manager的集成Adobe
 
-# 与Adobe Cloud Manager集成
-
-Adobe Cloud Manager附带一个git存储库，用于使用Cloud Manager的CI/CD管道部署代码。 客户可以立即使用Cloud Manager的git存储库。 客户还可以选择将内部部署或&#x200B;**客户管理的** git存储库与Cloud Manager集成。
+AdobeCloud Manager配置了单个git存储库，该存储库用于使用Cloud Manager的CI/CD管道部署代码。 客户可以开箱即用地使用Cloud Manager的git存储库。 客户还可以选择将内部部署或&#x200B;**customer-managed** git存储库与Cloud Manager集成。
 
 ## Git集成概述
 
 >[!VIDEO](https://video.tv.adobe.com/v/28710/)
 
-此视频系列探讨了在将客户管理的git存储库与Cloud Manager集成时的几个使用案例，包括：
+本视频系列探讨了在将客户管理的git存储库与Cloud Manager集成时的几个用例，包括：
 
 * [初始同步](#initial-sync)
 * [基本分支策略](#branching-strategy)
 * [功能分支开发](#feature-development)
 * [生产部署](#production-deployment)
-* [同步发布标记](#sync-tags)
+* [同步发行标记](#sync-tags)
 
-有关完整概述，请查阅[Cloud Manager用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)。 该视频系列假设您对git和源代码管理有了基本的了解。 有关git的更多详细信息，请参阅以下[其他资源。](#additional-resources)
+有关完整的概述，请参阅[Cloud Manager用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)。 该视频系列假定了有关git和源代码管理的基本知识。 有关git的更多详细信息，请参阅下面的[其他资源](#additional-resources)。
 
 >[!NOTE]
 >
-> 此视频系列中概述的步骤和命名约定代表了使用客户管理的git存储库和Cloud Manager的一些最佳实践。 预计所描述的公约和工作流将适用于个别发展小组。
+> 此视频系列中概述的步骤和命名约定体现了使用客户管理的git存储库和Cloud Manager的一些最佳实践。 预计所描述的公约和工作流程将适合各个开发小组。
 
 ## 初始同步{#initial-sync}
 
-将客户管理的Git存储库与Cloud Manager的Git存储库同步的最初步骤。
+将客户管理的Git存储库与Cloud Manager的Git存储库同步的首要步骤。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28711/?quality=12)
 
@@ -49,19 +48,19 @@ Adobe Cloud Manager附带一个git存储库，用于使用Cloud Manager的CI/CD�
 
 ## 功能分支开发{#feature-development}
 
-使用功能分支隔离客户管理的git存储库中的代码更改，并与Cloud Manager的git存储库同步，以便使用非生产渠道进行代码质量和验证测试。
+使用功能分支可隔离客户管理的git存储库中的代码更改，并与Cloud Manager的git存储库同步，以便使用非生产管道进行代码质量和验证测试。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12)
 
 ## 生产部署{#production-deployment}
 
-在由客户管理的git存储库中准备生产版本的代码，并与Cloud Manager的git存储库同步，以部署到暂存和生产环境。
+在客户管理的git存储库中为生产版本准备代码，并与Cloud Manager的git存储库同步，以便部署到暂存和生产环境。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12)
 
-## 正在同步发布标记{#sync-tags}
+## 正在同步发行标记{#sync-tags}
 
-将Cloud Manager Git存储库中的发行标记同步到客户管理的git存储库中，以便能够查看已部署到暂存和生产环境的代码。
+将Cloud Manager git存储库中的发行标记同步到客户管理的git存储库中，以便提供有关已部署到暂存和生产环境的代码的可见性。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12)
 
