@@ -11,10 +11,10 @@ discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 feature: 入门
 level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 81c14382821de6b2d249000a79799747a6d9cb19
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 85%
+source-wordcount: '805'
+ht-degree: 79%
 
 ---
 
@@ -30,6 +30,8 @@ ht-degree: 85%
 ## 简介 {#introduction}
 
 [!UICONTROL Cloud Manager]是云中Adobe Experience Manager(AEM)的一部分，允许组织在云中自行管理Experience Manager。它包含一个持续集成和持续交付 (CI/CD) 框架，使 IT 团队和实施合作伙伴能够在不影响性能或安全性的情况下快速交付自定义或更新。
+
+本文档网站专门介绍Adobe Managed Services(AMS)客户可用的Cloud Manager的特性和功能。 有关AEM as a Cloud Service客户的Cloud Manager特性和功能的文档，请参阅[为AEM as aCloud Service实施应用程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=en)。
 
 通过 [!UICONTROL Cloud Manager] 自助式客户门户，**组织**&#x200B;可以执行以下操作/利用以下功能：
 
