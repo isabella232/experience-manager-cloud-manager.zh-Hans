@@ -11,7 +11,7 @@ discoiquuid: b702dfc0-3534-4d90-af19-8559d8baf6a6
 feature: 入门
 level: Beginner
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: f9b33de0f1f2203175f66f261c8ee553f47e0c3b
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 2%
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 **** 管道一组按顺序执行的部署步骤。
 
-**** 产品组织许可的解决方案中的一组特定功能。一个组织内的不同方案可能有权使用不同的产品集。 例如，网站、Forms的资产。
+**** 产品组织许可的解决方案中的一组特定功能。一个组织内的不同方案可能有权使用不同的产品集。 例如，“站点”、“资产”或“Forms”。
 
 **** 计划支持客户计划的逻辑分组的一组环境，通常与购买的服务级别协议(SLA)相对应。每个计划只有一个生产环境，并且可能有许多非生产环境。
 
