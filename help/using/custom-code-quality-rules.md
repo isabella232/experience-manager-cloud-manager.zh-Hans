@@ -10,9 +10,9 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: 代码质量规则
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
-source-wordcount: '3654'
+source-wordcount: '3652'
 ht-degree: 4%
 
 ---
@@ -187,32 +187,6 @@ public void orDoThis() {
   }
  
   in.close();
-}
-```
-
-### 客户{#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}不应实施或扩展带有@ProviderType的产品API
-
-**键**:CQBP-84、CQBP-84依赖关系
-
-**类型**:错误
-
-**严重性**:关键
-
-**自**:版本2018.7.0
-
-AEM API包含Java接口和类，这些接口和类仅用于由自定义代码使用，但不能实现。 例如，接口com.day.cq.wcm. *api.Page* ，设计为仅由 ***AEM实现***。
-
-当将新方法添加到这些接口时，这些附加方法不会影响使用这些接口的现有代码，因此，向这些接口添加新方法被认为是向后兼容的。 但是，如果自定义代 ***码实现了*** 其中一个接口，则该自定义代码会给客户带来向后兼容性风险。
-
-仅打算由AEM实现的接口（和类）使用&#x200B;*org.osgi.annotation.versioning.ProviderType*（或者，在某些情况下，使用类似的旧版注释&#x200B;*aQute.bnd.annotation.ProviderType*）进行注释。 此规则标识通过自定义代码实现此类接口（或扩展类）的情况。
-
-#### 不符合代码{#non-compliant-code-3}
-
-```java
-import com.day.cq.wcm.api.Page;
-
-public class DontDoThis implements Page {
-// implementation here
 }
 ```
 
@@ -597,6 +571,32 @@ AEM API表面处于不断修订的状态，可识别不鼓励使用并因此被�
 >[!NOTE]
 >
 >OakPAL是由AEM合作伙伴(2019年AEM Rockstar北美地区入选者)开发的框架，该合作伙伴使用独立的Oak存储库来验证内容包。
+
+### 客户{#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}不应实施或扩展带有@ProviderType的产品API
+
+**键**:CQBP-84
+
+**类型**:错误
+
+**严重性**:关键
+
+**自**:版本2018.7.0
+
+AEM API包含Java接口和类，这些接口和类仅用于由自定义代码使用，但不能实现。 例如，接口com.day.cq.wcm. *api.Page* ，设计为仅由 ***AEM实现***。
+
+当将新方法添加到这些接口时，这些附加方法不会影响使用这些接口的现有代码，因此，向这些接口添加新方法被认为是向后兼容的。 但是，如果自定义代 ***码实现了*** 其中一个接口，则该自定义代码会给客户带来向后兼容性风险。
+
+仅打算由AEM实现的接口（和类）使用&#x200B;*org.osgi.annotation.versioning.ProviderType*（或者，在某些情况下，使用类似的旧版注释&#x200B;*aQute.bnd.annotation.ProviderType*）进行注释。 此规则标识通过自定义代码实现此类接口（或扩展类）的情况。
+
+#### 不符合代码{#non-compliant-code-3}
+
+```java
+import com.day.cq.wcm.api.Page;
+
+public class DontDoThis implements Page {
+// implementation here
+}
+```
 
 ### 客户包不应在/libs {#oakpal-customer-package}下创建或修改节点
 
