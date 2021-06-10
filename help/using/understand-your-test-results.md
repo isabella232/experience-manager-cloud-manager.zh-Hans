@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD管道、测试结果
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
 source-wordcount: '2722'
 ht-degree: 3%
@@ -53,7 +53,7 @@ ht-degree: 3%
 在“代码质量测试”中，会扫描源代码以确保其符合特定质量标准。 目前，这是通过SonarQube、使用OakPAL的内容包级别检查和使用调度程序优化工具的调度程序验证的组合来实现的。 有100多个规则可组合通用Java规则和特定于AEM的规则。 某些特定于AEM的规则是根据AEM Engineering中的最佳实践创建的，称为[Custom Code Quality Rules](/help/using/custom-code-quality-rules.md)。
 
 >[!NOTE]
->您可以在此处[下载规则的完整列表。](/help/using/assets/CodeQuality-rules-AMS.xlsx)
+>您可以在此处[下载规则的完整列表。](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx)
 
 此步骤的结果以&#x200B;*Rating*&#x200B;的形式提供。 下表汇总了各种测试标准的评级：
 
