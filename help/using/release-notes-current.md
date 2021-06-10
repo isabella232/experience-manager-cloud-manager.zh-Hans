@@ -1,44 +1,48 @@
 ---
-title: 2021.5.0 版发行说明
-description: 可查看本页面以获取有关Cloud Manager 2020.5.0版的信息
+title: 2021.6.0 版发行说明
+description: 可查看本页面以获取Cloud Manager 2021.6.0版的信息
 feature: 发行信息
-source-git-commit: 3f17f252d89a1753c9cb121461b048f619d28415
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '277'
 ht-degree: 5%
 
 ---
 
-# 2021.5.0 版发行说明 {#release-notes-for}
+# 2021.6.0 版发行说明 {#release-notes-for}
 
-以下部分概述了[!UICONTROL Cloud Manager]版本2021.5.0的常规发行说明。
+以下部分概述了[!UICONTROL Cloud Manager]版本2021.6.0的常规发行说明。
 
 >[!NOTE]
 >请参阅[当前发行说明](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) ，查看AEM as a Cloud Service中Cloud Manager的最新发行说明。
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager]版本2021.5.0的发行日期是2021年5月6日。
-下一版本计划于2021年6月10日发布。
+[!UICONTROL Cloud Manager]版本2021.6.0的发布日期是2021年6月10日。
+下一版本计划于2021年7月15日发布。
 
 ## 新增功能 {#whats-new}
 
-* PackageOverlaps质量规则现在会检测在同一部署的包集中多次部署同一包的情况，即在多个嵌入位置中部署同一包的情况。
+* 现在，资产和站点测试将并行运行（如果适用），从而缩短总管道执行时间。 未来几周，将为客户启用此功能。
 
-* 现在，公共API中的存储库端点包含Git URL。
+* 现在，在生成步骤期间下载的Maven依赖项将在管道执行之间缓存。 未来几周，将为客户启用此功能。
 
-* 在编辑项目群工作流中，用户将只能设置非十进制KPI值。
+* 在项目创建期间和通过管理git工作流在默认推送命令中使用的默认分支名称已更改为`main`。
 
-* 现在，解决了将代码推送到AdobeGit时遇到的间歇性故障。
+* 在UI中编辑项目体验已刷新。
 
-* 编辑程序体验已刷新。
+* 质量规则`ImmutableMutableMixCheck`已更新，可将`/oak:index`节点分类为不可变。
+
+* 质量规则`CQBP-84`和`CQBP-84--dependencies`已合并到单个规则中。
+
+* 在某些情况下，如果无法计算跳过的测试量度，则会导致管道执行失败。
 
 ## 错误修复 {#bug-fixes}
 
-* 管道变量API不会删除“已删除”变量，而是仅将其标记为状态为“已删除”。
+* 未正确解析根元素名称后包含换行符的JCR节点定义。
 
-* 某些代码气味类型的质量问题错误地影响了可靠性评级。
+* 列表存储库API不会过滤已删除的存储库。
 
-* 当从午夜UTC到凌晨1点之间开始管道执行时，Cloud Manager生成的对象版本不保证大于前一天创建的版本。
+* 为计划步骤提供无效值时，显示错误消息。
 
-* 某些Adobe Managed Services(AMS)客户无法使用Cloud Manager API在Adobe I/O开发人员控制台中创建新项目。
+* 在某些情况下，当管道执行到达部署到生产步骤，用户停止执行时，UI中的部署状态消息无法正确反映实际发生的情况。
