@@ -2,10 +2,10 @@
 title: 2021.6.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.6.0版的信息
 feature: 发行信息
-source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 5%
+source-wordcount: '285'
+ht-degree: 4%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 5%
 
 * 在项目创建期间和通过管理git工作流在默认推送命令中使用的默认分支名称已更改为`main`。
 
-* 在UI中编辑项目体验已刷新。
+* 在UI中编辑项目体验已刷新。 请参阅[编辑程序](/help/using/setting-up-program.md#editing-program)以了解更多信息。
 
 * 质量规则`ImmutableMutableMixCheck`已更新，可将`/oak:index`节点分类为不可变。
 
