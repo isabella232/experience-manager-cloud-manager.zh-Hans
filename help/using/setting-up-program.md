@@ -2,17 +2,12 @@
 title: 设置程序
 seo-title: 设置程序
 description: 入门后，业务所有者需要对程序进行一些初始设置。
-seo-description: '入门后，业务所有者将需要对Adobe AEM Cloud Manager进行一些初始设置。 这包括设置计划描述并定义将用于性能测试的KPI。 '
-uuid: 9ecf8743-1f5a-4744-86af-e2256567642f
-contentOwner: jsyal
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: getting-started
-discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
+seo-description: '入门后，业务所有者将需要执行一些初始设置AdobeAEM Cloud Manager。 这包括设置计划描述并定义将用于性能测试的KPI。 '
 feature: 入门
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: a65c413e9ffa96f950cf1c59771b45ce0f810bc0
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '728'
 ht-degree: 2%
 
 ---
@@ -24,11 +19,8 @@ ht-degree: 2%
 定义的KPI用作性能测试的基线，每次执行管道时都会通过该基线。
 
 >[!NOTE]
->
->定义的KPI是在&#x200B;**stage**&#x200B;环境中运行的测试中测量的。 通常，会缩小这些KPI以适合暂存环境的功能。
->
->例如，如果用户在生产&#x200B;**环境**&#x200B;中平均每分钟需要1000次页面查看，并且在生产中有四个调度程序/发布服务器，则该用户每分钟应该可以查看250次页面（假定其暂存环境仅包含一个调度程序/发布服务器对）。
->
+>定义的KPI是在&#x200B;**stage**环境中运行的测试中测量的。 通常，会缩小这些KPI以适合暂存环境的功能。
+>例如，如果用户在生产&#x200B;**环境**中平均每分钟需要1000次页面查看，并且在生产中有四个调度程序/发布服务器，则该用户每分钟应该可以查看250次页面（假定其暂存环境仅包含一个调度程序/发布服务器对）。
 >此外，许多用户在其生产环境之前还将拥有内容交付网络(CDN)，例如Akamai或CloudFront。 由于[!UICONTROL Cloud Manager]直接针对暂存环境进行测试，因此KPI应仅反映预期通过CDN的流量，即缓存缺失。 通常，这将是生产流量总量中相对较小的一部分。
 
 ## 使用[!UICONTROL Cloud Manager]设置程序{#using-cloud-manager-to-setup-your-program}
@@ -77,17 +69,13 @@ ht-degree: 2%
 1. 在&#x200B;**Provisioning**&#x200B;下，您可以查看或编辑程序中生产环境和非生产环境的配置配置。 如果为程序打开了自动缩放功能，则会看到&#x200B;**自动缩放功能在**&#x200B;上。
 
    >[!NOTE]
-   >
-   >* 自动缩放功能仅适用于生产环境，并且可能不适用于所有客户程序。
-   >* 此版本的[!UICONTROL Cloud Manager]不提供按需缩放功能。
-
+   >自动缩放功能仅适用于生产环境，并且可能不适用于所有客户程序。
 
    ![](assets/Setup_Program-Provisioning.png)
 
 1. 单击&#x200B;**Save**&#x200B;以完成安装向导。
 
    >[!NOTE]
-   >
    >设置初始程序后，您始终可以编辑该程序。 有关更多详细信息，请执行以下步骤。
 
 ## 编辑程序
@@ -98,14 +86,26 @@ ht-degree: 2%
 
 1. 选择解决方案并单击&#x200B;**编辑**&#x200B;以更新或修改程序，如下图所示。
 
-   ![](assets/SetUpProgram6.png)
+   ![](assets/set-up-program/edit-program1.png)
 
 1. 将显示&#x200B;**编辑程序**&#x200B;屏幕，用于更新或修改程序。
 
-   ![](assets/Editing_Program-screen3.png)
+   您可以从&#x200B;**General**&#x200B;选项卡更新程序名称和说明。
+
+   ![](assets/set-up-program/edit-program-general.png)
+
+   导航到&#x200B;**KPI**&#x200B;选项卡，以更新有关AEM Sites和Assets的信息。
+
+   ![](assets/set-up-program/edit-program-kpi.png)
+
+   此外，您还可以导航到&#x200B;**Provisioning**&#x200B;选项卡，以编辑程序中生产环境和非生产环境的配置配置。
+
+   ![](assets/set-up-program/edit-program-provision.png)
+
+1. 单击&#x200B;**Update**&#x200B;以保存所做的编辑。
 
 ## 后续步骤 {#the-next-steps}
 
-如果已设置&#x200B;**Pipeline**，则下次执行时将考虑更新的设置。 如果尚未设置管道，请按照步骤先设置管道。
+如果已设置管道，则下次执行时将考虑更新的设置。 如果尚未设置管道，请按照步骤先设置管道。
 
 请参阅[配置CI/CD管线](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html)以设置管线。
