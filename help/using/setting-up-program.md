@@ -5,7 +5,7 @@ description: 入门后，业务所有者需要对程序进行一些初始设置�
 seo-description: '入门后，业务所有者将需要执行一些初始设置AdobeAEM Cloud Manager。 这包括设置计划描述并定义将用于性能测试的KPI。 '
 feature: 入门
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: f14725f87d5c4c3afe63d4bfc924962a92705c7c
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 2%
@@ -78,7 +78,7 @@ ht-degree: 2%
    >[!NOTE]
    >设置初始程序后，您始终可以编辑该程序。 有关更多详细信息，请执行以下步骤。
 
-## 编辑程序
+## 编辑程序{#editing-program}
 
 1. 从&#x200B;**Cloud Manager**&#x200B;主屏幕导航到程序。
 
