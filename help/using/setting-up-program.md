@@ -5,9 +5,9 @@ description: 入门后，业务所有者需要对程序进行一些初始设置�
 seo-description: '入门后，业务所有者将需要执行一些初始设置AdobeAEM Cloud Manager。 这包括设置计划描述并定义将用于性能测试的KPI。 '
 feature: 入门
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
+source-git-commit: 71a6f2709efb9c4c3831deaa1ce89d93e30b775c
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '727'
 ht-degree: 2%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 2%
 
 1. 将显示&#x200B;**编辑程序**&#x200B;屏幕，用于更新或修改程序。
 
-   您可以从&#x200B;**General**&#x200B;选项卡更新程序名称和说明。
+   您可以从&#x200B;**General**&#x200B;选项卡更新程序说明。
 
    ![](assets/set-up-program/edit-program-general.png)
 
