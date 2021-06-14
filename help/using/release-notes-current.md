@@ -2,9 +2,9 @@
 title: 2021.6.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.6.0版的信息
 feature: 发行信息
-source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
+source-git-commit: 5ddbf718ad01b11dcba5dc2c5d1ab5d3cff2e9a9
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '310'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 * 质量规则`ImmutableMutableMixCheck`已更新，可将`/oak:index`节点分类为不可变。
 
-* 质量规则`CQBP-84`和`CQBP-84--dependencies`已合并到单个规则中。
+* 质量规则`CQBP-84`和`CQBP-84--dependencies`已合并到单个规则中。 作为此整合的一部分，对依赖项的扫描可更准确地识别部署到AEM运行时的第三方依赖项中的问题。
 
 * 在某些情况下，如果无法计算跳过的测试量度，则会导致管道执行失败。
 
