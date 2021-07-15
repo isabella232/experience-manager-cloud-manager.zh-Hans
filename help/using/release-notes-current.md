@@ -2,9 +2,9 @@
 title: 2021.7.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.7.0版的信息
 feature: 发行信息
-source-git-commit: 1da4ceef0d89223580800d9018c46aaec51f8927
+source-git-commit: fec742eb023e9811ee80951bd25fc2023df52d66
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '260'
 ht-degree: 6%
 
 ---
