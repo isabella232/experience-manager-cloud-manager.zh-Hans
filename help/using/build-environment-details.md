@@ -3,20 +3,20 @@ title: 了解构建环境
 description: 可查看本页以了解相关环境
 feature: 环境
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 0a5556729e64c9e8736d13b357db001dd57bc03a
+source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
 
-# 了解生成环境{#build-environment-details}
+# 了解构建环境 {#build-environment-details}
 
 Cloud Manager使用专门的构建环境来构建和测试您的代码。 此环境具有以下属性：
 
 * 构建环境基于Linux，源自Ubuntu 18.04。
 * 已安装Apache Maven 3.6.0。
-* 安装的Java版本是OracleJDK 8u202和11.0.2。
+* 安装的Java版本包括OracleJDK 8u202、Azul Zulu 8u292、OracleJDK 11.0.2和Azul Zulu 11.0.11。
 * 安装了一些其他系统包，这是必需的：
 
    * bzip2
@@ -47,44 +47,66 @@ Cloud Manager使用专门的构建环境来构建和测试您的代码。 此环
 >* [API权限](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md)
 
 
-## 使用Java 11 {#using-java-11}
+## 使用特定Java版本 {#using-java-version}
 
-Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情况下，使用Java 8构建项目。 计划在其项目中使用Java 11的客户可以使用[Apache Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/)执行此操作。
+默认情况下，项目由Cloud Manager构建过程使用Oracle8 JDK构建。 希望使用备用JDK的客户有两种选项：Maven工具链，并为整个Maven执行过程选择备用JDK版本。
 
-为此，请在pom.xml文件中添加如下所示的`<plugin>`条目：
+### Maven工具链 {#maven-toolchains}
+
+[Maven工具链插件](https://maven.apache.org/plugins/maven-toolchains-plugin/)允许项目选择特定的JDK（或&#x200B;*工具链*），以用于具有工具链感知功能的Maven插件的上下文。 可通过指定供应商和版本值在项目的`pom.xml`文件中完成此操作。 `pom.xml`文件中的示例部分为：
 
 ```xml
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-toolchains-plugin</artifactId>
-            <version>1.1</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>toolchain</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <toolchains>
-                    <jdk>
-                        <version>11</version>
-                        <vendor>oracle</vendor>
-                    </jdk>
-                </toolchains>
-            </configuration>
-        </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-toolchains-plugin</artifactId>
+    <version>1.1</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>toolchain</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <toolchains>
+            <jdk>
+                <version>11</version>
+                <vendor>oracle</vendor>
+            </jdk>
+        </toolchains>
+    </configuration>
+</plugin>
 ```
 
->[!NOTE]
->支持的`vendor`值为`oracle`和`sun`，支持的`version`值为`1.8`、`1.11`和`11`。
+这将导致所有具有工具链感知的Maven插件都使用OracleJDK版本11。
+
+使用此方法时，Maven本身仍使用默认的JDK(Oracle8)运行。 因此，通过诸如[Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/)之类的插件检查或强制实施Java版本不起作用，因此不得使用此类插件。
+
+当前可用的供应商/版本组合包括：
+
+* oracle1.8
+* oracle1.11
+* oracle11
+* sun 1.8
+* sun 1.11
+* 星期日11
+* azul 1.8
+* azul 1.11
+* azul 8
+
+### 备用Maven执行JDK版本 {#alternate-maven}
+
+还可以选择Azul 8或Azul 11作为整个Maven执行的JDK。 与工具链选项不同，这会更改所有插件所使用的JDK，除非还设置了工具链配置，在这种情况下，仍然会将工具链配置应用于具有工具链感知功能的Maven插件。 因此，使用[Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/)检查并强制实施Java版本将有效。
+
+为此，请在管道使用的git存储库分支中创建名为`.cloudmanager/java-version`的文件。 此文件可以包含内容11或8。 任何其他值都将被忽略。 如果指定了11，则使用Azul 11。 如果指定8，则使用Azul 8。
 
 >[!NOTE]
->Cloud Manager项目内部版本仍在使用Java 8调用Maven，因此通过诸如[Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/)之类的插件检查或强制实施工具链插件中配置的Java版本不起作用，因此不得使用此类插件。
+>在Cloud Manager的未来版本中，默认JDK将被更改，默认JDK将为Azul 11。 与Java 11不兼容的项目应尽快创建包含内容8的此文件，以确保它们不受此开关的影响。
 
-## 环境变量{#environment-variables}
 
-### 标准环境变量{#standard-environ-variables}
+## 环境变量 {#environment-variables}
+
+### 标准环境变量 {#standard-environ-variables}
 
 在某些情况下，客户会发现有必要根据有关项目或管道的信息来更改构建流程。
 
@@ -102,7 +124,7 @@ Cloud Manager现在支持使用Java 8和Java 11构建客户项目。 默认情�
 | CM_PROGRAM_NAME | 项目名称 |
 | ANTRACTS_VERSION | 对于暂存或生产管道，由Cloud Manager生成的合成版本 |
 
-### 管道变量{#pipeline-variables}
+### 管道变量 {#pipeline-variables}
 
 在某些情况下，客户的构建过程可能取决于特定的配置变量，这些变量不适合放置在Git存储库中，或者需要在使用同一分支的管道执行之间进行更改。
 
@@ -135,7 +157,7 @@ Cloud Manager允许在每个管道基础上通过Cloud Manager API或Cloud Manag
 ```
 
 
-## 安装其他系统包{#installing-additional-system-packages}
+## 安装其他系统包 {#installing-additional-system-packages}
 
 某些内部版本需要安装其他系统包才能完全正常运行。 例如，内部版本可能会调用Python或ruby脚本，因此需要安装适当的语言解释器。 这可以通过调用[exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/)来调用APT来完成。 此执行通常应包含在特定于Cloud Manager的Maven配置文件中。 例如，要安装python:
 
