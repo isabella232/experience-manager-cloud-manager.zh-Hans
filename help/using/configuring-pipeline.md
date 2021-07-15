@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD管线
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
+source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1308'
 ht-degree: 2%
 
 ---
@@ -25,16 +25,16 @@ ht-degree: 2%
 
 以下页介绍如何配置&#x200B;**Pipeline**。 要查看有关管道工作方式的更多概念信息，请参阅[CI/CD管道概述](ci-cd-pipeline.md)。
 
-## 视频教程{#video-tutorial-one}
+## 视频教程 {#video-tutorial-one}
 
-### 在Cloud Manager {#config-pipeline-video}中配置管道
+### 在Cloud Manager中配置管道 {#config-pipeline-video}
 
 CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
-## 了解流量{#understanding-the-flow}
+## 了解流量 {#understanding-the-flow}
 
 您可以在 UI中通过“管 **线设置** ”拼贴配 [!UICONTROL Cloud Manager]置管道 。
 
@@ -44,7 +44,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 * 定义控制生产部署的参数。
 * 配置性能测试参数。
 
-## 设置管道{#setting-up-the-pipeline}
+## 设置管道 {#setting-up-the-pipeline}
 
 >[!CAUTION]
 >
@@ -56,7 +56,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 >
 >在初始设置后，可以更改管道设置。
 
-### 从[!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}配置管道设置
+### 从[!UICONTROL Cloud Manager]配置管道设置 {#configuring-the-pipeline-settings-from-cloud-manager}
 
 使用[!UICONTROL Cloud Manager] UI设置程序后，即可设置管道。
 
@@ -171,9 +171,9 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 除了部署到暂存和生产的主管道之外，客户还能够设置其他管道，称为&#x200B;**非生产管道**。 这些管道始终执行生成和代码质量步骤。 它们也可以选择部署到Adobe Managed Services环境。
 
-## 视频教程{#video-tutorial-two}
+## 视频教程 {#video-tutorial-two}
 
-### Cloud Manager非生产和代码质量仅限管道{#non-prod-video}
+### Cloud Manager非生产和仅代码质量管道 {#non-prod-video}
 
 CI/CD非生产管道分为两类：代码质量管道和部署管道。 代码质量会从Git分支中管道所有代码，以根据Cloud Manager的代码质量扫描构建和评估这些代码。
 
@@ -183,22 +183,23 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 代码�
 
 1. 从Cloud Manager主屏幕中访问&#x200B;**非生产管道**&#x200B;拼贴。
 
-   ![](assets/Non-Production-Pipeline.png)
+   ![](/help/using/assets/non-prod-add.png)
 
-1. 单击添加按钮，以指定管道名称、管道类型和Git分支。
+1. 单击&#x200B;**添加**&#x200B;按钮，以指定管道名称、管道类型和Git分支。
 
    此外，您还可以从管道选项中设置部署触发器和重要失败行为。
 
    ![](assets/non-prod-pipe.png)
 
-1. 单击&#x200B;**Save**，此时主屏幕上的卡片上会显示管道，该管道会执行三个操作：
+1. 单击&#x200B;**Save** ，此时主屏幕上的卡片上会显示管道，该管道可执行五个操作：
 
    * **编辑**  — 允许编辑管线设置
    * **详细信息**  — 显示上次管道执行（如果有）
    * **生成**  — 导航到可从中执行管道的执行页面
+   * **访问存储库信息**  — 允许用户获取访问Cloud Manager Git存储库所需的信息
+   * **了解更多**  — 导航到了解CI/CD管线文档资源。
 
-   ![](assets/Non-prod-2.png)
-
+      ![](assets/prod-one.png)
    >[!NOTE]
    >
    >管道运行时，将显示当前步骤，并且只有&#x200B;**Details**&#x200B;操作可用。
