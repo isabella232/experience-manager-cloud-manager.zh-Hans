@@ -2,10 +2,10 @@
 title: 2021.8.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.8.0版的信息
 feature: 版本信息
-source-git-commit: 510c523423a8d7cf9ad4c5ba2af11ff12df2b1cc
+source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '169'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 * 现在有一个API可用于使每个管道的Maven依赖关系缓存失效。
 
-* Cloud Manager使用的AEM项目原型版本已更新至版本28。
+* Cloud Manager使用的AEM项目原型版本已更新至版本29。
 
 ## 错误修复 {#bug-fixes}
 
