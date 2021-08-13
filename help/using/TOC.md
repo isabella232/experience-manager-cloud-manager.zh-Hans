@@ -8,10 +8,10 @@ user-guide-description: 了解如何使用 Adobe Managed Services 在云中自�
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: e490a8f1dd17e63f35ed00d4cdf95b6e7a07b150
+source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 81%
+source-wordcount: '283'
+ht-degree: 79%
 
 ---
 
@@ -53,7 +53,8 @@ ht-degree: 81%
    + [自定义代码质量规则](custom-code-quality-rules.md)
 + 管理代码{#managing-code}
    + [Maven 项目版本处理](activating-maven-project.md)
-   + [访问 Git](accessing-git.md)
+   + [Cloud Manager中的存储库](cloud-manager-repositories.md)
+   + [访问存储库](accessing-repos.md)
    + [与Git集成](setup-cloud-manager-git-integration.md)
    + [使用多个源Git存储库](/help/using/working-with-multiple-source-git-repos.md)
 + 产品更新向导 {#product-update-wizard}
