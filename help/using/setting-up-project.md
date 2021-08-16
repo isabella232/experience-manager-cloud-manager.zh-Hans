@@ -3,16 +3,16 @@ title: 设置项目
 description: 可查看本页以了解如何设置项目
 feature: 入门、生产计划
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: cf19c7dfd593810779c03c51e08081954f8fc11e
+source-git-commit: 2a253abb98fa096f9f1c07bac94804849fad2ebb
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '884'
 ht-degree: 8%
 
 ---
 
-# 设置项目{#setting-up-your-project}
+# 设置项目 {#setting-up-your-project}
 
-## 修改项目设置详细信息{#modifying-project-setup-details}
+## 修改项目设置详细信息 {#modifying-project-setup-details}
 
 要使用Cloud Manager成功构建和部署AEM项目，现有Analytics项目需要遵守一些基本规则：
 
@@ -27,7 +27,7 @@ ht-degree: 8%
 * 如果有多个内容包，则无法保证包部署的顺序。 如果需要特定顺序，可以使用内容包依赖关系来定义顺序。 部署中的包可能已跳过[](#skipping-content-packages)。
 
 
-## 在Cloud Manager {#activating-maven-profiles-in-cloud-manager}中激活Maven配置文件
+## 在Cloud Manager中激活Maven配置文件 {#activating-maven-profiles-in-cloud-manager}
 
 在某些有限情况下，在Cloud Manager内运行时，您可能需要稍微改变构建过程，而不是在开发人员工作站上运行。 对于这些情况，可以使用[Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html)定义在包括Cloud Manager在内的不同环境中，内部版本应如何不同。
 
@@ -105,10 +105,10 @@ ht-degree: 8%
         </profile>
 ```
 
-## 受密码保护的Maven存储库支持{#password-protected-maven-repositories}
+## 受密码保护的Maven存储库支持 {#password-protected-maven-repositories}
 
 >[!NOTE]
->受密码保护的Maven存储库中的对象只应非常谨慎地使用，因为通过此机制部署的代码当前未通过Cloud Manager的质量门运行。 因此，它只应用于极少数情况下以及未绑定到AEM的代码。 建议还应将Java源以及整个项目源代码与二进制文件一起部署。
+>受密码保护的Maven存储库中的工件只应非常谨慎地使用，因为通过此机制部署的代码当前未通过Cloud Manager质量门中实施的所有质量规则运行。 因此，它只应用于极少数情况下以及未绑定到AEM的代码。 建议还应将Java源以及整个项目源代码与二进制文件一起部署。
 
 要从Cloud Manager中使用受密码保护的Maven存储库，请将密码（以及可选的用户名）指定为密钥[管道变量](/help/using/build-environment-details.md#pipeline-variables)，然后在git存储库中名为`.cloudmanager/maven/settings.xml`的文件中引用该密钥。 此文件遵循[Maven设置文件](https://maven.apache.org/settings.html)架构。 当Cloud Manager构建过程启动时，此文件中的`<servers>`元素将合并到Cloud Manager提供的默认`settings.xml`文件中。 以`adobe`和`cloud-manager`开头的服务器ID被视为保留ID，自定义服务器不应使用这些ID。 Cloud Manager将永远不会镜像与其中一个前缀或默认ID `central`匹配的服务器ID **不**。 此文件就位后，服务器ID将从`<repository>`和/或`<pluginRepository>`元素内的`pom.xml`文件中引用。 通常，这些`<repository>`和/或`<pluginRepository>`元素将包含在特定于[Cloud Manager的配置文件](#activating-maven-profiles-in-cloud-manager)中，尽管这并非严格必需的。
 
@@ -177,7 +177,7 @@ ht-degree: 8%
 </profiles>
 ```
 
-### 部署源{#deploying-sources}
+### 部署源 {#deploying-sources}
 
 最好将Java源与二进制文件一起部署到Maven存储库。
 
@@ -198,7 +198,7 @@ ht-degree: 8%
         </plugin>
 ```
 
-### 部署项目源{#deploying-project-sources}
+### 部署项目源 {#deploying-project-sources}
 
 最好将整个项目源与二进制文件一起部署到Maven存储库，以便重建确切的对象。
 
@@ -225,7 +225,7 @@ ht-degree: 8%
         </plugin>
 ```
 
-## 正在跳过内容包{#skipping-content-packages}
+## 跳过内容包 {#skipping-content-packages}
 
 在Cloud Manager中，内部版本可能会生成任意数量的内容包。
 出于各种原因，可能需要生成内容包，但不部署它。 例如，当构建仅用于测试的内容包时，或者当内容包将被构建过程中的其他步骤（即作为其他包的子包）重新打包时，这可能会非常有用。
@@ -262,6 +262,6 @@ ht-degree: 8%
         </plugin>
 ```
 
-## 根据最佳实践{#develop-your-code-based-on-best-practices}开发代码
+## 根据最佳实践开发代码 {#develop-your-code-based-on-best-practices}
 
 Adobe工程和咨询团队为AEM开发人员开发了一套[全面的最佳实践](https://helpx.adobe.com/cn/experience-manager/6-4/sites/developing/using/best-practices.html)。
