@@ -3,10 +3,10 @@ title: 2021.9.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.9.0版的信息
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ec180b60b24676bf1affe6369b6af66a10d9e8a0
+source-git-commit: 9e9836ad8793540a57048a6e43e4d158abf91579
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '179'
+ht-degree: 6%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 * 现在，“活动”页面菜单选项中将包含一个用于“下载日志”的选项，以便完成代码生成器执行。 选择此选项将下载生成步骤的日志。
 
-* 现在，直接单击项目卡片将导航到Cloud Manager概述页面。
+* 现在，直接在项目卡上单击将导航到Cloud Manager的&#x200B;**概述**&#x200B;页面。
 
 ## 错误修复 {#bug-fixes}
 
