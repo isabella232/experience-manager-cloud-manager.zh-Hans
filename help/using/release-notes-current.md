@@ -3,7 +3,7 @@ title: 2021.9.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.9.0版的信息
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 4bfd31875a2c1ac29ae93872406308ee1c1328c8
+source-git-commit: ec180b60b24676bf1affe6369b6af66a10d9e8a0
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -24,6 +24,8 @@ ht-degree: 0%
 
 ## 新增功能 {#whats-new}
 
+* Cloud Manager使用的AEM项目原型版本已更新至版本30。
+
 * Cloud Manager登录页面上的项目卡以及关联的体验已刷新。
 
 * 代码质量步骤日志现在包含有关OakPal扫描过程的详细日志记录信息。
@@ -31,8 +33,6 @@ ht-degree: 0%
 * 现在，“活动”页面菜单选项中将包含一个用于“下载日志”的选项，以便完成代码生成器执行。 选择此选项将下载生成步骤的日志。
 
 * 现在，直接单击项目卡片将导航到Cloud Manager概述页面。
-
-* Cloud Manager使用的AEM项目原型版本已更新至版本30。
 
 ## 错误修复 {#bug-fixes}
 
