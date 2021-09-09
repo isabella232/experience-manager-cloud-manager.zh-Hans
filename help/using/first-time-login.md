@@ -1,18 +1,18 @@
 ---
 title: 首次登录
-seo-title: 首次登录AdobeAEM Cloud Manager
+seo-title: First Time Login to Adobe AEM Cloud Manager
 description: 如果您已设置常规配置并且首次可以使用Cloud Manager，请遵循本页。
-seo-description: 如果您已设置常规配置并且首次可以使用AdobeAEM Cloud Manager，请遵循本页。
+seo-description: Follow this page if you have set up your general configurations and you are ready to use Adobe AEM Cloud Manager for the first time.
 uuid: 7c8458a6-6de8-4946-ac0c-fb10bce17a15
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
-feature: 入门
+feature: Getting Started
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 9be78d21b455095c1b1bd49cdb267a8aa5624927
+source-git-commit: eea3d82a803e7dcd172ce4c0b3506f952f46ff51
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '201'
 ht-degree: 10%
 
 ---
@@ -24,17 +24,17 @@ ht-degree: 10%
 >[!NOTE]
 >根据[!UICONTROL Cloud Manager]中分配的角色和应用程序的状态，使用[!UICONTROL Cloud Manager] UI时，您将看到不同的屏幕。
 
-## 首次登录{#logging-in-for-the-first-time}
+## 首次登录 {#logging-in-for-the-first-time}
 
 1. 登录到&#x200B;**Adobe[!UICONTROL Experience Cloud]**，您将看到&#x200B;**程序**&#x200B;的列表。
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
-1. 选择程序（例如，**We.Retail Global**），然后单击左上角的图标以打开[!UICONTROL Cloud Manager]。
+1. 选择程序（例如，**We.Retail Global**）。 在登陆页面上看到项目卡后，请选择&#x200B;**...** ，查看可供您使用的菜单选项。   选择&#x200B;**Cloud Manager** ，以导航到Cloud Manager的&#x200B;**概述**&#x200B;页面。
 
-   ![](assets/first-timea1.png)
+   ![](assets/navigate-cm1.png)
 
-1. 将显示[!UICONTROL Cloud Manager]的功能板。
+1. 此时会显示Cloud Manager的&#x200B;**概述**&#x200B;页面。
 
    ![](assets/FirstLogin1.png)
 
@@ -44,9 +44,9 @@ ht-degree: 10%
    >
    >请参阅[设置程序](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html)以完成后续步骤。
 
-## 视频教程{#video-tutorial-two}
+## 视频教程 {#video-tutorial-two}
 
-### Cloud Manager活动选项卡{#activity-video}
+### Cloud Manager“活动”选项卡 {#activity-video}
 
 Cloud Manager提供了对项目活动的整合视图，其中列出了所有CI/CD管道执行（包括生产和非生产），从而可以查看过去和当前活动的情况，并且可以查看任何活动的详细信息。
 
