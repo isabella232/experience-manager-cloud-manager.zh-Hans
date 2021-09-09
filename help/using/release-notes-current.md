@@ -3,7 +3,7 @@ title: 2021.9.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.9.0版的信息
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 3fccb0b577662ebc12b65777cbf9624e06d4259d
+source-git-commit: 4bfd31875a2c1ac29ae93872406308ee1c1328c8
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager]版本2021.8.0的发行日期是2021年9月9日。
+[!UICONTROL Cloud Manager]版本2021.9.0的发行日期是2021年9月9日。
 下一版本计划于2021年10月7日发布。
 
 ## 新增功能 {#whats-new}
