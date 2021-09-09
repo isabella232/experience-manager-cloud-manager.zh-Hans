@@ -8,10 +8,10 @@ user-guide-description: 了解如何使用 Adobe Managed Services 在云中自�
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
+source-git-commit: 3fccb0b577662ebc12b65777cbf9624e06d4259d
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 79%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 79%
    + [基于角色的权限](role-based-permissions.md)
    + [添加用户和角色](setting-up-users-and-roles.md)
    + [已设置的环境](environments-provisioned.md)
-+ 入门 {#getting-started}
++ 快速入门 {#getting-started}
    + [首次登录](first-time-login.md)
    + [设置程序](setting-up-program.md)
    + 创建 AEM 应用程序项目 {#create-application-project}
@@ -61,7 +61,8 @@ ht-degree: 79%
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
 + 发行说明 {#release-notes}
-   + [最新发行说明（2021.8.0 版）](release-notes-current.md)
+   + [最新发行说明（2021.9.0 版）](release-notes-current.md)
+   + [2021.8.0 版发行说明](release-notes-2021-8-0.md)
    + [2021.7.0 版发行说明](release-notes-2021-7-0.md)
    + [2021.6.0 版发行说明](release-notes-2021-6-0.md)
    + [2021.5.0 版发行说明](release-notes-2021-5-0.md)
