@@ -1,9 +1,10 @@
 ---
 title: Cloud Manager存储库
 description: Cloud Manager存储库
-source-git-commit: 7bda34be143d2d7587e61c09dab642f3419dfad9
+exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
+source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -51,7 +52,7 @@ Git子模块可用于在构建时在git存储库中合并多个分支的内容�
 $ git submodule update --init
 ```
 
-这会将每个子模块检出到相应的目录中。 对于熟悉使用git子模块且不希望管理外部合并流程的组织而言，此技术是https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html的一种潜在替代方法。
+这会将每个子模块检出到相应的目录中。 此技术是[与多个源Git存储库](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html)一起使用的一种潜在替代方法，适用于那些熟悉使用git子模块但不希望管理外部合并流程的组织。
 
 例如，假设有三个存储库，每个存储库都包含一个名为main的分支。 在“主”存储库（即在管道中配置的存储库）中，主分支具有一个pom.xml文件，用于声明其他两个存储库中包含的项目：
 
@@ -101,4 +102,3 @@ $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/proje
 * Git URL必须完全采用上述语法。 出于安全考虑，请勿在这些URL中嵌入凭据。
 * 仅支持位于分支根的子模块。
 * Git子模块引用存储到特定的git提交中。 因此，当对子模块存储库进行更改时，例如，使用`git submodule update --remote` ，需要更新引用的提交。
-
