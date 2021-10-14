@@ -1,27 +1,27 @@
 ---
 title: 配置 CI/CD 管线
-seo-title: 配置 CI/CD 管线
+seo-title: Configure your CI/CD Pipeline
 description: 可以按照本页从Cloud Manager配置管道设置。
-seo-description: '在开始部署代码之前，必须从AEM Cloud Manager中配置管道设置。 '
+seo-description: Before you start to deploy your code, you must configure your pipeline settings from the AEM Cloud Manager.
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-feature: CI-CD管线
+feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
+source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 2%
+source-wordcount: '1378'
+ht-degree: 1%
 
 ---
 
 # 配置 CI/CD 管线 {#configure-your-ci-cd-pipeline}
 
 >[!NOTE]
->要了解如何在AEM as a Cloud Service中为Cloud Manager配置CI/CD管线，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager)。
+>要了解如何在AEMas a Cloud Service中为Cloud Manager配置CI/CD管线，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager)。
 
 以下页介绍如何配置&#x200B;**Pipeline**。 要查看有关管道工作方式的更多概念信息，请参阅[CI/CD管道概述](ci-cd-pipeline.md)。
 
@@ -133,7 +133,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 您可以为暂存和生产部署配置一组单独的路径。 如果已配置，则在部署任何内容包后，这些缓存操作将作为部署管道步骤的一部分执行。 这些设置使用标准AEM Dispatcher行为 — 无效执行缓存失效，与从创作到发布激活内容时类似；刷新执行缓存删除。
 
-通常，最好使用无效操作，但有时可能需要刷新，尤其是在使用AEM HTML客户端库时。
+通常，最好使用无效操作，但有时可能需要刷新，尤其是在使用AEMHTML客户端库时。
 
 >[!NOTE]
 >
@@ -179,30 +179,53 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 代码�
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
+### 添加非生产管道 {#add-non-production-pipeline}
+
 在主屏幕上，这些管道将列在新卡中：
 
-1. 从Cloud Manager主屏幕中访问&#x200B;**非生产管道**&#x200B;拼贴。
+1. 从Cloud Manager主屏幕中访问&#x200B;**Pipelines**&#x200B;卡。 单击&#x200B;**+Add**&#x200B;并选择&#x200B;**添加非生产管道**。
 
-   ![](/help/using/assets/non-prod-add.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
-1. 单击&#x200B;**添加**&#x200B;按钮，以指定管道名称、管道类型和Git分支。
+1. **此时将显示“添加非生**  产管道”对话框。选择要创建的管道类型，包括&#x200B;**代码质量管道**&#x200B;或&#x200B;**部署管道**。
 
-   此外，您还可以从管道选项中设置部署触发器和重要失败行为。
+   此外，您还可以从&#x200B;**部署选项**&#x200B;中设置&#x200B;**部署触发器**&#x200B;和&#x200B;**重要失败行为**。 单击&#x200B;**继续**。
 
-   ![](assets/non-prod-pipe.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
-1. 单击&#x200B;**Save** ，此时主屏幕上的卡片上会显示管道，该管道可执行五个操作：
 
-   * **编辑**  — 允许编辑管线设置
-   * **详细信息**  — 显示上次管道执行（如果有）
-   * **生成**  — 导航到可从中执行管道的执行页面
-   * **访问存储库信息**  — 允许用户获取访问Cloud Manager Git存储库所需的信息
+1. 现在，新创建的非生产管道会显示在&#x200B;**Pipelines**&#x200B;卡中。
+
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add4.png)
+
+
+   管道显示在主屏幕的卡片上，带有三个操作，如下所示：
+
+   * **添加**  — 允许添加新管道。
+   * **访问存储库信息**  — 允许用户获取访问Cloud Manager Git存储库所需的信息。
    * **了解更多**  — 导航到了解CI/CD管线文档资源。
 
-      ![](assets/prod-one.png)
-   >[!NOTE]
-   >
-   >管道运行时，将显示当前步骤，并且只有&#x200B;**Details**&#x200B;操作可用。
+### 编辑非生产管道 {#editing-nonprod-pipeline}
+
+可以从&#x200B;**程序概述**&#x200B;页面的&#x200B;**管道卡**&#x200B;编辑管道配置。
+
+请按照以下步骤编辑配置的非生产管道：
+
+1. 从&#x200B;**程序概述**&#x200B;页面导航到&#x200B;**管道**&#x200B;卡。
+
+1. 选择非生产管道并单击&#x200B;**...**。 单击&#x200B;**编辑**，如下图所示。
+
+
+1. 此时将显示&#x200B;**编辑生产管道**&#x200B;对话框。
+
+   1. 通过&#x200B;**Configuration**&#x200B;选项卡，可更新&#x200B;**管道名称**、**部署触发器**&#x200B;和&#x200B;**重要量度失败行为**。
+
+      >[!NOTE]
+      >请参阅[添加和管理存储库](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) ，以了解如何在Cloud Manager中添加和管理存储库。
+
+
+1. 编辑完非生产管道后，单击&#x200B;**更新**。
+
 
 ## 后续步骤 {#the-next-steps}
 
