@@ -2,9 +2,9 @@
 title: Cloud Manager存储库
 description: Cloud Manager存储库
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
+source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
    >[!NOTE]
    >在Cloud Manager中创建的存储库也将可供您在添加或编辑管道步骤期间从中进行选择。
 
-1. 您可以选择存储库，然后单击表最右侧的菜单选项&#x200B;**复制存储库URL**、**查看和更新**&#x200B;或&#x200B;**删除**&#x200B;您的存储库，如下图所示。
+1. You can select the repository and click on the menu options from the far right of the table to **Copy Repository URL**, **View &amp; Update** or **Delete** your repository, as shown in the  figure below.
 
    ![](assets/create-repo3.png)
 
@@ -97,8 +97,9 @@ $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/proje
 
 有关git子模块的更多信息，请参阅[Git参考手册](https://git-scm.com/book/en/v2/Git-Tools-Submodules)。
 
-使用git子模块时，请牢记以下事项：
+When using git submodules, please keep these things in mind:
 
 * Git URL必须完全采用上述语法。 出于安全考虑，请勿在这些URL中嵌入凭据。
 * 仅支持位于分支根的子模块。
-* Git子模块引用存储到特定的git提交中。 因此，当对子模块存储库进行更改时，例如，使用`git submodule update --remote` ，需要更新引用的提交。
+* Git子模块引用存储到特定的git提交中。 因此，当对子模块存储库进行更改时，例如，使用`git submodule update --remote`需要更新引用的提交。
+* 除非另有必要，否则强烈建议使用“浅层”子模块。 为此，请为每个子模块运行`git config -f .gitmodules submodule.<submodule path>.shallow true`。
