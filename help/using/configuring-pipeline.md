@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
+source-git-commit: e748383fb627ac6ecf69f1b6e313bb5710fbf444
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1379'
 ht-degree: 1%
 
 ---
@@ -215,13 +215,14 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 代码�
 
 1. 选择非生产管道并单击&#x200B;**...**。 单击&#x200B;**编辑**，如下图所示。
 
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit1.png)
 
-1. 此时将显示&#x200B;**编辑生产管道**&#x200B;对话框。
+1. 此时会显示&#x200B;**编辑生产管道**&#x200B;对话框，用于更新&#x200B;**管道名称**、**存储库**、**Git分支**、**部署触发器**&#x200B;和&#x200B;**重要量度失败行为**。
 
-   1. 通过&#x200B;**Configuration**&#x200B;选项卡，可更新&#x200B;**管道名称**、**部署触发器**&#x200B;和&#x200B;**重要量度失败行为**。
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit2.png)
 
-      >[!NOTE]
-      >请参阅[添加和管理存储库](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) ，以了解如何在Cloud Manager中添加和管理存储库。
+   >[!NOTE]
+   >请参阅[添加和管理存储库](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) ，以了解如何在Cloud Manager中添加和管理存储库。
 
 
 1. 编辑完非生产管道后，单击&#x200B;**更新**。
