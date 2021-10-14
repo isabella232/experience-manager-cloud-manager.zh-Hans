@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: bdbee51ff0a61c2a72ff7ae3a742e2dd817c671a
+source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1491'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,9 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
       * **在Stage部署后** 进行批准的功能与在生产部署前进行批准的功能类似，但是会在Stage部署步骤之后立即进行，即在完成任何测试之前，与在生产部署前进行批准（在所有测试完成后完成）进行比较。
 
       * **跳过负载平衡器**
-   1. 为Stage选择&#x200B;**Dispatcher配置**。
+   1. 为Stage选择&#x200B;**Dispatcher配置**。 输入路径，从&#x200B;**Type**&#x200B;中选择操作，然后单击&#x200B;**Add Path**。 每个环境最多可以指定100个路径。
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
    1. 为生产选择&#x200B;**部署选项**。 现在，您可以定义控制生产部署的参数。 以下是三个可用选项：
 
@@ -114,7 +116,9 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
          >如果选择了&#x200B;**Scheduled**&#x200B;选项，则可以在阶段部署(和&#x200B;**使用GoLive批准**，如果已启用)之后，将生产部署计划到管道&#x200B;**之后。**&#x200B;用户还可以选择立即执行生产部署。
          >
          >请参阅[部署代码](deploying-code.md)，以设置部署计划或立即执行生产。
-   1. 为生产设置&#x200B;**Dispatcher配置**。
+   1. 为生产设置&#x200B;**Dispatcher配置**。 输入路径，从&#x200B;**Type**&#x200B;中选择操作，然后单击&#x200B;**Add Path**。 每个环境最多可以指定100个路径。
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
 
       作为部署管理器，您可以配置一组内容路径，在设置或编辑管道时，这些路径将从AEM Dispatcher缓存中为publish实例配置失效的&#x200B;****&#x200B;或&#x200B;**flushed**。
 
