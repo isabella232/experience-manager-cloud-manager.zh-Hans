@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 973fec504cd5f35435b10e3d1d28f3ba20ff4ab9
+source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 1%
 >[!NOTE]
 >要了解如何在AEMas a Cloud Service中为Cloud Manager配置CI/CD管线，请参阅[此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager)。
 
-以下页介绍如何配置&#x200B;**Pipeline**。 要查看有关管道工作方式的更多概念信息，请参阅[CI/CD管道概述](ci-cd-pipeline.md)。
+The following page explains how to configure the **Pipeline**. 要查看有关管道工作方式的更多概念信息，请参阅[CI/CD管道概述](ci-cd-pipeline.md)。
 
-## 视频教程 {#video-tutorial-one}
+## Video Tutorial {#video-tutorial-one}
 
 ### 在Cloud Manager中配置管道 {#config-pipeline-video}
 
@@ -40,7 +40,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 部署管理器负责设置管道。 这样做时，首先从&#x200B;**Git存储库**&#x200B;中选择一个分支。 管道配置包括：
 
-* 定义将启动管道的触发器。
+* defining the trigger that will start the pipeline.
 * 定义控制生产部署的参数。
 * 配置性能测试参数。
 
@@ -70,45 +70,45 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 1. **此时会显** 示“添加生产管道”对话框。
 
-   1. 输入管道名称。 您可以选择&#x200B;**Repository**&#x200B;和&#x200B;**Git分支**。
+   1. 输入&#x200B;**管道名称**。 您可以选择&#x200B;**Repository**&#x200B;和&#x200B;**Git分支**。
 
       ![](/help/using/assets/configure-pipelines/add-prod2.png)
 
-   1. 您可以从&#x200B;**部署选项**&#x200B;中设置&#x200B;**部署触发器**&#x200B;和&#x200B;**重要失败行为**。
+   1. 您可以从&#x200B;**部署选项**&#x200B;中设置&#x200B;**部署触发器**&#x200B;和&#x200B;**重要量度失败行为**。
 
       ![](/help/using/assets/configure-pipelines/add-prod3.png)
 
 
-      您可以定义启动管道的触发器：
+      您可以分配以下部署触发器以启动管道：
 
       * **手动**  — 使用UI手动启动管道。
       * **在Git更改中**  — 每当向配置的git分支添加提交时，都会启动CI/CD管道。即使选择此选项，也始终可以手动启动管道。
 
-         >[!NOTE]
-         >在管道设置或编辑期间，部署管理器可以选择在任何质量门中遇到重要故障时定义管道的行为。
-      这对于希望实现更自动化流程的客户非常有用。 可用选项包括：
+      在管道设置或编辑期间，部署管理器可以选择在任何质量门中遇到重要故障时定义管道的行为。
+
+      This is useful for customers who have the desire for more automated processes. 可用选项包括：
 
       * **每次提问**  — 这是默认设置，需要对任何重要故障进行手动干预。
-      * **立即取消**  — 如果选中此选项，则每当发生重要故障时，管道都将被取消。这实质上是在模拟用户手动拒绝每个故障。
-      * **立即批准**  — 如果选中此选项，则每当发生重要故障时，管道将自动继续。这实质上是在模拟用户手动批准每次失败。
+      * **立即失败**  — 如果选中此选项，则每当发生重要故障时，将取消管道。这实质上是在模拟用户手动拒绝每个故障。
+      * **立即继续**  — 如果选中此选项，则每当发生重要故障时，管道将自动继续。这实质上是在模拟用户手动批准每次失败。
    1. 选择&#x200B;**部署选项**。
 
       ![](/help/using/assets/configure-pipelines/add-prod4.png)
 
       * **在Stage部署后** 进行批准的功能与在生产部署前进行批准的功能类似，但是会在Stage部署步骤之后立即进行，即在完成任何测试之前，与在生产部署前进行批准（在所有测试完成后完成）进行比较。
 
-      * **跳过负载平衡器**
-   1. 为Stage选择&#x200B;**Dispatcher配置**。 输入路径，从&#x200B;**Type**&#x200B;中选择操作，然后单击&#x200B;**Add Path**。 每个环境最多可以指定100个路径。
+      * **跳过负载平衡** 器更改。
+   1. 为Stage选择&#x200B;**Dispatcher配置**。 Enter the path, select the action from **Type**, and click **Add Path**. You can specify up to 100 paths per environment.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
-   1. 为生产选择&#x200B;**部署选项**。 现在，您可以定义控制生产部署的参数。 以下是三个可用选项：
+   1. Select the **Deployment Options** for Production. Now you define the parameters controlling the production deployment.
+
+      ![](/help/using/assets/configure-pipelines/prod-deploymentoptions.png)
+
+      以下是三个可用选项：
 
       * **使用上线批准**  — 部署必须由业务所有者、项目经理或部署经理通过UI手动 [!UICONTROL Cloud Manager] 批准。
-      * **使用CSE监督**  — 使用CSE来实际开始部署。在管道设置或启用CSE监督时进行编辑期间，部署管理器可以选择：
-
-      * **任何CSE**:是指任何可用的案例
-      * **我的CSE**:是指分配给客户或其备份的特定CSE（如果CSE不在办公室）
 
       * **已计划**  — 此选项允许用户启用已计划的生产部署。
 
@@ -116,6 +116,11 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
          >如果选择了&#x200B;**Scheduled**&#x200B;选项，则可以在阶段部署(和&#x200B;**使用GoLive批准**，如果已启用)之后，将生产部署计划到管道&#x200B;**之后。**&#x200B;用户还可以选择立即执行生产部署。
          >
          >请参阅[部署代码](deploying-code.md)，以设置部署计划或立即执行生产。
+
+         * **使用CSE监督**  — 使用CSE来实际开始部署。在管道设置或启用CSE监督时进行编辑期间，部署管理器可以选择：
+
+            * **任何CSE**:是指任何可用的案例
+            * **我的CSE**:是指分配给客户或其备份的特定CSE（如果CSE不在办公室）
    1. 为生产设置&#x200B;**Dispatcher配置**。 输入路径，从&#x200B;**Type**&#x200B;中选择操作，然后单击&#x200B;**Add Path**。 每个环境最多可以指定100个路径。
 
       ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
@@ -124,11 +129,11 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
       您可以为暂存和生产部署配置一组单独的路径。 如果已配置，则在部署任何内容包后，这些缓存操作将作为部署管道步骤的一部分执行。 这些设置使用标准AEM Dispatcher行为 — 无效执行缓存失效，与从创作到发布激活内容时类似；刷新执行缓存删除。
 
-      通常，最好使用无效操作，但有时可能需要刷新，尤其是在使用AEMHTML客户端库时。
+      In general, the use of the invalidate action is preferable but there may be cases where flushing is required, especially when using AEM HTML Client Libraries.
 
       >[!NOTE]
       >
-      >请参阅[Dispatcher概述](dispatcher-configurations.md)获取有关Dispatcher缓存的更多信息。
+      >Please refer to [Dispatcher Overview](dispatcher-configurations.md) get more information on Dispatcher caching.
 
 
 
@@ -136,9 +141,9 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 1. 选择所有选项后，单击&#x200B;**继续**。
 
-1. 从&#x200B;**暂存测试**&#x200B;步骤中选择您的选项。 您可以配置&#x200B;*AEM Sites*&#x200B;和&#x200B;*AEM Assets*&#x200B;性能测试，具体取决于您已获得许可的产品。 有关更多详细信息，请参阅[性能测试](understand-your-test-results.md#performance-testing)。
+1. Select your options from the **Stage Testing** step. 您可以配置&#x200B;*AEM Sites*&#x200B;和&#x200B;*AEM Assets*&#x200B;性能测试，具体取决于您已获得许可的产品。 Refer to [Performance Testing](understand-your-test-results.md#performance-testing) for more details.
 
-   1. 从&#x200B;**站点内容交付/分布式负载权重**&#x200B;中选择您的选项。 有关更多详细信息，请参阅性能测试](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-sites)中的[AEM Sites。
+   1. Select your options from **Sites Content Delivery/Distributed Load Weight**. 有关更多详细信息，请参阅性能测试](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-sites)中的[AEM Sites。
 
       ![](/help/using/assets/configure-pipelines/add-prod5.png)
 
@@ -146,7 +151,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
       ![](/help/using/assets/configure-pipelines/add-prod6.png)
 
-1. 单击&#x200B;**Save**&#x200B;以完成添加生产管道。
+1. Click on **Save** to complete adding production pipeline.
 
 ### 编辑生产管道 {#editing-prod-pipeline}
 
@@ -172,6 +177,28 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 1. 编辑完管道后，单击&#x200B;**更新**。
 
+### 其他生产管道操作 {#additional-prod-actions}
+
+#### 运行生产管道 {#run-prod}
+
+可以从管道卡运行生产管道：
+
+1. 从&#x200B;**程序概述**&#x200B;页面导航到&#x200B;**管道**&#x200B;卡。
+
+1. 单击&#x200B;**...从**&#x200B;管道&#x200B;**卡中单击**&#x200B;运行&#x200B;**，如下图所示。**
+
+   ![](/help/using/assets/configure-pipelines/prod-run.png)
+
+#### 删除生产管道 {#delete-prod}
+
+可以从管道卡中删除生产管道：
+
+1. 从&#x200B;**程序概述**&#x200B;页面导航到&#x200B;**管道**&#x200B;卡。
+
+1. 单击&#x200B;**...从**&#x200B;管道&#x200B;**卡中单击**&#x200B;删除&#x200B;**，如下图所示。**
+
+   ![](/help/using/assets/configure-pipelines/prod-delete.png)
+
 ## 仅限非生产和代码质量管道
 
 除了部署到暂存和生产的主管道之外，客户还能够设置其他管道，称为&#x200B;**非生产管道**。 这些管道始终执行生成和代码质量步骤。 它们也可以选择部署到Adobe Managed Services环境。
@@ -184,7 +211,7 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 代码�
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
-### 添加非生产管道 {#add-non-production-pipeline}
+### Adding a Non-Production Pipeline {#add-non-production-pipeline}
 
 在主屏幕上，这些管道将列在新卡中：
 
@@ -194,7 +221,7 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 代码�
 
 1. **此时将显示“添加非生**  产管道”对话框。选择要创建的管道类型，包括&#x200B;**代码质量管道**&#x200B;或&#x200B;**部署管道**。
 
-   此外，您还可以从&#x200B;**部署选项**&#x200B;中设置&#x200B;**部署触发器**&#x200B;和&#x200B;**重要失败行为**。 单击&#x200B;**继续**。
+   此外，您还可以从&#x200B;**部署选项**&#x200B;中设置&#x200B;**部署触发器**&#x200B;和&#x200B;**重要量度失败行为**。 单击&#x200B;**继续**。
 
    ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
@@ -228,6 +255,17 @@ CI/CD非生产管道分为两类：代码质量管道和部署管道。 代码�
 
    >[!NOTE]
    >请参阅[添加和管理存储库](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) ，以了解如何在Cloud Manager中添加和管理存储库。
+
+   您可以分配以下部署触发器以启动管道：
+
+   * **手动**  — 使用UI手动启动管道。
+   * **在Git更改中**  — 每当向配置的git分支添加提交时，都会启动CI/CD管道。即使选择此选项，也始终可以手动启动管道。
+
+   在管道设置或编辑期间，部署管理器可以选择在任何质量门中遇到重要故障时定义管道的行为。 这对于希望实现更自动化流程的客户非常有用。 可用选项包括：
+
+   * **每次提问**  — 这是默认设置，需要对任何重要故障进行手动干预。
+   * **Fail Immediately** - If selected, the pipeline will be cancelled whenever an Important failure occurs. 这实质上是在模拟用户手动拒绝每个故障。
+   * **Continue immediately** - If selected, the pipeline will proceed automatically whenever an Important failure occurs. 这实质上是在模拟用户手动批准每次失败。
 
 
 1. 编辑完非生产管道后，单击&#x200B;**更新**。
