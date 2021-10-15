@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
+source-git-commit: 9509f83f3cecbeaa81543e3c1f8ec33028009e6a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 1%
@@ -25,14 +25,6 @@ ht-degree: 1%
 
 以下页介绍如何配置&#x200B;**Pipeline**。 要查看有关管道工作方式的更多概念信息，请参阅[CI/CD管道概述](ci-cd-pipeline.md)。
 
-## 视频教程 {#video-tutorial-one}
-
-### 在Cloud Manager中配置管道 {#config-pipeline-video}
-
-CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 
 ## 了解流量 {#understanding-the-flow}
 
@@ -43,6 +35,14 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 * 定义将启动管道的触发器。
 * 定义控制生产部署的参数。
 * 配置性能测试参数。
+
+## 视频教程 {#video-tutorial-one}
+
+### 在Cloud Manager中配置管道 {#config-pipeline-video}
+
+CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和性能测试参数的参数。
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 ## 设置管道 {#setting-up-the-pipeline}
 
@@ -56,7 +56,7 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 >
 >在初始设置后，可以更改管道设置。
 
-## 从管道卡添加新的生产管线 {#adding-production-pipeline}
+### 从管道卡添加新的生产管线 {#adding-production-pipeline}
 
 设置程序并使用[!UICONTROL Cloud Manager] UI至少有一个环境后，即可添加生产管道。
 
