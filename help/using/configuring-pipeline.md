@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
+source-git-commit: 973fec504cd5f35435b10e3d1d28f3ba20ff4ab9
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -158,29 +158,19 @@ CI/CD生产管道配置定义将启动管道的触发器、控制生产部署和
 
 1. 单击&#x200B;**...从**&#x200B;管道&#x200B;**卡中单击**&#x200B;编辑&#x200B;**，如下图所示。**
 
+   ![](/help/using/assets/configure-pipelines/edit-prod1.png)
 
 1. 此时将显示&#x200B;**编辑生产管道**&#x200B;对话框。
 
-   1. 通过&#x200B;**Configuration**&#x200B;选项卡，可更新&#x200B;**管道名称**、**部署触发器**&#x200B;和&#x200B;**重要量度失败行为**。
+   1. 通过&#x200B;**配置**&#x200B;选项卡，可以更新&#x200B;**管道名称**、**存储库**、**Git分支**、**部署触发器**、**重要量度失败行为**、**部署选项**&#x200B;和&#x200B;**调度程序**&#x200B;配置。
 
       >[!NOTE]
       >请参阅[添加和管理存储库](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) ，以了解如何在Cloud Manager中添加和管理存储库。
 
 
-   1. **Source**&#x200B;选项卡提供了选项，用于选中或取消选中&#x200B;**Pause before deploying to Production**&#x200B;和&#x200B;**Scheduled**&#x200B;选项（从&#x200B;**Production Deployment Options**）。
-
-
-   1. 通过&#x200B;**体验审核**&#x200B;选项，您可以更新或添加新页面。
-
+   1. **暂存测试**&#x200B;选项卡提供了一个选项，用于从&#x200B;**站点内容交付/分布式负载权重**&#x200B;和&#x200B;**资产性能测试分发**&#x200B;中重新选择您的选项。
 
 1. 编辑完管道后，单击&#x200B;**更新**。
-
-1. 单击&#x200B;**设置管道**&#x200B;以设置和配置管道。
-
-   ![](assets/Setup-Pipeline.png)
-
-
-
 
 ## 仅限非生产和代码质量管道
 
