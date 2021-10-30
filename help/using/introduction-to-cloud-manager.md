@@ -1,24 +1,24 @@
 ---
 title: Cloud Manager 简介
-seo-title: Cloud Manager 简介
+seo-title: Introduction to Cloud Manager
 description: '本页作为了解 Cloud Manager 的起始点。 '
-seo-description: '本页作为了解 Cloud Manager 的起始点，重点讲述了其优势和主要功能。 '
+seo-description: This page serves as a starting point for learning about Adobe AEM Cloud Manager and highlights the benefits and key features.
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-feature: 入门
+feature: Getting Started
 level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 81c14382821de6b2d249000a79799747a6d9cb19
+source-git-commit: 08d831c560510d58062ed81fab809c12169810cb
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 79%
+source-wordcount: '814'
+ht-degree: 66%
 
 ---
 
-# [!UICONTROL Cloud Manager]{#introduction-to-cloud-manager} 简介
+# [!UICONTROL Cloud Manager] 简介{#introduction-to-cloud-manager}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
@@ -29,22 +29,25 @@ ht-degree: 79%
 
 ## 简介 {#introduction}
 
-[!UICONTROL Cloud Manager]是云中Adobe Experience Manager(AEM)的一部分，允许组织在云中自行管理Experience Manager。它包含一个持续集成和持续交付 (CI/CD) 框架，使 IT 团队和实施合作伙伴能够在不影响性能或安全性的情况下快速交付自定义或更新。
+[!UICONTROL Cloud Manager] 对于Adobe Experience Manager，开发人员能够通过基于Adobe Experience Manager最佳实践的简化工作流创建具有影响力的客户体验。 针对Adobe Experience Manager优化的CI/CD管道允许您通过检入代码并一直移动到生产就绪状态，轻松合并开发工作流。 在构建阶段，我们会使用经过尝试和学习的最佳实践对您的自定义代码更新进行彻底测试，以便为客户提供有影响的数字体验。 Cloud Manager使用开放API方法，使您能够与系统集成，而不会中断现有流程和工具。
 
-本文档网站专门介绍Adobe Managed Services(AMS)客户可用的Cloud Manager的特性和功能。 有关AEM as a Cloud Service客户的Cloud Manager特性和功能的文档，请参阅[为AEM as aCloud Service实施应用程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=en)。
+本文档网站专门介绍了适用于Adobe Managed Services(AMS)客户的Cloud Manager的特性和功能。 AEMas a Cloud Service客户的对等文档可在 [为AEMas a Cloud Service实施应用程序](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=en).
 
-通过 [!UICONTROL Cloud Manager] 自助式客户门户，**组织**&#x200B;可以执行以下操作/利用以下功能：
+借助Cloud Manager，您的开发团队可以利用以下功能：
 
-* **持续集成和持续交付**&#x200B;代码，将上市时间从几个月/几周缩短到几天/几小时。
-* 在投入生产之前，根据最佳实践&#x200B;**执行代码审查、性能测试和安全性验证**&#x200B;以将生产中断降至最低。
-* 即使在工作时间之外，也能够完成&#x200B;**自动、计划或手动部署**，从而可最大程度地实现灵活性和控制。
-* **自动缩放**&#x200B;功能可智能地检测增加容量需求，并自动使更多的调度程序/发布区段联机。
+* 持续集成和持续交付代码，将上市时间从几个月/几周缩短到几天/几小时。
+
+* 在投入生产之前，根据最佳实践执行代码检查、性能测试和安全性验证以将生产中断降至最低。
+
+* API连接，以补充现有DevOps流程。
+
+* 自动缩放功能可智能地检测增加容量需求，并自动使更多的调度程序/发布区段联机。
 
 下图说明了 [!UICONTROL Cloud Manager] 中使用的 CI/CD 流程：
 
 ![](assets/screen_shot_2018-05-12at73843pm.png)
 
-## [!UICONTROL Cloud Manager] 的主要功能 {#key-features-in-cloud-manager}
+## [!UICONTROL Cloud Manager] 的主要功能  {#key-features-in-cloud-manager}
 
 组织可以利用 [!UICONTROL Cloud Manager] 的以下功能：
 
@@ -54,7 +57,7 @@ ht-degree: 79%
 
 客户可以定义特定于应用程序的关键绩效指标 (KPI)（如每分钟的页面查看峰值和页面加载的预期响应时间），这些指标最终构成衡量部署是否成功的基础。可以轻松定义不同团队成员的角色和权限。新的自助式界面在将控制权重新交还给用户的同时，还提供了到最佳实践的链接，并且能够在需要时联系 Adobe 内可提供必要指导的专家。
 
-要探索[!UICONTROL Cloud Manager]的UI并开始使用，请参阅[首次登录](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html)。
+探索并开始使用 [!UICONTROL Cloud Manager]的UI，请参阅 [首次登录](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
 
 ### CI/CD 管线 {#ci-cd-pipeline}
 
@@ -62,7 +65,7 @@ ht-degree: 79%
 
 通过 [!UICONTROL Cloud Manager] UI，客户能够配置并启动他们的 CI/CD 管线。在执行此管线期间，会执行彻底的代码扫描，以确保只有高质量的应用程序才能投入到生产环境。
 
-要了解有关从[!UICONTROL Cloud Manager]的UI配置管道的更多信息，请参阅[配置CI/CD管道](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html)。
+要详细了解如何从 [!UICONTROL Cloud Manager]的UI，请参阅 [配置CI/CD管线](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
 
 ### 灵活的部署模式 {#flexible-deployment-modes}
 
