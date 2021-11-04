@@ -3,9 +3,9 @@ title: 2021.11.0 版发行说明
 description: 请阅读本页以了解Cloud Manager版本2021.11.0的相关信息
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0395fd4263ae37bce49c698e8e72ad7b08af046a
+source-git-commit: e6e5a17c16c42e0b0ed5aedd2f9a6360fd81d8cd
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '368'
 ht-degree: 3%
 
 ---
@@ -29,6 +29,8 @@ ht-degree: 3%
 * 的 `x-request-id` 响应标头现在在API操场上可见 [www.adobe.io](https://www.adobe.io/). 提交客户关怀问题以进行疑难解答时，此标题非常有用。
 
 * 作为用户，我看到带零管道的管道卡为我提供了适当的指导。
+
+* 现在提供了新的活动页面，可在其中查看管道和代码执行等活动及其关联的详细信息。 随着时间的推移，此页面中列出的活动范围将会扩展，并且还会扩展提供的详细信息。
 
 * 现在提供了一个新的“管道”页面，该页面上提供了悬停时的状态弹出窗口，以便轻松查看详细信息摘要。 可以查看管道执行及其关联的详细信息。
 
