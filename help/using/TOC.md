@@ -8,9 +8,9 @@ user-guide-description: 了解如何使用 Adobe Managed Services 在云中自�
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
+source-git-commit: 0ba21a1223c5cee5d8a46e08f38fc59b5188fd40
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '288'
 ht-degree: 80%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 80%
    + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [通知](notifications.md)
    + [自定义代码质量规则](custom-code-quality-rules.md)
-+ 管理代码{#managing-code}
++ 管理代码 {#managing-code}
    + [Maven 项目版本处理](activating-maven-project.md)
    + [Cloud Manager中的存储库](cloud-manager-repositories.md)
    + [访问存储库](accessing-repos.md)
@@ -61,7 +61,8 @@ ht-degree: 80%
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
 + 发行说明 {#release-notes}
-   + [最新发行说明（2021.10.0 版）](release-notes-current.md)
+   + [最新发行说明（2021.11.0 版）](release-notes-current.md)
+   + [2021.10.0 版发行说明](release-notes-2021-10-0.md)
    + [2021.9.0 版发行说明](release-notes-2021-9-0.md)
    + [2021.8.0 版发行说明](release-notes-2021-8-0.md)
    + [2021.7.0 版发行说明](release-notes-2021-7-0.md)
