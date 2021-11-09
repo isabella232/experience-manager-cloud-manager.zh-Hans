@@ -3,14 +3,14 @@ title: 2021.11.0 版发行说明
 description: 请阅读本页以了解Cloud Manager版本2021.11.0的相关信息
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: e6e5a17c16c42e0b0ed5aedd2f9a6360fd81d8cd
+source-git-commit: 0a8373f9613715f8945f482198710cefd84b169d
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 3%
 
 ---
 
-# 2021.10.0 版发行说明 {#release-notes-for}
+# 2021.11.0 版发行说明 {#release-notes-for}
 
 以下部分概述了 [!UICONTROL Cloud Manager] 版本2021.11.0。
 
