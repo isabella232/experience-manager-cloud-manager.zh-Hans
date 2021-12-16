@@ -1,37 +1,36 @@
 ---
 title: 2021.3.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.3.0版的信息
-feature: 发行信息
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 503d9b25855633737c49e3e278a3a76052ed84d1
+feature: Release Information
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '240'
 ht-degree: 5%
 
 ---
 
 # 2021.3.0 版发行说明 {#release-notes-for}
 
-以下部分概述了[!UICONTROL Cloud Manager]版本2021.3.0的常规发行说明。
+以下部分概述了 [!UICONTROL Cloud Manager] 版本2021.3.0。
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager]版本2021.3.0的发行日期是2021年3月11日。
+的发行日期 [!UICONTROL Cloud Manager] 2021.3.0版是2021年3月11日。
 下一版本计划于2021年4月8日发布。
 
 ## 新增功能 {#whats-new}
 
-* 引入了新的代码质量工具[Dispatcher优化工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules)来验证客户Dispatcher配置。
+* 新的代码质量工具 [Dispatcher优化工具](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) 已引入以验证客户dispatcher配置。
 
-* 现在，用户在导航到Unified Shell的“用户配置文件”图标（右上方）后，通过选择&#x200B;**查看Cloud Manager角色**&#x200B;选项，可以看到其Cloud Manager角色。
+* 用户现在可以通过选择 **查看Cloud Manager角色** 选项。
 
-* 标签&#x200B;**申请批准**&#x200B;已重新标记到&#x200B;**生产批准**，以便更加清晰。
+* 标签 **申请批准** 已重新标记为 **生产审批** 更清楚。
 
-* 在“生产管道”执行屏幕中， **版本**&#x200B;标签已重新标记为&#x200B;**Git标记**。
+* 的 **版本** 标签已重新标记为 **Git标记** 在生产管道执行屏幕中。
 
-* 重新标记了在重要量度不满足定义的阈值时定义行为的标签，以反映其真实行为 — **Cancel立即**&#x200B;和&#x200B;**Approve立即**。 有关更多详细信息，请参阅[配置管道设置](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) 。
+* 重新标记了在重要量度未达到定义的阈值时定义行为的标签，以反映其真实行为 —  **立即取消** 和 **立即批准**. 请参阅 [配置管道设置](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) 以了解更多详细信息。
 
-* 类和方法弃用列表已根据AEMCloud ServiceSDK的`2021.3.4997.20210303T022849Z-210225`版本进行更新。
+* 类和方法弃用列表已根据版本进行了更新 `2021.3.4997.20210303T022849Z-210225` AEM Cloud Service SDK的ID。
 
 ## 错误修复 {#bug-fixes}
 
