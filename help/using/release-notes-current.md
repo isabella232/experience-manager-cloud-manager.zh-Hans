@@ -2,9 +2,10 @@
 title: 2021.12.0 版发行说明
 description: 以下是Cloud Manager版本2021.12.0的发行说明。
 feature: Release Information
-source-git-commit: 910def6d82c09e0220a50a3cb34a61f2c7284cb9
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: 61f2d1e0882b752d1a1d5e62f9c028aa71941efe
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '265'
 ht-degree: 3%
 
 ---
@@ -30,6 +31,7 @@ ht-degree: 3%
 * 现在，具有部署管理器角色的用户可以从“存储库”页面的“操作”菜单中为没有分支的存储库启动项目/分支创建向导。
 * 现在，将通知处于添加或编辑管道工作流中的部署管理器在选定的存储库没有分支时如何创建分支或项目。
 * 在“编辑生产管道”窗口中，如果生产存在多个阶段环境，则可以使用用于环境选择的下拉列表。
+* Cloud Manager使用的AEM项目原型版本已更新至版本32。
 
 ## 错误修复 {#bug-fixes}
 
