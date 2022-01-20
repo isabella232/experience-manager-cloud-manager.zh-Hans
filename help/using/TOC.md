@@ -3,15 +3,15 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Experience Manager Cloud Manager 指南
-breadcrumb-title: 适用于AEM 6.x的Cloud Manager指南
+breadcrumb-title: AEM 6.x 的 Cloud Manager 指南
 user-guide-description: 了解如何使用 Adobe Managed Services 在云中自我管理 Experience Manager。
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: 53c5aed5e42408ae4503b6003350de3ae1f27edf
+source-git-commit: e3f0759437707f73dfc6851608e06e30064c0f16
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 80%
+source-wordcount: '294'
+ht-degree: 91%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 80%
    + [CI/CD 管线](ci-cd-pipeline.md)
    + [安全性和隐私](security-and-privacy.md)
    + [帮助资源](help-resources.md)
-   + [Cloud Manager常见问题解答](cloud-manager-faqs.md)
+   + [Cloud Manager 常见问题解答](cloud-manager-faqs.md)
 + 先决条件 {#requirements}
    + [已授予的访问权限](access-rights-granted.md)
    + [源代码存储库](source-code-repository.md)
@@ -38,7 +38,7 @@ ht-degree: 80%
    + 创建 AEM 应用程序项目 {#create-application-project}
       + [使用向导](using-the-wizard.md)
       + [设置项目](setting-up-project.md)
-      + [了解构建环境](build-environment-details.md)
+      + [了解生成环境](build-environment-details.md)
    + [配置发布分支](configure-your-release-branches.md)
    + [管理调度程序配置](dispatcher-configurations.md)
 + 使用方法 {#how-to-use}
@@ -53,15 +53,16 @@ ht-degree: 80%
    + [自定义代码质量规则](custom-code-quality-rules.md)
 + 管理代码 {#managing-code}
    + [Maven 项目版本处理](activating-maven-project.md)
-   + [Cloud Manager中的存储库](cloud-manager-repositories.md)
+   + [Cloud Manager 中的存储库](cloud-manager-repositories.md)
    + [访问存储库](accessing-repos.md)
    + [与Git集成](setup-cloud-manager-git-integration.md)
-   + [使用多个源Git存储库](/help/using/working-with-multiple-source-git-repos.md)
+   + [使用多个源 Git 存储库](/help/using/working-with-multiple-source-git-repos.md)
 + 产品更新向导 {#product-update-wizard}
    + [概述](overview-productupdate-wizard.md)
    + [评估](evaluation.md)
 + 发行说明 {#release-notes}
    + [最新发行说明](release-notes-current.md)
+   + [2021.12.0 版发行说明](release-notes-2021-12-0.md)
    + [2021.11.0 版发行说明](release-notes-2021-11-0.md)
    + [2021.10.0 版发行说明](release-notes-2021-10-0.md)
    + [2021.9.0 版发行说明](release-notes-2021-9-0.md)
