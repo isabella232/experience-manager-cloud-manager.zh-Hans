@@ -11,9 +11,9 @@ discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 feature: Getting Started
 level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 08d831c560510d58062ed81fab809c12169810cb
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '812'
 ht-degree: 66%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 66%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en#cloud-manager" text="创建程序"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager" text="创建环境"
 
-## 简介 {#introduction}
+## Communications API {#introduction}
 
 [!UICONTROL Cloud Manager] 对于Adobe Experience Manager，开发人员能够通过基于Adobe Experience Manager最佳实践的简化工作流创建具有影响力的客户体验。 针对Adobe Experience Manager优化的CI/CD管道允许您通过检入代码并一直移动到生产就绪状态，轻松合并开发工作流。 在构建阶段，我们会使用经过尝试和学习的最佳实践对您的自定义代码更新进行彻底测试，以便为客户提供有影响的数字体验。 Cloud Manager使用开放API方法，使您能够与系统集成，而不会中断现有流程和工具。
 
@@ -65,7 +65,7 @@ ht-degree: 66%
 
 通过 [!UICONTROL Cloud Manager] UI，客户能够配置并启动他们的 CI/CD 管线。在执行此管线期间，会执行彻底的代码扫描，以确保只有高质量的应用程序才能投入到生产环境。
 
-要详细了解如何从 [!UICONTROL Cloud Manager]的UI，请参阅 [配置CI/CD管线](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+要详细了解如何从 [!UICONTROL Cloud Manager]的用户界面，查看文档 [配置生产管道](configuring-production-pipelines.md) 和 [配置非生产管道。](configuring-non-production-pipelines.md)
 
 ### 灵活的部署模式 {#flexible-deployment-modes}
 

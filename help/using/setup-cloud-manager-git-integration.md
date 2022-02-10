@@ -5,9 +5,9 @@ seo-title: Git Integration with Adobe Cloud Manager
 seo-description: A video series that walks through the set up and integration of a customer-managed (on-premise) git repository with Adobe Cloud Manager.
 feature: Git Repositories
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
-source-git-commit: 0bc3e775ef2432cdb8d3bd5470953c07c6628148
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '363'
 ht-degree: 4%
 
 ---
@@ -42,7 +42,7 @@ AdobeCloud Manager配置了单个git存储库，该存储库用于使用Cloud Ma
 
 ## 基本分支策略 {#branching-strategy}
 
-设置基本的分支策略以利用Cloud Manager的 [生产和非生产管道。](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)
+设置基本的分支策略以利用Cloud Manager的 [生产](configuring-production-pipelines.md) 和 [非生产管道。](configuring-non-production-pipelines.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 

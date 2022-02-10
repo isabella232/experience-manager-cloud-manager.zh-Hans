@@ -2,9 +2,10 @@
 title: 2021.3.0 版发行说明
 description: 可查看本页面以获取Cloud Manager 2021.3.0版的信息
 feature: Release Information
-source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
+exl-id: e05b22fe-f071-4b69-9db1-e3d7ee4cfbcc
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '231'
 ht-degree: 5%
 
 ---
@@ -28,7 +29,7 @@ ht-degree: 5%
 
 * 的 **版本** 标签已重新标记为 **Git标记** 在生产管道执行屏幕中。
 
-* 重新标记了在重要量度未达到定义的阈值时定义行为的标签，以反映其真实行为 —  **立即取消** 和 **立即批准**. 请参阅 [配置管道设置](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) 以了解更多详细信息。
+* 重新标记了在重要量度未达到定义的阈值时定义行为的标签，以反映其真实行为 —  **立即取消** 和 **立即批准**. 请参阅文档 [配置生产管道](configuring-production-pipelines.md) 以了解更多详细信息。
 
 * 类和方法弃用列表已根据版本进行了更新 `2021.3.4997.20210303T022849Z-210225` AEM Cloud Service SDK的ID。
 

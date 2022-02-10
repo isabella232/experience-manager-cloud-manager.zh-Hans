@@ -1,35 +1,35 @@
 ---
 title: 2018.8.0 版发行说明
-seo-title: AEM Cloud Manager 2018.8.0发行说明
+seo-title: AEM Cloud Manager Release Notes for 2018.8.0
 description: 可查看本页面以获取有关Cloud Manager 2018.8.0版的信息。
-seo-description: 可查看本页以获取有关AEM Cloud Manager 2018.8.0版的信息。
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2018.8.0.
 uuid: e8aaba32-89b4-4bc5-b295-09b753252612
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
-feature: 发行信息
+feature: Release Information
 exl-id: 20f87048-30f7-4869-aad0-13ca383a404b
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '312'
 ht-degree: 4%
 
 ---
 
 # 2018.8.0 版发行说明 {#release-notes-for}
 
-[!UICONTROL Cloud Manager] 2018.8.0版本添加了对在git提交时自动触发CI/CD管线的支持，以及一个新向导，用于根据AEM项目原型在git中创建应用程序项目。
+的 [!UICONTROL Cloud Manager] 2018.8.0版增加了对在git提交时自动触发CI/CD管道的支持，以及一个新的向导，用于根据AEM项目原型在git中创建应用程序项目。
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager]版本2018.8.0的发行日期是2018年10月4日。
+的发行日期 [!UICONTROL Cloud Manager] 2018.8.0版是2018年10月4日。
 
 ## 新增功能 {#what-s-new}
 
-* **程序设置**  — 新建了一个向导，用于使用AEM项目原型在git中创建应用程序项目
+* **程序设置**  — 新增了使用AEM项目原型在git中创建应用程序项目的向导
 
-* **CI/CD管道**  — 向CI/CD管道添加了以下更改。请参阅[配置CI/CD管线](configuring-pipeline.md)以了解更多信息。
+* **CI/CD管线**  — 向CI/CD管道中添加了以下更改。 请参阅该文档 [配置生产管道](configuring-production-pipelines.md) 以了解更多。
 
    * 在Git更改触发器上，当向配置的git分支添加提交时，该触发器将启动CI/CD管道。
    * 现在，主屏幕上的信息卡深度链接到管道执行页面的特定部分。
@@ -38,10 +38,10 @@ ht-degree: 4%
    * 管道执行页面现在显示为执行创建的版本/标记名称。
    * 已将Apache Maven版本更新至3.5.3。
 
-* **导航**  — 在中添加了以下更 [!UICONTROL Cloud Manager]改。
+* **导航**  — 以下更改已添加到 [!UICONTROL Cloud Manager].
 
    * 全局导航中的资源链接将导航到Sharepoint中的Runbook。
-   * 帮助菜单已重新组织，以包含更多特定于[!UICONTROL Cloud Manager]的内容。
+   * 帮助菜单已重新组织以包含更多 [!UICONTROL Cloud Manager]特定内容。
 
 ## 错误修复 {#bug-fixes}
 
@@ -54,4 +54,4 @@ ht-degree: 4%
 ## 已知问题 {#known-issues}
 
 * 使用应用程序项目向导创建的分支不能包含破折号。
-* [!UICONTROL Experience Cloud]通知侧栏可能无法始终如一地加载通知。 但是，通知在[!UICONTROL Experience Cloud]中可见，如果配置，仍将通过电子邮件发送。
+* 的 [!UICONTROL Experience Cloud] 通知侧栏可能无法始终加载通知。 但是，通知在 [!UICONTROL Experience Cloud] 并且，如果已配置，仍将通过电子邮件发送。

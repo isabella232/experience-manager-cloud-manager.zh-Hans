@@ -2,8 +2,7 @@
 title: 2021.12.0 版发行说明
 description: 以下是Cloud Manager版本2021.12.0的发行说明。
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5796f30c311f2f25421b53d40e0d4429c4458ff6
+source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 3%
