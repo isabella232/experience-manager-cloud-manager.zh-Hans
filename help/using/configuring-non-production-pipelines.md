@@ -1,13 +1,13 @@
 ---
 title: 配置非生产管道
 description: 了解如何使用Cloud Manager创建和配置非生产管道以部署代码。
-source-git-commit: 205113735cc743e11e140b1161413002844f5b79
+exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
+source-git-commit: 154b95e1b43717097b9ae9076a15792517dd613d
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
-
 
 # 配置非生产管道 {#configuring-non-production-pipelines}
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
       * **手动**  — 使用此选项手动启动管道。
       * **在Git更改时**  — 每当将提交添加到配置的git分支时，此选项都会启动管道。 通过此选项，您仍可以根据需要手动启动管道。
-   1. 在 **重要量度失败行为**，定义在任何质量门中遇到重要故障时管道的行为。
+   1. 对于部署管道，在 **重要量度失败行为**，定义在任何质量门中遇到重要故障时管道的行为。
 
       * **每次提问**  — 这是默认设置，需要对任何重要故障进行手动干预。
       * **立即失败**  — 如果选中，则每当发生重要故障时，将取消管道。 这实质上是在模拟用户手动拒绝每个故障。
