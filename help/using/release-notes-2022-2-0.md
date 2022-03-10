@@ -2,13 +2,13 @@
 title: 2022.2.0 版发行说明
 description: 以下是Cloud Manager 2022.2.0版发行说明。
 feature: Release Information
-source-git-commit: 845724c9dec08c043aa305a5c9591d315995cbe7
+exl-id: c13ee200-197e-4855-a08c-99d36b471bb6
+source-git-commit: d074bc1af7e681377ec5b961db23f0bde5d1aaca
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '139'
 ht-degree: 6%
 
 ---
-
 
 # Cloud Manager 2022.2.0版发行说明 {#release-notes}
 
@@ -24,7 +24,10 @@ ht-degree: 6%
 
 ## 新增功能 {#whats-new}
 
-* 经过刷新的Cloud Manager登陆页面体验可提供改进的导航、在网格/图块视图之间轻松切换，以及用于快速获取项目摘要的弹出窗口。
+以下是2月版中的新增功能：
+
+* (仅限Cloud Service)使用开发人员角色可以访问AEM环境日志。
+* 您现在可以禁用可靠性评级关键量度。
 
 ## 错误修复 {#bug-fixes}
 
