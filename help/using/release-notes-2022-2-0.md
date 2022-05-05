@@ -3,10 +3,10 @@ title: 2022.2.0 版发行说明
 description: 以下是Cloud Manager 2022.2.0版发行说明。
 feature: Release Information
 exl-id: c13ee200-197e-4855-a08c-99d36b471bb6
-source-git-commit: d074bc1af7e681377ec5b961db23f0bde5d1aaca
+source-git-commit: 0ddfd152cb15731882d198d043dd8897b5073ab4
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 6%
+source-wordcount: '136'
+ht-degree: 22%
 
 ---
 
@@ -20,16 +20,16 @@ ht-degree: 6%
 
 ## 发布日期 {#release-date}
 
-的发行日期 [!UICONTROL Cloud Manager] 2022.2.0版于2022年2月10日发布。 下一版本计划于2022年3月10日发布。
+的发行日期 [!UICONTROL Cloud Manager] 2022.2.0版于2022年2月10日发布。 下一个版本计划于 2022 年 3 月 10 日发布。
 
 ## 新增功能 {#whats-new}
 
 以下是2月版中的新增功能：
 
-* (仅限Cloud Service)使用开发人员角色可以访问AEM环境日志。
+* 使用开发人员角色可以访问AEM环境日志。
 * 您现在可以禁用可靠性评级关键量度。
 
 ## 错误修复 {#bug-fixes}
 
 * 回滚执行现在与完全堆栈管道执行有适当区别。
-* 现在，在生成新密码时，旧的Git存储库密码始终无效。
+* 当生成新密码时，旧的 Git 存储库密码无效。
