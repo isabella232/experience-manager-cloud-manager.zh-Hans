@@ -3,10 +3,10 @@ title: 2022.5.0 版发行说明
 description: 以下是Cloud Manager 2022.5.0版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 59e57e33e52b2749865f8c92a8d947c9a04ffe79
+source-git-commit: d183e470db271bde0b5725f93b2a7bf97f00a89d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 6%
 
 ---
 
