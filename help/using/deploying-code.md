@@ -10,9 +10,9 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 0ba7c49b3550666030249562219b2d0dc51f4ae1
+source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1615'
 ht-degree: 1%
 
 ---
@@ -184,7 +184,6 @@ Cloud Manager将构建过程生成的所有target/*.zip文件上传到存储位�
 
 ![](assets/execution-emergency2.png)
 
-
 也可以在此紧急模式下创建管道执行，这可以通过Cloud Manager API或CLI来完成。 要在紧急模式下启动执行，请使用查询参数向管道的执行端点提交PUT请求 `?pipelineExecutionMode=EMERGENCY` 或者，在使用CLI时：
 
 ```
@@ -193,3 +192,73 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 >[!IMPORTANT]
 >使用 `--emergency` 标记可能需要更新到最新 `aio-cli-plugin-cloudmanager` 版本。
+
+## 重新执行生产部署 {#Reexecute-Deployment}
+
+对于生产部署步骤已完成的执行，支持重新执行生产部署步骤。 完成类型不重要 — 部署可能成功（仅适用于AMS程序）、取消或失败。 尽管如此，主要用例预计是生产部署步骤因临时原因而失败的情况。 重新执行会使用相同的管道创建新执行。 此新执行包含三个步骤：
+
+1. 验证步骤 — 这基本上与正常管道执行期间发生的验证相同。
+1. 生成步骤 — 在重新执行的上下文中，生成步骤是复制工件，而不是实际执行新的生成过程。
+1. 生产部署步骤 — 使用与正常管道执行中的生产部署步骤相同的配置和选项。
+
+生成步骤在UI中的标记可能略有不同，以反映它是在复制工件，而不是重新生成。
+
+![](assets/Re-deploy.png)
+
+限制：
+
+* 重新执行生产部署步骤将仅在上次执行时可用。
+* 无法重新执行回滚执行。
+* 如果上次执行是回滚执行，则无法重新执行。
+* 如果上次执行是推送更新执行，则无法重新执行。
+* 如果上次执行在生产部署步骤之前的任何时间点失败，则无法重新执行。
+
+### 重新执行API {#Reexecute-API}
+
+### 识别重新执行的执行
+
+要识别执行是否为重新执行，可检查trigger字段。 其价值将是 *RE_EXECUTE*.
+
+### 触发新执行
+
+要触发重新执行，需要向HAL Link &lt;(<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)>。 如果此链接存在，则可以从该步骤重新启动执行。 如果不存在，则无法从该步骤重新启动执行。 在初始版本中，此链接将只在生产部署步骤中存在，但将来版本可能支持从其他步骤启动管道。 示例:
+
+```Javascript
+ {
+  "_links": {
+    "http://ns.adobe.com/adobecloud/rel/pipeline/logs": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/logs",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/reExecute": {
+      "href": "/api/program/4/pipeline/1/execution?stepId=2983530",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/metrics": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/metrics",
+      "templated": false
+    },
+    "self": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530",
+      "templated": false
+    }
+  },
+  "id": "6187842",
+  "stepId": "2983530",
+  "phaseId": "1575676",
+  "action": "deploy",
+  "environment": "weretail-global-b75-prod",
+  "environmentType": "prod",
+  "environmentId": "59254",
+  "startedAt": "2022-01-20T14:47:41.247+0000",
+  "finishedAt": "2022-01-20T15:06:19.885+0000",
+  "updatedAt": "2022-01-20T15:06:20.803+0000",
+  "details": {
+  },
+  "status": "FINISHED"
+```
+
+
+HAL链接的语法 *href*  上述值不打算用作参考点。 实际值应始终从HAL链接中读取，而不是生成。
+
+提交 *PUT* 对此端点的请求将导致 *201* 响应（如果成功），且响应主体将表示新执行。 这类似于通过API开始定期执行。
