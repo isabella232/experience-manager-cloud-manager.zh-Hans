@@ -3,10 +3,10 @@ title: 2022.5.0 版发行说明
 description: 以下是Cloud Manager 2022.5.0版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: f2b8670baa81e0ddb1ef374d42d6b3192299c1e9
+source-git-commit: dc28bbacfe86a68f416a525d386a2d8d1c1b0190
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 7%
+source-wordcount: '134'
+ht-degree: 6%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 7%
 
 * 管道执行现在将在执行屏幕上显示UI顶级错误。
 * 更新了默认配置，以包含暂停到B/G配置。
+* 通过Cloud Manager UI重新执行生产部署步骤。
 
 ## 错误修复 {#bug-fixes}
 
