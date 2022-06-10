@@ -5,9 +5,9 @@ description: 请参阅Cloud Manager常见问题解答，以获取一些疑难解
 seo-description: Follow this page to get answers on Cloud Manager FAQs
 feature: Getting Started
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
+source-git-commit: 6dce1f48b66c6970c3ba025031f0adcbd01195dd
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,11 @@ ht-degree: 0%
 
 ## 由于代码质量检查失败，我们的部署卡住。 有办法绕过这张支票吗？ {#deployment-stuck}
 
-除 *安全评级* 是非关键量度，因此可以通过扩展结果UI中的项目来绕过这些量度。
+是。除 *安全评级* 是非关键量度，因此可以通过展开结果UI中的项目，将这些量度作为部署管道的一部分进行绕过。
 
-具有 [部署经理、项目经理或业务所有者](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=en#requirements) 角色可以覆盖问题，在这种情况下，管道继续进行，或者他们可以接受问题，在这种情况下，管道会因失败而停止。  请参阅 [运行管道时的三层门](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use) 以了解更多详细信息。
+具有 [部署经理、项目经理或业务所有者](/help/using/setting-up-users-and-roles.md#role-definitions) 角色可以覆盖问题，在这种情况下，管道继续进行，或者他们可以接受问题，在这种情况下，管道会因失败而停止。
+
+查看文档 [运行管道时的三层门](/help/using/understand-your-test-results.md#three-tier-gates-while-running-a-pipeline) 和 [配置非生产管道](/help/using/configuring-non-production-pipelines.md#understanding-the-flow) 以了解更多详细信息。
 
 ## 在Adobe Managed Services环境中，Cloud Manager部署在性能测试步骤失败。 我们如何调试此参数以传递关键量度？ {#debug-critical-metrics}
 
