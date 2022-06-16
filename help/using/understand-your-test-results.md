@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 2179314120911cac8a0dd99a8b57974751959871
+source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
 workflow-type: tm+mt
-source-wordcount: '2897'
+source-wordcount: '2896'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 了解管道的代码质量测试的工作原理，以及它如何提高部署质量。
 
-## Communications API {#introduction}
+## 简介 {#introduction}
 
 在管道执行期间，会捕获许多量度并将其与业务所有者定义的关键绩效指标(KPI)或Adobe Managed Services设置的标准进行比较。
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->要了解Cloud Manager支持的AEMas a Cloud Service测试，请参阅 [AEMas a Cloud Service文档。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
+>要了解Cloud Manager支持的AEMas a Cloud Service测试，请参阅 [AEMas a Cloud Service文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
 
 
 ## 三级评级  {#three-tier-gates-while-running-a-pipeline}
@@ -76,7 +76,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->请参阅 [SonarQube的度量定义](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) 以了解更多详细信息。
+>请参阅 [SonarQube的度量定义](https://docs.sonarqube.org/latest/user-guide/metric-definitions/) 以了解更多详细信息。
 
 >[!NOTE]
 >
@@ -309,3 +309,4 @@ Cloud Manager将在创作实例上使用CSE在 [入门要求](#onboaring-require
 >
 >* 此优化不会影响部署到AEM的包。
 >* 由于嵌入的内容包与跳过的内容包之间的匹配基于文件名，因此如果多个跳过的内容包具有相同的文件名，或者在嵌入时更改了文件名，则无法执行此优化。
+

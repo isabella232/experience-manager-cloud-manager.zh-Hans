@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: Code Quality Rules
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 834508109e34eb1e052abac482e981735c72d43d
+source-git-commit: d4c92a36ca3af123730d68fedf1dbf7ee819c66b
 workflow-type: tm+mt
-source-wordcount: '3611'
+source-wordcount: '3609'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->要了解AEMas a Cloud Service中Cloud Manager的自定义代码质量规则，请参阅 [到此文档。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
+>要了解AEMas a Cloud Service中Cloud Manager的自定义代码质量规则，请参阅 [到本文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
 
 >[!NOTE]
 >
@@ -321,7 +321,7 @@ public void doThis() throws Exception {
 
 >[!NOTE]
 >
->这不适用于每个请求的access.log类型日志记录。
+>这不适用于每个请求的access.log-type日志记录。
 
 #### 不符合代码 {#non-compliant-code-8}
 
@@ -651,7 +651,7 @@ OSGi配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 在AEM中定义
 * 具有经典UI设计对话框的组件(例如， `design_dialog` 节点)必须具有相应的触屏UI设计对话框(即 `cq:design_dialog` 子节点)。
 * 同时具有经典UI对话框和经典UI设计对话框的组件必须同时具有相应的触屏UI对话框和相应的触屏UI设计对话框。
 
-AEM现代化工具文档提供了有关如何将组件从经典UI转换到触屏UI的详细信息和工具。 请参阅 [AEM现代化工具文档 ](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) 以了解更多详细信息。
+AEM现代化工具文档提供了有关如何将组件从经典UI转换到触屏UI的详细信息和工具。 请参阅 [AEM现代化工具文档 ](https://opensource.adobe.com/aem-modernize-tools/) 以了解更多详细信息。
 
 ### 包不应混合使用可变和不可变内容 {#oakpal-packages-immutable}
 
