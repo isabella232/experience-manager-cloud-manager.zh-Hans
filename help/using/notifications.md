@@ -1,58 +1,51 @@
 ---
 title: 通知
-seo-title: 通知
-description: 用户如何在AEM Cloud Manager中接收通知
-seo-description: 可查看本页以了解在AEM Cloud Manager中管道开始和完成（成功或失败）时，用户如何接收通知。
-uuid: 73e4bb80-36c1-4408-bdbd-1ac5328359d1
-contentOwner: jsyal
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: using
-discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
-feature: 入门
+description: 了解Cloud Manager如何通知您重要事件。
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 22efb00c7e3ffee8829073dbb498f05a9114807d
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
 
+
 # 通知 {#notifications}
 
-[!UICONTROL Cloud Manager] 允许用户在生产管道开始和完成（成功或失败）、生产部署开始时以及达到上线批准和计划步骤时 **接收** 通 **** 知。这些通知通过Adobe[!UICONTROL Experience Cloud]通知系统发送。
+了解Cloud Manager如何通知您重要事件。
+
+## Cloud Manager中的通知 {#cloud-manager-notifications}
+
+[!UICONTROL Cloud Manager] 当生产管道在生产部署开始时开始并完成（成功或失败），以及在生产部署开始时，向您发送通知 **上线批准** 和 **已计划** 步骤。 这些通知通过 [!UICONTROL Experience Cloud] 通知系统。
 
 >[!NOTE]
 >
->批准和计划通知仅发送给“业务所有者”、“项目经理”和“部署经理”角色的用户。
+>批准通知和计划通知仅发送给 **业务所有者**, **项目经理**&#x200B;和 **部署管理器** 角色。
 
-通知显示在[!UICONTROL Cloud Manager] UI（用户界面）的侧栏中，以及整个Adobe[!UICONTROL Experience Cloud]中。
+通知显示在 [!UICONTROL Cloud Manager] 和整个Adobe [!UICONTROL Experience Cloud].
 
-单击标题中的铃铛图标以打开侧栏并查看通知，如下图所示：
+当您有新通知时，标题中的铃铛图标会出现标记。
 
-![](assets/image2018-7-12_11-52-40.png)
+![“通知”图标](/help/assets/image2018-7-12_11-52-40.png)
 
-侧栏列出了最新通知。
+单击铃铛图标以打开侧栏并查看通知。 侧栏列出了最新通知。
 
-![](assets/screen_shot_2018-07-20at91406pm.png)
+![通知侧栏](/help/assets/screen_shot_2018-07-20at91406pm.png)
 
-此外，单击其中一个通知，然后单击&#x200B;**查看详细信息**&#x200B;以访问管道执行详细信息页面。
+单击通知，然后单击 **查看详细信息** 访问管道执行详细信息页面。
 
-![](assets/screen_shot_2018-08-14at43503pm.png)
+![查看详细信息](/help/assets/screen_shot_2018-08-14at43503pm.png)
 
-## 电子邮件通知{#email-notifications}
+## 电子邮件通知 {#email-notifications}
 
-默认情况下，Web用户界面中会提供跨Adobe[!UICONTROL Experience Cloud]解决方案的通知。 个人用户还可以选择立即或摘要方式通过电子邮件发送这些通知。
+默认情况下，通知可在Web用户界面中跨Adobe使用 [!UICONTROL Experience Cloud] 解决方案。 个人用户还可以选择通过电子邮件发送这些通知。
 
-单击通知侧栏底部的齿轮图标，如下图所示：
+单击通知侧栏底部的齿轮图标。
 
-![](assets/image2018-7-12_12-8-19.png)
+![“通知设置”图标](/help/assets/image2018-7-12_12-8-19.png)
 
-这会将用户带到[!UICONTROL Experience Cloud]Adobe的“通知首选项”屏幕。
+这会将用户引导至 **通知首选项** 屏幕Adobe [!UICONTROL Experience Cloud].
 
-用户可以打开电子邮件通知，（可选）选择要通过电子邮件接收的通知类型。
+用户可以打开电子邮件通知，（可选）选择要通过电子邮件接收的通知类型。 您还可以指定从Adobe以每日或每周摘要的形式接收通知 [!UICONTROL Experience Cloud]，如下所示：
 
->[!NOTE]
->
->您还可以从Adobe[!UICONTROL Experience Cloud]启用消化功能，如下所示：
-
-![](assets/image2018-7-12_12-10-51.png)
+![通知设置](/help/assets/image2018-7-12_12-10-51.png)

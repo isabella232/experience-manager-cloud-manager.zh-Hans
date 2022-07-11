@@ -1,15 +1,10 @@
 ---
 title: 自定义代码质量规则
-description: 本页介绍在代码质量测试中由Cloud Manager执行的自定义代码质量规则。 这些建议基于AEM工程部门的最佳实践。
-uuid: a7feb465-1982-46be-9e57-e67b59849579
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: using
-discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
-feature: Code Quality Rules
+description: 了解有关在代码质量测试中由Cloud Manager执行的自定义代码质量规则的详细信息，这些规则是根据AEM Engineering中的最佳实践执行的。
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: d4c92a36ca3af123730d68fedf1dbf7ee819c66b
+source-git-commit: 5fe0d20d9020e6b90353ef5a54e49c93be5c00be
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3575'
 ht-degree: 3%
 
 ---
@@ -17,11 +12,7 @@ ht-degree: 3%
 
 # 自定义代码质量规则 {#custom-code-quality-rules}
 
-本页介绍由Cloud Manager作为 [代码质量测试。](understand-your-test-results.md) 这些建议基于AEM工程部门的最佳实践。
-
->[!NOTE]
->
->要了解AEMas a Cloud Service中Cloud Manager的自定义代码质量规则，请参阅 [到本文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
+了解有关Cloud Manager作为 [代码质量测试，](/help/using/code-quality-testing.md) 基于AEM工程部的最佳实践。
 
 >[!NOTE]
 >
