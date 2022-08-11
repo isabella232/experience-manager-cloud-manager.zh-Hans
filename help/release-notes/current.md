@@ -1,19 +1,19 @@
 ---
-title: 2022.7.0 版发行说明
-description: 以下是Cloud Manager 2022.7.0版的发行说明。
+title: 2022.8.0 版发行说明
+description: 以下是Cloud Manager 2022.8.0版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 6%
+source-wordcount: '150'
+ht-degree: 11%
 
 ---
 
 
-# Cloud Manager 2022.7.0版发行说明 {#release-notes}
+# Cloud Manager 2022.8.0版发行说明 {#release-notes}
 
-本页记录了 [!UICONTROL Cloud Manager] 版本2022.7.0。
+本页记录了 [!UICONTROL Cloud Manager] 版本2022.8.0。
 
 >[!NOTE]
 >
@@ -21,13 +21,14 @@ ht-degree: 6%
 
 ## 发布日期 {#release-date}
 
-的发行日期 [!UICONTROL Cloud Manager] 2022.7.0版于2022年6月30日发布。 下一版本计划于2022年8月11日发布。
+的发行日期 [!UICONTROL Cloud Manager] 2022.8.0版于2022年8月11日发布。 下一版本计划于2022年9月9日发布。
 
 ## 新增功能 {#what-is-new}
 
-* Cloud Manager用户现在可以从登陆页面访问有用的视频教程 **欢迎** 随时刷卡。
-* 要测试的最大页数 [现在可以通过设置 `MAX_PAGES` 环境变量。](/help/using/code-quality-testing.md#crawler)
+* 在某些情况下，静默重试机制将有助于确保部署管道不会导致错误状态。
+* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 已将Cloud Manager中包含的内容更新到版本37。
 
 ## 错误修复 {#bug-fixes}
 
-* 修复了在前端管道批准后未调用以执行部署步骤的问题。
+* 存储库创建失败的某些情况已变得更具弹性。
+* 由于引入了重试，VSTS组织设置错误的罕见情况现在有所减少。
