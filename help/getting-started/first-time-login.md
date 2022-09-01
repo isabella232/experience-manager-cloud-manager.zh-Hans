@@ -2,9 +2,9 @@
 title: 首次登录
 description: 如果您已设置常规配置并且首次可以使用Cloud Manager，请遵循本页。
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
+source-git-commit: 43d05eed9c2e7c4cf6c3becdbc3e4522428722b7
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '181'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 首次登录 {#logging-in-for-the-first-time}
 
-1. 登录Adobe [!UICONTROL Experience Cloud] 你会看到节目列表。
+1. 登录Adobe [!UICONTROL Experience Cloud] 你会看到节目单。
 
 1. 选择项目。
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 1. 单击 **安装程序** 以设置计划描述并定义关键绩效指标(KPI)。
 
-请继续阅读该文档 [程序设置](https://helpx.adobe.com/experience-manager/cloud-manager/using/program-setup.html) 以了解设置程序的后续步骤。
+请继续阅读该文档 [程序设置](/help/getting-started/program-setup.md) 以了解设置程序的后续步骤。
 
 ## Cloud Manager活动 {#activity}
 
