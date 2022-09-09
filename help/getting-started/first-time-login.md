@@ -2,10 +2,10 @@
 title: 首次登录
 description: 如果您已设置常规配置并且首次可以使用Cloud Manager，请遵循本页。
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 43d05eed9c2e7c4cf6c3becdbc3e4522428722b7
+source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 3%
+source-wordcount: '255'
+ht-degree: 2%
 
 ---
 
@@ -39,3 +39,7 @@ ht-degree: 3%
 ## Cloud Manager活动 {#activity}
 
 Cloud Manager提供了项目活动的整合视图，其中列出了所有生产和非生产CI/CD管道执行，从而可以查看过去和当前的活动。
+
+>[!NOTE]
+>
+>默认情况下，有权访问AEM环境的用户也将具有Cloud Manager用户角色。 此角色本身及其本身不足以授予用户访问项目详细信息视图的权限。 此类仅具有Cloud Manager用户角色的用户能够通过项目菜单选项导航到AEM环境创作URL（如果存在环境）。 如果此类用户希望获得程序级访问权限，则必须联系其管理员。
