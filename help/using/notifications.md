@@ -2,9 +2,9 @@
 title: 通知
 description: 了解Cloud Manager如何通知您重要事件。
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 22efb00c7e3ffee8829073dbb498f05a9114807d
+source-git-commit: 804b537bbd61105a92b42960d44ecedabfb13099
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '563'
 ht-degree: 1%
 
 ---
@@ -26,26 +26,72 @@ ht-degree: 1%
 
 当您有新通知时，标题中的铃铛图标会出现标记。
 
-![“通知”图标](/help/assets/image2018-7-12_11-52-40.png)
+![“通知”图标](/help/assets/notifications-bell-badged.png)
 
-单击铃铛图标以打开侧栏并查看通知。 侧栏列出了最新通知。
+单击铃铛图标以打开侧栏并查看通知。 的 **通知** 选项卡，其中列出了最新的通知，如部署确认。 通知与您的环境有关。
 
-![通知侧栏](/help/assets/screen_shot_2018-07-20at91406pm.png)
+![通知侧栏](/help/assets/notifications-activities.png)
 
-单击通知，然后单击 **查看详细信息** 访问管道执行详细信息页面。
+的 **公告** 选项卡包括Adobe产品公告。 公告涉及产品。
 
-![查看详细信息](/help/assets/screen_shot_2018-08-14at43503pm.png)
+![通知侧栏](/help/assets/notificaitons-announcements.png)
 
-## 电子邮件通知 {#email-notifications}
+单击通知或公告可查看其详细信息。 链接到活动（如管道部署）的通知会将您转到该活动的详细信息，如管道执行窗口。
 
-默认情况下，通知可在Web用户界面中跨Adobe使用 [!UICONTROL Experience Cloud] 解决方案。 个人用户还可以选择通过电子邮件发送这些通知。
+单击 **查看全部** 选项来查看收件箱中的所有公告。
 
-单击通知侧栏底部的齿轮图标。
+单击 **全部标记为已读** 选项，将所有未读通知标记为已读，并清除铃铛图标标记。
 
-![“通知设置”图标](/help/assets/image2018-7-12_12-8-19.png)
+## 通知配置 {#configuration}
 
-这会将用户引导至 **通知首选项** 屏幕Adobe [!UICONTROL Experience Cloud].
+您可以自定义接收通知的方式以及接收的通知。
 
-用户可以打开电子邮件通知，（可选）选择要通过电子邮件接收的通知类型。 您还可以指定从Adobe以每日或每周摘要的形式接收通知 [!UICONTROL Experience Cloud]，如下所示：
+单击通知侧栏顶部的齿轮图标。
 
-![通知设置](/help/assets/image2018-7-12_12-10-51.png)
+![“通知设置”图标](/help/assets/notifications-configuration.png)
+
+这将打开 **Experience Cloud首选项** 窗口，您可以在此处定义通知订阅以及接收通知的方式。
+
+### 订阅 {#subscriptions}
+
+订阅可定义您接收通知的产品和通知。
+
+![通知订阅](/help/assets/notifications-subscriptions.png)
+
+默认情况下，您将收到所有产品的所有通知。 单击 **自定义** 定义您为该产品接收的通知类型。
+
+![通知订阅自定义](/help/assets/notifications-subscriptions-customize.png)
+
+### 优先级 {#priority}
+
+优先级警报将标有 **高** 标记，并且可以配置为仅作为警报接收。 在 **优先级** 部分，您可以定义哪些类别符合优先级通知的条件。
+
+![通知优先级](/help/assets/notifications-priority.png)
+
+使用下拉列表将符合优先级的类别添加到列表中。 单击类别名称旁边的X可删除这些名称。
+
+### 警报 {#alerts}
+
+警报会在窗口的右上角显示几秒钟。 使用 **警报** 部分，以定义接收警报的通知。
+
+![通知警报](/help/assets/notifications-alerts.png)
+
+您可以定义警报的行为。
+
+* **显示警报**  — 定义触发警报的通知类型
+* **警报应会一直保留在屏幕中，直到我将其取消为止**  — 控制警报是否应持续存在，除非您主动取消它们
+* **持续时间**  — 定义警报在屏幕上停留的时间（如果您未选择警报应停留在屏幕上）。
+
+## 电子邮件 {#emails}
+
+可在Web用户界面中跨Adobe获取通知 [!UICONTROL Experience Cloud] 解决方案。 您还可以在 **电子邮件** 中。
+
+![通知电子邮件](/help/assets/notifications-emails.png)
+
+默认情况下，不会发送任何电子邮件。 您可以选择以下形式接收电子邮件：
+
+* 立即
+* 每日
+* 每周
+
+When **即时通知** 选择后，会立即发送每个通知的电子邮件。 对于 **每日摘要** 和 **每周摘要** 您可以选择发送每日摘要的时间、发送日期和每周摘要的时间。
