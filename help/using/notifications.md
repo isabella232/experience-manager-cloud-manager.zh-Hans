@@ -1,40 +1,40 @@
 ---
 title: 通知
-description: 了解Cloud Manager如何通知您重要事件。
+description: 了解 Cloud Manager 如何向您通知重要事件。
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 804b537bbd61105a92b42960d44ecedabfb13099
+source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 1%
+ht-degree: 23%
 
 ---
 
 
 # 通知 {#notifications}
 
-了解Cloud Manager如何通知您重要事件。
+了解 Cloud Manager 如何向您通知重要事件。
 
-## Cloud Manager中的通知 {#cloud-manager-notifications}
+## Cloud Manager 中的通知 {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] 当生产管道在生产部署开始时开始并完成（成功或失败），以及在生产部署开始时，向您发送通知 **上线批准** 和 **已计划** 步骤。 这些通知通过 [!UICONTROL Experience Cloud] 通知系统。
+[!UICONTROL Cloud Manager] 在以下情况下向您发送通知：当生产管道启动和完成（成功或失败）时、在生产部署开始时，以及在到达&#x200B;**上线审批**&#x200B;和&#x200B;**已计划**&#x200B;步骤时。这些通知将通过 [!UICONTROL Experience Cloud] 通知系统发送。
 
 >[!NOTE]
 >
->批准通知和计划通知仅发送给 **业务所有者**, **项目经理**&#x200B;和 **部署管理器** 角色。
+>审批和已计划通知仅发送给具有&#x200B;**业务负责人**、**项目经理**&#x200B;和&#x200B;**部署经理**&#x200B;角色的用户。
 
-通知显示在 [!UICONTROL Cloud Manager] 和整个Adobe [!UICONTROL Experience Cloud].
+通知显示在 [!UICONTROL Cloud Manager] 侧边栏中以及整个 Adobe [!UICONTROL Experience Cloud] 中。
 
-当您有新通知时，标题中的铃铛图标会出现标记。
+当您有新通知时，标题中的铃铛图标将被标记。
 
 ![“通知”图标](/help/assets/notifications-bell-badged.png)
 
-单击铃铛图标以打开侧栏并查看通知。 的 **通知** 选项卡，其中列出了最新的通知，如部署确认。 通知与您的环境有关。
+单击铃铛图标可打开侧边栏并查看通知。的 **通知** 选项卡，其中列出了最新的通知，如部署确认。 通知与您的环境有关。
 
-![通知侧栏](/help/assets/notifications-activities.png)
+![通知侧边栏](/help/assets/notifications-activities.png)
 
 的 **公告** 选项卡包括Adobe产品公告。 公告涉及产品。
 
-![通知侧栏](/help/assets/notificaitons-announcements.png)
+![通知侧边栏](/help/assets/notificaitons-announcements.png)
 
 单击通知或公告可查看其详细信息。 链接到活动（如管道部署）的通知会将您转到该活动的详细信息，如管道执行窗口。
 
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 单击通知侧栏顶部的齿轮图标。
 
-![“通知设置”图标](/help/assets/notifications-configuration.png)
+![通知设置图标](/help/assets/notifications-configuration.png)
 
 这将打开 **Experience Cloud首选项** 窗口，您可以在此处定义通知订阅以及接收通知的方式。
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 * **警报应会一直保留在屏幕中，直到我将其取消为止**  — 控制警报是否应持续存在，除非您主动取消它们
 * **持续时间**  — 定义警报在屏幕上停留的时间（如果您未选择警报应停留在屏幕上）。
 
-## 电子邮件 {#emails}
+### 电子邮件 {#emails}
 
 可在Web用户界面中跨Adobe获取通知 [!UICONTROL Experience Cloud] 解决方案。 您还可以在 **电子邮件** 中。
 
