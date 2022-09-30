@@ -1,67 +1,67 @@
 ---
-title: Cloud Manager存储库
-description: 了解如何访问、创建和编辑Cloud Manager程序的存储库。
+title: Cloud Manager 存储库
+description: 了解如何访问、创建和编辑 Cloud Manager 项目的存储库。
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '666'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# Cloud Manager存储库 {#cloud-manager-repos}
+# Cloud Manager 存储库 {#cloud-manager-repos}
 
-存储库是您使用git管理代码的位置。 了解如何为Cloud Manager程序创建存储库。
+可以在存储库中使用 Git 管理代码。了解如何为 Cloud Manager 项目创建存储库。
 
 ## 访问存储库 {#accessing-repos}
 
-您可以从Cloud Manager通过自助服务访问和管理Git存储库。
+您可以通过 Cloud Manager 中的自助服务来访问和管理您的 Git 存储库。
 
-要访问您的存储库，请使用 **访问存储库信息** 按钮，在管道卡的最突出位置。
+要访问存储库，请使用 Cloud Manager 中提供的&#x200B;**访问存储库信息**&#x200B;按钮（位于管道信息卡上最显眼的位置）。
 
-1. 登录Cloud Manager(位于 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) 并选择相应的组织和程序。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) 中登录 Cloud Manager 并选择适当的组织和项目。
 
-1. 导航到 **管道** 卡 **计划概述** 页面，您将看到 **访问存储库信息** 访问和管理git存储库的选项 [已配置此管道。](/help/using/production-pipelines.md)
+1. 从&#x200B;**项目概述**&#x200B;页面导航到&#x200B;**管道**&#x200B;信息卡，您将看到&#x200B;**访问存储库信息**&#x200B;选项，该选项可用于访问和管理[已配置此管道](/help/using/production-pipelines.md)的 Git 存储库。
 
-   ![访问存储库信息按钮](/help/assets/access-repo1.png)
+   ![“访问存储库信息”按钮](/help/assets/access-repo1.png)
 
-1. 如果您切换到 **非生产** 管道选项卡， **访问存储库信息** 选项在此处也可用为 [为管道配置。](/help/using/non-production-pipelines.md)
+1. 如果您切换到&#x200B;**非生产**&#x200B;管道选项卡，则也可使用&#x200B;**访问存储库信息**&#x200B;选项，操作与[为管道配置](/help/using/non-production-pipelines.md)一样。
 
    ![非生产管道](/help/assets/access-repo-nonprod.png)
 
-1. 单击 **访问存储库信息** 按钮以打开显示以下内容的对话框：
+1. 单击&#x200B;**访问存储库信息**&#x200B;按钮，会打开显示以下内容的对话框：
 
-   * 指向Git存储库的URL
+   * Git 存储库的 URL
    * 用户名
    * 密码
-   * 用于在本地克隆存储库的Git命令
+   * 用于本地克隆存储库的 Git 命令
 
-   ![存储库信息对话框](/help/assets/access-repo-create.png)
+   ![“存储库信息”对话框](/help/assets/access-repo-create.png)
 
-使用提供的信息在本地克隆存储库，以便开始本地开发。
+使用提供的信息本地克隆存储库，以便开始本地开发。
 
 >[!NOTE]
 >
->的 **访问存储库信息** 选项在 **开发人员** 或 **部署管理器** 角色。
+>**访问存储库信息**&#x200B;选项对具有&#x200B;**开发人员**&#x200B;或&#x200B;**部署经理**&#x200B;角色的用户可见。
 
 ## 添加存储库 {#add-repos}
 
-按照以下步骤在Cloud Manager中添加存储库：
+执行以下步骤可在 Cloud Manager 中添加存储库：
 
-1. 登录Cloud Manager(位于 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) 并选择相应的组织和程序。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) 中登录 Cloud Manager 并选择适当的组织和项目。
 
-1. 从 **计划概述** 页面，单击 **存储库** 选项卡，然后导航到 **存储库** 页面。
+1. 从&#x200B;**项目概述**&#x200B;页面中，单击&#x200B;**存储库**&#x200B;选项卡，然后导航到&#x200B;**存储库**&#x200B;页面。
 
-1. 单击 **添加存储库** 启动向导。
+1. 单击&#x200B;**添加存储库**&#x200B;启动向导。
 
    >[!NOTE]
    >
-   >您必须拥有 **部署管理器** 或 **业务所有者** 角色添加存储库。
+   >您必须具有&#x200B;**部署经理**&#x200B;或&#x200B;**业务负责人**&#x200B;角色才能添加存储库。
 
    ![添加存储库](/help/assets/create-repo2.png)
 
-1. 根据请求输入名称和描述，然后单击 **保存**.
+1. 输入请求的名称和描述，然后单击&#x200B;**保存**。
 
    ![存储库的详细信息](/help/assets/repo-1.png)
 
@@ -69,35 +69,35 @@ ht-degree: 2%
 
 此时将显示您新创建的存储库。
 
-![已创建新存储库](/help/assets/create-repo3.png)
+![创建的新存储库](/help/assets/create-repo3.png)
 
-在Cloud Manager中创建的存储库可供您选择 [创建管道。](/help/overview/ci-cd-pipelines.md)
+在[创建管道](/help/overview/ci-cd-pipelines.md)时，可以选择已在 Cloud Manager 中创建的存储库。
 
 ## 查看和编辑存储库 {#edit-repos}
 
-按照以下步骤在Cloud Manager中编辑和查看存储库：
+执行以下步骤可在 Cloud Manager 中编辑和查看存储库：
 
-1. 登录Cloud Manager(位于 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) 并选择相应的组织和程序。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) 中登录 Cloud Manager 并选择适当的组织和项目。
 
-1. 从 **计划概述** 页面，单击 **存储库** 选项卡，然后导航到 **存储库** 页面。 您可以在此处查看现有存储库的详细信息。
+1. 从&#x200B;**项目概述**&#x200B;页面中，单击&#x200B;**存储库**&#x200B;选项卡，然后导航到&#x200B;**存储库**&#x200B;页面。您可以在此处查看现有存储库的详细信息。
 
-1. 选择存储库，然后单击表最右侧的省略号按钮以 **复制存储库URL**, **查看和更新** 或 **删除** 您的存储库。
+1. 选择存储库，然后单击表最右侧的省略号按钮&#x200B;**复制存储库 URL**、**查看和更新**&#x200B;或&#x200B;**删除**&#x200B;存储库。
 
 ![编辑存储库](/help/assets/create-repo3.png)
 
-## Git子模块支持 {#git-submodule-support}
+## Git 子模块支持 {#git-submodule-support}
 
-Git子模块可用于在构建时在git存储库中合并多个分支的内容。
+Git 子模块可用于在构建时跨 Git 存储库合并多个分支的内容。
 
-在执行Cloud Manager的生成过程时，如果为管道配置的存储库包含 `.gitmodules` 文件，将执行命令。
+Cloud Manager 的构建过程执行期间，在克隆为管道配置的存储库并签出配置的分支后，如果该分支在根目录中包含 `.gitmodules` 文件，则执行此命令。
 
 ```
 $ git submodule update --init
 ```
 
-这会将每个子模块检出到相应的目录中。 此技术是 [使用多个源Git存储库](/help/managing-code/multiple-git-repos.md) 适用于熟悉使用git子模块且不希望管理外部合并流程的组织。
+这会将每个子模块签出到适当的目录中。对于能够轻松使用 Git 子模块并且不想管理外部合并过程的组织来说，此方法是[使用多个源 Git 存储库](/help/managing-code/multiple-git-repos.md)的潜在替代方法。
 
-例如，假设有三个存储库，每个存储库都包含一个名为 `main`. 在“主”存储库（即在管道中配置的存储库）中， `main` 分支具有 `pom.xml` 声明其他两个存储库中包含的项目的文件：
+例如，假设有三个存储库，每个存储库均包含一个名为 `main` 的分支。在“主”存储库（即，在管道中配置的存储库）中，`main` 分支包含一个 `pom.xml` 文件，声明其他两个存储库所包含的项目：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -118,14 +118,14 @@ $ git submodule update --init
 </project>
 ```
 
-然后，您将为其他两个存储库添加子模块：
+之后，您将为其他两个存储库添加子模块：
 
 ```shell
 $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/projectA/ project-a
 $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/projectB/ project-b
 ```
 
-这会导致 `.gitmodules` 文件如下所示：
+这将生成一个 `.gitmodules` 文件，与以下内容类似：
 
 ```text
 [submodule "project-a"]
@@ -138,16 +138,16 @@ $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/proje
     branch = main
 ```
 
-有关git子模块的更多信息，请参阅 [Git参考手册](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+可以在 [Git 参考手册](https://git-scm.com/book/en/v2/Git-Tools-Submodules)中找到有关 Git 子模块的更多信息。
 
 ### 限制 {#limitations}
 
-使用git子模块时，请注意：
+在使用 Git 子模块时，请注意：
 
-* Git URL必须完全遵循上述语法。
-* 出于安全考虑，请勿在这些URL中嵌入凭据。
-* 仅支持位于分支根的子模块。
-* Git子模块引用存储到特定的git提交中。
-   * 因此，当对子模块存储库进行更改时，例如，使用 `git submodule update --remote`.
-* 除非另有必要，否则强烈建议使用“浅层”子模块。
-   * 要执行此操作，请运行 `git config -f .gitmodules submodule.<submodule path>.shallow true` 每个子模块。
+* Git URL 必须完全遵循上述语法。
+* 为安全起见，请勿在这些 URL 中嵌入凭据。
+* 仅支持分支的根目录中的子模块。
+* Git 子模块引用将存储到特定的 git 承诺中。
+   * 因此，在对子模块存储库进行更改时，需要更新引用的承诺，例如使用 `git submodule update --remote` 进行更新。
+* 除非另有必要，否则强烈建议使用“浅”子模块。
+   * 为此，请为每个子模块运行 `git config -f .gitmodules submodule.<submodule path>.shallow true`。
