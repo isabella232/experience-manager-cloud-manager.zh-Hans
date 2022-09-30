@@ -1,54 +1,54 @@
 ---
-title: 调度程序配置
-description: 了解如何使用Cloud Manager部署调度程序配置文件。
+title: Dispatcher 配置
+description: 了解如何使用 Cloud Manager 部署 Dispatcher 配置文件。
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '582'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# 调度程序配置 {#manage-your-dispatcher-configurations}
+# Dispatcher 配置 {#manage-your-dispatcher-configurations}
 
-了解如何使用Cloud Manager部署调度程序配置文件
+了解如何使用 Cloud Manager 部署 Dispatcher 配置文件
 
-## 使用Cloud Manager部署调度程序配置 {#deploying-dispatcher-configurations}
+## 使用 Cloud Manager 部署 Dispatcher 配置 {#deploying-dispatcher-configurations}
 
-Cloud Manager能够部署Web服务器和Dispatcher配置文件(假定它们与常规AEM内容包一起存储在Git存储库中)。
+Cloud Manager 能够部署 Web 服务器和 Dispatcher 配置文件，前提是这些文件与普通 AEM 内容包一起存储在 Git 存储库中。
 
-要利用此功能，Maven内部版本应生成一个.zip文件，其中至少包含两个目录： `conf` 和 `conf.d`. 可以使用 `maven-assembly-plugin`.
+为了利用此功能，Maven 构建应生成一个 .zip 文件，其中至少包含两个目录：`conf` 和 `conf.d`。可以使用 `maven-assembly-plugin` 生成此 .zip 文件。
 
-Cloud Manager使用内置 [项目创建向导](/help/getting-started/using-the-wizard.md) 自动创建正确的Maven项目结构。 如果您是Adobe Managed Services(AMS)的新用户，建议使用此路径。
+Cloud Manager 使用内置的[项目创建向导](/help/getting-started/using-the-wizard.md)生成的项目具有自动创建的正确的 Maven 项目结构。如果您不熟悉 Adobe Managed Services (AMS)，那么建议您执行此操作。
 
-部署到调度程序实例后，Dispatcher实例中这些目录的内容将被您的git存储库中的目录内容覆盖。 由于Web服务器和Dispatcher配置文件经常需要特定于环境的信息才能正确使用此功能，因此您首先需要与客户成功工程师(CSE)合作，在 `/etc/sysconfig/httpd`.
+部署到 Dispatcher 实例后，Dispatcher 实例上这些目录的内容将由您的 Git 存储库中的内容覆盖。由于 Web 服务器和 Dispatcher 配置文件经常需要特定于环境的信息才能正确使用此功能，因此，您首先需要与客户成功工程师 (CSE) 一起在 `/etc/sysconfig/httpd` 中设置这些环境变量。
 
-## 现有托管服务客户的调度程序配置 {#steps-for-configuring-dispatcher}
+## 适用于现有托管服务客户的 Dispatcher 配置 {#steps-for-configuring-dispatcher}
 
-请按照以下步骤完成初始Dispatcher配置。
+执行以下步骤以完成初始 Dispatcher 配置。
 
-1. 从CSE获取当前生产配置文件。
-1. 删除硬编码的环境特定数据（如发布渲染器IP）并替换为变量。
-1. 在键值对中为每个目标Dispatcher定义必需变量，并请求您的CSE将它们添加到 `/etc/sysconfig/httpd` 在每个实例上。
-1. 在暂存环境中测试更新的配置。
-1. 测试后，请求您的CSE部署到生产环境。
-1. 将文件提交到您的git存储库。
-1. 通过Cloud Manager部署。
+1. 从您的 CSE 处获取当前生产配置文件。
+1. 移除硬编码的环境特定的数据（例如发布渲染程序 IP），并替换为变量。
+1. 在每个目标 Dispatcher 的键值对中定义所需的变量，并请求您的 CSE 将这些变量添加到每个实例上的 `/etc/sysconfig/httpd` 中。
+1. 在暂存环境中测试已更新的配置。
+1. 测试后，请求 CSE 部署到生产环境。
+1. 将文件提交到 Git 存储库。
+1. 通过 Cloud Manager 进行部署。
 
 >[!NOTE]
 >
->可以将Dispatcher和Web服务器配置迁移到您的git存储库可以在Cloud Manager载入期间完成，但也可以在稍后的时间点完成。
+>可以在 Cloud Manager 新用户引导期间或以后的某个时间点，将 Dispatcher 和 Web 服务器配置迁移到 Git 存储库。
 
 ### 示例 {#example}
 
-具体的文件和目录结构可能因项目的特定情况而异，但此示例应当提供具体指南，说明如何构建项目以包含Apache和Dispatcher配置。
+虽然特定的文件和目录结构可能会因项目的具体情况而异，但此示例应提供一个具体的指南，说明如何构建项目来包含 Apache 和 Dispatcher 配置。
 
-1. 创建名为的子目录 `dispatcher`.
+1. 创建一个名为 `dispatcher` 的子目录。
 
-   您可以在此使用任何名称，但此步骤中创建的目录名称必须与步骤6中使用的名称相同。
+   尽管可在此处使用任意名称，但此步骤中创建的目录名称必须与步骤 6 中使用的名称相同。
 
-1. 此子目录将包含一个Maven模块，该模块使用Maven Assembly插件生成Dispatcher .zip文件。 要开始此操作，请在 `dispatcher` 目录，创建 `pom.xml` 文件，更改 `parent` 引用， `artifactId`和 `name` 视需要。
+1. 此子目录将包含一个 Maven 模块，该模块使用 Maven Assembly 插件构建 Dispatcher .zip 文件。首先，在 `dispatcher` 目录中，创建一个包含此内容的 `pom.xml` 文件，并根据需要更改 `parent` 引用 `artifactId` 和 `name`。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -88,9 +88,9 @@ Cloud Manager使用内置 [项目创建向导](/help/getting-started/using-the-w
    </project>
    ```
 
-   * 与步骤1一样，如果需要，此处的artifactId和名称可以是其他值。 `dispatcher` 仅用于示例。
+   * 与步骤 1 中一样，可以根据需要将此处的 artifactId 和 name 设为其他值。此处仅以使用 `dispatcher` 为例。
 
-1. Maven Assembly插件需要 `descriptor` 定义如何创建.zip文件。 要创建此描述符，请在 `dispatcher` 子目录 `assembly.xml` ，其内容如下。 请注意，此文件名在 `pom.xml` 文件。
+1. Maven Assembly 插件需要 `descriptor` 来定义 .zip 文件的创建方式。要创建此描述符，请在 `dispatcher` 子目录中创建一个名为 `assembly.xml` 的文件，该文件包含以下内容。请注意，上述 `pom.xml` 文件中的第 26 行引用了此文件名。
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -113,9 +113,9 @@ Cloud Manager使用内置 [项目创建向导](/help/getting-started/using-the-w
    </assembly>
    ```
 
-1. 创建名为的子目录 `src` （如上面第11行的程序集描述符中所引用）位于dispatcher子目录内，用于存储实际的Apache和Dispatcher配置。 在此 `src` 目录，创建名为的目录 `conf`, `conf.d`, `conf.dispatcher.d`和 `conf.modules.d`.
+1. 在 Dispatcher 子目录中创建一个名为 `src` 的子目录（如上面第 11 行的 Assembly 描述符中所引用）来存储实际的 Apache 和 Dispatcher 配置。在此 `src` 目录中，创建名为 `conf`、`conf.d`、`conf.dispatcher.d` 和 `conf.modules.d` 的目录。
 
-1. 填充 `conf`, `conf.d`, `conf.dispatcher.d`和 `conf.modules.d` 目录。 例如，默认配置由这些文件和符号链接组成。
+1. 在 `conf`、`conf.d`、`conf.dispatcher.d` 和 `conf.modules.d` 目录中填入您的配置文件。例如，默认配置包含这些文件和符号链接。
 
    ```
    dispatcher
@@ -190,9 +190,9 @@ Cloud Manager使用内置 [项目创建向导](/help/getting-started/using-the-w
            └── 02-dispatcher.conf
    ```
 
-1. 最后，在 `pom.xml` 在项目的根目录下，添加 `<module>` 用于包含调度程序模块的元素。
+1. 最后，在项目的根目录中的 `pom.xml` 文件中，添加 `<module>` 元素以包含 Dispatcher 模块。
 
-   例如，如果您的现有模块列表为
+   例如，如果现有模块列表为
 
    ```xml
        <modules>
@@ -202,7 +202,7 @@ Cloud Manager使用内置 [项目创建向导](/help/getting-started/using-the-w
        </modules>
    ```
 
-   您应将其更改为
+   您应将它更改为
 
    ```xml
        <modules>
@@ -213,9 +213,9 @@ Cloud Manager使用内置 [项目创建向导](/help/getting-started/using-the-w
        </modules>
    ```
 
-   * 如步骤1中所述， `<module>` 元素必须匹配创建的目录名称。
+   * 如步骤 1 中所述，`<module>` 元素的值必须与创建的目录名称匹配。
 
-1. 要测试，请运行 `mvn clean package` 在项目根目录中。 您应会在输出中看到这样的行。
+1. 要进行测试，请在项目的根目录中运行 `mvn clean package`。您应在输出中看到类似这样的行。
 
    ```
    [INFO] --- maven-assembly-plugin:3.1.0:single (default) @ dispatcher ---
@@ -223,7 +223,7 @@ Cloud Manager使用内置 [项目创建向导](/help/getting-started/using-the-w
    [INFO] Building zip: /Users/me/mycompany/dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
    ```
 
-   您也可以解压缩此文件以查看其内容。
+   您还可以解压缩此文件来查看其内容。
 
    ```shell
    $ unzip -l dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
