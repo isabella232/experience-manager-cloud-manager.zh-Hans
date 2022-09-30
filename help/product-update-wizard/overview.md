@@ -1,39 +1,39 @@
 ---
 title: 产品更新向导
-description: 了解产品更新向导如何简化Cloud Manager中的端到端AEM更新流程。
+description: 了解产品更新向导如何简化 Cloud Manager 中的端到端 AEM 更新过程。
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
 source-git-commit: bbee49987e2f80825f5f7f5caf29c841e2b00dfb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '197'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 
 # 产品更新向导 {#product-update-wizard}
 
-“产品更新”向导是使用Cloud Manager引导式分步升级到最新版Adobe Experience Manager 6.5的体验。 它使用Cloud Manager的CI/CD框架和内置的自动测试来简化端到端流程并确保遵循AEM最佳实践。
+产品更新向导是使用 Cloud Manager 升级到最新版本的 Adobe Experience Manager 6.5 的引导式分步升级体验。它使用 Cloud Manager 的 CI/CD 框架和内置的自动化测试，简化了端到端流程并确保遵循 AEM 最佳实践。
 
-该向导包括五个阶段，用于指导您在AEM产品更新期间：
+该向导包括五个阶段，可以在 AEM 产品更新期间为您提供指导：
 
 * 评估
-* 修正
+* 修复
 * 执行
 * 验证
 * 完成
 
 ## 使用向导 {#using}
 
-已载入Cloud Manager且有资格升级到AEM 6.5的客户可以使用产品更新向导。 有关更多详细信息，请联系您的客户成功工程师(CSE)。
+已登记到 Cloud Manager 并有资格升级到 AEM 6.5 的客户可以使用产品更新向导。有关更多详细信息，请联系您的客户成功工程师 (CSE)。
 
-1. 您将通过Cloud Manager收到一则推送通知，告知您的项目有AEM 6.5可用。
+1. 您将通过 Cloud Manager 收到一个推送通知，告知您 AEM 6.5 适用于您的项目。
 
-1. 安 **[!UICONTROL AEM 6.5 Update]** 卡片会显示在的概述屏幕上 [!UICONTROL Cloud Manager]. 此卡将帮助跟踪您当前处于更新流程的哪个阶段，并将通知您下一步要采取的步骤。
+1. [!UICONTROL Cloud Manager] 的概述屏幕上将显示一个 **[!UICONTROL AEM 6.5 Update]** 信息卡。此信息卡有助于跟踪您当前在更新过程中所处的阶段，并告知您要执行的下一个步骤。
 
-   ![更新向导卡](/help/assets/Start-Update.png)
+   ![更新向导信息卡](/help/assets/Start-Update.png)
 
-1. 选择 **[!UICONTROL Start Update]** 启动向导。
+1. 选择&#x200B;**[!UICONTROL Start Update]**&#x200B;以启动向导。
 
-1. 向导将显示 **[!UICONTROL AEM 6.5 Update]** 进程。
+1. 向导将显示 **[!UICONTROL AEM 6.5 Update]**&#x200B;过程的第一个阶段。
 
-要进一步了解向导的第一阶段，请参阅此文档 [评估阶段。](/help/product-update-wizard/evaluation.md)
+要了解有关向导的第一个阶段的更多信息，请参阅[评估阶段](/help/product-update-wizard/evaluation.md)文档。
