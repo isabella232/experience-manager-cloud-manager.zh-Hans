@@ -1,11 +1,11 @@
 ---
 title: 首次登录
-description: 如果您已设置常规配置并且首次可以使用Cloud Manager，请遵循本页。
+description: 如果您已设置常规配置并且已准备好首次使用 Cloud Manager，请按照此页面上的说明进行操作。
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 2%
+source-wordcount: '261'
+ht-degree: 51%
 
 ---
 
@@ -24,21 +24,21 @@ ht-degree: 2%
 
 1. 选择项目。
 
-1. 在您项目的卡片上，选择省略号按钮，然后 **Cloud Manager** 导航到Cloud Manager的 **概述** 页面。
+1. 在项目的信息卡上，选择省略号按钮，然后选择 **Cloud Manager** 导航到 Cloud Manager 的&#x200B;**概述**&#x200B;页面。
 
-   ![Cloud Manager选项](/help/assets/navigate-cm1.png)
+   ![Cloud Manager 选项](/help/assets/navigate-cm1.png)
 
-1. Cloud Manager将打开 **概述** 页面。
+1. 此时将打开 Cloud Manager 以显示&#x200B;**概述**&#x200B;页面。
 
-   ![Cloud Manager概述页面](/help/assets/FirstLogin1.png)
+   ![Cloud Manager 概述页面](/help/assets/FirstLogin1.png)
 
-1. 单击 **安装程序** 以设置计划描述并定义关键绩效指标(KPI)。
+1. 单击&#x200B;**设置项目**&#x200B;设置您的项目描述并定义关键绩效指标 (KPI)。
 
-请继续阅读该文档 [程序设置](/help/getting-started/program-setup.md) 以了解设置程序的后续步骤。
+请继续查看[项目设置](/help/getting-started/program-setup.md)文档，了解项目设置过程的后续步骤。
 
-## Cloud Manager活动 {#activity}
+## Cloud Manager 活动 {#activity}
 
-Cloud Manager提供了项目活动的整合视图，其中列出了所有生产和非生产CI/CD管道执行，从而可以查看过去和当前的活动。
+Cloud Manager 提供项目活动的综合视图，其中列出了所有用于生产环境和非生产环境的 CI/CD 管道执行，并允许查看过去和现在的活动。
 
 >[!NOTE]
 >

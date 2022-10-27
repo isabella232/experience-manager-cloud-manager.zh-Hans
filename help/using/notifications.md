@@ -4,8 +4,8 @@ description: 了解 Cloud Manager 如何向您通知重要事件。
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 23%
+source-wordcount: '573'
+ht-degree: 14%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 23%
 
 ## Cloud Manager 中的通知 {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] 在以下情况下向您发送通知：当生产管道启动和完成（成功或失败）时、在生产部署开始时，以及在到达&#x200B;**上线审批**&#x200B;和&#x200B;**已计划**&#x200B;步骤时。这些通知将通过 [!UICONTROL Experience Cloud] 通知系统发送。
+[!UICONTROL Cloud Manager] 当生产管道在生产部署开始时开始并完成（成功或失败），以及在生产部署开始时，向您发送通知 **上线批准** 和 **已计划** 步骤。 这些通知通过 [!UICONTROL Experience Cloud] 通知系统。
 
 >[!NOTE]
 >
 >审批和已计划通知仅发送给具有&#x200B;**业务负责人**、**项目经理**&#x200B;和&#x200B;**部署经理**&#x200B;角色的用户。
 
-通知显示在 [!UICONTROL Cloud Manager] 侧边栏中以及整个 Adobe [!UICONTROL Experience Cloud] 中。
+通知显示在 [!UICONTROL Cloud Manager] 和整个Adobe [!UICONTROL Experience Cloud].
 
 当您有新通知时，标题中的铃铛图标将被标记。
 
