@@ -1,19 +1,19 @@
 ---
-title: 2022.10.0 版发行说明
-description: 这些是 Cloud Manager 2022.10.0 版的发行说明。
+title: 2022.11.0 版发行说明
+description: 这些是 Cloud Manager 2022.11.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 69c1c8a1136c037a5eea635a75f2d4d187f2ac4d
+source-git-commit: 2defbdbee0221540f66f7d824ccf1bd33179c9d9
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 54%
+source-wordcount: '132'
+ht-degree: 45%
 
 ---
 
 
-# Cloud Manager 2022.10.0 版的发行说明 {#release-notes}
+# Cloud Manager 2022.11.0 版的发行说明 {#release-notes}
 
-本页记录了 [!UICONTROL Cloud Manager] 版本2022.10.0。
+本页记录了 [!UICONTROL Cloud Manager] 版本2022.11.0。
 
 >[!NOTE]
 >
@@ -21,12 +21,12 @@ ht-degree: 54%
 
 ## 发布日期 {#release-date}
 
-的发行日期 [!UICONTROL Cloud Manager] 2022.10.0版于2022年10月6日发布。 下一版本计划于2022年11月3日发布。
+的发行日期 [!UICONTROL Cloud Manager] 2022.11.0版于2022年11月3日发布。 下一版本计划于2022年11月29日发布。
 
 ## 新增功能 {#what-is-new}
 
-* 的版本 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) Cloud Manager使用的已更新到版本39。
+* 如果与管道关联的环境具有不允许执行管道的状态，则运行操作将被禁用，并显示说明性工具提示。
 
 ## 错误修复 {#bug-fixes}
 
-* 通过在特定条件下添加重试，提高了资产性能测试的可靠性。
+* 改进了编辑生产管道期间的反馈，以捕获一个或多个缺失环境的不经常出现。
