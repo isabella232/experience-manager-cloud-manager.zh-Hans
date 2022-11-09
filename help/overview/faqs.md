@@ -23,7 +23,7 @@ ht-degree: 100%
 
 ## 从 Java 8 切换到 Java 11 后，我的构建失败，并显示一个有关 maven-scr-plugin 的错误。我该怎么办？ {#maven-src-plugin}
 
-尝试将构建从 Java 8 切换到 Java 11 时，您的 AEM Cloud Manager 构建可能会失败。如果您遇到以下错误，则需要移除 `maven-scr-plugin` 并将所有 OSGi 注释转换为 OSGi R6 注释。
+尝试将构建从 Java 8 切换到 Java 11 时，您的 AEM Cloud Manager 构建可能会失败。 如果您遇到以下错误，则需要移除 `maven-scr-plugin` 并将所有 OSGi 注释转换为 OSGi R6 注释。
 
 ```text
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
@@ -41,7 +41,7 @@ ht-degree: 100%
 
 这是一个已知问题，导致此问题的原因是 Cloud Manager 使用其他版本的 Java 来运行 maven 命令而不是编译代码。只需从 `maven-enforcer-plugin` 配置中忽略 `requireJavaVersion`。
 
-## 代码质量检查失败，并且我们的部署出现卡滞。是否能通过某种方式绕过此检查？ {#deployment-stuck}
+## 代码质量检查失败，并且我们的部署出现卡滞。 是否能通过某种方式绕过此检查？ {#deployment-stuck}
 
 是。除了安全性评级之外，所有代码质量故障都是非关键量度，因此，可以在部署管道中，通过扩展结果 UI 中的项目来绕过它们。
 
@@ -66,9 +66,9 @@ ht-degree: 100%
 
 是。对于开发人员部署，Git 分支 `pom.xml` 文件必须在 `<version>` 值的末尾包含 `-SNAPSHOT`。
 
-这样一来，在版本未更改的情况下，仍能安装后续部署。在开发人员部署中，不会为 Maven 构建添加或生成自动版本。
+这样一来，在版本未更改的情况下，仍能安装后续部署。 在开发人员部署中，不会为 Maven 构建添加或生成自动版本。
 
-您也可以为暂存和生产构建或部署将版本设置为 `-SNAPSHOT`。Cloud Manager 会自动设置适当的版本号并在 Git 中为您创建标记。如果需要，可以稍后参考此标记。
+您也可以为暂存和生产构建或部署将版本设置为 `-SNAPSHOT`。 Cloud Manager 会自动设置适当的版本号并在 Git 中为您创建标记。 如果需要，可以稍后参考此标记。
 
 [此处记录了](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling.html)有关版本处理的更多详细信息。
 
@@ -78,9 +78,9 @@ ht-degree: 100%
 
 对于暂存和生产部署中的自定义版本控制，请设置包含三个部分的正确 maven 版本，如 `1.0.0`。每次部署到生产环境时提高版本。
 
-Cloud Manager 自动将其版本添加到暂存和生产构建，并创建 Git 分支。无需特殊配置。如果您未如前所述设置 maven 版本，部署仍将成功，并且会自动设置版本。
+Cloud Manager 自动将其版本添加到暂存和生产构建，并创建 Git 分支。 无需特殊配置。 如果您未如前所述设置 maven 版本，部署仍将成功，并且会自动设置版本。
 
-## 虽然在 Cloud Manager 部署中，我的 maven 构建失败，但它会在本地构建，并且不会产生错误。有什么问题吗？ {#maven-build-fail}
+## 虽然在 Cloud Manager 部署中，我的 maven 构建失败，但它会在本地构建，并且不会产生错误。 有什么问题吗？ {#maven-build-fail}
 
 有关更多详细信息，请参阅此 [Git 资源](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md)。
 
