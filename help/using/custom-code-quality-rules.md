@@ -27,9 +27,9 @@ ht-degree: 100%
 * **密钥**：CQRules:CWE-676
 * **类型**：漏洞
 * **严重性**：主要
-* **从以下版本开始**：版本 2018.4.0
+* **开始版本**：版本 2018.4.0
 
-`Thread.stop()` 和 `Thread.interrupt()` 方法可能会产生难以重现的问题，并且在某些情况下会产生安全漏洞。应严格监控和验证其使用情况。 总的来说，传递信息是实现类似目标的一种更安全的方式。
+`Thread.stop()` 和 `Thread.interrupt()` 方法可能会产生难以重现的问题，并且在某些情况下会产生安全漏洞。 应严格监控和验证其使用情况。 总的来说，传递信息是实现类似目标的一种更安全的方式。
 
 #### 不合规的代码 {#non-compliant-code}
 
@@ -101,8 +101,8 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 * **密钥**：CQRules:ConnectionTimeoutMechanism
 * **类型**：错误
-* **严重性**：关键
-* **从以下版本开始**：版本 2018.6.0
+* **严重性**：严重
+* **开始版本**：版本 2018.6.0
 
 从 AEM 应用程序内部执行 HTTP 请求时，请务必确保配置适当的超时以避免不必要的线程消耗。 不幸的是，Java 的默认 HTTP 客户端 `java.net.HttpUrlConnection` 和常用的 Apache HTTP 组件客户端的默认行为都是永不超时，因此必须明确设置超时。 作为最佳实践，这些超时不应超过 60 秒。
 
@@ -177,11 +177,11 @@ public void orDoThis() {
 * **密钥**：CQRules:CQBP-72
 * **类型**：代码异味
 * **严重性**：主要
-* **从以下版本开始**：版本 2018.4.0
+* **开始版本**：版本 2018.4.0
 
-从 `ResourceResolverFactory` 获取的 `ResourceResolver` 对象占用系统资源。虽然可以采取一些措施以在不再使用 `ResourceResolver` 时回收这些资源，但通过调用 `close()` 方法显式关闭任何打开的 `ResourceResolver` 对象会更有效。
+从 `ResourceResolverFactory` 获取的 `ResourceResolver` 对象占用系统资源。 虽然可以采取一些措施以在不再使用 `ResourceResolver` 时回收这些资源，但通过调用 `close()` 方法显式关闭任何打开的 `ResourceResolver` 对象会更有效。
 
-一个相对常见的误解是，使用现有 JCR 会话创建的 `ResourceResolver` 对象不应显式关闭，否则将关闭底层 JCR 会话。情况并非如此。无论 `ResourceResolver` 的打开方式如何，只要不再使用它，就应将它关闭。由于 `ResourceResolver` 实施 `Closeable` 接口，也可以使用 `try-with-resources` 语法，而不是显式调用 `close()`。
+一个相对常见的误解是，使用现有 JCR 会话创建的 `ResourceResolver` 对象不应显式关闭，否则将关闭底层 JCR 会话。情况并非如此。无论 `ResourceResolver` 的打开方式如何，只要不再使用它，就应将它关闭。 由于 `ResourceResolver` 实施 `Closeable` 接口，也可以使用 `try-with-resources` 语法，而不是显式调用 `close()`。
 
 #### 不合规的代码 {#non-compliant-code-4}
 
@@ -219,9 +219,9 @@ public void orDoThis(Session session) throws Exception {
 * **密钥**：CQRules:CQBP-75
 * **类型**：代码异味
 * **严重性**：主要
-* **从以下版本开始**：版本 2018.4.0
+* **开始版本**：版本 2018.4.0
 
-如 [Sling 文档](http://sling.apache.org/documentation/the-sling-engine/servlets.html)中所述，建议不要通过路径绑定 servlet。路径绑定的 servlet 不能使用标准 JCR 访问控制，因此，需要额外的安全严密性。建议在存储库中创建节点并按资源类型注册 servlet，而不是使用路径绑定的 servlet。
+如 [Sling 文档](http://sling.apache.org/documentation/the-sling-engine/servlets.html)中所述，建议不要通过路径绑定 servlet。 路径绑定的 servlet 不能使用标准 JCR 访问控制，因此，需要额外的安全严密性。 建议在存储库中创建节点并按资源类型注册 servlet，而不是使用路径绑定的 servlet。
 
 #### 不合规的代码 {#non-compliant-code-5}
 
@@ -238,10 +238,10 @@ public class DontDoThis extends SlingAllMethodsServlet {
 
 * **密钥**：CQRules:CQBP-44---CatchAndEitherLogOrThrow
 * **类型**：代码异味
-* **严重性**：次要
-* **从以下版本开始**：版本 2018.4.0
+* **严重性**：轻微
+* **开始版本**：版本 2018.4.0
 
-通常，一个异常应只记录一次。将一个异常记录多次可能会导致混淆，因为不清楚该异常发生了几次。导致出现此情况的最常见模式是记录并引发捕获的异常。
+通常，一个异常应只记录一次。 将一个异常记录多次可能会导致混淆，因为不清楚该异常发生了几次。 导致出现此情况的最常见模式是记录并引发捕获的异常。
 
 #### 不合规的代码 {#non-compliant-code-6}
 
@@ -280,10 +280,10 @@ public void orDoThis() throws MyCustomException {
 
 * **密钥**：CQRules:CQBP-44---ConsecutivelyLogAndThrow
 * **类型**：代码异味
-* **严重性**：次要
-* **从以下版本开始**：版本 2018.4.0
+* **严重性**：轻微
+* **开始版本**：版本 2018.4.0
 
-另一个要避免的常见模式是记录一条消息，然后立即引发异常。这通常表明异常消息最终会在日志文件中重复。
+另一个要避免的常见模式是记录一条消息，然后立即引发异常。 这通常表明异常消息最终会在日志文件中重复。
 
 #### 不合规的代码 {#non-compliant-code-7}
 
@@ -306,9 +306,9 @@ public void doThis() throws Exception {
 
 * **密钥**：CQRules:CQBP-44---LogInfoInGetOrHeadRequests
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 
-通常，应使用 INFO 日志级别来划分重要操作，默认情况下，AEM 配置为在 INFO 级别或更高级别进行记录。GET 和 HEAD 方法只能为只读操作，因此，不会构成重要操作。在 INFO 级别进行记录来响应 GET 或 HEAD 请求可能会产生大量日志噪音，从而导致更难以识别日志文件中的有用信息。处理 GET 或 HEAD 请求时，应在 WARN 或 ERROR 级别进行记录（如果出现问题），或在 DEBUG 或 TRACE 级别进行记录（如果更深入的故障排除信息会很有用）。
+通常，应使用 INFO 日志级别来划分重要操作，默认情况下，AEM 配置为在 INFO 级别或更高级别进行记录。 GET 和 HEAD 方法只能为只读操作，因此，不会构成重要操作。 在 INFO 级别进行记录来响应 GET 或 HEAD 请求可能会产生大量日志噪音，从而导致更难以识别日志文件中的有用信息。 处理 GET 或 HEAD 请求时，应在 WARN 或 ERROR 级别进行记录（如果出现问题），或在 DEBUG 或 TRACE 级别进行记录（如果更深入的故障排除信息会很有用）。
 
 >[!NOTE]
 >
@@ -334,10 +334,10 @@ public void doGet() throws Exception {
 
 * **密钥**：CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
 * **类型**：代码异味
-* **严重性**：次要
-* **从以下版本开始**：版本 2018.4.0
+* **严重性**：轻微
+* **开始版本**：版本 2018.4.0
 
-作为最佳实践，日志消息应提供有关应用程序中发生异常的位置的上下文信息。虽然也可以使用堆栈跟踪来确定上下文，但通常日志消息将更易于阅读和理解。因此，在记录异常时，将异常消息用作日志消息是一种不好的做法。异常消息将包含所发生的问题，而日志消息应让日志读者知道，当发生异常时，应用程序正在做什么。仍将记录异常消息。通过指定您自己的消息，可使日志更易于理解。
+作为最佳实践，日志消息应提供有关应用程序中发生异常的位置的上下文信息。 虽然也可以使用堆栈跟踪来确定上下文，但通常日志消息将更易于阅读和理解。 因此，在记录异常时，将异常消息用作日志消息是一种不好的做法。 异常消息将包含所发生的问题，而日志消息应让日志读者知道，当发生异常时，应用程序正在做什么。 仍将记录异常消息。通过指定您自己的消息，可使日志更易于理解。
 
 #### 不合规的代码 {#non-compliant-code-9}
 
@@ -367,8 +367,8 @@ public void doThis() {
 
 * **密钥**：CQRules:CQBP-44---WrongLogLevelInCatchBlock
 * **类型**：代码异味
-* **严重性**：次要
-* **从以下版本开始**：版本 2018.4.0
+* **严重性**：轻微
+* **开始版本**：版本 2018.4.0
 
 顾名思义，Java 异常应始终在异常情况下使用。因此，当捕获到异常时，请务必确保在适当的级别记录日志消息：WARN 或 ERROR。这将确保这些消息正确显示在日志中。
 
@@ -396,11 +396,11 @@ public void doThis() {
 }
 ```
 
-### 请勿将堆栈跟踪输出到控制台 {#do-not-print-stack-traces-to-the-console}
+### 请勿将堆栈跟踪打印到控制台 {#do-not-print-stack-traces-to-the-console}
 
 * **密钥**：CQRules:CQBP-44---ExceptionPrintStackTrace
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2018.4.0
 
 上下文对于理解日志消息是至关重要的。使用 `Exception.printStackTrace()` 会导致仅将堆栈跟踪输出到标准错误流，从而丢失所有上下文。此外，在像 AEM 这样的多线程应用程序中，如果使用此方法并行打印多个异常，则其堆栈跟踪可能会发生重叠，从而导致产生严重混淆。应仅通过记录框架来记录异常。
@@ -433,7 +433,7 @@ public void doThis() {
 
 * **密钥**：CQRules:CQBP-44—LogLevelConsolePrinters
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2018.4.0
 
 AEM 中的记录应始终通过记录框架 SLF4J 完成。直接输出到标准输出或标准错误流将丢失记录框架提供的结构和上下文信息，并且在某些情况下可能会导致出现性能问题。
@@ -466,7 +466,7 @@ public void doThis() {
 
 * **密钥**：CQRules:CQBP-71
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2018.4.0
 
 通常，以 `/libs` 和 `/apps` 开头的路径不应进行硬编码，因为它们引用的路径最常存储为 Sling 搜索路径（默认情况下，设置为 `/libs,/apps`）的相对路径。使用绝对路径可能会引入小缺陷，这些缺陷仅在项目生命周期的后期出现。
@@ -491,10 +491,10 @@ public void doThis(Resource resource) {
 
 * **密钥**：CQRules:AMSCORE-554
 * **类型**：代码异味/Cloud Service 兼容性
-* **严重性**：次要
-* **从以下版本开始**：版本 2020.5.0
+* **严重性**：轻微
+* **开始版本**：版本 2020.5.0
 
-Sling 调度程序不得用于需要保证执行的任务。Sling 计划作业可保证执行，并且更适合集群和非集群环境。
+Sling 调度程序不得用于需要保证执行的任务。 Sling 计划作业可保证执行，并且更适合集群和非集群环境。
 
 请参阅 [Apache Sling 事件和作业处理](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html)文档，详细了解如何在集群环境中处理 Sling 作业。
 
@@ -502,8 +502,8 @@ Sling 调度程序不得用于需要保证执行的任务。Sling 计划作业�
 
 * **密钥**：AMSCORE-553
 * **类型**：代码异味/Cloud Service 兼容性
-* **严重性**：次要
-* **从以下版本开始**：版本 2020.5.0
+* **严重性**：轻微
+* **开始版本**：版本 2020.5.0
 
 AEM API 接口正在不断修订，以识别建议不要使用的 API，从而考虑将其弃用。
 
@@ -517,18 +517,18 @@ AEM API 接口正在不断修订，以识别建议不要使用的 API，从而�
 
 >[!NOTE]
 >
->OakPAL 是一个框架，它使用独立的 Oak 存储库来验证内容包。它由一个 AEM 合作伙伴开发，并获得了 2019 年的 AEM Rockstar 北美区大奖。
+>OakPAL 是一个框架，它使用独立的 Oak 存储库来验证内容包。 它由一个 AEM 合作伙伴开发，并获得了 2019 年的 AEM Rockstar 北美区大奖。
 
 ### 客户不应实施或扩展用 @ProviderType 注释的产品 API {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
 * **密钥**：CQBP-84
 * **类型**：错误
-* **严重性**：关键
-* **从以下版本开始**：版本 2018.7.0
+* **严重性**：严重
+* **开始版本**：版本 2018.7.0
 
-AEM API 包含 Java 接口和类，这些接口和类仅通过自定义代码使用而不是实现。例如，接口 `com.day.cq.wcm.api.Page` 设计为仅由 AEM 实现。
+AEM API包含Java接口和类，这些接口和类仅用于由自定义代码使用，但不能实现。 例如，接口 `com.day.cq.wcm.api.Page` 设计为仅由 AEM 实现。
 
-在将新方法添加到这些接口时，这些附加方法不会影响使用这些接口的现有代码，因此，向这些接口添加新方法被认为是向后兼容的。但是，如果自定义代码实现了其中一个接口，则该自定义代码会给客户带来向后兼容性风险。
+当将新方法添加到这些接口时，这些附加方法不会影响使用这些接口的现有代码，因此，向这些接口添加新方法被认为是向后兼容的。 但是，如果自定义代码实现了其中一个接口，则该自定义代码会给客户带来向后兼容性风险。
 
 仅由 AEM 实现的接口和类通过 `org.osgi.annotation.versioning.ProviderType` 进行注释，在某些情况下，通过类似的旧批注 `aQute.bnd.annotation.ProviderType` 进行注释。此规则标识实现此类接口或自定义代码扩展类的情况。
 
@@ -549,14 +549,14 @@ public class DontDoThis implements Page {
 * **严重性**：阻断
 * **从以下版本开始**：版本 2019.6.0
 
-客户应将 AEM 内容存储库中的 `/libs` 内容树视为只读，这是一个长期存在的最佳实践。修改 `/libs` 下的节点和属性会给主要和次要更新带来重大风险。对 `/libs` 的修改只能由 Adobe 通过正式渠道进行。
+客户应将 AEM 内容存储库中的 `/libs` 内容树视为只读，这是一个长期存在的最佳实践。修改 `/libs` 下的节点和属性会给主要和次要更新带来重大风险。 对 `/libs` 的修改只能由 Adobe 通过正式渠道进行。
 
 ### 包不应包含重复的 OSGi 配置 {#oakpal-package-osgi}
 
 * **密钥**：DuplicateOsgiConfigurations
 * **类型**：错误
 * **严重性**：主要
-* **从以下版本开始**：版本 2019.6.0
+* **开始版本**：版本 2019.6.0
 
 复杂项目中出现的一个常见问题是，将同一个 OSGi 组件配置多次。这会导致无法明确哪种配置将是可操作的。此规则是“运行模式感知型”的，因为它只会识别在同一运行模式或运行模式组合中多次配置同一组件的问题。
 
@@ -586,11 +586,11 @@ public class DontDoThis implements Page {
 * **密钥**：ConfigAndInstallShouldOnlyContainOsgiNodes
 * **类型**：错误
 * **严重性**：主要
-* **从以下版本开始**：版本 2019.6.0
+* **开始版本**：版本 2019.6.0
 
-出于安全原因，包含 `/config/` 和 `/install/` 的路径只能由 AEM 中的管理用户读取，并且只能用于 OSGi 配置和 OSGi 捆绑包。如果将其他类型的内容放在包含这些区段的路径下，则会导致应用程序行为在管理用户和非管理用户之间无意中发生变化。
+出于安全原因，包含 `/config/` 和 `/install/` 的路径只能由 AEM 中的管理用户读取，并且只能用于 OSGi 配置和 OSGi 捆绑包。 如果将其他类型的内容放在包含这些区段的路径下，则会导致应用程序行为在管理用户和非管理用户之间无意中发生变化。
 
-一个常见问题是，在组件对话框中或在为内联编辑指定富文本编辑器配置时使用名为 `config` 的节点。要解决此问题，应将违规节点重命名为合规的名称。对于富文本编辑器配置，使用 `cq:inplaceEditing` 节点上的 `configPath` 属性指定新位置。
+一个常见问题是，在组件对话框中或在为内联编辑指定富文本编辑器配置时使用名为 `config` 的节点。 要解决此问题，应将违规节点重命名为合规的名称。 对于富文本编辑器配置，使用 `cq:inplaceEditing` 节点上的 `configPath` 属性指定新位置。
 
 #### 不合规的代码 {#non-compliant-code-config-install}
 
@@ -624,22 +624,22 @@ public class DontDoThis implements Page {
 
 * **密钥**：ClassicUIAuthoringMode
 * **类型**：代码异味/Cloud Service 兼容性
-* **严重性**：次要
-* **从以下版本开始**：版本 2020.5.0
+* **严重性**：轻微
+* **开始版本**：版本 2020.5.0
 
-OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中的默认创作模式。由于[经典 UI 自 AEM 6.4 之后已被弃用](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)，因此，在将默认创作模式配置为经典 UI 时，现在将引发问题。
+OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中的默认创作模式。 由于[经典 UI 自 AEM 6.4 之后已被弃用,](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)，因此，在将默认创作模式配置为经典 UI 时，现在将引发问题。
 
 ### 带对话框的组件应具有 Touch UI 对话框 {#oakpal-components-dialogs}
 
 * **密钥**：ComponentWithOnlyClassicUIDialog
 * **类型**：代码异味/Cloud Service 兼容性
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2020.5.0
 
 具有经典 UI 对话框的 AEM 组件应始终具有对应的 Touch UI 对话框，以提供最佳创作体验并与不支持经典 UI 的 Cloud Service 部署模型兼容。此规则验证以下场景：
 
-* 具有经典 UI 对话框（即 `dialog` 子节点）的组件必须具有对应的 Touch UI 对话框（即 `cq:dialog` 子节点）。
-* 具有经典 UI 设计对话框（即 `design_dialog` 节点）的组件必须具有对应的 Touch UI 设计对话框（即 `cq:design_dialog` 子节点）。
+* 具有经典 UI 对话框（即 `dialog` 子节点）的组件必须具有相应的 Touch UI 对话框（即 `cq:dialog` 子节点）。
+* 具有经典 UI 设计对话框（即 `design_dialog` 节点）的组件必须具有相应的 Touch UI 设计对话框（即 `cq:design_dialog` 子节点）。
 * 具有经典 UI 对话框和经典 UI 设计对话框的组件必须具有对应的 Touch UI 对话框和 Touch UI 设计对话框。
 
 “AEM 现代化工具”文档提供了有关如何将组件从经典 UI 转换为 Touch UI 的详细信息以及使用的工具。有关更多详细信息，请参阅[“AEM 现代化工具”文档](https://opensource.adobe.com/aem-modernize-tools/)。
@@ -648,10 +648,10 @@ OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中
 
 * **密钥**：ImmutableMutableMixedPackage
 * **类型**：代码异味/Cloud Service 兼容性
-* **严重性**：次要
-* **从以下版本开始**：版本 2020.5.0
+* **严重性**：轻微
+* **开始版本**：版本 2020.5.0
 
-要与 Cloud Service 部署模型兼容，各个内容包必须包含存储库的不可变区域（即 `/apps` 和 `/libs`）的内容或可变区域的内容（即未在 `/apps` 或 `/libs` 中的内容），但不能同时包含这两个区域的内容。例如，包含 `/apps/myco/components/text and /etc/clientlibs/myco` 的包不与 Cloud Service 兼容，并且将导致报告问题。
+要与 Cloud Service 部署模型兼容，各个内容包必须包含存储库的不可变区域（即 `/apps` 和 `/libs`）的内容或可变区域的内容（即未在 `/apps` 或 `/libs` 中的内容），但不能同时包含这两个区域的内容。 例如，包含 `/apps/myco/components/text and /etc/clientlibs/myco` 的包不与 Cloud Service 兼容，并且将导致报告问题。
 
 有关更多详细信息，请参阅[“AEM 项目结构”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html)。
 
@@ -663,7 +663,7 @@ OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中
 
 * **密钥**：ReverseReplication
 * **类型**：代码异味/Cloud Service 兼容性
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2020.5.0
 
 Cloud Service 部署中不支持反向复制，如[发行说明：移除复制代理](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html#replication-agents)中所述。
@@ -674,8 +674,8 @@ Cloud Service 部署中不支持反向复制，如[发行说明：移除复制�
 
 * **密钥**：ClientlibProxyResource
 * **类型**：错误
-* **严重性**：次要
-* **从以下版本开始**：版本 2021.2.0
+* **严重性**：轻微
+* **开始版本**：版本 2021.2.0
 
 AEM 客户端库可能包含静态资源，如图像和字体。如[“使用客户端库”文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#using-preprocessors)中所述，在使用代理的客户端库时，这些静态资源必须包含在名为 `resources` 的子文件夹中，才能在发布实例上有效引用这些资源。
 
@@ -716,8 +716,8 @@ AEM 客户端库可能包含静态资源，如图像和字体。如[“使用客
 
 * **密钥**：StaticTemplateUsage
 * **类型**：代码异味
-* **严重性**：次要
-* **从以下版本开始**：版本 2021.2.0
+* **严重性**：轻微
+* **开始版本**：版本 2021.2.0
 
 虽然静态模板的使用历来在 AEM 项目中非常普遍，但强烈建议使用可编辑的模板，因为它们提供了最大的灵活性，并支持静态模板中不存在的附加功能。要获取更多信息，请参阅[“页面模板 - 可编辑”文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)。
 
@@ -727,7 +727,7 @@ AEM 客户端库可能包含静态资源，如图像和字体。如[“使用客
 
 * **密钥**：LegacyFoundationComponentUsage
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 旧的基础组件（即 `/libs/foundation` 下的组件）已在多个 AEM 版本中被弃用以便支持[核心组件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)建议不要使用旧的基础组件作为自定义组件的基础（无论是通过叠加还是继承），并且应将这些基础组件转换为对应的核心组件。
@@ -738,7 +738,7 @@ AEM 客户端库可能包含静态资源，如图像和字体。如[“使用客
 
 * **密钥**：SupportedRunmode
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 AEM Cloud Service 对运行模式名称实施严格的命名策略，并对这些运行模式进行严格的排序。可以在[“部署到 AEM as a Cloud Service”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html#runmodes)中找到受支持的运行模式列表，任何偏离该列表的情况都将被视为问题。
@@ -747,7 +747,7 @@ AEM Cloud Service 对运行模式名称实施严格的命名策略，并对这�
 
 * **密钥**：OakIndexLocation
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinition` 类型的节点）是 `/oak:index` 的直接子节点。必须移动其他位置的索引才能与 AEM Cloud Service 兼容。有关搜索索引的更多信息，请参阅[“内容搜索和索引编制”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html)。
@@ -756,7 +756,7 @@ AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * **密钥**：IndexCompatVersion
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinition` 类型的节点）必须将 `compatVersion` 属性设置为 `2`。AEM Cloud Service 不支持任何其他值。有关搜索索引的更多信息，请参阅[“内容搜索和索引编制”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html)。
@@ -765,7 +765,7 @@ AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * **密钥**：IndexDescendantNodeType
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 当自定义搜索索引定义节点具有无序子节点时，可能会出现难以解决的问题。为了避免出现此情况，建议 `oak:QueryIndexDefinition` 节点的所有后代节点的类型为 `nt:unstructured`。
@@ -774,7 +774,7 @@ AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * **密钥**：IndexRulesNode
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 正确定义的自定义搜索索引定义节点必须包含一个名为 `indexRules` 的子节点，而该子节点必须具有至少一个子节点。有关更多信息，请参阅 [Oak 文档](https://jackrabbit.apache.org/oak/docs/query/lucene.html)。
@@ -783,7 +783,7 @@ AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * **密钥**：IndexName
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinition` 类型的节点）必须按照[内容搜索和索引编制](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#how-to-use)中所述的特定模式进行命名。
@@ -792,7 +792,7 @@ AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * **密钥**：IndexType
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinition` 类型的节点）必须将 `type` 属性的值设置为 `lucene`。在迁移到 AEM Cloud Service 之前，必须更新使用旧索引类型的索引编制。有关更多信息，请参阅[“内容搜索和索引编制”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#how-to-use)。
@@ -801,7 +801,7 @@ AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * **密钥**：IndexSeedProperty
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 AEM Cloud Service 禁止自定义搜索索引定义（即 `oak:QueryIndexDefinition` 类型的节点）包含名为 `seed` 的属性。在迁移到 AEM Cloud Service 之前，必须更新使用此属性的索引编制。有关更多信息，请参阅[“内容搜索和索引编制”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#how-to-use)。
@@ -810,7 +810,7 @@ AEM Cloud Service 禁止自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * **密钥**：IndexReindexProperty
 * **类型**：代码异味
-* **严重性**：次要
+* **严重性**：轻微
 * **从以下版本开始**：版本 2021.2.0
 
 AEM Cloud Service 禁止自定义搜索索引定义（即 `oak:QueryIndexDefinition` 类型的节点）包含名为 `reindex` 的属性。在迁移到 AEM Cloud Service 之前，必须更新使用此属性的索引编制。有关更多信息，请参阅[“内容搜索和索引编制”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#how-to-use)。
