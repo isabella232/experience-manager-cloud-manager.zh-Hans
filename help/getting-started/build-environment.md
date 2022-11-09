@@ -19,7 +19,7 @@ ht-degree: 100%
 Cloud Manager 的构建环境具有以下属性。
 
 * 构建环境基于 Linux，派生自 Ubuntu 18.04。
-* 已安装 Apache Maven 3.6.0。
+* 安装 Apache Maven 3.6.0。
 * 安装的 Java 版本是 Oracle JDK 8u202 和 Oracle JDK 11.0.2。
 * 默认情况下，`JAVA_HOME` 环境变量设置为 `/usr/lib/jvm/jdk1.8.0_202`，其中包含 Oracle JDK 8u202。有关更多详细信息，请参阅[替代 Maven 执行 JDK 版本](#alternate-maven)部分。
 * 安装了一些其他的必要系统包。
@@ -51,7 +51,7 @@ Cloud Manager 的构建环境具有以下属性。
 
 ## 使用特定的 Java 版本 {#using-java-version}
 
-默认情况下，项目通过使用 Oracle 8 JDK 的 Cloud Manager 构建过程构建。希望使用替代 JDK 的客户有两种选择。
+默认情况下，项目通过使用 Oracle 8 JDK 的 Cloud Manager 构建过程构建。 希望使用替代 JDK 的客户有两种选择。
 
 * [Maven 工具链](#maven-toolchains)
 * [为整个 Maven 执行过程选择替代 JDK 版本](#alternate-maven)
@@ -104,7 +104,7 @@ Cloud Manager 的构建环境具有以下属性。
 
 ### 替代 Maven 执行 JDK 版本 {#alternate-maven}
 
-也可以选择 Oracle 8 或 Oracle 11 作为整个 Maven 执行的 JDK。与工具链选项不同，除非还设置了工具链配置（在此情况下，工具链配置仍适用于工具链感知的 Maven 插件），否则这将更改用于所有插件的 JDK。因此，通过 [Apache Maven Enforcer 插件](https://maven.apache.org/enforcer/maven-enforcer-plugin/)等插件检查和强制实施 Java 版本将起作用。
+也可以选择 Oracle 8 或 Oracle 11 作为整个 Maven 执行的 JDK。与工具链选项不同，除非还设置了工具链配置（在此情况下，工具链配置仍适用于工具链感知的 Maven 插件），否则这将更改用于所有插件的 JDK。因此，通过 [Apache Maven Enforcer 插件](https://maven.apache.org/enforcer/maven-enforcer-plugin/)等插件检查和强制执行 Java 版本将起作用。
 
 为此，请在管道使用的 Git 存储库分支中创建一个名为 `.cloudmanager/java-version` 的文件。此文件可以包含内容 `11` 或 `8`。任何其他值将被忽略。如果指定了 `11`，则使用 Oracle 11，并且 `JAVA_HOME` 环境变量将设置为 `/usr/lib/jvm/jdk-11.0.2`。如果指定了 `8`，则使用 Oracle 8，并且 `JAVA_HOME` 环境变量将设置为 `/usr/lib/jvm/jdk1.8.0_202`。
 
@@ -121,7 +121,7 @@ Cloud Manager 的构建环境具有以下属性。
 | 变量名称 | 描述 |
 |---|---|
 | `CM_BUILD` | 始终设置为 `true` |
-| `BRANCH` | 已配置的执行分支 |
+| `BRANCH` | 执行的已配置分支 |
 | `CM_PIPELINE_ID` | 数值管道标识符 |
 | `CM_PIPELINE_NAME` | 管道名称 |
 | `CM_PROGRAM_ID` | 数值项目标识符 |
