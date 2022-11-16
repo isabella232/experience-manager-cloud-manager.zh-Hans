@@ -4,7 +4,7 @@ description: 从此处开始了解 Cloud Manager for Adobe Managed Services (AMS
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 14e35882765783b234ca35da14257279af5130a0
 workflow-type: ht
-source-wordcount: '1287'
+source-wordcount: '1311'
 ht-degree: 100%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 100%
 
 ![CI/CD 流](/help/assets/screen_shot_2018-05-12at73843pm.png)
 
-## [!UICONTROL Cloud Manager] 中的主要功能 {#key-features-in-cloud-manager}
+## [!UICONTROL  中的主要功能Cloud Manager] {#key-features-in-cloud-manager}
 
 下面对精选的 Cloud Manager 主要功能进行了深入探讨。
 
@@ -55,7 +55,7 @@ ht-degree: 100%
 
 您可以定义特定于应用程序的关键绩效指标 (KPI)（如每分钟的页面查看峰值和页面加载的预期响应时间），这些指标构成了衡量部署是否成功的基础。可以轻松定义不同团队成员的角色和权限。自助式界面在将控制权重新交还给您的同时，还提供了指向最佳实践资源的链接，并使您能够在需要时联系可提供必要指导的 Adobe 专家。
 
-要探究并开始使用 [!UICONTROL Cloud Manager] 的 UI，请参阅[首次登录](/help/getting-started/first-time-login.md)文档。
+要探究并开始使用 [!UICONTROL Cloud Manager] 的 UI，请参阅[首次登录文档。](/help/getting-started/first-time-login.md)
 
 ### CI/CD 管道 {#ci-cd-pipeline}
 
@@ -63,7 +63,7 @@ ht-degree: 100%
 
 通过 [!UICONTROL Cloud Manager] UI，您能够配置并启动您的 CI/CD 管道。在执行此管道期间，会执行彻底的代码扫描，以确保只有高质量的应用程序才能投入到生产环境。
 
-要详细了解如何从 [!UICONTROL Cloud Manager] UI 配置管道，请参阅[配置生产管道](/help/using/production-pipelines.md)和[配置非生产管道](/help/using/non-production-pipelines.md)文档。
+要详细了解如何从 [!UICONTROL Cloud Manager] UI 配置管道，请参阅[配置生产管道](/help/using/production-pipelines.md)和[配置非生产管道文档。](/help/using/non-production-pipelines.md)
 
 ### 灵活的部署模式 {#flexible-deployment-modes}
 
