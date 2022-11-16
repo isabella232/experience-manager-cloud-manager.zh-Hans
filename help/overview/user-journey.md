@@ -4,7 +4,7 @@ description: 本文档列出了不同的新用户引导场景，并解释了您�
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
 workflow-type: ht
-source-wordcount: '504'
+source-wordcount: '546'
 ht-degree: 100%
 
 ---
@@ -34,8 +34,8 @@ ht-degree: 100%
 
 在新用户引导过程中，您将收到一封欢迎电子邮件，其中包括：
 
-* 用于访问 [!UICONTROL Cloud Manager] 的 URL
-* [!UICONTROL Experience Cloud] 登录说明
+* 用于访问 [!UICONTROL  的 URLCloud Manager]
+* 登录 [!UICONTROL Experience Cloud] 说明
 * 有关使用 Admin Console 管理您的用户及其相应权限以便他们能够访问 [!UICONTROL Cloud Manager]（如果需要）的说明。
 
 ### 现有 Adobe Managed Services 客户 {#existing-customer}
@@ -54,11 +54,11 @@ ht-degree: 100%
 
 在首次登录 [!UICONTROL Cloud Manager] 后，您将有权直接从 [!UICONTROL Cloud Manager] UI 访问 AEM 环境。此时，您已能开始探索 [!UICONTROL Cloud Manager] 的所有可能性，并准备好您的第一个代码分支以部署到暂存和生产环境。
 
-要开始使用 [!UICONTROL Cloud Manager]，请参阅[首次登录](/help/getting-started/first-time-login.md)文档。
+要开始使用 [!UICONTROL Cloud Manager]，请参阅[首次登录文档](/help/getting-started/first-time-login.md)。
 
 有关 AEM 的其他信息，请参阅[部署和维护](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)文档。
 
-## [!UICONTROL Cloud Manager] 快速入门 {#getting-started-with-cloud-manager}
+## [!UICONTROL  快速入门Cloud Manager] {#getting-started-with-cloud-manager}
 
 在登录到 [!UICONTROL Cloud Manager] 后，您可以通过以下方式开始使用 AEM 项目：
 
