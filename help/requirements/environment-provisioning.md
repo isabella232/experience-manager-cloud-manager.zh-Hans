@@ -4,7 +4,7 @@ description: 了解如何在 Cloud Manager 新用户引导过程中配置环境�
 exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
 workflow-type: ht
-source-wordcount: '293'
+source-wordcount: '314'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 ## 欢迎电子邮件 {#welcome-email}
 
-环境配置过程完成后，指定的客户管理员会收到一封欢迎电子邮件，用于确认他们已被授予访问 Adobe [!UICONTROL Experience Cloud]。欢迎电子邮件包含有关如何开始使用 [!UICONTROL Experience Cloud] 服务、[!UICONTROL AEM Managed Services] 云环境以及 [!UICONTROL Cloud Manager] 自助式门户的详细信息。该电子邮件还包含了重要信息，例如客户成功工程师 (CSE) 联系信息、从何处获得支持资源、论坛、常见问题等。在该电子邮件中提供的资源列表中，您还将获得有关如何访问 AEM 云环境的 [!UICONTROL Cloud Manager] 的详细信息。
+环境配置过程完成后，指定的客户管理员会收到一封欢迎电子邮件，用于确认他们已被授予 Adobe [!UICONTROL Experience Cloud] 访问权限。欢迎电子邮件包含有关如何开始使用 [!UICONTROL Experience Cloud] 服务、[!UICONTROL AEM Managed Services] 云环境以及 [!UICONTROL Cloud Manager] 自助式门户的详细信息。该电子邮件还包含了重要信息，例如客户成功工程师 (CSE) 联系信息、从何处获得支持资源、论坛、常见问题等。在该电子邮件中提供的资源列表中，您还将获得有关如何访问 AEM 云环境的 [!UICONTROL Cloud Manager] 的详细信息。
 
 ## 后续步骤 {#next-steps}
 
