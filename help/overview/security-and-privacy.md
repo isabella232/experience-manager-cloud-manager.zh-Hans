@@ -4,7 +4,7 @@ description: 了解 Cloud Manager 中的代码和工件资产的安全性和隐�
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: d7751757c1d3bda3d60406a1d39cb41c61f5c863
 workflow-type: ht
-source-wordcount: '189'
+source-wordcount: '205'
 ht-degree: 100%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 ## 角色和权限 {#roles}
 
-[!UICONTROL Cloud Manager] 预配置了一些具有适当权限的角色。
+[!UICONTROL Cloud Manager 预配置了一些具有适当权限的角色。]
 
 要了解可以在 Admin Console 中分配的角色和用户角色权限，请参阅[基于角色的权限](/help/requirements/role-based-permissions.md)文档。
 
