@@ -4,7 +4,7 @@ description: 完成新用户引导后，业务负责人将需要对项目进行�
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
 workflow-type: ht
-source-wordcount: '581'
+source-wordcount: '585'
 ht-degree: 100%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 完成新用户引导后，业务负责人将完成项目的初始设置，包括设置项目描述和定义用于性能测试的关键绩效指标 (KPI)。
 
-## 使用 [!UICONTROL Cloud Manager] 设置项目 {#program-setup-cloud-manager}
+## 使用 [!UICONTROL  设置项目Cloud Manager] {#program-setup-cloud-manager}
 
 执行以下步骤可设置项目和定义 KPI。
 
