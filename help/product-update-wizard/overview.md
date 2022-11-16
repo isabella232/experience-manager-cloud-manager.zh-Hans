@@ -4,7 +4,7 @@ description: 了解产品更新向导如何简化 Cloud Manager 中的端到端 
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
 source-git-commit: bbee49987e2f80825f5f7f5caf29c841e2b00dfb
 workflow-type: ht
-source-wordcount: '197'
+source-wordcount: '205'
 ht-degree: 100%
 
 ---
@@ -28,12 +28,12 @@ ht-degree: 100%
 
 1. 您将通过 Cloud Manager 收到一个推送通知，告知您 AEM 6.5 适用于您的项目。
 
-1. [!UICONTROL Cloud Manager] 的概述屏幕上将显示一个 **[!UICONTROL AEM 6.5 Update]** 信息卡。此信息卡有助于跟踪您当前在更新过程中所处的阶段，并告知您要执行的下一个步骤。
+1. **[!UICONTROL AEM 6.5 更新]**&#x200B;信息卡显示在 [!UICONTROL Cloud Manager] 概述屏幕上。此信息卡有助于跟踪您当前在更新过程中所处的阶段，并告知您要执行的下一个步骤。
 
    ![更新向导信息卡](/help/assets/Start-Update.png)
 
-1. 选择&#x200B;**[!UICONTROL Start Update]**&#x200B;以启动向导。
+1. 选择&#x200B;**[!UICONTROL 开始更新]**&#x200B;以打开向导。
 
-1. 向导将显示 **[!UICONTROL AEM 6.5 Update]**&#x200B;过程的第一个阶段。
+1. 向导将显示 **[!UICONTROL AEM 6.5 更新]**&#x200B;过程的第一个阶段。
 
 要了解有关向导的第一个阶段的更多信息，请参阅[评估阶段](/help/product-update-wizard/evaluation.md)文档。
