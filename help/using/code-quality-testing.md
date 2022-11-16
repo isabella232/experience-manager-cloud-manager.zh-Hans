@@ -4,7 +4,7 @@ description: 了解管道代码质量测试的工作方式以及其提高部署�
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
 workflow-type: ht
-source-wordcount: '2863'
+source-wordcount: '2867'
 ht-degree: 100%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 100%
 对于这三项审核中的每项审核，审核所确定的问题具有一个三层结构。
 
 * **严重** – 这些是导致管道立即失效的问题。
-* **重要** – 这些是导致管道进入暂停状态的问题。部署经理、项目经理或业务负责人既可以覆盖问题，也可以接受问题，在前一种情况下，管道将继续运行，在后一种情况下，管道将停止并显示故障。重要故障的覆盖受[超时](/help/using/code-deployment.md#timeouts)的约束。
+* **重要** – 这些是导致管道进入暂停状态的问题。部署管理员、项目管理员或业务负责人既可以覆盖问题，也可以接受问题，在前一种情况下，管道将继续运行，在后一种情况下，管道将停止并显示故障。重要故障的覆盖受[超时](/help/using/code-deployment.md#timeouts)的约束。
 * **信息** – 这些是仅供参考并且对管道执行没有影响的问题。
 
 >[!NOTE]
@@ -57,10 +57,10 @@ ht-degree: 100%
 | 安全性评级 | A = 无漏洞<br/>B = 至少 1 个次要漏洞<br/>C = 至少 1 个主要漏洞<br/>D = 至少 1 个严重漏洞<br/>E = 至少 1 个阻断漏洞 | 严重 | &lt; B |
 | 可靠性评级 | A = 无错误<br/>B = 至少 1 个次要错误<br/>C = 至少 1 个主要错误<br/>D = 至少 1 个严重错误<br/>E = 至少 1 个阻断错误 | 重要 | &lt; C |
 | 可维护性评级 | 定义为代码异味的未完成修复成本占应用程序已用时间的百分比<br/><ul><li>A = &lt;=5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = >50%</li></ul> | 重要 | &lt; A |
-| 覆盖率 | 在以下公式中结合使用单元测试行覆盖率和条件覆盖率来定义：<br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = 在运行单元测试时已评估为 `true` 至少一次的条件</li><li>`CF` = 在运行单元测试时已评估为 `false` 至少一次的条件</li><li>`LC` = 覆盖的行 = lines_to_cover - uncovered_lines</li><li>`B` = 条件总数</li><li>`EL` = 可执行的行总数 (lines_to_cover)</li></ul> | 重要 | &lt; 50% |
+| 范围 | 在以下公式中结合使用单元测试行覆盖率和条件覆盖率来定义：<br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = 在运行单元测试时已评估为 `true` 至少一次的条件</li><li>`CF` = 在运行单元测试时已评估为 `false` 至少一次的条件</li><li>`LC` = 覆盖的行 = lines_to_cover - uncovered_lines</li><li>`B` = 条件总数</li><li>`EL` = 可执行的行总数 (lines_to_cover)</li></ul> | 重要 | &lt; 50% |
 | 跳过的单元测试 | 跳过的单元测试数 | 信息 | > 1 |
 | 未结问题 | 整体问题类型 – 漏洞、错误和代码异味 | 信息 | > 0 |
-| 重复行 | 定义为重复块中涉及的行数。在以下条件下，代码块被视为重复。<br>非 Java 项目：<ul><li>应有至少 100 个连续和重复的令牌。</li><li>这些令牌应至少分布在： </li><li>30 个代码行（对于 COBOL） </li><li>20 个代码行（对于 ABAP） </li><li>10 个代码行（对于其他语言）</li></ul>Java 项目：<ul></li><li> 无论令牌和行的数量如何，都应至少有 10 个连续和重复的语句。</li></ul>检测重复项时将忽略缩进和字符串文本的差异。 | 信息 | > 1% |
+| 重复行 | 定义为重复块中涉及的行数。 在以下条件下，代码块被视为重复。<br>非 Java 项目：<ul><li>应有至少 100 个连续和重复的令牌。</li><li>这些令牌应至少分布在： </li><li>30 个代码行（对于 COBOL） </li><li>20 个代码行（对于 ABAP） </li><li>10 个代码行（对于其他语言）</li></ul>Java 项目：<ul></li><li> 无论令牌和行的数量如何，都应至少有 10 个连续和重复的语句。</li></ul>检测重复项时将忽略缩进和字符串文本的差异。 | 信息 | > 1% |
 | Cloud Service 兼容性 | 确定的 Cloud Service 兼容性问题数 | 信息 | > 0 |
 
 >[!NOTE]
@@ -69,7 +69,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->要了解有关 [!UICONTROL Cloud Manager] 执行的自定义代码质量规则的更多信息，请参阅[自定义代码质量规则](custom-code-quality-rules.md)文档。
+>要了解有关 [!UICONTROL Cloud Manager] 执行的自定义代码质量规则的更多信息，请参阅[自定义代码质量规则文档。](custom-code-quality-rules.md)
 
 ### 处理误报 {#dealing-with-false-positives}
 
@@ -84,7 +84,7 @@ ht-degree: 100%
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-之后，SonarQube 将引发阻断漏洞。不过，在查看代码后，您会发现这并不是漏洞，并且可以使用适当的规则 ID 注释代码。
+之后，SonarQube 将引发阻断漏洞。 不过，在查看代码后，您会发现这并不是漏洞，并且可以使用适当的规则 ID 注释代码。
 
 ```java
 @SuppressWarnings("squid:S2068")
@@ -280,17 +280,17 @@ Cloud Manager 将使用 CSE 设置的用户名和密码在创作实例上创建�
 
 ## 内容包扫描优化 {#content-package-scanning-optimization}
 
-在质量分析过程中，Cloud Manager 会对 Maven 构建生成的内容包进行分析。Cloud Manager 提供优化功能以加速此过程，当遵守某些打包限制时，这些优化功能将生效。 最重要的是对输出单个内容包（通常称为“完整”包）的项目执行的优化，其中包含构建生成的大量其他内容包（这些内容包标记为已跳过）。当 Cloud Manager 检测到此情况时，它不会解压缩“完整”包，而是直接扫描各个内容包并根据依赖关系对它们进行排序。例如，考虑以下构建输出。
+在质量分析过程中，Cloud Manager 会对 Maven 构建生成的内容包进行分析。 Cloud Manager 提供优化功能以加速此过程，当遵守某些打包限制时，这些优化功能将生效。 最重要的是对输出单个内容包（通常称为“所有”包）的项目执行的优化，其中包含构建生成的大量其他内容包（这些内容包标记为已跳过）。 当 Cloud Manager 检测到此情况时，它不会解压缩“所有”包，而是直接扫描各个内容包并根据依赖关系对它们进行排序。 例如，考虑以下构建输出。
 
 * `all/myco-all-1.0.0-SNAPSHOT.zip` (content-package)
 * `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (skipped-content-package)
 * `ui.content/myco-ui.content-1.0.0-SNAPSHOT.zip` (skipped-content-package)
 
-如果 `myco-all-1.0.0-SNAPSHOT.zip` 中的唯一项目是两个跳过的内容包，则将扫描两个嵌入包而不是“完整”内容包。
+如果 `myco-all-1.0.0-SNAPSHOT.zip` 中的唯一项目是两个跳过的内容包，则将扫描两个嵌入包而不是“所有”内容包。
 
 对于产生数十个嵌入包的项目，此优化已被证明可将每次管道执行时间节省 10 分钟以上。
 
-当“完整”内容包包含跳过的内容包和 OSGi 捆绑包的组合时，可能会出现特殊情况。例如，如果 `myco-all-1.0.0-SNAPSHOT.zip` 包含前面提到的两个嵌入式包以及一个或多个 OSGi 捆绑包，则仅使用 OSGi 捆绑包构建一个新的最小内容包。此包始终名为 `cloudmanager-synthetic-jar-package`，并且包含的捆绑包将放置在 `/apps/cloudmanager-synthetic-installer/install` 中。
+当“所有”内容包包含跳过的内容包和 OSGi 捆绑包的组合时，可能会出现特殊情况。 例如，如果 `myco-all-1.0.0-SNAPSHOT.zip` 包含前面提到的两个嵌入式包以及一个或多个 OSGi 捆绑包，则仅使用 OSGi 捆绑包构建一个新的最小内容包。 此包始终名为 `cloudmanager-synthetic-jar-package`，并且包含的捆绑包将放置在 `/apps/cloudmanager-synthetic-installer/install` 中。
 
 >[!NOTE]
 >
