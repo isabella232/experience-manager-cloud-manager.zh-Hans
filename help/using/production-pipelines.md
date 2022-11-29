@@ -2,10 +2,10 @@
 title: 配置生产管道
 description: 了解如何使用 Cloud Manager 创建和配置生产管道以部署代码。
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
-workflow-type: ht
-source-wordcount: '1302'
-ht-degree: 100%
+source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -93,8 +93,9 @@ ht-degree: 100%
 
             1. 在&#x200B;**路径**&#x200B;下，提供内容路径。
             1. 在&#x200B;**类型**&#x200B;下，选择要对路径执行的操作。
-            * **刷新** - 执行缓存失效操作，与将内容从创作实例激活到发布实例的情况类似。
-            * **失效** - 执行缓存删除。
+
+               * **刷新**  — 执行缓存删除。
+               * **无效**  — 执行缓存失效，与从创作实例激活内容到发布实例时类似。
             1. 单击&#x200B;**添加路径**&#x200B;以添加指定路径。可以为每个环境添加最多 100 个路径。
 
          ![Dispatcher 配置](/help/assets/configure-pipelines/dispatcher-stage.png)
@@ -125,7 +126,6 @@ ht-degree: 100%
             ![生产部署选项](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
          * **Dispatcher 配置** - 为您的生产环境定义 Dispatcher 配置。这些选项与暂存环境的选项相同。
-
 
 
 
