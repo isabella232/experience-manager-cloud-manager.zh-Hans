@@ -3,10 +3,10 @@ title: 2022.12.0 版发行说明
 description: 这些是 Cloud Manager 2022.12.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5c97e8bfa30ed6bbbaf361e5d3987aa2a0bf5b13
+source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 73%
+source-wordcount: '124'
+ht-degree: 84%
 
 ---
 
@@ -21,9 +21,10 @@ ht-degree: 73%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2022.12.0 版的发布日期为 2022 年 11 月 29 日。下一版本计划于2023年1月19日发布。
+[!UICONTROL Cloud Manager] 2022.12.0 版的发布日期为 2022 年 11 月 29 日。下一个版本计划于 2023 年 1 月 19 日发布。
 
 ## 新增功能 {#what-is-new}
 
-* 多区域自动缩放功能现已可用。 某些限制可能适用。
-* 改进了 [Cloud Manager管道](/help/overview/ci-cd-pipelines.md) 被制造。
+* 多区域自动缩放功能现已可用。可能存在某些限制。
+   * 此更改将在2022.12.0版本发布后的4到6周内分阶段实施。
+* 提高了 [Cloud Manager 管道](/help/overview/ci-cd-pipelines.md)的可用性和可靠性。
