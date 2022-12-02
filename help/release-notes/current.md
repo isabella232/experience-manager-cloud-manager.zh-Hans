@@ -5,8 +5,8 @@ feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '124'
+ht-degree: 100%
 
 ---
 
@@ -26,5 +26,5 @@ ht-degree: 0%
 ## 新增功能 {#what-is-new}
 
 * 多区域自动缩放功能现已可用。可能存在某些限制。
-   * 此更改将在2022.12.0版本发布后的4到6周内分阶段实施。
+   * 将在发布 2022.12.0 版本后的四至六周后分阶段推出此更改。
 * 提高了 [Cloud Manager 管道](/help/overview/ci-cd-pipelines.md)的可用性和可靠性。
