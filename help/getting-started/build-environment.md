@@ -2,10 +2,10 @@
 title: 构建环境
 description: 了解 Cloud Manager 用户可用来构建和测试代码的专用构建环境。
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
-workflow-type: ht
-source-wordcount: '0'
-ht-degree: 100%
+source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
+workflow-type: tm+mt
+source-wordcount: '1139'
+ht-degree: 91%
 
 ---
 
@@ -127,6 +127,28 @@ Cloud Manager 的构建环境具有以下属性。
 | `CM_PROGRAM_ID` | 数值项目标识符 |
 | `CM_PROGRAM_NAME` | 项目名称 |
 | `ARTIFACTS_VERSION` | 对于暂存或生产管道，为由 Cloud Manager 生成的合成版本 |
+
+### 标准环境变量可用性 {#availability}
+
+标准环境变量可在多个位置使用。
+
+#### 创作、预览和发布 {#author-preview-publish}
+
+常规环境变量和密钥均可在创作、预览和发布环境中使用。
+
+#### Dispatcher {#dispatcher}
+
+调度程序上只能使用常规环境变量。 无法使用密钥。
+
+但是，环境变量不能在 `IfDefine` 指令。
+
+>[!TIP]
+>
+>您应当通过 [本地调度程序](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) 部署之前。
+
+#### OSGi配置 {#osgi}
+
+常规环境变量和密钥均可在OSGi配置中使用。
 
 ### 管道变量 {#pipeline-variables}
 
