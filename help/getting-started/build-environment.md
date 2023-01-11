@@ -2,9 +2,9 @@
 title: 构建环境
 description: 了解 Cloud Manager 用户可用来构建和测试代码的专用构建环境。
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
+source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1152'
 ht-degree: 91%
 
 ---
@@ -138,7 +138,7 @@ Cloud Manager 的构建环境具有以下属性。
 
 #### Dispatcher {#dispatcher}
 
-调度程序上只能使用常规环境变量。 无法使用密钥。
+只能将常规环境变量与 [调度程序。](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 无法使用密钥。
 
 但是，环境变量不能在 `IfDefine` 指令。
 
@@ -148,7 +148,7 @@ Cloud Manager 的构建环境具有以下属性。
 
 #### OSGi配置 {#osgi}
 
-常规环境变量和密钥均可在OSGi配置中使用。
+常规环境变量和密钥均可在 [OSGi配置。](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html)
 
 ### 管道变量 {#pipeline-variables}
 
