@@ -5,7 +5,7 @@ exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
 source-wordcount: '1152'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -130,25 +130,25 @@ Cloud Manager 的构建环境具有以下属性。
 
 ### 标准环境变量可用性 {#availability}
 
-标准环境变量可在多个位置使用。
+可在多个位置使用标准环境变量。
 
-#### 创作、预览和发布 {#author-preview-publish}
+#### “创作”、“预览”和“发布” {#author-preview-publish}
 
-常规环境变量和密钥均可在创作、预览和发布环境中使用。
+常规环境变量和密钥均可用于创作、预览和发布环境。
 
 #### Dispatcher {#dispatcher}
 
-只能将常规环境变量与 [调度程序。](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 无法使用密钥。
+只有常规环境变量可用于 [Dispatcher。无法使用 ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 密钥。
 
-但是，环境变量不能在 `IfDefine` 指令。
+但是，无法在 `IfDefine` 指令中使用环境变量。
 
 >[!TIP]
 >
->您应当通过 [本地调度程序](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) 部署之前。
+>应验证可将环境变量[在本地用于 Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) 后再部署。
 
-#### OSGi配置 {#osgi}
+#### OSGi 配置 {#osgi}
 
-常规环境变量和密钥均可在 [OSGi配置。](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html)
+可在 [OSGi 配置](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html)中使用常规环境变量和密钥。
 
 ### 管道变量 {#pipeline-variables}
 
