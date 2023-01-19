@@ -1,19 +1,19 @@
 ---
-title: 2022.12.0 版发行说明
-description: 这些是 Cloud Manager 2022.12.0 版的发行说明。
+title: 2023.1.0 版发行说明
+description: 这些是 Cloud Manager 2023.1.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
+source-git-commit: 3e4937fc262016cef5c5c692c06244f411b28c0f
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 100%
+source-wordcount: '125'
+ht-degree: 61%
 
 ---
 
 
-# Cloud Manager 2022.12.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.1.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2022.12.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.1.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -21,10 +21,12 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2022.12.0 版的发布日期为 2022 年 11 月 29 日。下一个版本计划于 2023 年 1 月 19 日发布。
+的发行日期 [!UICONTROL Cloud Manager] 2023.1.0版于2023年1月19日发布。 下一个版本计划于 2023 年 2 月 16 日发布。
 
 ## 新增功能 {#what-is-new}
 
-* 多区域自动缩放功能现已可用。可能存在某些限制。
-   * 将在发布 2022.12.0 版本后的四至六周后分阶段推出此更改。
-* 提高了 [Cloud Manager 管道](/help/overview/ci-cd-pipelines.md)的可用性和可靠性。
+* 可用性增强是通过更新光标样式来区分用户在何处可以执行操作还是默认指针来实现的。
+
+## 错误修复 {#bug-fixes}
+
+* Cloud Manager将防止两个管道执行同时（或几乎同时）开始，从而避免管道故障。
