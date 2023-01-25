@@ -4,9 +4,9 @@ description: 这些是 Cloud Manager 2023.1.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: dc534e6339f910014a3edbd684f7b1535079f039
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '164'
+ht-degree: 100%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 ## 新增功能 {#what-is-new}
 
-* 支持 [自助内容副本](/help/using/content-copy.md) 将通过在此版本发布后分阶段推出提供。 可能存在某些限制。
-* 在环境和管道执行的列表中，您现在可以通过单击单个行来访问详细信息。
-* 通过更新光标样式，可区分用户在何处执行操作和默认指针，增强了可用性。
+* 对[自助式内容复制](/help/using/content-copy.md)的支持将在本次发布后分阶段推出。可能存在某些限制。
+* 在环境和管道执行列表中，您现在可以通过单击单独的行来访问详细信息。
+* 通过更新区分用户可在何处执行操作的光标样式与默认指针，增强了可用性。
 
 ## 错误修复 {#bug-fixes}
 
