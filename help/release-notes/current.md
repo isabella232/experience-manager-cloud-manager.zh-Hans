@@ -1,19 +1,19 @@
 ---
-title: 2023.1.0 版发行说明
-description: 这些是 Cloud Manager 2023.1.0 版的发行说明。
+title: 2023.2.0 版发行说明
+description: 这些是 Cloud Manager 2023.2.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dc534e6339f910014a3edbd684f7b1535079f039
-workflow-type: ht
-source-wordcount: '164'
+source-git-commit: ab1747e14be783004544681f9aefefaa0587302e
+workflow-type: tm+mt
+source-wordcount: '82'
 ht-degree: 100%
 
 ---
 
 
-# Cloud Manager 2023.1.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.2.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2023.1.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.2.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -21,14 +21,4 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.1.0 版的发布日期为 2023 年 1 月 19 日。下一个版本计划于 2023 年 2 月 16 日发布。
-
-## 新增功能 {#what-is-new}
-
-* 对[自助式内容复制](/help/using/content-copy.md)的支持将在本次发布后分阶段推出。可能存在某些限制。
-* 在环境和管道执行列表中，您现在可以通过单击单独的行来访问详细信息。
-* 通过更新区分用户可在何处执行操作的光标样式与默认指针，增强了可用性。
-
-## 错误修复 {#bug-fixes}
-
-* Cloud Manager 将阻止同时（或几乎同时）开始两个管道执行，从而避免管道故障。
+[!UICONTROL Cloud Manager] 2023.1.0 版的发布日期为 2023 年 2 月 16 日。下一个版本计划于 2023 年 3 月 16 日发布。
