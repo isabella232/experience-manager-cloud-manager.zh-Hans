@@ -2,10 +2,10 @@
 title: 自定义代码质量规则
 description: 了解 Cloud Manager 在基于来自 AEM 工程的最佳实践的代码质量测试过程中执行的自定义代码质量规则的详细信息。
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 5fe0d20d9020e6b90353ef5a54e49c93be5c00be
-workflow-type: ht
-source-wordcount: '0'
-ht-degree: 100%
+source-git-commit: 611cd8f874e8e0d21a475365f4aceb6ae2565644
+workflow-type: tm+mt
+source-wordcount: '3537'
+ht-degree: 86%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->此处提供的代码示例仅用于说明目的。请参阅 [SonarQube 的概念](https://docs.sonarqube.org/7.4/user-guide/concepts/)文档，了解其概念和质量规则。
+>此处提供的代码示例仅用于说明目的。参见 [SonarQube的概念文档](https://docs.sonarqube.org/latest/) 了解其概念和质量规则。
 
 ## SonarQube 规则 {#sonarqube-rules}
 
@@ -29,7 +29,7 @@ ht-degree: 100%
 * **严重性**：主要
 * **开始版本**：版本 2018.4.0
 
-`Thread.stop()` 和 `Thread.interrupt()` 方法可能会产生难以重现的问题，并且在某些情况下会产生安全漏洞。 应严格监控和验证其使用情况。 总的来说，传递信息是实现类似目标的一种更安全的方式。
+`Thread.stop()` 和 `Thread.interrupt()` 方法可能会产生难以重现的问题，并且有时会产生安全漏洞。 应严格监控和验证其使用情况。 总的来说，传递信息是实现类似目标的一种更安全的方式。
 
 #### 不合规的代码 {#non-compliant-code}
 
@@ -104,7 +104,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 * **严重性**：严重
 * **开始版本**：版本 2018.6.0
 
-从 AEM 应用程序内部执行 HTTP 请求时，请务必确保配置适当的超时以避免不必要的线程消耗。 不幸的是，Java 的默认 HTTP 客户端 `java.net.HttpUrlConnection` 和常用的 Apache HTTP 组件客户端的默认行为都是永不超时，因此必须明确设置超时。 作为最佳实践，这些超时不应超过 60 秒。
+从 AEM 应用程序内部执行 HTTP 请求时，请务必确保配置适当的超时以避免不必要的线程消耗。 不幸的是，Java™的默认HTTP客户端的默认行为， `java.net.HttpUrlConnection`，并且常用的Apache HTTP组件客户端从不超时，因此必须明确设置超时。 作为最佳实践，这些超时不应超过 60 秒。
 
 #### 不合规的代码 {#non-compliant-code-2}
 
@@ -181,7 +181,7 @@ public void orDoThis() {
 
 从 `ResourceResolverFactory` 获取的 `ResourceResolver` 对象占用系统资源。 虽然可以采取一些措施以在不再使用 `ResourceResolver` 时回收这些资源，但通过调用 `close()` 方法显式关闭任何打开的 `ResourceResolver` 对象会更有效。
 
-一个相对常见的误解是，使用现有 JCR 会话创建的 `ResourceResolver` 对象不应显式关闭，否则将关闭底层 JCR 会话。情况并非如此。无论 `ResourceResolver` 的打开方式如何，只要不再使用它，就应将它关闭。 由于 `ResourceResolver` 实施 `Closeable` 接口，也可以使用 `try-with-resources` 语法，而不是显式调用 `close()`。
+一个常见的误解是 `ResourceResolver` 不应显式关闭使用现有JCR会话创建的对象，否则会关闭底层JCR会话。 情况并非如此。 无论 `ResourceResolver` 的打开方式如何，只要不再使用它，就应将它关闭。 由于 `ResourceResolver` 实施 `Closeable` 接口，也可以使用 `try-with-resources` 语法，而不是显式调用 `close()`。
 
 #### 不合规的代码 {#non-compliant-code-4}
 
@@ -221,7 +221,7 @@ public void orDoThis(Session session) throws Exception {
 * **严重性**：主要
 * **开始版本**：版本 2018.4.0
 
-如 [Sling 文档](http://sling.apache.org/documentation/the-sling-engine/servlets.html)中所述，建议不要通过路径绑定 servlet。 路径绑定的 servlet 不能使用标准 JCR 访问控制，因此，需要额外的安全严密性。 建议在存储库中创建节点并按资源类型注册 servlet，而不是使用路径绑定的 servlet。
+如 [Sling 文档](https://sling.apache.org/documentation/the-sling-engine/servlets.html)中所述，建议不要通过路径绑定 servlet。 路径绑定的 servlet 不能使用标准 JCR 访问控制，因此，需要额外的安全严密性。 建议在存储库中创建节点并按资源类型注册 servlet，而不是使用路径绑定的 servlet。
 
 #### 不合规的代码 {#non-compliant-code-5}
 
@@ -283,7 +283,7 @@ public void orDoThis() throws MyCustomException {
 * **严重性**：轻微
 * **开始版本**：版本 2018.4.0
 
-另一个要避免的常见模式是记录一条消息，然后立即引发异常。 这通常表明异常消息最终会在日志文件中重复。
+另一个要避免的常见模式是记录一条消息，然后立即引发异常。 这通常表示异常消息最终会在日志文件中重复。
 
 #### 不合规的代码 {#non-compliant-code-7}
 
@@ -308,7 +308,7 @@ public void doThis() throws Exception {
 * **类型**：代码异味
 * **严重性**：轻微
 
-通常，应使用 INFO 日志级别来划分重要操作，默认情况下，AEM 配置为在 INFO 级别或更高级别进行记录。 GET 和 HEAD 方法只能为只读操作，因此，不会构成重要操作。 在 INFO 级别进行记录来响应 GET 或 HEAD 请求可能会产生大量日志噪音，从而导致更难以识别日志文件中的有用信息。 处理 GET 或 HEAD 请求时，应在 WARN 或 ERROR 级别进行记录（如果出现问题），或在 DEBUG 或 TRACE 级别进行记录（如果更深入的故障排除信息会很有用）。
+通常，应使用 INFO 日志级别来划分重要操作，默认情况下，AEM 配置为在 INFO 级别或更高级别进行记录。 GET 和 HEAD 方法只能为只读操作，因此，不会构成重要操作。 在 INFO 级别进行记录来响应 GET 或 HEAD 请求可能会产生大量日志噪音，导致更难以识别日志文件中的有用信息。 处理 GET 或 HEAD 请求时，应在 WARN 或 ERROR 级别进行记录（如果出现问题），或在 DEBUG 或 TRACE 级别进行记录（如果更深入的故障排除信息会很有用）。
 
 >[!NOTE]
 >
@@ -337,7 +337,7 @@ public void doGet() throws Exception {
 * **严重性**：轻微
 * **开始版本**：版本 2018.4.0
 
-作为最佳实践，日志消息应提供有关应用程序中发生异常的位置的上下文信息。 虽然也可以使用堆栈跟踪来确定上下文，但通常日志消息将更易于阅读和理解。 因此，在记录异常时，将异常消息用作日志消息是一种不好的做法。 异常消息将包含所发生的问题，而日志消息应让日志读者知道，当发生异常时，应用程序正在做什么。 仍将记录异常消息。通过指定您自己的消息，可使日志更易于理解。
+作为最佳实践，日志消息应提供有关应用程序中发生异常的位置的上下文信息。 虽然也可以使用堆栈跟踪来确定上下文，但通常日志消息将更易于阅读和理解。 因此，在记录异常时，将异常消息用作日志消息是一种不好的做法。 异常消息将包含所发生的问题，而日志消息应让日志读者知道，当发生异常时，应用程序正在做什么。 仍会记录异常消息。 通过指定您自己的消息，可使日志更易于理解。
 
 #### 不合规的代码 {#non-compliant-code-9}
 
@@ -370,7 +370,7 @@ public void doThis() {
 * **严重性**：轻微
 * **开始版本**：版本 2018.4.0
 
-顾名思义，Java 异常应始终在异常情况下使用。因此，当捕获到异常时，请务必确保在适当的级别记录日志消息：WARN 或 ERROR。这将确保这些消息正确显示在日志中。
+顾名思义，Java™ 异常应始终在异常情况下使用。 因此，当捕获到异常时，请务必确保在适当的级别记录日志消息：WARN 或 ERROR。这将确保这些消息正确显示在日志中。
 
 #### 不合规的代码 {#non-compliant-code-10}
 
@@ -403,7 +403,7 @@ public void doThis() {
 * **严重性**：轻微
 * **从以下版本开始**：版本 2018.4.0
 
-上下文对于理解日志消息是至关重要的。使用 `Exception.printStackTrace()` 会导致仅将堆栈跟踪输出到标准错误流，从而丢失所有上下文。此外，在像 AEM 这样的多线程应用程序中，如果使用此方法并行打印多个异常，则其堆栈跟踪可能会发生重叠，从而导致产生严重混淆。应仅通过记录框架来记录异常。
+上下文对于理解日志消息是至关重要的。使用 `Exception.printStackTrace()` 会导致仅将堆栈跟踪输出到标准错误流，从而丢失所有上下文。 此外，在像 AEM 这样的多线程应用程序中，如果使用此方法并行打印多个异常，则其堆栈跟踪可能会发生重叠，从而导致产生严重混淆。应仅通过记录框架来记录异常。
 
 #### 不合规的代码 {#non-compliant-code-11}
 
@@ -436,7 +436,7 @@ public void doThis() {
 * **严重性**：轻微
 * **从以下版本开始**：版本 2018.4.0
 
-AEM 中的记录应始终通过记录框架 SLF4J 完成。直接输出到标准输出或标准错误流将丢失记录框架提供的结构和上下文信息，并且在某些情况下可能会导致出现性能问题。
+AEM 中的记录应始终通过记录框架 SLF4J 完成。直接输出到标准输出或标准错误流将丢失记录框架提供的结构和上下文信息，并且有时可能会导致性能问题。
 
 #### 不合规的代码 {#non-compliant-code-12}
 
@@ -496,7 +496,7 @@ public void doThis(Resource resource) {
 
 Sling 调度程序不得用于需要保证执行的任务。 Sling 计划作业可保证执行，并且更适合集群和非集群环境。
 
-请参阅 [Apache Sling 事件和作业处理](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html)文档，详细了解如何在集群环境中处理 Sling 作业。
+请参阅 [Apache Sling事件和作业处理文档](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) 详细了解如何在集群环境中处理Sling作业。
 
 ### 不应使用 AEM 弃用的 API {#sonarqube-aem-deprecated}
 
@@ -505,11 +505,11 @@ Sling 调度程序不得用于需要保证执行的任务。 Sling 计划作业�
 * **严重性**：轻微
 * **开始版本**：版本 2020.5.0
 
-AEM API 接口正在不断修订，以识别建议不要使用的 API，从而考虑将其弃用。
+AEM API 接口正在不断修订，以识别建议不要使用的 API，从而将其弃用。
 
-在许多情况下，使用标准 Java *@Deprecated* 注释来弃用这些 API，如 `squid:CallToDeprecatedMethod` 所标识。
+通常，使用标准Java来弃用这些API™ *@Deprecated* 注释和（如）由以下项标识 `squid:CallToDeprecatedMethod`.
 
-但在某些情况下，API 会在 AEM 上下文中被弃用，但在其他上下文中可能不会被弃用。此规则标识第二个类。
+但在某些情况下，API会在AEM上下文中被弃用，但在其他上下文中可能不会被弃用。 此规则标识第二个类。
 
 ## OakPAL 内容规则 {#oakpal-rules}
 
@@ -526,11 +526,11 @@ AEM API 接口正在不断修订，以识别建议不要使用的 API，从而�
 * **严重性**：严重
 * **开始版本**：版本 2018.7.0
 
-AEM API包含Java接口和类，这些接口和类仅用于由自定义代码使用，但不能实现。 例如，接口 `com.day.cq.wcm.api.Page` 设计为仅由 AEM 实现。
+AEM API包含Java™接口和类，这些接口和类仅用于由自定义代码使用，但不能实现。 例如，界面 `com.day.cq.wcm.api.Page` 仅由AEM实现。
 
-当将新方法添加到这些接口时，这些附加方法不会影响使用这些接口的现有代码，因此，向这些接口添加新方法被认为是向后兼容的。 但是，如果自定义代码实现了其中一个接口，则该自定义代码会给客户带来向后兼容性风险。
+当将新方法添加到这些接口时，这些附加方法不会影响使用这些接口的现有代码，因此，向这些接口添加新方法被认为是向后兼容的。 但是，如果自定义代 码实现了 其中一个接口，则该自定义代码会给客户带来向后兼容性风险。
 
-仅由 AEM 实现的接口和类通过 `org.osgi.annotation.versioning.ProviderType` 进行注释，在某些情况下，通过类似的旧批注 `aQute.bnd.annotation.ProviderType` 进行注释。此规则标识实现此类接口或自定义代码扩展类的情况。
+仅由AEM实现的接口和类通过进行注释 `org.osgi.annotation.versioning.ProviderType` 或者，有时候，类似的旧批注 `aQute.bnd.annotation.ProviderType`. 此规则标识实现此类接口或自定义代码扩展类的情况。
 
 #### 不合规的代码 {#non-compliant-code-3}
 
@@ -549,7 +549,7 @@ public class DontDoThis implements Page {
 * **严重性**：阻断
 * **从以下版本开始**：版本 2019.6.0
 
-客户应将 AEM 内容存储库中的 `/libs` 内容树视为只读，这是一个长期存在的最佳实践。修改 `/libs` 下的节点和属性会给主要和次要更新带来重大风险。 对 `/libs` 的修改只能由 Adobe 通过正式渠道进行。
+客户应将 AEM 内容存储库中的 `/libs` 内容树视为只读，这是一个长期存在的最佳实践。修改 `/libs` 下的节点和属性会给主要和次要更新带来重大风险。 对的修改 `/libs` 只能通过官方渠道Adobe。
 
 ### 包不应包含重复的 OSGi 配置 {#oakpal-package-osgi}
 
@@ -558,7 +558,7 @@ public class DontDoThis implements Page {
 * **严重性**：主要
 * **开始版本**：版本 2019.6.0
 
-复杂项目中出现的一个常见问题是，将同一个 OSGi 组件配置多次。这会导致无法明确哪种配置将是可操作的。此规则是“运行模式感知型”的，因为它只会识别在同一运行模式或运行模式组合中多次配置同一组件的问题。
+复杂项目中出现的一个常见问题是，将同一个 OSGi 组件配置多次。 这会产生关于哪个配置可以操作的模棱两可。 此规则是“运行模式感知型”的，因为它只会识别在同一运行模式或运行模式组合中多次配置同一组件的问题。
 
 #### 不合规的代码 {#non-compliant-code-osgi}
 
@@ -627,7 +627,7 @@ public class DontDoThis implements Page {
 * **严重性**：轻微
 * **开始版本**：版本 2020.5.0
 
-OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中的默认创作模式。 由于[经典 UI 自 AEM 6.4 之后已被弃用,](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)，因此，在将默认创作模式配置为经典 UI 时，现在将引发问题。
+OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中的默认创作模式。 因为 [经典UI自AEM 6.4之后已被弃用，](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html) 在将默认创作模式配置为经典UI时，现在会引发问题。
 
 ### 带对话框的组件应具有 Touch UI 对话框 {#oakpal-components-dialogs}
 
@@ -651,7 +651,7 @@ OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中
 * **严重性**：轻微
 * **开始版本**：版本 2020.5.0
 
-要与 Cloud Service 部署模型兼容，各个内容包必须包含存储库的不可变区域（即 `/apps` 和 `/libs`）的内容或可变区域的内容（即未在 `/apps` 或 `/libs` 中的内容），但不能同时包含这两个区域的内容。 例如，包含 `/apps/myco/components/text and /etc/clientlibs/myco` 的包不与 Cloud Service 兼容，并且将导致报告问题。
+要与 Cloud Service 部署模型兼容，各个内容包必须包含存储库的不可变区域（即 `/apps` 和 `/libs`）的内容或可变区域的内容（即未在 `/apps` 或 `/libs` 中的内容），但不能同时包含这两个区域的内容。 例如，包含两者的资源包 `/apps/myco/components/text and /etc/clientlibs/myco` 与Cloud Service不兼容，并会导致报告问题。
 
 有关更多详细信息，请参阅[“AEM 项目结构”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html)。
 
@@ -719,7 +719,7 @@ AEM 客户端库可能包含静态资源，如图像和字体。如[“使用客
 * **严重性**：轻微
 * **开始版本**：版本 2021.2.0
 
-虽然静态模板的使用历来在 AEM 项目中非常普遍，但强烈建议使用可编辑的模板，因为它们提供了最大的灵活性，并支持静态模板中不存在的附加功能。要获取更多信息，请参阅[“页面模板 - 可编辑”文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)。
+虽然静态模板的使用历来在AEM项目中非常普遍，但强烈建议使用可编辑模板，因为它们提供了最大的灵活性，并支持静态模板中不存在的附加功能。 要获取更多信息，请参阅[“页面模板 - 可编辑”文档](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)。
 
 可以使用 [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)在很大程度上实现从静态模板到可编辑模板的迁移的自动化。
 
@@ -734,14 +734,14 @@ AEM 客户端库可能包含静态资源，如图像和字体。如[“使用客
 
 可以通过 [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)促进此转换。
 
-### 仅应使用受支持的运行模式名称和排序 {#oakpal-supported-runmodes}
+### 应仅使用受支持的运行模式名称和排序 {#oakpal-supported-runmodes}
 
 * **密钥**：SupportedRunmode
 * **类型**：代码异味
 * **严重性**：轻微
-* **从以下版本开始**：版本 2021.2.0
+* **开始版本**：版本 2021.2.0
 
-AEM Cloud Service 对运行模式名称实施严格的命名策略，并对这些运行模式进行严格的排序。可以在[“部署到 AEM as a Cloud Service”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html#runmodes)中找到受支持的运行模式列表，任何偏离该列表的情况都将被视为问题。
+AEM Cloud Service对运行模式名称实施严格的命名策略，并对这些运行模式进行严格的排序。 支持的运行模式列表可在以下位置找到： [“部署到AEM”as a Cloud Service文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html#runmodes) 任何偏离该准则的情况都将被视为问题。
 
 ### 自定义搜索索引定义节点必须是 /oak:index 的直接子节点 {#oakpal-custom-search}
 
@@ -766,9 +766,9 @@ AEM Cloud Service 要求自定义搜索索引定义（即 `oak:QueryIndexDefinit
 * **密钥**：IndexDescendantNodeType
 * **类型**：代码异味
 * **严重性**：轻微
-* **从以下版本开始**：版本 2021.2.0
+* **开始版本**：版本 2021.2.0
 
-当自定义搜索索引定义节点具有无序子节点时，可能会出现难以解决的问题。为了避免出现此情况，建议 `oak:QueryIndexDefinition` 节点的所有后代节点的类型为 `nt:unstructured`。
+当自定义搜索索引定义节点具有无序子节点时，可能会出现难以解决的问题。 为了避免出现此情况，建议 `oak:QueryIndexDefinition` 节点的所有后代节点的类型为 `nt:unstructured`。
 
 ### 自定义搜索索引定义节点必须包含一个名为 indexRules 的具有子节点的子节点 {#oakpal-custom-search-index}
 
@@ -847,10 +847,10 @@ AEM Cloud Service 禁止自定义搜索索引定义（即 `oak:QueryIndexDefinit
 
 * [每个 Dispatcher 场都应该有一个唯一的名称](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [Dispatcher 发布场缓存应以允许列表方式配置其 ignoreUrlParams 规则](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [允许列表 Dispatcher发布场缓存应以方式配置其ignoreUrlParams规则](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [Dispatcher 发布场过滤器应以允许列表方式指定允许的 Sling 选择器](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [允许列表 Dispatcher发布场过滤器应以方式指定允许的Sling选择器](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [Dispatcher 发布场过滤器应以允许列表方式指定允许的 Sling 后缀模式](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [允许列表 Dispatcher发布场过滤器应以方式指定允许的Sling后缀模式](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [不应在具有根目录路径的“VirtualHost 目录”部分中使用“Require all granted”指令](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [不要在具有根目录路径的VirtualHost Directory部分中使用“Require all granted”指令](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
