@@ -4,9 +4,9 @@ description: 这些是 Cloud Manager 2023.3.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 82%
 
 ## 错误修复 {#bug-fixes}
 
-* 上的商务拼贴 **学习** Cloud Manager的选项卡现在会将用户导航到正确的页面。
+* Cloud Manager 的&#x200B;**学习**&#x200B;选项卡上的商业磁贴现在可以将用户导航到正确的页面。
