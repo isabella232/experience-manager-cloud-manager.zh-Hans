@@ -2,9 +2,9 @@
 title: 自定义代码质量规则
 description: 了解 Cloud Manager 在基于来自 AEM 工程的最佳实践的代码质量测试过程中执行的自定义代码质量规则的详细信息。
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 611cd8f874e8e0d21a475365f4aceb6ae2565644
-workflow-type: ht
-source-wordcount: '3537'
+source-git-commit: ef87e13eb81faf5605cdd16c6fd46d5f7b3233a9
+workflow-type: tm+mt
+source-wordcount: '3531'
 ht-degree: 100%
 
 ---
@@ -627,7 +627,7 @@ public class DontDoThis implements Page {
 * **严重性**：轻微
 * **开始版本**：版本 2020.5.0
 
-OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中的默认创作模式。 由于[经典 UI 自 AEM 6.4 之后已被弃用，](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)因此，在将默认创作模式配置为经典 UI 时，现在将引发问题。
+OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中的默认创作模式。 由于经典 UI 自 AEM 6.4 之后已被弃用，因此，在将默认创作模式配置为经典 UI 时，现在将引发问题。
 
 ### 带对话框的组件应具有 Touch UI 对话框 {#oakpal-components-dialogs}
 
