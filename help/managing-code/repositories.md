@@ -2,10 +2,10 @@
 title: Cloud Manager 存储库
 description: 了解如何访问、创建和编辑 Cloud Manager 项目的存储库。
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
-source-wordcount: '0'
-ht-degree: 100%
+source-git-commit: 63cbcf8724a840efa67b8fafc4c321e04a5d70d9
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 80%
 
 ---
 
@@ -81,9 +81,19 @@ ht-degree: 100%
 
 1. 从&#x200B;**项目概述**&#x200B;页面中，单击&#x200B;**存储库**&#x200B;选项卡，然后导航到&#x200B;**存储库**&#x200B;页面。您可以在此处查看现有存储库的详细信息。
 
-1. 选择存储库，然后单击表最右侧的省略号按钮&#x200B;**复制存储库 URL**、**查看和更新**&#x200B;或&#x200B;**删除**&#x200B;存储库。
+1. 选择存储库，然后单击表最右侧的省略号按钮以 **复制存储库URL** 或 **查看和更新** 您的存储库。
 
 ![编辑存储库](/help/assets/create-repo3.png)
+
+## 删除存储库 {#delete-repos}
+
+要删除存储库，请执行相同的步骤 [查看和编辑存储库](#edit-repos) 但在 **存储库** 页面选择 **删除** 从要删除的存储库的省略号按钮。
+
+请注意，在Cloud Manager中删除某个存储库后，该存储库会标记为已删除，用户将无法再访问该存储库，但出于恢复目的，它将在系统中进行维护。
+
+如果在删除具有相同名称的存储库后尝试创建新存储库，您将收到错误消息“尝试创建存储库时出错。 请联系您的CSE或Adobe支持。”
+
+如果收到此错误消息，请联系Adobe支持，以便他们协助重命名已删除的存储库或为新存储库选择其他名称。
 
 ## Git 子模块支持 {#git-submodule-support}
 
