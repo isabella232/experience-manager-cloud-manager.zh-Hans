@@ -2,9 +2,9 @@
 title: 内容复制工具
 description: Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生产环境复制到较低的环境以进行测试。
 source-git-commit: 5b10ac5e47052cabd7478050651a4ca04287a8f0
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1082'
+ht-degree: 100%
 
 ---
 
