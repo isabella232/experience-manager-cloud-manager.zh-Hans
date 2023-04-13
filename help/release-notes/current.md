@@ -1,19 +1,19 @@
 ---
-title: 2023.3.0 版发行说明
-description: 这些是 Cloud Manager 2023.3.0 版的发行说明。
+title: 2023.4.0 版发行说明
+description: 这些是 Cloud Manager 2023.4.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
-workflow-type: ht
-source-wordcount: '102'
-ht-degree: 100%
+source-git-commit: 0ea63c0c8a4fa216ac3d70db1fb12add7f036495
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 79%
 
 ---
 
 
-# Cloud Manager 2023.3.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.4.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2023.3.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.4.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -21,8 +21,12 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.3.0 版的发布日期为 2023 年 3 月 16 日。下一个版本计划于 2023 年 4 月 13 日发布。
+[!UICONTROL Cloud Manager] 2023.4.0 版的发布日期为 2023 年 4 月 13 日。下一个版本计划于 2023 年 11 月 5 日发布。
+
+## 新增功能 {#what-is-new}
+
+* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 已更新到版本41。
 
 ## 错误修复 {#bug-fixes}
 
-* Cloud Manager 的&#x200B;**学习**&#x200B;选项卡上的商业磁贴现在可以将用户导航到正确的页面。
+* 蓝色调度程序不再附加到绿色ELB(如果 [蓝绿部署](/help/introduction.md#blue-green) 失败。
