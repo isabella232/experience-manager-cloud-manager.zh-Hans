@@ -4,9 +4,9 @@ description: 这些是 Cloud Manager 2023.4.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 0ea63c0c8a4fa216ac3d70db1fb12add7f036495
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 79%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.4.0 版的发布日期为 2023 年 4 月 13 日。下一个版本计划于 2023 年 11 月 5 日发布。
+[!UICONTROL Cloud Manager] 2023.4.0 版的发布日期为 2023 年 4 月 13 日。下一个版本计划于 2023 年 5 月 11 日发布。
 
 ## 新增功能 {#what-is-new}
 
-* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 已更新到版本41。
+* [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)已更新到版本 41。
 
 ## 错误修复 {#bug-fixes}
 
-* 蓝色调度程序不再附加到绿色ELB(如果 [蓝绿部署](/help/introduction.md#blue-green) 失败。
+* 如果[蓝/绿部署](/help/introduction.md#blue-green)失败，则蓝色 Dispatcher 不再附加到绿色 ELB。
