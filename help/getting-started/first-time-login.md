@@ -2,10 +2,10 @@
 title: 首次登录
 description: 如果您已设置常规配置并且已准备好首次使用 Cloud Manager，请按照此页面上的说明进行操作。
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
-workflow-type: ht
-source-wordcount: '261'
-ht-degree: 100%
+source-git-commit: 413edd167b5eda51c207113aaa00a92c808fb09f
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 100%
 
 ## 首次登录 {#logging-in-for-the-first-time}
 
-1. 登录到 Adobe [!UICONTROL Experience Cloud]，随后将看到项目的列表。
+1. 登录Cloud Manager(位于 [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) 你看到你的节目单了。
 
-1. 选择项目。
+   ![Cloud Manager控制台](/help/assets/cloud-manager-console.png)
 
-1. 在项目的信息卡上，选择省略号按钮，然后选择 **Cloud Manager** 导航到 Cloud Manager 的&#x200B;**概述**&#x200B;页面。
+1. 在您项目的卡片上，选择省略号按钮，然后 **计划概述** 导航到Cloud Manager的 **概述** 页面。
 
-   ![Cloud Manager 选项](/help/assets/navigate-cm1.png)
+   ![Cloud Manager 选项](/help/assets/program-overview-option.png)
 
 1. 此时将打开 Cloud Manager 以显示&#x200B;**概述**&#x200B;页面。
 
