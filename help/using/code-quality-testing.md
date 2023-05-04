@@ -3,8 +3,8 @@ title: 代码质量测试
 description: 了解管道代码质量测试的工作方式以及其提高部署质量的方式。
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 8c3b59ab9e00d6ee3b90b9255d025d9e19b3b89a
-workflow-type: tm+mt
-source-wordcount: '2867'
+workflow-type: ht
+source-wordcount: '0'
 ht-degree: 100%
 
 ---
