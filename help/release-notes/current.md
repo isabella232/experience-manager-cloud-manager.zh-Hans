@@ -1,19 +1,19 @@
 ---
-title: 2023.4.0 版发行说明
-description: 这些是 Cloud Manager 2023.4.0 版的发行说明。
+title: 2023.5.0 版发行说明
+description: 这些是 Cloud Manager 2023.5.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0ea63c0c8a4fa216ac3d70db1fb12add7f036495
-workflow-type: ht
-source-wordcount: '118'
-ht-degree: 100%
+source-git-commit: 5a92ceb98de68025ca917c9b9cb358d54282b235
+workflow-type: tm+mt
+source-wordcount: '111'
+ht-degree: 67%
 
 ---
 
 
-# Cloud Manager 2023.4.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.5.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2023.4.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.5.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -21,12 +21,8 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.4.0 版的发布日期为 2023 年 4 月 13 日。下一个版本计划于 2023 年 5 月 11 日发布。
+的发行日期 [!UICONTROL Cloud Manager] 2023.5.0版于2023年5月11日发布。 下一个版本计划于 2023 年 6 月 8 日发布。
 
 ## 新增功能 {#what-is-new}
 
-* [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)已更新到版本 41。
-
-## 错误修复 {#bug-fixes}
-
-* 如果[蓝/绿部署](/help/introduction.md#blue-green)失败，则蓝色 Dispatcher 不再附加到绿色 ELB。
+* [自助内容副本](/help/using/content-copy.md) 现在，可通过Cloud Manager UI从较高的环境访问较低的环境。 有关详细信息，请联系您的客户成功工程师。
