@@ -3,9 +3,9 @@ title: 自定义代码质量规则
 description: 了解 Cloud Manager 在基于来自 AEM 工程的最佳实践的代码质量测试过程中执行的自定义代码质量规则的详细信息。
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3566'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->由于Adobe专有信息，无法下载完整的SonarQube规则。 可以[使用此链接下载规则的完整列表。](/help/assets/CodeQuality-rules-latest-AMS.xlsx) 请继续阅读本文档，了解规则的说明和示例。
+>由于是 Adobe 专有信息，因此无法下载完整的 SonarQube 规则。可[使用此链接](/help/assets/CodeQuality-rules-latest-AMS.xlsx)下载规则的完整列表。有关规则的描述和示例，请继续阅读本文档。
 
 ## SonarQube 规则 {#sonarqube-rules}
 
