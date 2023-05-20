@@ -3,7 +3,7 @@ title: 自定义代码质量规则
 description: 了解 Cloud Manager 在基于来自 AEM 工程的最佳实践的代码质量测试过程中执行的自定义代码质量规则的详细信息。
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3566'
 ht-degree: 100%
 

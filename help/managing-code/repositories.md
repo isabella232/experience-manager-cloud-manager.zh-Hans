@@ -3,7 +3,7 @@ title: Cloud Manager 存储库
 description: 了解如何访问、创建和编辑 Cloud Manager 项目的存储库。
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 63cbcf8724a840efa67b8fafc4c321e04a5d70d9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 100%
 

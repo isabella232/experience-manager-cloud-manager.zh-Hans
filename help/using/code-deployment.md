@@ -3,8 +3,8 @@ title: 代码部署
 description: 了解如何部署代码以及在部署代码时 Cloud Manager 中会发生什么情况。
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
-source-wordcount: '0'
+workflow-type: tm+mt
+source-wordcount: '1609'
 ht-degree: 100%
 
 ---

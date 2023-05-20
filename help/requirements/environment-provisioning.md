@@ -3,7 +3,7 @@ title: 环境配置
 description: 了解如何在 Cloud Manager 新用户引导过程中配置环境。
 exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%
 

@@ -3,7 +3,7 @@ title: 源代码存储库
 description: 了解为您在 Cloud Manager 中拥有的每个项目配置的 Git 存储库。
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 100%
 

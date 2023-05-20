@@ -3,7 +3,7 @@ title: 用户历程
 description: 本文档列出了不同的新用户引导场景，并解释了您的 Cloud Manager 快速入门历程。
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 100%
 
