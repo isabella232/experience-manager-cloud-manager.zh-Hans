@@ -7,7 +7,7 @@ user-guide-description: 了解如何使用 Cloud Manager 在云中自行管理 A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 source-git-commit: 11d378f12cb02e6c23990d85838bd57dddd7f295
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 100%
 
