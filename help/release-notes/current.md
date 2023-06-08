@@ -1,19 +1,19 @@
 ---
-title: 2023.5.0 版发行说明
-description: 这些是 Cloud Manager 2023.5.0 版的发行说明。
+title: 2023.6.0 版发行说明
+description: 这些是 Cloud Manager 2023.6.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5a92ceb98de68025ca917c9b9cb358d54282b235
+source-git-commit: 1bbdc88a2c7a86e258d5fd56fab504aa7232e9fc
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 100%
+source-wordcount: '99'
+ht-degree: 77%
 
 ---
 
 
-# Cloud Manager 2023.5.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.6.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2023.5.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.6.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -21,8 +21,8 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.5.0 版的发布日期为 2023 年 5 月 11 日。下一个版本计划于 2023 年 6 月 8 日发布。
+[!UICONTROL Cloud Manager] 2023.6.0 版的发布日期为 2023 年 6 月 8 日。下一个版本计划于2023年7月6日发布。
 
 ## 新增功能 {#what-is-new}
 
-* 现在可通过 Cloud Manager UI 从较高环境向较低环境执行[自助内容复制](/help/using/content-copy.md)。有关详细信息，请联系您的客户成功工程师。
+* 恢复时 [生产管道，](/help/using/production-pipelines.md) 现在，批准步骤中会显示确认对话框。
