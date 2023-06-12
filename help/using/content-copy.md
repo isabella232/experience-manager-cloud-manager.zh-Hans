@@ -2,10 +2,10 @@
 title: 内容复制工具
 description: Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生产环境复制到较低的环境以进行测试。
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
+source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
 workflow-type: tm+mt
-source-wordcount: '1123'
-ht-degree: 100%
+source-wordcount: '1090'
+ht-degree: 95%
 
 ---
 
@@ -119,7 +119,6 @@ Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生�
    >* 用户没有适当的权限。
    >* 环境中有正在运行的管道或正在进行的复制内容操作。
 
-
 1. 在&#x200B;**复制内容**&#x200B;对话框中，指定内容复制操作的源和目标。
 
 1. 您可以选择删除或保留目标环境中的排除路径。如果您希望保留内容集中指定的排除路径，请选中复选框 `Do not delete exclude paths from destination`。如果未选中复选框，则会在目标环境中删除排除路径。
@@ -164,7 +163,6 @@ Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生�
 * 如果在目标或源环境（例如 CI/CD 管道）上正在运行任何活动操作，则无法执行内容复制。
 * 每个内容集最多可以指定五十条路径。排除的路径没有限制。
 * 内容复制工具不应用作克隆或镜像工具，因为它无法跟踪源上移动或删除的内容。
-* 内容复制工具没有版本控制能力，并且无法自动检测自上次内容复制操作以来在内容集中的源环境上修改或新创建的内容。
-   * 如果您希望仅使用自上次内容复制操作以来的内容更改来更新您的目标环境，则您需要创建一个内容集。在内容集中，指定自上次内容复制操作以来发生更改的源实例上的路径。
-* 版本信息不包含在内容副本中。
 * 内容复制一旦开始即无法暂停或取消。
+* 内容复制工具可将资源以及与动态媒体相关的元数据从较高的环境复制到选定的较低环境。
+   * 然后，需要使用重新处理复制的资产 [DAM流程资产工作流](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) ，以便使用相应的dynamic media配置。
