@@ -3,9 +3,9 @@ title: 内容复制工具
 description: Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生产环境复制到较低的环境以进行测试。
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1090'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -164,5 +164,5 @@ Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生�
 * 每个内容集最多可以指定五十条路径。排除的路径没有限制。
 * 内容复制工具不应用作克隆或镜像工具，因为它无法跟踪源上移动或删除的内容。
 * 内容复制一旦开始即无法暂停或取消。
-* 内容复制工具可将资源以及与动态媒体相关的元数据从较高的环境复制到选定的较低环境。
-   * 然后，需要使用重新处理复制的资产 [DAM流程资产工作流](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) ，以便使用相应的dynamic media配置。
+* 内容复制工具将资源连同与动态媒体相关的元数据从较高环境复制到所选的较低环境。
+   * 然后，需要在较低的环境中使用 [DAM 处理资源工作流程](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html)重新处理复制的资源以使用相应的动态媒体配置。
