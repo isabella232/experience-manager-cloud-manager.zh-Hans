@@ -1,21 +1,22 @@
 ---
 title: 内容复制工具
-description: Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生产环境复制到较低的环境以进行测试。
+description: Cloud Manager内容复制工具使用户能够按需将可变内容从其AMS托管的AEM 6.x生产环境复制到较低环境，以进行测试。
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
-workflow-type: ht
-source-wordcount: '1090'
-ht-degree: 100%
+source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
+workflow-type: tm+mt
+source-wordcount: '1096'
+ht-degree: 92%
 
 ---
 
+
 # 内容复制工具 {#content-copy}
 
-Cloud Manager 内容复制工具使用户能够按需将可变内容从 AEM 生产环境复制到较低的环境以进行测试。
+Cloud Manager内容复制工具使用户能够按需将可变内容从其AMS托管的AEM 6.x生产环境复制到较低环境，以进行测试。
 
 ## 简介 {#introduction}
 
-当前的真实数据对于测试、验证和用户验收很有价值。内容复制工具允许您将内容从生产 AEM 环境复制到暂存或开发环境以进行此类测试。
+当前的真实数据对于测试、验证和用户验收很有价值。内容复制工具允许您将内容从AMS托管的生产AEM 6.x环境复制到暂存或开发环境以进行此类测试。
 
 要复制的内容由内容集定义。内容集由 JCR 路径列表组成，这些路径包含相同的 Cloud Manager 程序中要从源环境复制到目标环境的可变内容。内容集中允许使用以下路径。
 
