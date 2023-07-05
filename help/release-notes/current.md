@@ -3,9 +3,9 @@ title: 2023.7.0 的发行说明
 description: 这些是 Cloud Manager 2023.7.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 950fef5781c53f9bccf4c33c8b9d958edd5a0327
-workflow-type: ht
-source-wordcount: '123'
+source-git-commit: 9ecefd72cb9701026798ba47a743d99375f657c1
+workflow-type: tm+mt
+source-wordcount: '106'
 ht-degree: 100%
 
 ---
@@ -25,5 +25,4 @@ ht-degree: 100%
 
 ## 错误修复 {#bug-fixes}
 
-* Cloud Manager 登陆页面上的卡片现在指示是否为其程序启用了[增强安全性](/help/getting-started/program-setup.md)。
 * 在[编辑生产管道时，](/help/using/managing-pipelines.md#editing-pipelines)如果用户尝试从&#x200B;**暂存测试**&#x200B;选项卡中删除资源，则显示一条错误。
