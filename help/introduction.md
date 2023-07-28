@@ -3,9 +3,9 @@ title: Cloud Manager for AMS 简介
 description: 从此处开始了解 Cloud Manager for Adobe Managed Services (AMS) 以及它如何使组织能够在云中自行管理 Adobe Experience Manager。
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1322'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -115,7 +115,7 @@ Cloud Manager 提供了附加高级功能，这些功能可能有助于实施您
 | 5 | 暂停以进行测试（最多 24 小时） | - |
 | 6 | 将绿色基础架构添加到生产负载平衡器 | - |
 | 7 | 从生产负载平衡器中移除蓝色基础架构 |
-| 8 | 暂停以最终注销（最长24小时） | - |
+| 8 | 暂停以进行最终签发（最长 24 小时） | - |
 | 9 | 自动终止蓝色基础架构 | - |
 | 10 | 管道完成 | - |
 
