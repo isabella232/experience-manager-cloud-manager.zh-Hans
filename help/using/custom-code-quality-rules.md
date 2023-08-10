@@ -2,9 +2,9 @@
 title: 自定义代码质量规则
 description: 了解 Cloud Manager 在基于来自 AEM 工程的最佳实践的代码质量测试过程中执行的自定义代码质量规则的详细信息。
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
+source-git-commit: f930f12b5f50dd96a1677ff7a56cf0e92a400556
 workflow-type: tm+mt
-source-wordcount: '3566'
+source-wordcount: '3377'
 ht-degree: 100%
 
 ---
@@ -648,21 +648,6 @@ OSGi 配置 `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` 定义 AEM 中
 
 “AEM 现代化工具”文档提供了有关如何将组件从经典 UI 转换为 Touch UI 的详细信息以及使用的工具。有关更多详细信息，请参阅[“AEM 现代化工具”文档](https://opensource.adobe.com/aem-modernize-tools/)。
 
-### 包不应混合可变和不可变的内容 {#oakpal-packages-immutable}
-
-* **密钥**：ImmutableMutableMixedPackage
-* **类型**：代码异味/Cloud Service 兼容性
-* **严重性**：轻微
-* **开始版本**：版本 2020.5.0
-
-要与 Cloud Service 部署模型兼容，各个内容包必须包含存储库的不可变区域（即 `/apps` 和 `/libs`）的内容或可变区域的内容（即未在 `/apps` 或 `/libs` 中的内容），但不能同时包含这两个区域的内容。 例如，同时包含 `/apps/myco/components/text and /etc/clientlibs/myco` 的包不与 Cloud Service 兼容，并且将导致报告问题。
-
-有关更多详细信息，请参阅[“AEM 项目结构”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html)。
-
->[!NOTE]
->
->[客户包不应在 /libs 下创建或修改节点](#oakpal-customer-package)规则始终适用。
-
 ### 不应使用反向复制代理 {#oakpal-reverse-replication}
 
 * **密钥**：ReverseReplication
@@ -737,15 +722,6 @@ AEM 客户端库可能包含静态资源，如图像和字体。如[“使用客
 旧的基础组件（即 `/libs/foundation` 下的组件）已在多个 AEM 版本中被弃用以便支持[核心组件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)建议不要使用旧的基础组件作为自定义组件的基础（无论是通过叠加还是继承），并且应将这些基础组件转换为对应的核心组件。
 
 可以通过 [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)促进此转换。
-
-### 仅应使用受支持的运行模式名称和排序 {#oakpal-supported-runmodes}
-
-* **密钥**：SupportedRunmode
-* **类型**：代码异味
-* **严重性**：轻微
-* **开始版本**：版本 2021.2.0
-
-AEM Cloud Service 对运行模式名称实施严格的命名策略，并对这些运行模式进行严格的排序。可以在[“部署到 AEM as a Cloud Service”文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html#runmodes)中找到受支持的运行模式列表，任何偏离该列表的情况都将被视为存在问题。
 
 ### 自定义搜索索引定义节点必须是 /oak:index 的直接子节点 {#oakpal-custom-search}
 
