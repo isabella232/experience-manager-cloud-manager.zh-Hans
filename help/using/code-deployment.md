@@ -3,9 +3,9 @@ title: 代码部署
 description: 了解如何部署代码以及在部署代码时 Cloud Manager 中会发生什么情况。
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: b85bd1bdf38360885bf2777d75bf7aa97c6da7ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1655'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -178,19 +178,19 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 ## 重新执行生产部署 {#reexecute-deployment}
 
-在极少数情况下，生产部署步骤可能会由于临时原因而失败。 在这种情况下，无论完成的类型（例如成功、取消或不成功）如何，只要生产部署步骤已完成，就可以支持重新执行生产部署步骤。 重新执行将使用包含三个步骤的同一管道来创建一个新的执行。
+在罕见的情况下，生产部署步骤可能会因短暂的原因而失败。在此类情况下，只要生产部署步骤已完成，无论完成的类型是什么（例如，成功、已取消或失败），都支持重新执行生产部署步骤。重新执行将使用包含三个步骤的同一管道创建新的执行。
 
-1. **验证步骤**  — 这基本上与正常管道执行期间进行的验证相同。
-1. **构建步骤**  — 在重新执行的上下文中，构建步骤将复制工件，而实际上并不执行新的构建过程。
-1. **生产部署步骤**  — 它使用与正常管道执行中的生产部署步骤相同的配置和选项。
+1. **验证步骤** - 此步骤基本上就是在正常管道执行期间进行的相同验证。
+1. **构建步骤** - 在重新执行的上下文中，构建步骤复制工件，但实际上并不执行新的构建过程。
+1. **生产部署步骤** - 此步骤使用与正常管道执行中的生产部署步骤相同的配置和选项。
 
-在这种情况下，如果可以重新执行，生产管道状态页面将提供 **重新执行** 选项位于常规选项旁边 **下载内部版本日志** 选项。
+在此类能够重新执行的情况下，生产管道状态页面在平常的&#x200B;**下载构建日志**&#x200B;选项旁提供&#x200B;**重新执行**&#x200B;选项。
 
-![管道概述窗口中的重新执行选项](/help/assets/re-execute.png)
+![管道概述窗口中的“重新执行”选项](/help/assets/re-execute.png)
 
 >[!NOTE]
 >
->在重新执行时，UI中会标记构建步骤，以反映它将复制而不是重新构建工件。
+>在重新执行中，在 UI 中为构建步骤加上标签以反映它复制工件而非重新构建。
 
 ### 限制 {#limitations}
 
@@ -201,16 +201,16 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 ### 重新执行 API {#reexecute-api}
 
-除了在UI中可用之外，您还可以使用 [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) 触发重新执行并确定作为重新执行触发的执行。
+除了在 UI 中可用之外，您还可以使用 [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) 触发重新执行以及标识已作为重新执行触发的执行。
 
 #### 触发重新执行 {#triggering}
 
-要触发重新执行，需要对生产部署步骤状态的 HAL 链接 `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` 发出 `PUT` 请求。
+要触发重新执行，需要对生产部署步骤状态的 HAL 链接 `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` 作出 `PUT` 请求。
 
-* 如果存在此链接，则可以从该步骤重新开始执行。 
-* 如果此链接不存在，则无法从该步骤重新开始执行。
+* 如果存在此链接，则可以从该步骤重新开始执行。
+* 如果不存在它，则无法从该步骤重新开始执行。
 
-此链接始终仅适用于生产部署步骤。
+此链接仅适用于生产部署步骤。
 
 ```javascript
  {
@@ -247,10 +247,10 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
   "status": "FINISHED"
 ```
 
-HAL链接的语法 `href` value只是一个示例，应当始终从HAL链接读取而不是生成实际值。
+HAL 链接的 `href` 值的语法只是一个示例，应始终从 HAL 链接读取而不是生成实际值。
 
 通过将 `PUT` 请求提交到此端点，将产生 `201` 响应（如果成功），并且响应正文将是新执行的表示形式。这类似于通过 API 开始常规执行。
 
-#### 识别重新执行的情况 {#identifying}
+#### 识别重新执行的执行 {#identifying}
 
-重新执行的执行可以通过值来标识 `RE_EXECUTE` 在 `trigger` 字段。
+可以通过 `trigger` 字段中的 `RE_EXECUTE` 值识别重新执行的执行。
