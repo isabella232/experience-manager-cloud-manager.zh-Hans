@@ -8,7 +8,7 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: d2c4503fdcccb62d2e25799e81f1ce823c2b1cbe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '342'
 ht-degree: 100%
 
@@ -69,7 +69,7 @@ ht-degree: 100%
       + [2023.6.0 的发行说明](/help/release-notes/2023/2023-6-0.md)
       + [2023.5.0 的发行说明](/help/release-notes/2023/2023-5-0.md)
       + [2023.4.0 的发行说明](/help/release-notes/2023/2023-4-0.md)
-      + [2023.3.0 版发行说明](/help/release-notes/2023/2023-3-0.md)
+      + [2023.3.0 的发行说明](/help/release-notes/2023/2023-3-0.md)
       + [2023.2.0 的发行说明](/help/release-notes/2023/2023-2-0.md)
       + [2023.1.0 的发行说明](/help/release-notes/2023/2023-1-0.md)
    + 2022 {#2022}
@@ -109,23 +109,23 @@ ht-degree: 100%
       + [2020.4.0 的发行说明](/help/release-notes/2020/2020-4-0.md)
       + [2020.3.0 的发行说明](/help/release-notes/2020/2020-3-0.md)
       + [2020.2.0 的发行说明](/help/release-notes/2020/2020-2-0.md)
-      + [2020.1.0 版发行说明](/help/release-notes/2020/2020-1-0.md)
+      + [2020.1.0 的发行说明](/help/release-notes/2020/2020-1-0.md)
    + 2019 {#2019}
-      + [2019.12.0 版发行说明](/help/release-notes/2019/2019-12-0.md)
-      + [2019.11.0 版发行说明](/help/release-notes/2019/2019-11-0.md)
-      + [2019.10.0 版发行说明](/help/release-notes/2019/2019-10-0.md)
-      + [2019.9.0 版发行说明](/help/release-notes/2019/2019-9-0.md)
-      + [2019.8.0 版发行说明](/help/release-notes/2019/2019-8-0.md)
-      + [2019.7.0 版发行说明](/help/release-notes/2019/2019-7-0.md)
-      + [2019.6.0 版发行说明](/help/release-notes/2019/2019-6-0.md)
-      + [2019.5.0 版发行说明](/help/release-notes/2019/2019-5-0.md)
-      + [2019.4.0 版发行说明](/help/release-notes/2019/2019-4-0.md)
-      + [2019.3.0 版发行说明](/help/release-notes/2019/2019-3-0.md)
-      + [2019.2.0 版发行说明](/help/release-notes/2019/2019-2-0.md)
-      + [2019.1.0 版发行说明](/help/release-notes/2019/2019-1-0.md)
+      + [2019.12.0 的发行说明](/help/release-notes/2019/2019-12-0.md)
+      + [2019.11.0 的发行说明](/help/release-notes/2019/2019-11-0.md)
+      + [2019.10.0 的发行说明](/help/release-notes/2019/2019-10-0.md)
+      + [2019.9.0 的发行说明](/help/release-notes/2019/2019-9-0.md)
+      + [2019.8.0 的发行说明](/help/release-notes/2019/2019-8-0.md)
+      + [2019.7.0 的发行说明](/help/release-notes/2019/2019-7-0.md)
+      + [2019.6.0 的发行说明](/help/release-notes/2019/2019-6-0.md)
+      + [2019.5.0 的发行说明](/help/release-notes/2019/2019-5-0.md)
+      + [2019.4.0 的发行说明](/help/release-notes/2019/2019-4-0.md)
+      + [2019.3.0 的发行说明](/help/release-notes/2019/2019-3-0.md)
+      + [2019.2.0 的发行说明](/help/release-notes/2019/2019-2-0.md)
+      + [2019.1.0 的发行说明](/help/release-notes/2019/2019-1-0.md)
    + 2018 {#2018}
-      + [2018.9.0 版发行说明](/help/release-notes/2018/2018-9-0.md)
-      + [2018.8.0 版发行说明](/help/release-notes/2018/2018-8-0.md)
-      + [2018.7.0 版发行说明](/help/release-notes/2018/2018-7-0.md)
-      + [2018.6.0 版发行说明](/help/release-notes/2018/2018-6-0.md)
-      + [2018.5.0 版发行说明](/help/release-notes/2018/2018-5-0.md)
+      + [2018.9.0 的发行说明](/help/release-notes/2018/2018-9-0.md)
+      + [2018.8.0 的发行说明](/help/release-notes/2018/2018-8-0.md)
+      + [2018.7.0 的发行说明](/help/release-notes/2018/2018-7-0.md)
+      + [2018.6.0 的发行说明](/help/release-notes/2018/2018-6-0.md)
+      + [2018.5.0 的发行说明](/help/release-notes/2018/2018-5-0.md)
