@@ -1,18 +1,18 @@
 ---
-title: 2023.8.0 的发行说明
-description: 这些是 Cloud Manager 2023.8.0 版的发行说明。
+title: 2023.9.0 的发行说明
+description: 这些是 Cloud Manager 2023.9.0 版的发行说明。
 feature: Release Information
-source-git-commit: 26c4c945e18f21b812f65dbabc14a4e8ab9f6b43
+source-git-commit: a3e926fa13d54da1322f3a5219519fae07ddb273
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 100%
+source-wordcount: '164'
+ht-degree: 52%
 
 ---
 
 
-# Cloud Manager 2023.8.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.9.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2023.8.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.9.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -20,18 +20,14 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.8.0 版的发布日期为 2023 年 8 月 10 日。下一个版本计划于 2023 年 9 月 14 日发布。
+[!UICONTROL Cloud Manager] 2023.9.0 版的发布日期为 2023 年 9 月 14 日。下一个版本计划于 2023 年 10 月 5 日发布。
 
 ## 新增功能 {#what-is-new}
 
-* 作出了一些增强以使 Cloud Manager UI 中错误消息更容易理解且出现得更合理。
+* 此版本仅包含针对Cloud Manager的错误修复。
 
 ## 错误修复 {#bug-fixes}
 
-* 已设法解决[内容复制](/help/using/content-copy.md)过程停滞的罕见情况。
-* 为不使用 New Relic One 的客户解决了一个临时的测试问题。
-* 已从 SonarQube 中删除[自定义代码质量规则](/help/using/custom-code-quality-rules.md) `SupportedRunmode` 和 `ImmutableMutableMixedPackage`，因为它们仅适用于 AEM as a Cloud Service。
-* 用户将不再遇到看起来处于运行状态但实际上停滞的管道。
-* 在触发&#x200B;**[复制内容](/help/using/content-copy.md)**&#x200B;模式后，**环境**&#x200B;菜单现在将关闭。
-* 如果上次执行没有设置为构建阶段状态的 `commitId`，则不再允许[管道重新执行](/help/using/code-deployment.md#reexecute-deployment)。
-* 当用户在&#x200B;**活动**&#x200B;或&#x200B;**管道**&#x200B;屏幕中单击某个管道时，现在为罕见的错误显示更易理解的消息。
+* 删除程序时，还将删除任何关联的正在运行的管道，确保不会将管道错误地指定为失败状态。
+* 有时，当管道执行的所有步骤都是“已完成”时，管道的状态会视为“正在运行”，使其似乎处于卡住状态。 它现在被视为“完成”。
+* 对于使用代码生成器原型生成的存储库分支，CI/CD管道失败。
