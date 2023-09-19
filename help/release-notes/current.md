@@ -2,10 +2,10 @@
 title: 2023.9.0 的发行说明
 description: 这些是 Cloud Manager 2023.9.0 版的发行说明。
 feature: Release Information
-source-git-commit: a3e926fa13d54da1322f3a5219519fae07ddb273
+source-git-commit: f15a4b739150ee40b6dc48de0fbc20859093c79c
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 52%
+source-wordcount: '145'
+ht-degree: 57%
 
 ---
 
@@ -22,12 +22,8 @@ ht-degree: 52%
 
 [!UICONTROL Cloud Manager] 2023.9.0 版的发布日期为 2023 年 9 月 14 日。下一个版本计划于 2023 年 10 月 5 日发布。
 
-## 新增功能 {#what-is-new}
-
-* 此版本仅包含针对Cloud Manager的错误修复。
-
 ## 错误修复 {#bug-fixes}
 
-* 删除程序时，还将删除任何关联的正在运行的管道，确保不会将管道错误地指定为失败状态。
-* 有时，当管道执行的所有步骤都是“已完成”时，管道的状态会视为“正在运行”，使其似乎处于卡住状态。 它现在被视为“完成”。
-* 对于使用代码生成器原型生成的存储库分支，CI/CD管道失败。
+* 现在，删除程序时，任何关联的正在运行的管道也会被删除。
+* 已修复偶尔出现的错误，其中管道执行的所有步骤均标记为已完成，但管道的状态仍在运行，看起来像是卡住状态。
+* 当存储库分支的CI/CD管道生成原型失败时，已更正错误。
