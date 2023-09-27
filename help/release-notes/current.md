@@ -3,9 +3,9 @@ title: 2023.9.0 的发行说明
 description: 这些是 Cloud Manager 2023.9.0 版的发行说明。
 feature: Release Information
 source-git-commit: f15a4b739150ee40b6dc48de0fbc20859093c79c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '145'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -24,6 +24,6 @@ ht-degree: 57%
 
 ## 错误修复 {#bug-fixes}
 
-* 现在，删除程序时，任何关联的正在运行的管道也会被删除。
-* 已修复偶尔出现的错误，其中管道执行的所有步骤均标记为已完成，但管道的状态仍在运行，看起来像是卡住状态。
-* 当存储库分支的CI/CD管道生成原型失败时，已更正错误。
+* 当删除项目时，任何关联的正在运行的管道现在也会被删除。
+* 修复了偶尔出现的错误，即管道执行的所有步骤都标记为已完成，但管道仍在运行状态，从而呈现出卡住状态。
+* 当 CI/CD 管道因存储库分支生成原型而失败时的错误已得到纠正。
