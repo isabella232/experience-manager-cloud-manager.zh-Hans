@@ -2,7 +2,7 @@
 title: 配置生产管道
 description: 了解如何使用 Cloud Manager 创建和配置生产管道以部署代码。
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
+source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
 workflow-type: tm+mt
 source-wordcount: '1302'
 ht-degree: 100%
@@ -33,12 +33,6 @@ ht-degree: 100%
 >
 >在管道的关联 Git 存储库具有至少一个分支且[项目设置](/help/getting-started/program-setup.md)完成之前，无法设置管道。
 
-## 视频教程 {#video-tutorial-one}
-
-该视频概述了本文档中详述的管道创建过程。
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 ## 添加新生产管道 {#adding-production-pipeline}
 
 在使用 [!UICONTROL Cloud Manager] UI 设置项目并具有至少一个环境后，便可以添加生产管道。
@@ -56,6 +50,7 @@ ht-degree: 100%
    1. 在&#x200B;**源代码**&#x200B;部分下，您定义管道在何处检索它将处理的代码。
 
       * **存储库** - 此选项定义管道应从中检索代码的 Git 存储库。
+
       >[!TIP]
       >
       >请参阅[项目设置](/help/getting-started/program-setup.md)文档，了解如何在 Cloud Manager 中添加和管理存储库。
@@ -73,6 +68,7 @@ ht-degree: 100%
 
             * **手动** - 使用此选项可通过 Cloud Manager UI 手动启动管道。
             * **在 Git 发生更改时** - 只要将承诺添加到配置的 Git 分支，此选项就会启动 CI/CD 管道。利用此选项，您仍能根据需要手动启动管道。
+
          * **重要量度失败行为** - 在管道设置或编辑期间，部署管理员可以选择定义在任何质量审核出现重要失败时的管道行为。可用的选项为：
 
             * **每次询问** – 这是默认设置，需要对任何重要失败进行手动干预。
@@ -96,6 +92,7 @@ ht-degree: 100%
 
                * **刷新** - 执行缓存删除。
                * **使无效** - 执行缓存无效，与将内容从创作实例激活到发布实例时类似。
+
             1. 单击&#x200B;**添加路径**&#x200B;以添加指定路径。可以为每个环境添加最多 100 个路径。
 
          ![Dispatcher 配置](/help/assets/configure-pipelines/dispatcher-stage.png)
@@ -114,27 +111,18 @@ ht-degree: 100%
                * **日期** - 此选项允许用户计划应完成部署的时间。
                * **停止执行** - 此选项将中止到生产环境的部署。
 
-            >[!TIP]
-            >
-            >请参阅[代码部署](/help/using/code-deployment.md)文档，了解如何设置部署计划或立即执行管道。
+           >[!TIP]
+           >
+           >请参阅[代码部署](/help/using/code-deployment.md)文档，了解如何设置部署计划或立即执行管道。
 
             * **使用 CSE 监督** - 如果选择此选项，则通过 CSE 实际启动部署。在启用此选项的情况下创建或编辑管道时，**部署管理员**&#x200B;角色具有以下选项。
 
                * **任何 CSE** - 此选项允许任何可用的 CSE 启动部署。
                * **我的 CSE** - 此选项仅允许分配给客户的特定 CSE 启动部署。如果分配的 CSE 不可用，这也将适用于指定的 CSE 后备人员。
 
-            ![生产部署选项](/help/assets/configure-pipelines/prod-deploymentoptions.png)
+           ![生产部署选项](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
          * **Dispatcher 配置** - 为您的生产环境定义 Dispatcher 配置。这些选项与暂存环境的选项相同。
-
-
-
-
-
-
-
-
-
 
 1. 单击&#x200B;**继续**&#x200B;以进入&#x200B;**暂存测试**&#x200B;选项卡，可以在其中根据已许可的产品来配置 AEM Sites 和 AEM Assets 性能测试。
 
@@ -163,10 +151,14 @@ ht-degree: 100%
 
       ![Assets 测试分发](/help/assets/configure-pipelines/add-prod6.png)
 
-
-
 1. 单击&#x200B;**保存**&#x200B;以完成生产管道添加操作。
 
 ## 后续步骤 {#the-next-steps}
 
 配置管道后，您需要部署代码。有关更多详细信息，请参阅[代码部署](/help/using/code-deployment.md)文档。
+
+## 视频教程 {#video-tutorial-one}
+
+该视频概述了本文档中详述的管道创建过程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)

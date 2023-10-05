@@ -1,18 +1,19 @@
 ---
-title: 2023.9.0 的发行说明
-description: 这些是 Cloud Manager 2023.9.0 版的发行说明。
+title: 2023.10.0 的发行说明
+description: 这些是 Cloud Manager 2023.10.0 版的发行说明。
 feature: Release Information
-source-git-commit: f15a4b739150ee40b6dc48de0fbc20859093c79c
-workflow-type: ht
-source-wordcount: '145'
-ht-degree: 100%
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: a5a304541409bc1775090eef2a669e1e0bcf005e
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 58%
 
 ---
 
 
-# Cloud Manager 2023.9.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.10.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2023.9.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.10.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -20,10 +21,13 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.9.0 版的发布日期为 2023 年 9 月 14 日。下一个版本计划于 2023 年 10 月 5 日发布。
+[!UICONTROL Cloud Manager] 2023.10.0 版的发布日期为 2023 年 10 月 5 日。下一个版本计划于 2023 年 11 月 2 日发布。
 
-## 错误修复 {#bug-fixes}
+## 新增功能 {#what-is-new}
 
-* 当删除项目时，任何关联的正在运行的管道现在也会被删除。
-* 修复了偶尔出现的错误，即管道执行的所有步骤都标记为已完成，但管道仍在运行状态，从而呈现出卡住状态。
-* 当 CI/CD 管道因存储库分支生成原型而失败时的错误已得到纠正。
+* 此 **部署管理员** 角色可以 [配置一组内容路径，这些路径将在运行非生产管道时失效或从AEM Dispatcher缓存中刷新。](/help/using/non-production-pipelines.md)
+   * 这些缓存操作将在部署任何内容包之后在部署管道步骤中执行。
+   * 这些设置使用标准 AEM Dispatcher 行为。
+* 在2023年10月版的Cloud Manager中，将通过分阶段推出来更新Java版本。
+   * Java版本正在更新以OracleJDK 8u371和OracleJDK 11.0.20。
+   * [请参阅OpenJDK建议](https://openjdk.org/groups/vulnerability/advisories/) 有关这些JDK更新中的安全和错误修复的详细信息。
