@@ -2,9 +2,9 @@
 title: 配置非生产管道
 description: 了解如何使用 Cloud Manager 创建和配置非生产管道以部署代码。
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 567a16a032bf80451b5e8ba4e3d842cb617a615f
-workflow-type: tm+mt
-source-wordcount: '600'
+source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
+workflow-type: ht
+source-wordcount: '716'
 ht-degree: 100%
 
 ---
@@ -30,12 +30,6 @@ ht-degree: 100%
 >[!NOTE]
 >
 >在管道的关联 Git 存储库具有至少一个分支且[项目设置](/help/getting-started/program-setup.md)完成之前，无法设置管道。请参阅 [Cloud Manager 存储库](/help/managing-code/repositories.md)文档，了解如何在 Cloud Manager 中添加和管理存储库。
-
-## 视频教程 {#video-tutorial}
-
-该视频概述了本文档中详述的管道创建过程。
-
->[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 ## 添加非生产管道 {#add-non-production-pipeline}
 
@@ -66,15 +60,30 @@ ht-degree: 100%
 
       * **手动** - 使用此选项可手动启动管道。
       * **在 Git 发生更改时** – 只要将承诺添加到配置的 Git 分支，此选项就会启动管道。利用此选项，您仍能根据需要手动启动管道。
+
    1. 对于部署管道，在&#x200B;**重要量度失败行为**&#x200B;下，定义在任何质量审核出现重要失败时的管道行为。
 
       * **每次询问** – 这是默认设置，需要对任何重要失败进行手动干预。
       * **立即失败** – 如果选定此选项，则只要发生重要失败，就会取消管道。这实际上是在模拟用户手动拒绝每个失败。
-      * **立即继续** – 如果选定此选项，则每当发生重要失败时，管道就会自动继续。这实际上是在模拟用户手动审批每个失败的情况。
+      * **立即继续** – 如果选定此选项，则每当发生重要失败时，管道就会自动继续。这实际上是在模拟用户手动批准每个失败。
 
+   1. **Dispatcher 配置** - **部署管理员**&#x200B;角色可以配置一组内容路径，这些路径将在管道运行时失效或从 AEM Dispatcher 缓存中刷新。这些缓存操作将在部署任何内容包之后在部署管道步骤中执行。这些设置使用标准 AEM Dispatcher 行为。要进行配置，请执行以下操作：
+
+      1. 在&#x200B;**路径**&#x200B;下，提供内容路径。
+      1. 在&#x200B;**类型**&#x200B;下，选择要对路径执行的操作。
+
+         * **刷新** - 执行缓存删除。
+         * **使无效** - 执行缓存无效，与将内容从创作实例激活到发布实例时类似。
+      1. 单击&#x200B;**添加路径**&#x200B;以添加指定路径。可以为每个环境添加最多 100 个路径。
 
 1. 单击&#x200B;**保存**&#x200B;以保存管道。
 
 ## 后续步骤 {#the-next-steps}
 
 配置管道后，您需要部署代码。有关更多详细信息，请参阅[代码部署](/help/using/code-deployment.md)文档。
+
+## 视频教程 {#video-tutorial}
+
+该视频概述了本文档中详述的管道创建过程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
