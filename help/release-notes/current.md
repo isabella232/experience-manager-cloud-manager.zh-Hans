@@ -3,10 +3,10 @@ title: 2023.10.0 的发行说明
 description: 这些是 Cloud Manager 2023.10.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: a5a304541409bc1775090eef2a669e1e0bcf005e
+source-git-commit: 851364e74864c28b3bcd9285dfbe06ddb530eb10
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 58%
+source-wordcount: '226'
+ht-degree: 49%
 
 ---
 
@@ -29,5 +29,8 @@ ht-degree: 58%
    * 这些缓存操作将在部署任何内容包之后在部署管道步骤中执行。
    * 这些设置使用标准 AEM Dispatcher 行为。
 * 在2023年10月版的Cloud Manager中，将通过分阶段推出来更新Java版本。
-   * Java版本正在更新以OracleJDK 8u371和OracleJDK 11.0.20。
+   * Java 8和11以及Maven的次要版本已更新，并将在未来2个月内分阶段推出。 新版本包含多个安全修复和错误修复。 新版本包括：
+   * *Maven： 3.8.8*
+   * *Java 8版本： /usr/lib/jvm/jdk1.8.0_371*
+   * *Java 11版本： /usr/lib/jvm/jdk-11.0.20*
    * [请参阅OpenJDK建议](https://openjdk.org/groups/vulnerability/advisories/) 有关这些JDK更新中的安全和错误修复的详细信息。
