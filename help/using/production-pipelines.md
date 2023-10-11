@@ -3,7 +3,7 @@ title: 配置生产管道
 description: 了解如何使用 Cloud Manager 创建和配置生产管道以部署代码。
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1302'
 ht-degree: 100%
 
@@ -85,7 +85,7 @@ ht-degree: 100%
 
          ![暂存部署选项](/help/assets/configure-pipelines/add-prod4.png)
 
-         * **Dispatcher 配置** - **部署管理员**&#x200B;角色可以配置一组内容路径，这些路径将在管道运行时失效或从 AEM Dispatcher 缓存中刷新。这些缓存操作将在部署任何内容包之后在部署管道步骤中执行。这些设置使用标准 AEM Dispatcher 行为。要进行配置，请执行以下操作：
+         * **Dispatcher 配置** - **部署管理员**&#x200B;角色可以配置一组内容路径，这些路径将在管道运行时失效或从 AEM Dispatcher 缓存中刷新。就在部署任何内容包之后，将作为部署管道步骤的一部分执行这些缓存操作。这些设置使用标准 AEM Dispatcher 行为。要进行配置，请执行以下操作：
 
             1. 在&#x200B;**路径**&#x200B;下，提供内容路径。
             1. 在&#x200B;**类型**&#x200B;下，选择要对路径执行的操作。
