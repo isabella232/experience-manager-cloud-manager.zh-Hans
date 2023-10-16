@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 851364e74864c28b3bcd9285dfbe06ddb530eb10
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -29,8 +29,8 @@ ht-degree: 77%
    * 就在部署任何内容包之后，将作为部署管道步骤的一部分执行这些缓存操作。
    * 这些设置使用标准 AEM Dispatcher 行为。
 * 随着 2023 年 10 月发布 Cloud Manager，将通过分阶段推出的方式更新 Java 版本。
-   * Java 8和11以及Maven的次要版本已更新，并将在未来2个月内分阶段推出。 新版本包含多个安全修复和错误修复。 新版本包括：
-   * *Maven： 3.8.8*
-   * *Java 8版本： /usr/lib/jvm/jdk1.8.0_371*
-   * *Java 11版本： /usr/lib/jvm/jdk-11.0.20*
+   * Java 8 和 11 以及 Maven 的次要版本已更新，并将在接下来的 2 个月内分阶段推出。新版本具有多项安全修复和错误修复。新版本是：
+   * *Maven：3.8.8*
+   * *Java 8 版本：/usr/lib/jvm/jdk1.8.0_371*
+   * *Java 11 版本：/usr/lib/jvm/jdk-11.0.20*
    * 有关这些 JDK 更新中的安全性和错误修复的详细信息，[请参阅 OpenJDK 公告](https://openjdk.org/groups/vulnerability/advisories/)。
