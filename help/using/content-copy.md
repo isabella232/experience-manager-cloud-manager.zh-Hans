@@ -2,10 +2,10 @@
 title: 内容复制工具
 description: 通过 Cloud Manager 内容复制工具，用户可按需将可变内容从其 AMS 托管的 AEM 6.x 生产环境复制到较低版本的环境以供测试。
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
-workflow-type: ht
-source-wordcount: '1096'
-ht-degree: 100%
+source-git-commit: fe5de4e1ab5cd0d0e317cd399b8e44758a6312c4
+workflow-type: tm+mt
+source-wordcount: '1139'
+ht-degree: 93%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 100%
 
 在可以复制任何内容之前，必须定义一个内容集。内容集在定义之后可以重复使用来复制内容。请按照以下步骤操作来创建内容集。
 
-1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登录 Cloud Manager 并选择适当的组织和程序。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 上登录到 Cloud Manager 并选择适当的组织和项目。
 
 1. 从&#x200B;**概述**&#x200B;页面导航到&#x200B;**环境**&#x200B;屏幕。
 
@@ -103,7 +103,7 @@ ht-degree: 100%
 
 创建内容集后，您可以使用它来复制内容。按照以下步骤操作来复制内容。
 
-1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登录 Cloud Manager 并选择适当的组织和程序。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 上登录到 Cloud Manager 并选择适当的组织和项目。
 
 1. 从&#x200B;**概述**&#x200B;页面导航到&#x200B;**环境**&#x200B;屏幕。
 
@@ -122,7 +122,9 @@ ht-degree: 100%
 
 1. 在&#x200B;**复制内容**&#x200B;对话框中，指定内容复制操作的源和目标。
 
-1. 您可以选择删除或保留目标环境中的排除路径。如果您希望保留内容集中指定的排除路径，请选中复选框 `Do not delete exclude paths from destination`。如果未选中复选框，则会在目标环境中删除排除路径。
+1. 您可以选择删除或保留目标环境中的排除路径。 如果您希望保留内容集中指定的排除路径，请选中复选框 `Do not delete exclude paths from destination`。如果未选中复选框，则会在目标环境中删除排除路径。
+
+1. 您可以选择将正在从源环境复制到目标环境的路径的版本历史记录。 选中复选框 `Copy Versions` 如果您希望复制所有版本历史记录。
 
    ![复制内容](/help/assets/copying-content.png)
 
@@ -134,7 +136,7 @@ ht-degree: 100%
 
 您可以在&#x200B;**复制内容活动**&#x200B;页面中监控复制过程的状态。
 
-1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 登录 Cloud Manager 并选择适当的组织和程序。
+1. 在 [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) 上登录到 Cloud Manager 并选择适当的组织和项目。
 
 1. 从&#x200B;**概述**&#x200B;页面导航到&#x200B;**环境**&#x200B;屏幕。
 
@@ -159,7 +161,7 @@ ht-degree: 100%
 * 无法从较低环境向较高环境执行内容复制。
 * 内容复制只能在同一层内执行（即创作-创作或发布-发布）。
 * 无法跨项目和跨区域复制内容。
-* 只有当源环境和目标环境位于同一云提供商上时，才能执行基于云数据存储的拓扑的内容复制。
+* 仅当源和目标环境位于同一云提供商和同一区域时，才能对基于云数据存储的拓扑进行内容复制。
 * 在同一环境中运行并发的内容复制操作是不可能的。
 * 如果在目标或源环境（例如 CI/CD 管道）上正在运行任何活动操作，则无法执行内容复制。
 * 每个内容集最多可以指定五十条路径。排除的路径没有限制。
@@ -167,3 +169,4 @@ ht-degree: 100%
 * 内容复制一旦开始即无法暂停或取消。
 * 内容复制工具将资源连同与动态媒体相关的元数据从较高环境复制到所选的较低环境。
    * 然后，需要在较低的环境中使用 [DAM 处理资源工作流程](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html)重新处理复制的资源以使用相应的动态媒体配置。
+* 当不复制版本历史记录时，内容复制过程将显着加快。
