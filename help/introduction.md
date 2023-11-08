@@ -3,7 +3,7 @@ title: Cloud Manager for AMS 简介
 description: 从此处开始了解 Cloud Manager for Adobe Managed Services (AMS) 以及它如何使组织能够在云中自行管理 Adobe Experience Manager。
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 100%
 
