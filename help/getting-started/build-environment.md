@@ -2,7 +2,7 @@
 title: 构建环境
 description: 了解 Cloud Manager 用户可用来构建和测试代码的专用构建环境。
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
+source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 100%
@@ -19,9 +19,11 @@ ht-degree: 100%
 Cloud Manager 的构建环境具有以下属性。
 
 * 构建环境基于 Linux，派生自 Ubuntu 18.04。
-* 安装 Apache Maven 3.6.0。
-* 安装的 Java 版本是 Oracle JDK 8u202 和 Oracle JDK 11.0.2。
-* 默认情况下，`JAVA_HOME` 环境变量设置为 `/usr/lib/jvm/jdk1.8.0_202`，其中包含 Oracle JDK 8u202。有关更多详细信息，请参阅[替代 Maven 执行 JDK 版本](#alternate-maven)部分。
+* 安装 Apache Maven 3.8.8。
+* 安装的 Java 版本是 Oracle JDK 8u371 和 Oracle JDK 11.0.20。
+   * `/usr/lib/jvm/jdk1.8.0_371`
+   * `/usr/lib/jvm/jdk-11.0.20`
+* 默认情况下，`JAVA_HOME` 环境变量设置为 `/usr/lib/jvm/jdk1.8.0_371`，其中包含 Oracle JDK 8u371。有关更多详细信息，请参阅[替代 Maven 执行 JDK 版本](#alternate-maven)部分。
 * 安装了一些其他的必要系统包。
    * `bzip2`
    * `unzip`
@@ -47,7 +49,6 @@ Cloud Manager 的构建环境具有以下属性。
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [创建 API 集成](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [API 权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-
 
 ## 使用特定的 Java 版本 {#using-java-version}
 
