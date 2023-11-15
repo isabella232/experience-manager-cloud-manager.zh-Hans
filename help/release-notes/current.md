@@ -3,10 +3,10 @@ title: 2023.11.0 的发行说明
 description: 这些是 Cloud Manager 2023.11.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: c7803c75bcfcc967877808214704c5746015481d
+source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 31%
+source-wordcount: '386'
+ht-degree: 28%
 
 ---
 
@@ -28,8 +28,10 @@ ht-degree: 31%
 * [管道执行详细信息页面](/help/using/managing-pipelines.md#view-details) 现在将显示管道执行中的所有步骤，其中尚未开始的步骤将显示为灰色。
 * 在两者上 **[活动](/help/using/managing-pipelines.md#activity)** 和 **[管道](/help/using/managing-pipelines.md#pipelines)** 现在，在单击处于运行状态的管道时，会显示管道执行摘要。
 * 新 **持续时间** 部分已添加到 [管道详细信息页面](/help/using/managing-pipelines.md#view-details) 这包括基于该项目历史趋势的管道步骤的平均持续时间。
-* 在管道执行页面上，完成的步骤现在显示持续时间
+* 在 [管道执行页面，](/help/using/managing-pipelines.md#activity-window) 完成的步骤现在显示持续时间
 * Cloud Manager [内容复制工具](/help/using/content-copy.md) 允许用户按需将可变内容从其AMS托管的AEM 6.x生产环境复制到较低环境以进行测试。
+* 以下内容的执行 [重用生成工件](/help/getting-started/project-setup.md#build-artifact-reuse) 现在将显示最初构建这些工件的执行的链接。
+* 要选择的选项 **重要量度失败** 现在可以配置 [代码质量管道](/help/using/non-production-pipelines.md) 也一样。
 
 ## 早期采用计划 {#early-adoption}
 
