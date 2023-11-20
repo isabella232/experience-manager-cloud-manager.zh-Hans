@@ -3,7 +3,7 @@ title: 构建环境
 description: 了解 Cloud Manager 用户可用来构建和测试代码的专用构建环境。
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1152'
 ht-degree: 100%
 
