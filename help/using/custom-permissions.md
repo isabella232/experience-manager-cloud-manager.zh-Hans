@@ -1,10 +1,10 @@
 ---
 title: 自定义权限
 description: 了解如何使用自定义权限创建具有可配置权限的新的自定义权限配置文件，以限制 Cloud Manager 用户对项目、管道和环境的访问。
-source-git-commit: e1a3814041a8a7842e39ab09289c83e9c935b4ab
-workflow-type: ht
-source-wordcount: '1444'
-ht-degree: 100%
+source-git-commit: 769538ec21b21e612619b0c96718f27982574f6c
+workflow-type: tm+mt
+source-wordcount: '1489'
+ht-degree: 96%
 
 ---
 
@@ -129,6 +129,11 @@ Cloud Manager 具有一组预定义的角色，从而管理对 Cloud Manager 的
 | 覆盖/拒绝重要量度失败权限 | 允许用户覆盖/拒绝重要量度失败 |
 | 生产部署计划权限 | 允许用户计划生产部署步骤 |
 | 存储库信息访问权限 | 允许用户访问存储库信息并生成访问密码 |
+| 存储库创建 | 允许用户创建新的Git存储库 |
+| 存储库删除 | 允许用户删除Git存储库 |
+| 存储库编辑 | 允许用户编辑Git存储库 |
+| 存储库代码生成 | 允许用户从原型生成项目 |
+| 内容复制管理 | 允许用户管理内容复制操作 |
 
 ### 组织级权限 {#organization-level}
 
