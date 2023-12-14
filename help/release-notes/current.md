@@ -1,19 +1,19 @@
 ---
-title: 2023.11.0 的发行说明
-description: 这些是 Cloud Manager 2023.11.0 版的发行说明。
+title: 2023.12.0 的发行说明
+description: 这些是 Cloud Manager 2023.12.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
-workflow-type: ht
-source-wordcount: '386'
-ht-degree: 100%
+source-git-commit: 16eef51d86647ae4f2515f3f3c4cb2d15e948854
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 93%
 
 ---
 
 
-# Cloud Manager 2023.11.0 版的发行说明 {#release-notes}
+# Cloud Manager 2023.12.0 版的发行说明 {#release-notes}
 
-此页面记载 [!UICONTROL Cloud Manager] 2023.11.0 版的发行说明。
+此页面记载 [!UICONTROL Cloud Manager] 2023.12.0 版的发行说明。
 
 >[!NOTE]
 >
@@ -21,17 +21,11 @@ ht-degree: 100%
 
 ## 发布日期 {#release-date}
 
-[!UICONTROL Cloud Manager] 2023.11.0 版的发布日期为 2023 年 11 月 14 日。下一个版本计划于 2023 年 12 月 7 日发布。
+的发布日期 [!UICONTROL Cloud Manager] 2023.12.0版为2023年12月14日。 下一个版本计划于 2024 年 1 月 18 日发布。
 
 ## 新增功能 {#what-is-new}
 
-* [管道执行详细信息页面](/help/using/managing-pipelines.md#view-details)现在将显示管道执行中的所有步骤，尚未开始的步骤将灰显。
-* 在&#x200B;**[活动](/help/using/managing-pipelines.md#activity)**&#x200B;页面和&#x200B;**[管道](/help/using/managing-pipelines.md#pipelines)**&#x200B;页面上，单击具有正在运行状态的管道时，现在将显示管道执行摘要。
-* 一个新的&#x200B;**持续时间**&#x200B;部分已添加到[管道详细信息页面](/help/using/managing-pipelines.md#view-details)，其中包括基于该项目的历史趋势的管道步骤的平均持续时间。
-* 在[管道执行页面](/help/using/managing-pipelines.md#activity-window)上，已完成的步骤现在显示持续时间
-* 利用 Cloud Manager [内容复制工具](/help/using/content-copy.md)，用户可按需将可变内容从其 AMS 托管的 AEM 6.x 生产环境复制到较低版本的环境以供测试。
-* [重用构建构件](/help/getting-started/project-setup.md#build-artifact-reuse)的执行现在将显示最初构建这些构件的执行的链接。
-* 现在还可以为[代码质量管道](/help/using/non-production-pipelines.md)配置用于选择&#x200B;**重要量度失败**&#x200B;的选项。
+* 通过 [Cloud Manager 自定义权限](/help/using/custom-permissions.md)，可创建具有可配置的权限的自定义权限配置文件以限制 Cloud Manager 用户访问项目、管道和环境。
 
 ## 早期采用计划 {#early-adoption}
 
@@ -42,9 +36,3 @@ ht-degree: 100%
 如果您使用 GitHub 管理存储库，则[现在可以通过 Cloud Manager 直接在 GitHub 存储库中验证代码。](/help/managing-code/byo-github.md)此集成使您无需始终与 Adobe 存储库同步代码，并可在将拉取请求合并到主分支之前对其进行验证。
 
 如果您有兴趣测试这项新功能并共享您的反馈，请从您的 Adobe ID 关联的电子邮件地址发送电子邮件至 `Grp-CloudManager_BYOG@adobe.com`。
-
-### 自定义权限 {#custom-permissions}
-
-[Cloud Manager 自定义权限](/help/using/custom-permissions.md)可让您创建具有可配置权限的新的自定义权限配置文件，以限制 Cloud Manager 用户对项目、管道和环境的访问。
-
-如果您有兴趣测试这项新功能并共享您的反馈，请从您的 Adobe ID 关联的电子邮件地址发送电子邮件至 `Grp-CloudManager_ams_custompermissions@adobe.com`。
