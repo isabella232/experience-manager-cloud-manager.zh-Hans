@@ -2,10 +2,10 @@
 title: 构建环境
 description: 了解 Cloud Manager 用户可用来构建和测试代码的专用构建环境。
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
-workflow-type: ht
-source-wordcount: '1152'
-ht-degree: 100%
+source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
+workflow-type: tm+mt
+source-wordcount: '1283'
+ht-degree: 87%
 
 ---
 
@@ -18,8 +18,9 @@ ht-degree: 100%
 
 Cloud Manager 的构建环境具有以下属性。
 
-* 构建环境基于 Linux，派生自 Ubuntu 18.04。
+* 构建环境基于 Linux，并派生自 Ubuntu 22.04。
 * 安装 Apache Maven 3.8.8。
+   * Adobe推荐用户 [更新其Maven存储库以使用HTTPS而不是HTTP。](#https-maven)
 * 安装的 Java 版本是 Oracle JDK 8u371 和 Oracle JDK 11.0.20。
    * `/usr/lib/jvm/jdk1.8.0_371`
    * `/usr/lib/jvm/jdk-11.0.20`
@@ -38,6 +39,7 @@ Cloud Manager 的构建环境具有以下属性。
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * 使用 `settings.xml` 文件在系统级别配置 Maven，并将自动包含使用名为 `adobe-public` 的配置文件的公共 Adobe 工件存储库。
    * 有关更多详细信息，请参阅 [Adobe 公共 Maven 存储库](https://repo1.maven.org/)。
+* Node.js 18可用于 [前端管道和全栈管道。](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
@@ -49,6 +51,14 @@ Cloud Manager 的构建环境具有以下属性。
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [创建 API 集成](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [API 权限](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
+
+## HTTPS Maven存储库 {#https-maven}
+
+Cloud Manager [2023.10.0版](/help/release-notes/2023/2023-10-0.md) 开始滚动更新构建环境（包括对Maven 3.8.8的更新，完成版本为2023.12.0）。Maven 3.8.1中引入的一项重大更改是旨在减少潜在漏洞的安全增强功能。 具体来说，Maven现在禁用所有不安全的 `http://*` 默认镜像，如 [Maven发行说明。](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291)
+
+由于此安全增强，某些用户可能在构建步骤期间遇到问题，尤其是从使用不安全HTTP连接的Maven存储库下载工件时。
+
+为了确保通过更新版本获得流畅的体验，Adobe建议用户更新其Maven存储库以使用HTTPS而不是HTTP。 这一调整与业界日益转向安全通信协议相一致，并有助于保持安全可靠的构建过程。
 
 ## 使用特定的 Java 版本 {#using-java-version}
 
