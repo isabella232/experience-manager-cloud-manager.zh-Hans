@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
 workflow-type: tm+mt
 source-wordcount: '305'
-ht-degree: 66%
+ht-degree: 81%
 
 ---
 
@@ -21,19 +21,19 @@ ht-degree: 66%
 
 ## 发布日期 {#release-date}
 
-的发布日期 [!UICONTROL Cloud Manager] 2023.12.0版为2023年12月14日。 下一个版本计划于 2024 年 1 月 18 日发布。
+[!UICONTROL Cloud Manager] 2023.12.0 版的发布日期为 2023 年 12 月 14 日。下一个版本计划于 2024 年 1 月 18 日发布。
 
 ## 新增功能 {#what-is-new}
 
-* 通过 [Cloud Manager 自定义权限](/help/using/custom-permissions.md)，可创建具有可配置的权限的自定义权限配置文件以限制 Cloud Manager 用户访问项目、管道和环境。
+* 通过 [Cloud Manager 自定义权限](/help/using/custom-permissions.md)，可创建具有可配置的权限的自定义权限配置文件，以限制 Cloud Manager 用户对项目、管道和环境的访问。
 * 将更新转出到 [构建环境](/help/getting-started/build-environment.md) 曾经是 [宣布并从10月发布的Cloud Manager开始](/help/release-notes/2023/2023-10-0.md) 已完成。
    * 添加了对节点18的支持 [前端管道和全栈管道。](/help/overview/ci-cd-pipelines.md)
-   * Java 8次要版本已更新为 `jdk1.8.0_371`.
-   * Java 11次要版本已更新为 `jdk-11.0.20`.
-   * Maven已更新至版本3.8.8
+   * Java 8 次要版本已更新到 `jdk1.8.0_371`。
+   * Java 11 次要版本已更新到 `jdk-11.0.20`。
+   * Maven 已更新到版本 3.8.8
       * Maven现在禁用所有不安全的内容 `http://*` 默认镜像。
       * [Adobe推荐](/help/getting-started/build-environment.md#https-maven) 用户更新其Maven存储库以使用HTTPS而不是HTTP。
-* 构建容器基础图像已更新为Ubuntu 22.04。
+* 构建容器基础映像已更新至 Ubuntu 22.04。
 
 ## 早期采用计划 {#early-adoption}
 
