@@ -4,9 +4,9 @@ description: 这些是 Cloud Manager 2023.12.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '305'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 81%
 ## 新增功能 {#what-is-new}
 
 * 通过 [Cloud Manager 自定义权限](/help/using/custom-permissions.md)，可创建具有可配置的权限的自定义权限配置文件，以限制 Cloud Manager 用户对项目、管道和环境的访问。
-* 将更新转出到 [构建环境](/help/getting-started/build-environment.md) 曾经是 [宣布并从10月发布的Cloud Manager开始](/help/release-notes/2023/2023-10-0.md) 已完成。
-   * 添加了对节点18的支持 [前端管道和全栈管道。](/help/overview/ci-cd-pipelines.md)
+* 已[宣布并于 10 月发布的 Cloud Manager](/help/release-notes/2023/2023-10-0.md) 开始对[构建环境](/help/getting-started/build-environment.md)进行的更新现已完成。
+   * 为[前端和全栈管道](/help/overview/ci-cd-pipelines.md)添加了对 Node 18 的支持。
    * Java 8 次要版本已更新到 `jdk1.8.0_371`。
    * Java 11 次要版本已更新到 `jdk-11.0.20`。
    * Maven 已更新到版本 3.8.8
-      * Maven现在禁用所有不安全的内容 `http://*` 默认镜像。
-      * [Adobe推荐](/help/getting-started/build-environment.md#https-maven) 用户更新其Maven存储库以使用HTTPS而不是HTTP。
+      * Maven 现在默认禁用所有不安全的 `http://*` 镜像。
+      * [Adobe 建议](/help/getting-started/build-environment.md#https-maven)用户更新其 Maven 存储库以使用 HTTPS 代替 HTTP。
 * 构建容器基础映像已更新至 Ubuntu 22.04。
 
 ## 早期采用计划 {#early-adoption}
