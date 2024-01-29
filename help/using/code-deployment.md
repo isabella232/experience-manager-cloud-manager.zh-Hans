@@ -3,9 +3,9 @@ title: 代码部署
 description: 了解如何部署代码以及在部署代码时 Cloud Manager 中会发生什么情况。
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 70e68f8af17b0acf644176c2ed3afaf8fc219063
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1650'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -87,10 +87,10 @@ ht-degree: 99%
 | 代码质量测试 | 7 天 |
 | 安全性测试 | 7 天 |
 | 性能测试 | 7 天 |
-| 申请批准（阶段） | 7 天 |
-| 申请批准（生产） | 14 天 |
+| 申请审批（暂存） | 7 天 |
+| 申请审批（生产） | 14 天 |
 | 计划生产部署 | 14 天 |
-| 受管生产部署 | 14 天 |
+| 托管的生产部署 | 14 天 |
 
 ## 部署过程详细信息 {#deployment-process}
 
