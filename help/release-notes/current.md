@@ -4,9 +4,9 @@ description: 这些是 Cloud Manager 2024.2.0 版的发行说明。
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: cc87246503ab63d6dd60c691f15fc4759fcf6939
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '299'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 68%
 
 ## 新增功能 {#what-is-new}
 
-* 作为的一部分 [部署，](/help/using/code-deployment.md) Dispatcher缓存在 **附加Dispatcher** 步骤。 为了允许您在将每个节点附加到应用程序负载平衡器之前测试其上的更改，在将代码部署到特定发布者后，现在可以在将相关Dispatcher附加到负载平衡器之前直接从该Dispatcher测试更改。
-* [构建环境](/help/getting-started/build-environment.md) 已更新至Maven版本3.9.4和JDK版本jdk-11.0.22和jdk1.8.0_401。
+* 作为[部署](/help/using/code-deployment.md)的一部分，在&#x200B;**附加 Dispatcher** 这一步刷新了 Dispatcher 缓存。在将代码部署到特定发布者后，为了使您可在每个节点上测试更改后再将该节点附加到应用程序负载平衡器，您现在可直接从关联的 Dispatcher 测试更改后再将该 Dispatcher 附加到负载平衡器。
+* 已将[构建环境](/help/getting-started/build-environment.md)更新为 Maven 版本 3.9.4 以及 JDK 版本 jdk-11.0.22 和 jdk1.8.0_401。
 
 ## 早期采用计划 {#early-adoption}
 
@@ -40,5 +40,5 @@ ht-degree: 68%
 
 ## 错误修复 {#bug-fixes}
 
-* 内部版本容器的JDK已更新到可以解决此问题的版本 [JDK-8313765。](https://bugs.openjdk.org/browse/JDK-8313765)
+* 已将构建容器的 JDK 更新到解决了 [JDK-8313765](https://bugs.openjdk.org/browse/JDK-8313765) 问题的版本。
 §
