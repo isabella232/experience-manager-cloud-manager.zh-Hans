@@ -2,10 +2,10 @@
 title: 基于角色的权限
 description: 了解 Cloud Manager 预先配置的基于角色的权限来管理对云资源的访问。
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
+source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 100%
+source-wordcount: '602'
+ht-degree: 93%
 
 ---
 
@@ -13,6 +13,12 @@ ht-degree: 100%
 # 基于角色的权限 {#role-based-permissions}
 
 [!UICONTROL Cloud Manager 预配置了一些具有适当权限的角色。]例如，开发人员可以开发代码，并有权将代码推送到 Git 存储库。业务负责人具有不同的权限，可让他们定义关键绩效指标 (KPI) 并审批部署。
+
+>[!NOTE]
+>
+>本文档介绍了用于AdobeManaged Services (AMS)的Cloud Manager基于角色的权限。
+>
+>可以在文档中找到AEMas a Cloud Service的等效文档 [Cloud Manager简介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions) 在AEMas a Cloud Service文档中。
 
 ## 用户角色 {#user-roles}
 
