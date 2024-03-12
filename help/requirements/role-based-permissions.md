@@ -3,9 +3,9 @@ title: 基于角色的权限
 description: 了解 Cloud Manager 预先配置的基于角色的权限来管理对云资源的访问。
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '602'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->本文档介绍了用于AdobeManaged Services (AMS)的Cloud Manager基于角色的权限。
+>本文档介绍了 Cloud Manager for Adobe Managed Services (AMS) 的基于角色的权限。
 >
->可以在文档中找到AEMas a Cloud Service的等效文档 [Cloud Manager简介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions) 在AEMas a Cloud Service文档中。
+>AEM as a Cloud Service 的等效文档可以在 AEM as a Cloud Service 文档中的 [Cloud Manager 简介](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions)文档中找到。
 
 ## 用户角色 {#user-roles}
 
